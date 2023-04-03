@@ -1,0 +1,5 @@
+# Block common file extensions
+*.exe
+*.doc
+*.docx
+*.gdoc
