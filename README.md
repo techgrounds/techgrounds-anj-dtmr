@@ -11,7 +11,7 @@ Here you may find **all the repositories** I did during the training
 - [Linux Machine Files and Directories](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/02_linux)
 - [Working with text (CLI)](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/03_linux)
 - [VM Users and groups](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/04_linux)
-- [File permissions]
+- [File permissions](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/05_linux)
 - [Processes]
 - [Bash scripting]
 - [Cron Jobs](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/08_linux)
@@ -21,7 +21,7 @@ Here you may find **all the repositories** I did during the training
 ```
 root
  |- 00_includes < A place for all the screenshots
- |- 00_templates < A place you will find the templates
+ |- 00_templates < A place to find all my customized templates
  |
  |- 00_git_github
  |
