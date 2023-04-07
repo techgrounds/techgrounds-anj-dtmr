@@ -61,7 +61,7 @@ Maak een Markdown-document met je gekozen editor. Je document moet de volgende e
 - [x] Een bold tekst
 - [x] Een link naar een website
 
-[Have a look](https://github.com/agcdtmr/angeline-cloud-10-repo)
+[Have a look](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/README.md)
 
 ## Optional next steps:
 
