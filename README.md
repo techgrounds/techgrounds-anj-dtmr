@@ -12,7 +12,7 @@ Here you may find **all the repositories** I did during the training
 - [Working with text (CLI)](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/03_linux)
 - [VM Users and groups](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/04_linux)
 - [File permissions](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/05_linux)
-- [Processes]
+- [Processes](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/06-linux)
 - [Bash scripting]
 - [Cron Jobs](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/08_linux)
 
