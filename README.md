@@ -6,9 +6,15 @@ Here you may find **all the repositories** I did during the training
 
 **Week 1:**
 
-- [Git and GitHub Projects](https://github.com/agcdtmr/angeline-cloud-10-repo/tree/main/00_git_github)
-- [Set up SSH-connection to the virtual machine using Linux machine](https://github.com/agcdtmr/angeline-cloud-10-repo/tree/main/01_linux)
-- [Linux Machine Files and Directories](https://github.com/agcdtmr/angeline-cloud-10-repo/tree/main/02_linux)
+- [Git and GitHub Projects](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/00_git_github)
+- [Set up SSH-connection to the virtual machine using Linux machine](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/01_linux)
+- [Linux Machine Files and Directories](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/02_linux)
+- [Working with text (CLI)](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/03_linux)
+- [VM Users and groups]
+- [File permissions]
+- [Processes]
+- [Bash scripting]
+- [Cron Jobs](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/08_linux)
 
 ## How my files are organized
 
