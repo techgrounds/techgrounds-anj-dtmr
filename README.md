@@ -13,7 +13,7 @@ Here you may find **all the repositories** I did during the training
 - [VM Users and groups](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/04_linux)
 - [File permissions](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/05_linux)
 - [Processes](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/06-linux)
-- [Bash scripting]
+- [Bash scripting](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/07_linux)
 - [Cron Jobs](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/08_linux)
 
 ## How my files are organized
