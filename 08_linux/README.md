@@ -124,7 +124,7 @@ Issue 2: I don't know what /var/log means but it looks like a path to me, so I w
 Issue 3: Cron jobs is something I only once heard, again, I don't know where or how to begin because this is another concept. But from researching on google, I come to a beginner understanding on what Cron Jobs is and saw the pattern on how to execute it, which is detailed documented above. The biggest issue I had is when my scripts on crontab is not working, and I don't know how to debug it. So I approached Roan and we called for an hour to compare how he did his with mine, without a success
 I approached the learning coach and together with other colleagues we found out that there is a difference between using "crontab -e" and "sudo crontab -e"
 
-Issue 4: Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercise 4 to 7. I first focus on issue 3 because I need other people's expertise on that. Then Friday night I continued and found a command to find the history of all the commands I used in the command line.
+[Issue 4:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on issue 3 because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
 
 ```
 cat ~/.bash_history
