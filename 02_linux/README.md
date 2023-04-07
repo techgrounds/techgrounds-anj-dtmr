@@ -1,15 +1,15 @@
-# Linux Machine Files and Directories
+# LNX-02 Linux Machine Files and Directories
 
 This projects taught us how to play around linux environment especially on how to create a new directory, save a new file inside a directory, move between paths using absolute and relative path, use a command that shows the list of all files and directories, use "sudo" command, use vim editor and how to save and quit from it and how to use a command that can show the text inside a .txt file, difference use of "/" "." "~".
 
 Learned how to use these different commands:
 
-* .(a single dot) - this represents the current directory.
-* ..(two dots) - this represents the parent directory.
-* cd .. - moves one level up
-* cd ../.. - moves two level up
-* man man - for accessing the manual from the command line
-* :wq! - save and quit using vim editor
+- .(a single dot) - this represents the current directory.
+- ..(two dots) - this represents the parent directory.
+- cd .. - moves one level up
+- cd ../.. - moves two level up
+- man man - for accessing the manual from the command line
+- :wq! - save and quit using vim editor
 
 ## Key terminology
 
@@ -75,4 +75,3 @@ Brief description of the result of the exercises. An image can speak more than a
 
 **Moved around my directory tree using both absolute and relative paths:**
 ![path](https://github.com/agcdtmr/angeline-cloud-10-repo/blob/main/00_includes/linux/path.png)
-
