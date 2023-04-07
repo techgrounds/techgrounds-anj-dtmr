@@ -2,7 +2,7 @@
 
 Coincidentally this week, I was reading the book, The Untold Women Who Made The Internet. In that book I got to meet, [Stacy Horn](https://en.wikipedia.org/wiki/Stacy_Horn), the woman behind East Coast Hang-Out. [Echo](https://www.echonyc.com/about/). An online community that was started in New York City in 1990. Echo was, what we would call today a social network. It is accessed via telnet, this requires opening Terminal, a command-line application that serves as a kind of text-based window into the operating system, and summoning Echo with a typed command: `$ ssh claire@echonyc.com`
 
-Sharing this because it helped me understand the use history of Telnet and how this processes actually is contributed by women.
+Sharing this because it helped me understand the use history of Telnet and how this processes actually were part of the contributions of women in tech.
 
 Learned how to use these different commands:
 
@@ -58,21 +58,24 @@ sudo systemctl start xinetd
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: I was trying to install telnet with Homebrew
-Issue 2: Inetd masked
-Issue 3: [Service](https://kerneltalks.com/howto/how-to-restart-inetd-service-in-linux/)
+Issue 1: At first I found an article saying that I need to install telnet with Homebrew. But I keep getting the errors of issue 3
+Issue 2: Another issue was when I was trying to follow this [article about using service](https://kerneltalks.com/howto/how-to-restart-inetd-service-in-linux/). But I end up keep on getting the issue 3
+[Issue 3:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue2.png) To understand this issue, I ask a colleague, Akram, to debug this error with me. He had the same error, and lead me to resources link above to better understand between inetd and xinetd and which one is suitable to my device
 [Issue 4:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on Cron Jobs because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
 
 ```
 cat ~/.bash_history
 ```
 
-Issue 5: lock-frontend permission denied
-Issue 6: cannot find a way to kill
+[Issue 5:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue5.png) Error message: ...lock-frontend permission denied, which again appeared because I did not use sudo command
+[Issue 6:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue6.png) I did able to install, start, check the status, but cannot find a way to kill or stop it. I could not find a reliable resources or someone to ask with that is also compatible to my device. My last resort was to ask chatgpd and it gave me the stop command above.
 
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Label]()
+**PID:**
+![PID](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-pid.png)
+
+**Able to install, start, check the status, and kill telnetd:**
+![telnetd](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-result.png)
