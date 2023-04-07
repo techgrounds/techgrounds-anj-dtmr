@@ -1,4 +1,4 @@
-# Cron jobs
+# LNX-08 Cron jobs
 
 What is Cron jobs?
 
@@ -14,11 +14,9 @@ Learned how to use these different commands:
 
 Note: Make sure your cron is started and the path of your script file is added to the PATH variable
 
-
 ## Opdrachten
 
 - [x] Create a Bash script that writes the current date and time to a file in your home directory.
-
 
 ```
 touch datetime.sh
@@ -38,13 +36,14 @@ Note: Make sure to give permission to your bash file to execute
 sudo chmod u+x datetime.sh
 ```
 
-or 
+or
 
 ```
 sudo chmod 664 datetime.sh
 ```
 
-Execute to check if the bash script is right. 
+Execute to check if the bash script is right.
+
 ```
 sudo bash datetime.sh
 ```
@@ -84,13 +83,14 @@ Note: Make sure to give permission to your bash file to execute
 sudo chmod u+x disk_space.log
 ```
 
-or 
+or
 
 ```
 sudo chmod 664 disk_space.log
 ```
 
-Execute to check if the bash script is right. 
+Execute to check if the bash script is right.
+
 ```
 sudo bash disk_space.log
 ```
@@ -98,6 +98,7 @@ sudo bash disk_space.log
 Then check the changes on disk_space.log
 
 To access the log file in ‘/var/logs’
+
 ```
 cd /var/log
 ```
@@ -129,7 +130,6 @@ I approached the learning coach and together with other colleagues we found out 
 ```
 cat ~/.bash_history
 ```
-
 
 ## Results
 
