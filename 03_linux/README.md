@@ -62,11 +62,11 @@ cat techgrounds.txt
 
 Short description of the challeges encountered, and how I solved them:
 
-[Issue 1](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-issue1.png) - I keep trying to put a txt file to my root folder, I could not understand the instructions clearly. I asked my teammates on how they understood the instructions word per word.
+[Issue 1:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-issue1.png) I keep trying to put a txt file to my root folder, I could not understand the instructions clearly. I asked my teammates on how they understood the instructions word per word.
 
-[Issue 2](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-issue2.png) - I keep forgetting that I need to use sudo, and lost where to do the txt file. With often use of the terminal and keep having the same error message. My brain was able to remember that this error message is for that issue.
+[Issue 2:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-issue2.png) I keep forgetting that I need to use sudo, and lost where to do the txt file. With often use of the terminal and keep having the same error message. My brain was able to remember that this error message is for that issue.
 
-[Issue 3](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-issue3.png) - I first used cat command to write something to my txt file, but i could not understand the interface and keep typing anything and could not find the way how to exit (i dont know how i end up with find command which gave me a lot of permission denied too) until I remember I could use google to search for “how to exit cat command”. I found ctrl+d command.
+[Issue 3:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-issue3.png) I first used cat command to write something to my txt file, but i could not understand the interface and keep typing anything and could not find the way how to exit (i dont know how i end up with find command which gave me a lot of permission denied too) until I remember I could use google to search for “how to exit cat command”. I found ctrl+d command.
 
 ## Results
 
