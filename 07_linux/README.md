@@ -17,18 +17,25 @@ What is Bash scripting?
 
 ### Opdracht 1 - Bash:
 
-- [x] Create a directory called ‘scripts’. Place all the scripts you make in this directory.
-- [x] Add the scripts directory to the PATH variable.
+- [x] Create a directory called ‘scripts’. Place all the scripts you'll make in this directory. Add the scripts directory to the PATH variable.
+![path](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-path.png)
+
 - [x] Create a script that appends a line of text to a text file whenever it is executed.
+![append](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-append.png)
+
 - [x] Create a script that installs the httpd package, activates httpd, and enables httpd. Finally, your script should print the status of httpd in the terminal.
+![apache](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-httpd.png)
+![httpd](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-apache.png)
 
 ### Opdracht 2 - Variable:
 
 - [x] Create a script that generates a random number between 1 and 10, stores it in a variable, and then appends the number to a text file.
+![random](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-random.png)
 
 ### Opdracht 3 - Conditions:
 
 - [x] Create a script that generates a random number between 1 and 10, stores it in a variable, and then appends the number to a text file only if the number is bigger than 5. If the number is 5 or smaller, it should append a line of text to that same text file instead.
+![conditions](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-conditions.png)
 
 ## Sources list used for solving the exercise
 
