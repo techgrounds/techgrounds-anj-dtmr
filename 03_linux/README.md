@@ -72,6 +72,6 @@ Short description of the challeges encountered, and how I solved them:
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Found out the difference between "grep -o "techgrounds" test.txt > techgrounds.txt" and "grep -i "techgrounds" test.txt", grep -i is used when we want to look for centain part of word that is part of a longer one.:**
+**Found out the difference between "grep -o "techgrounds" test.txt > techgrounds.txt" and "grep -i "techgrounds" test.txt", grep -i is used when we want to look for centain part of word that is part of a longer one:**
 ![Label](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-issue4.1.png)
 ![Label](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-issue4.png)
