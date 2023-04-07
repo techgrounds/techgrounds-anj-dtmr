@@ -51,7 +51,7 @@ sudo bash datetime.sh
 
 Then check the changes on datetime.txt
 
-[Check what I did](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-08-cron-disk1.png)
+[Check what I did](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-08-cron-date1.png)
 
 - [x] Register the script in your crontab so that it runs every minute.
 
