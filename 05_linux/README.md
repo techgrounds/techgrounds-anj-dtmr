@@ -55,5 +55,5 @@ cat ~/.bash_history
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Label]()
+**Understood more how permissions work in Linux:**
+![Label](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-05-result.png)
