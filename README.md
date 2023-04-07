@@ -9,8 +9,8 @@ Here you may find **all the repositories** I did during the training
 - [Git and GitHub Projects](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/00_git_github)
 - [Set up SSH-connection to the virtual machine using Linux machine](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/01_linux)
 - [Linux Machine Files and Directories](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/02_linux)
-- [Working with text (CLI)]()
-- [VM Users and groups]()
+- [Working with text (CLI)](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/03_linux)
+- [VM Users and groups]
 - [File permissions]
 - [Processes]
 - [Bash scripting]
