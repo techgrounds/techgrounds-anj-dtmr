@@ -14,7 +14,7 @@ Here you may find **all the repositories** I did during the training
 - [File permissions]
 - [Processes]
 - [Bash scripting]
-- [Cron Jobs]
+- [Cron Jobs](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/08_linux)
 
 ## How my files are organized
 
