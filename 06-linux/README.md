@@ -73,7 +73,7 @@ cat ~/.bash_history
 
 [Issue 5:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue5.png) Error message: ...lock-frontend permission denied, which again appeared because I did not use sudo command.
 
-[Issue 6:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue6.png) I did able to install, start, check the status, but cannot find a way to kill or stop it. I could not find a reliable resources or someone to ask with that is also compatible to my device. My last resort was to ask chatgpd and it gave me the stop command above.
+[Issue 6:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue6.png) I did able to install, start, check the status, but cannot find a way to kill or stop it. I could not find a reliable resources or someone to ask with that is also compatible to my device. My last resort was to ask chatgpt and it gave me the stop command above.
 
 ## Results
 
