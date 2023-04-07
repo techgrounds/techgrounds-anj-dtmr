@@ -77,7 +77,7 @@ cat ~/.bash_history
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**PID:**
+**PID and memory:**
 ![PID](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-pid.png)
 
 **Able to install, start, check the status, and kill telnetd:**
