@@ -41,7 +41,7 @@ grep 'techgrounds' 03lnx.txt`
 
 ```
 
-[Take a peek]([lnx-03-grep.png](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-grep.png))
+[Take a peek](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-03-grep.png)
 
 - [x] Read your text file with the command used in the second step, once again filtering for the word ‘techgrounds’. This time, redirect the output to a new file called ‘techgrounds.txt’.
 
