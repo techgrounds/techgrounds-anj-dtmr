@@ -21,7 +21,7 @@ Here you may find **all the repositories** I did during the training
 ```
 root
  |- 00_includes < A place for all the screenshots
- |- 00_templates < A place you will find the templates
+ |- 00_templates < A place to find all my customized templates
  |
  |- 00_git_github
  |
