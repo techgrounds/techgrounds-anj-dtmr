@@ -63,5 +63,5 @@ cat ~/.bash_history
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Label]()
+**Understood bash scripting more, how to run/execute and write a script:**
+![Script](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-all.png)
