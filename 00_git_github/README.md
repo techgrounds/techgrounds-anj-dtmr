@@ -84,7 +84,7 @@ Maak een Markdown-document met je gekozen editor. Je document moet de volgende e
 
 Short description of the challeges encountered, and how I solved them:
 
-1. The rest of the team did not had an in-dept experience using Git en GitHub before. I noticed that we were confuse on where to begin or how to work with the team. I did not know if I'm the right person who should teach them, since I have a difficulties on explaining, I then share my screen and let them see how I will do it myself. We answered each other's questions and confusions in a friendly and professional manner. At the end everyone completed the exercises.
+Issue 1: The rest of the team did not had an in-dept experience using Git en GitHub before. I noticed that we were confuse on where to begin or how to work with the team. I did not know if I'm the right person who should teach them, since I have a difficulties on explaining, I then share my screen and let them see how I will do it myself. We answered each other's questions and confusions in a friendly and professional manner. At the end everyone completed the exercises.
 
 ## Results
 
@@ -100,4 +100,5 @@ Brief description of the result of the exercises. An image can speak more than a
 ![collaborators](https://github.com/agcdtmr/angeline-cloud-10-repo/blob/main/00_includes/collabs.png)
 
 **Clone the repositories of my teammates:**
-![collaborators](https://github.com/agcdtmr/angeline-cloud-10-repo/blob/main/00_includes/clone.png)
+![Clone collaborators](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/clone1.png)
+![Clone Team](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/clone2.png)
