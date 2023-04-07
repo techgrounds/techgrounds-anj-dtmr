@@ -1,4 +1,4 @@
-# Setting up SSH-connection to the virtual machine using Linux machine
+# LNX-01 Setting up SSH-connection to the virtual machine using Linux machine
 
 What is Linux?
 
@@ -55,7 +55,7 @@ username@servername: Permission denied (publickey).
 
 I solved it using `chmod 600 containerName.pem`
 
-Paste again "ssh -i containerName username@servername -p sshportnumber". 
+Paste again "ssh -i containerName username@servername -p sshportnumber".
 If everything is fine you may receive a message like this:
 
 ```
