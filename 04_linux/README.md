@@ -54,5 +54,5 @@ cat ~/.bash_history
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
+**Created a new user:**
 ![Users](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-users.png)
