@@ -16,6 +16,36 @@ Learned how to use these different commands:
 
 - [x] Create a Bash script that writes the current date and time to a file in your home directory.
 
+
+```
+touch datetime.sh
+
+vi datetime.sh
+
+#!/usr/bin/bash
+
+datetime=$(date)
+
+echo $datetime >> /home/datetime.txt
+```
+
+Note: Make sure to give permission to your bash file to execute
+
+```
+sudo chmod u+x datetime.sh
+```
+
+or 
+
+```
+sudo chmod 664 datetime.sh
+```
+
+Execute to check if the bash script is right
+```
+sudo bash datetime.sh
+```
+
 [Check what I did]()
 
 - [x] Register the script in your crontab so that it runs every minute.
