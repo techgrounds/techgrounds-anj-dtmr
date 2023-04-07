@@ -14,11 +14,6 @@
 
 - [x] [Create a new user in your VM](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-adduser.png)
 - [x] The new user should be part of an [admin group](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-allcomnds.png).
-
-```
-less /etc/group
-```
-
 - [x] The new user should have a [password](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-passwd.png).
 - [x] The new user should be able to use ‘[sudo](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-sudogrp.png)’
 
@@ -30,6 +25,11 @@ usermod -aG sudo username
 
 Password:
 `cd /etc/shadow`
+
+Groups:
+````
+less /etc/group
+```
 
 ## Sources list used for solving the exercise
 
