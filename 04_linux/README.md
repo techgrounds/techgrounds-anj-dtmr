@@ -27,7 +27,7 @@ Password:
 `cd /etc/shadow`
 
 Groups:
-````
+```
 less /etc/group
 ```
 
