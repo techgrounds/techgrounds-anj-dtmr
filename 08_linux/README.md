@@ -126,6 +126,10 @@ I approached the learning coach and together with other colleagues we found out 
 
 Issue 4: Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercise 4 to 7. I first focus on issue 3 because I need other people's expertise on that. Then Friday night I continued and found a command to find the history of all the commands I used in the command line.
 
+```
+cat ~/.bash_history
+```
+
 
 ## Results
 
