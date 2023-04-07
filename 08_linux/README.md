@@ -41,10 +41,12 @@ or
 sudo chmod 664 datetime.sh
 ```
 
-Execute to check if the bash script is right
+Execute to check if the bash script is right. 
 ```
 sudo bash datetime.sh
 ```
+
+Then check the changes on datetime.txt
 
 [Check what I did]()
 
