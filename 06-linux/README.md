@@ -26,6 +26,7 @@ Learned how to use these different commands:
 ## Opdrachten
 
 - [x] Install and Start the telnet daemon.
+
 ```
 sudo apt-get install telnetd -y
 sudo systemctl start xinetd
@@ -34,12 +35,12 @@ sudo systemctl start xinetd
 [Check what I did](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-install.png)
 
 - [x] Find out the PID of the telnet daemon. Find out how much memory telnetd is using.
-`systemctl status xinetd`
+      `systemctl status xinetd`
 
 [Take a peek](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-status.png)
 
-- [x] Stop or kill the telnetd process. 
-`sudo systemctl stop xinetd`
+- [x] Stop or kill the telnetd process.
+      `sudo systemctl stop xinetd`
 
 [Have a look]()
 
