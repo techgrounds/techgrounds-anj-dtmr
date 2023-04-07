@@ -58,9 +58,12 @@ sudo systemctl start xinetd
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: At first I found an article saying that I need to install telnet with Homebrew. But I keep getting the errors of issue 3
-Issue 2: Another issue was when I was trying to follow this [article about using service](https://kerneltalks.com/howto/how-to-restart-inetd-service-in-linux/). But I end up keep on getting the issue 3
-[Issue 3:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue2.png) To understand this issue, I ask a colleague, Akram, to debug this error with me. He had the same error, and lead me to resources link above to better understand between inetd and xinetd and which one is suitable to my device
+Issue 1: At first I found an article saying that I need to install telnet with Homebrew. But I keep getting the errors of issue 3.
+
+Issue 2: Another issue was when I was trying to follow this [article about using service](https://kerneltalks.com/howto/how-to-restart-inetd-service-in-linux/). But I end up keep on getting the issue 3.
+
+[Issue 3:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue2.png) To understand this issue, I ask a colleague, Akram, to debug this error with me. He had the same error, and lead me to resources link above to better understand between inetd and xinetd and which one is suitable to my device.
+
 [Issue 4:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on Cron Jobs because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
 
 ```
