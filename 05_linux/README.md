@@ -36,18 +36,22 @@ Why permissions is important?
 
 ## Sources list used for solving the exercise
 
-- [Notes]()
+- [Notes](https://docs.google.com/document/d/1vJfWbHumTxh779zwRnrRlq8Ytzm4_PXn/edit#)
+- [Linux permissions for users, groups, and others](https://www.redhat.com/sysadmin/manage-permissions)
+- [Chmod command](https://www.freecodecamp.org/news/linux-chmod-chown-change-file-permissions/)
+- [Chown command](https://www.ibm.com/docs/en/aix/7.2?topic=c-chown-command)
+- [Chgrp command](https://www.geeksforgeeks.org/chgrp-command-in-linux-with-examples/)
 
 ## Overcome challenges:
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1:
-Issue 2:
-Issue 3:
-Issue 4:
-Issue 5:
-Issue 6:
+Issue 1: Luckily I have basic experience with permissions, I run through this task smoothly. But of course I still need to remind myself of all the commands by reading the above resources above.
+[Issue 2:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on Cron Jobs because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
+
+```
+cat ~/.bash_history
+```
 
 ## Results
 
