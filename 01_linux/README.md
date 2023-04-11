@@ -14,7 +14,7 @@
 
 ## Benodigdheden
 
-- [x] The email from your Learning Coach about the VM you'll use
+- [x] The email from your Learning Coach about the VM you'll use:
 * SSH Client
 * Username
 * Keyfile .pem
