@@ -1,6 +1,6 @@
 # LNX-01 Setting up SSH-connection to the virtual machine using Linux machine
 
-What is Linux?
+<!-- What is Linux? -->
 
 ## Key terminology
 
