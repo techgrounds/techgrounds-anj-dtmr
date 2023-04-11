@@ -14,7 +14,12 @@
 
 ## Benodigdheden
 
-- [x] The email from your Learning Coach
+- [x] The email from your Learning Coach about the VM you'll use
+* SSH Client
+* Username
+* Keyfile .pem
+* Hostname IP Address
+* Port number
 - [x] If you’re using a Windows machine: OpenSSH or If you’re using a MacOS or Linux machine: Access ssh using your terminal
 
 ## Opdrachten
