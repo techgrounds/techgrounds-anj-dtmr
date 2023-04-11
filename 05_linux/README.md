@@ -2,7 +2,7 @@
 
 There are three types of entities that can have different permissions: the owner of the file, a group, and everyone else. Root does not need permissions to read, write or execute a file.
 
-Why permissions is important?
+<!-- Why permissions is important? -->
 
 ## Key terminology
 
