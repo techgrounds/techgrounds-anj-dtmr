@@ -19,7 +19,7 @@ For those people who have difficulties using the terminal or command line or pow
 - [x] Fork is a terminology used on Git and GitHub, to make a personal copy from someone else project repository, that will eventually be seen by your repositories folder
 - [x] Clone is a terminology used on Git and GitHub, to copy the repository from remote repo to your local machine
 - [x] Markdown - the idea for Markdown is to make it easy to read, write, and edit plain text. HTML is a publishing format; Markdown is a writing format.
-- [ ] WYSIWYG vs WYSIWYM
+- [ ] WYSIWYG vs WYSIWYM - what you see is what you get and What You See Is What You Mean
 
 ## Benodigdheden
 
