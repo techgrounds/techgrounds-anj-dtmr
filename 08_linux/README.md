@@ -1,8 +1,8 @@
 # LNX-08 Cron jobs
 
-What is Cron jobs?
+<!-- What is Cron jobs?
 
-Learned how to use these different commands:
+Learned how to use these different commands: -->
 
 ## Key terminology
 
