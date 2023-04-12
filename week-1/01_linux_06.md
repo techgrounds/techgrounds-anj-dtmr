@@ -32,17 +32,15 @@ sudo apt-get install telnetd -y
 sudo systemctl start xinetd
 ```
 
-[Check what I did](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-install.png)
+[Check what I did](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-06-install.png)
 
 - [x] Find out the PID of the telnet daemon. Find out how much memory telnetd is using.
       `systemctl status xinetd`
 
-[Take a peek](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-status.png)
+[Take a peek](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-06-status.png)
 
 - [x] Stop or kill the telnetd process.
       `sudo systemctl stop xinetd`
-
-[Have a look]()
 
 ## Sources list used for solving the exercise
 
@@ -63,24 +61,24 @@ Issue 1: At first I found an article saying that I need to install telnet with H
 
 Issue 2: Another issue was when I was trying to follow this [article about using service](https://kerneltalks.com/howto/how-to-restart-inetd-service-in-linux/). But I end up keep on getting the issue 3.
 
-[Issue 3:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue2.png) To understand this issue, I ask a colleague, Akram, to debug this error with me. He had the same error, and lead me to resources link above to better understand between inetd and xinetd and which one is suitable to my device.
+[Issue 3:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-06-issue2.png) To understand this issue, I ask a colleague, Akram, to debug this error with me. He had the same error, and lead me to resources link above to better understand between inetd and xinetd and which one is suitable to my device.
 
-[Issue 4:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on Cron Jobs because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
+[Issue 4:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on Cron Jobs because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
 
 ```
 cat ~/.bash_history
 ```
 
-[Issue 5:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue5.png) Error message: ...lock-frontend permission denied, which again appeared because I did not use sudo command.
+[Issue 5:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-06-issue5.png) Error message: ...lock-frontend permission denied, which again appeared because I did not use sudo command.
 
-[Issue 6:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-issue6.png) I did able to install, start, check the status, but cannot find a way to kill or stop it. I could not find a reliable resources or someone to ask with that is also compatible to my device. My last resort was to ask chatgpt and it gave me the stop command above.
+[Issue 6:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-06-issue6.png) I did able to install, start, check the status, but cannot find a way to kill or stop it. I could not find a reliable resources or someone to ask with that is also compatible to my device. My last resort was to ask chatgpt and it gave me the stop command above.
 
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **PID and memory:**
-![PID](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-pid.png)
+![PID](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-06-pid.png)
 
 **Able to install, start, check the status, and kill telnetd:**
-![telnetd](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-06-result.png)
+![telnetd](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-06-result.png)
