@@ -23,16 +23,27 @@ root
  |- 00_includes < A place for all the screenshots
  |- 00_templates < A place to find all my customized templates
  |
- |- 00_git_github
+ |- week-1
+ |  |- 01_git_github
+ |  |- 01_linux_01
+ |  |- 01_linux_02
+ |  |- 01_linux_03
+ |  |- 01_linux_04
+ |  |- 01_linux_05
+ |  |- 01_linux_06
+ |  |- 01_linux_07
+ |  |- 01_linux_08
  |
- |- 01_linux
- |- 02_linux
- |- 03_linux
- |- 04_linux
- |- 05_linux
- |- 06_linux
- |- 07_linux
- |- 08_linux
+ |- week-2
+ |  |- 02_network_01
+ |  |- 02_network_02
+ |  |- 02_network_03
+ |  |- 02_network_04
+ |  |- 02_network_05
+ |  |- 02_network_06
+ |  |- 02_network_07
+ |
+ |
  |
  |- 02_Cloud_1
  |- 02_Cloud_2
