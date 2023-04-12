@@ -15,21 +15,21 @@ There are three types of entities that can have different permissions: the owner
 ## Opdrachten
 
 - [x] Create a text file. Make a long listing to view the file’s permissions. Who is the file’s owner and group? What kind of permissions does the file have?
-      ![Txt file](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-05-create.png)
+      ![Txt file](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-05-create.png)
 
 - [x] Make the file executable by adding the execute permission (x).
-      ![Execute](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-05-execute.png)
+      ![Execute](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-05-execute.png)
 
 - [x] Remove the read and write permissions (rw) from the file for the group and everyone else, but not for the owner. Can you still read it?
-      ![chmod](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-05-chmod.png)
+      ![chmod](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-05-chmod.png)
 
 - [x] Change the owner of the file to a different user. If everything went well, you shouldn’t be able to read the file unless you assume root privileges with ‘sudo’.
-      ![chown](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-05-owner.png)
-      ![chown](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-05-owner1.png)
+      ![chown](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-05-owner.png)
+      ![chown](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-05-owner1.png)
 
 - [x] Change the group ownership of the file to a different group.
-      ![chgrp](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-05-grp.png)
-      ![chgrp](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-05-grp1.png)
+      ![chgrp](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-05-grp.png)
+      ![chgrp](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-05-grp1.png)
 
 ## Sources list used for solving the exercise
 
@@ -45,7 +45,7 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: Luckily I have basic experience with permissions, I run through this task smoothly. But of course I still need to remind myself of all the commands by reading the above resources above.
 
-[Issue 2:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on Cron Jobs because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
+[Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on Cron Jobs because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
 
 ```
 cat ~/.bash_history
@@ -56,4 +56,4 @@ cat ~/.bash_history
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Understood more how permissions work in Linux:**
-![Label](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-05-result.png)
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-05-result.png)
