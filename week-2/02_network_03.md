@@ -18,13 +18,14 @@ A network protocol are set of rules or agreement how connected devices communica
 
 - [x] Look into wireshark and install this program. Try and capture a bit of your own network data. Search for a protocol you know and try to understand how it functions.
 
+**TCP and UDP, are responsible for transporting internet packets.**
 ![TCP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-tcp.png)
+ 
+**UDP utilises a ‘fire and forget’ strategy, whereas TCP utilises a ‘Three-way handshake’. TCP is therefore more reliable, but UDP is significantly faster.**
 ![TLS](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-tls.png)
-![UDP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-udp.png)
 
-- TCP and UDP, are responsible for transporting internet packets. 
-- UDP utilises a ‘fire and forget’ strategy, whereas TCP utilises a ‘Three-way handshake’. TCP is therefore more reliable, but UDP is significantly faster.
-- Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a computer network.
+**Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a computer network.**
+![UDP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-udp.png)
 
 
 ## Sources list used for solving the exercise
