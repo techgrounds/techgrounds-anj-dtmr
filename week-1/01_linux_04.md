@@ -12,10 +12,14 @@
 
 ## Opdrachten
 
-- [x] [Create a new user in your VM](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-adduser.png)
-- [x] The new user should be part of an [admin group](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-allcomnds.png).
-- [x] The new user should have a [password](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-passwd.png).
-- [x] The new user should be able to use ‘[sudo](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-sudogrp.png)’
+- [x] Create a new user in your VM
+![Create New User](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-04-adduser.png)
+- [x] The new user should be part of an admin group
+![admin group](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-04-allcomnds.png)
+- [x] The new user should have a password
+![password](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-04-passwd.png)
+- [x] The new user should be able to use sudo
+![sudo](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-04-sudogrp.png)
 
 `usermod -aG sudo username`
 
