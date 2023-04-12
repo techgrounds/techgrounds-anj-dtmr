@@ -6,15 +6,15 @@ Here you may find **all the repositories** I did during the training
 
 **Week 1:**
 
-- [Git and GitHub](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/00_git_github)
-- [Set up SSH-connection to the virtual machine using Linux machine](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/01_linux)
-- [Linux Machine Files and Directories](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/02_linux)
-- [Working with text (CLI)](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/03_linux)
-- [VM Users and groups](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/04_linux)
-- [File permissions](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/05_linux)
-- [Processes](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/06-linux)
-- [Bash scripting](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/07_linux)
-- [Cron Jobs](https://github.com/techgrounds/techgrounds-agcdtmr/tree/main/08_linux)
+- [Git and GitHub](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_git_github.md)
+- [Set up SSH-connection to the virtual machine using Linux machine](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_01.md)
+- [Linux Machine Files and Directories](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_02.md)
+- [Working with text (CLI)](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_03.md)
+- [VM Users and groups](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_04.md)
+- [File permissions](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_05.md)
+- [Processes](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_06.md)
+- [Bash scripting](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_07.md)
+- [Cron Jobs](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_08.md)
 
 ## How my files are organized
 
