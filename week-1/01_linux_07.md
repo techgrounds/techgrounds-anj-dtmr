@@ -18,24 +18,24 @@ What is Bash scripting?
 ### Opdracht 1 - Bash:
 
 - [x] Create a directory called ‘scripts’. Place all the scripts you'll make in this directory. Add the scripts directory to the PATH variable.
-![path](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-path.png)
+![path](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-07-path.png)
 
 - [x] Create a script that appends a line of text to a text file whenever it is executed.
-![append](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-append.png)
+![append](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-07-append.png)
 
 - [x] Create a script that installs the httpd package, activates httpd, and enables httpd. Finally, your script should print the status of httpd in the terminal.
-![apache](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-httpd.png)
-![httpd](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-apache.png)
+![apache](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-07-httpd.png)
+![httpd](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-07-apache.png)
 
 ### Opdracht 2 - Variable:
 
 - [x] Create a script that generates a random number between 1 and 10, stores it in a variable, and then appends the number to a text file.
-![random](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-random.png)
+![random](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-07-random.png)
 
 ### Opdracht 3 - Conditions:
 
 - [x] Create a script that generates a random number between 1 and 10, stores it in a variable, and then appends the number to a text file only if the number is bigger than 5. If the number is 5 or smaller, it should append a line of text to that same text file instead.
-![conditions](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-conditions.png)
+![conditions](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-07-conditions.png)
 
 ## Sources list used for solving the exercise
 
@@ -53,7 +53,7 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: I have a beginner experience with shell, variable and conditions that's why I did this task in a really smooth way. But still I need to read about the syntax especially when I was doing conditions. I was first using the < operator but apparently this is not the way it's written here because I keep getting an error message saying txt file doesn't exist. I did not able to save the screenshot of this because of issue 2. Because I was spending a lot of time with this, I ask my teammates to do a 'rubber ducky' session. And while I was running into my process again, I found the article about operators. And it was indeed the mistake I was doing.
 
-[Issue 2:](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on Cron Jobs because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
+[Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/chatgpt-terminal-history.jpg) Friday, around 3 in the afternoon, my device gave up and lost all the history of my terminal from week one, the worst part is I did not save screenshots from Exercises 4 to 7. I first focus on Cron Jobs because I need other people's expertise on that. Then Friday night I continued and ask the best friend of every programmer on what steps to do and which command I can use to find the history of all the commands I used in the command line.
 
 ```
 cat ~/.bash_history
@@ -64,4 +64,4 @@ cat ~/.bash_history
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Understood bash scripting more, how to run/execute and write a script:**
-![Script](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-07-all.png)
+![Script](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-07-all.png)
