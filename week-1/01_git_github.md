@@ -100,5 +100,5 @@ Brief description of the result of the exercises. An image can speak more than a
 ![collaborators](https://github.com/agcdtmr/angeline-cloud-10-repo/blob/main/00_includes/collabs.png)
 
 **Clone the repositories of my teammates:**
-![Clone collaborators](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/clone1.png)
-![Clone Team](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/clone2.png)
+![Clone collaborators](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/clone1.png)
+![Clone Team](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/clone2.png)
