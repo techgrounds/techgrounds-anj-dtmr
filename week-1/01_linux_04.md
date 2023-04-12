@@ -59,4 +59,4 @@ cat ~/.bash_history
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Created a new user:**
-![Users](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/chatgpt-terminal-history.jpg)
+![Users](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-04-users.png)
