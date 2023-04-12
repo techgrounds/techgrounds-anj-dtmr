@@ -14,7 +14,7 @@ Let's dive deeper on what, why, how and the different purposes and use. We first
 
 **The TCP/IP model and its uses**
 
-- TCP/IP stands for Transmission Control Protocol/Internet Protocol.
+TCP/IP stands for Transmission Control Protocol/Internet Protocol.
 
 Have you ever wondered how you can troubleshoot a network problem? Or how an email you send from Florida is delivered to Tokyo in a matter of seconds? The magic behind it is the TCP/IP model.
 
