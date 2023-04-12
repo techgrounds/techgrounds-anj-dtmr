@@ -29,7 +29,9 @@ A project developed in the 1970s by DARPA (the Defense Advanced Research Project
 | PHYSICAL    | 1     |
 
 Uses and more explanation according to ChatGPT:
-![Label]()
+![TCP/IP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-tcp-explain.png)
+
+![TCP/IP Analogy](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-tcp-analogy.png)
 
 **The OSI model and its uses**
 
@@ -46,9 +48,14 @@ Open Systems Interconnection networking reference model, unlike TCP/IP is widely
 | PHYSICAL     | 1     |
 
 Uses and more explanation according to ChatGPT:
+![OSI](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-osi-explain.png)
+![OSI Analogy](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-osi-analogy.png)
 
 **Difference between TCP/IP and OSI explained by ChatGPT**
-![Label]()
+![Difference](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-difference1.png)
+
+![Difference](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-difference2.png)
+
 
 ## Opdrachten
 
@@ -80,4 +87,4 @@ Issue 2: The education system from where I came from did not encouraged a studen
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **I ask better questions**
-![Label]()
+![Result](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-result.png)
