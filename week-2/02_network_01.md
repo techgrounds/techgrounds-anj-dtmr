@@ -14,7 +14,7 @@ Let's dive deeper on what, why, how and the different purposes and use. We first
 
 **The TCP/IP model and its uses**
 
-- TCP/IP stands for Transmission Control Protocol/Internet Protocol.
+TCP/IP stands for Transmission Control Protocol/Internet Protocol.
 
 Have you ever wondered how you can troubleshoot a network problem? Or how an email you send from Florida is delivered to Tokyo in a matter of seconds? The magic behind it is the TCP/IP model.
 
@@ -29,7 +29,9 @@ A project developed in the 1970s by DARPA (the Defense Advanced Research Project
 | PHYSICAL    | 1     |
 
 Uses and more explanation according to ChatGPT:
-![Label]()
+![TCP/IP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-tcp-explain.png)
+
+![TCP/IP Analogy](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-tcp-analogy.png)
 
 **The OSI model and its uses**
 
@@ -46,9 +48,14 @@ Open Systems Interconnection networking reference model, unlike TCP/IP is widely
 | PHYSICAL     | 1     |
 
 Uses and more explanation according to ChatGPT:
+![OSI](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-osi-explain.png)
+![OSI Analogy](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-osi-analogy.png)
 
 **Difference between TCP/IP and OSI explained by ChatGPT**
-![Label]()
+![Difference](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-difference1.png)
+
+![Difference](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-difference2.png)
+
 
 ## Opdrachten
 
@@ -73,11 +80,11 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: It was overwhelming because this is my first time learning about networking, it was especially difficult to understand the tech terminologies and connect them from each other. I open a lot of resources as much as I could, learn, note down, reread again and again until I can explain it myself to other person. I used ChatGPT in the end to have additional simplier explanation.
 
-Issue 2: The education system from where I came from did not encouraged a student to ask a lot of questions, that's why I did not develop a skills to ask questions, how to formulate a good question and how to summarize a concept from what I just heard from other person, I tend to keep it to myself especially when I know that I understood it already and my brain is digesting at the same moment (another reason is that I notice that I'm a fast learner and keep missing a lot of small details like summarizing the concept verbally in return).
+Issue 2: The education system from where I came from did not encouraged a student to ask a lot of questions, that's why I did not develop a skills to ask questions, how to formulate a good question and how to summarize a concept from what I just heard from other person, I tend to keep it to myself especially when I know that I understood it already and my brain is digesting at the same moment (another reason is that I notice that I'm a fast learner and keep missing a lot of small details like summarizing the concept verbally in return). With the help of the excellent rapport I built with my team mates, I make sure I take notes on how they explain things and how they answer from feedbacks.
 
 ## Result
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **I ask better questions**
-![Label]()
+![Result](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-result.png)
