@@ -37,11 +37,12 @@ There is no network without network devices. But what are the network devices in
 
 - [x] De meeste routers hebben een overzicht van alle verbonden apparaten, vind deze lijst. Welke andere informatie heeft de router over aangesloten apparatuur?
 
-![Label]()
+![admin](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-admin.png)
+![details](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-details.png)
 
 - [x] Waar staat je DHCP server op jouw netwerk? Wat zijn de configuraties hiervan?
 
-![Label]()
+![DHCP server](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-admin-dhcp.png)
 
 ## Sources list used for solving the exercise
 
@@ -55,21 +56,27 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: I could not understand what this exercises wanted me to do. It was overwhelming, plus I could not seem to understand the Dutch words from the instructions. I skipped this part for a day and did the next exercise. I noticed that when I successfully installed wireshark and understood more what networking is and what the purposes of different networking devices are. I begin to understand what everyone is talking about. For example, that they needed to reset their router, install a cisco packet tracer or even the simplest thing what the word protocol means.
 
-Issue 2: Because I don't know the username and password of my router admin. I search google on how I can "access router admin from command line".
+[Issue 2](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-issue1.png): Because I don't know the username and password of my router admin. I search google on how I can "access router admin from command line".
 
 I found about about the ipconfig command, but I could not understand why I kept on getting error until I tried "man ipconfig".
+![ipconfig error](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-issue2.png)
+![ipconfig error](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-issue3.png)
 
 Learned to use these commands:
 
 - ipconfig getiflist
+- ipconfig getpacket en0
+![getpacket](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-getpacket.png)
 - ipconfig getsummary en0
+![dhcp](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-dhcp.png)
 - arp -a
+![arp](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-arp.png)
 - netstat -nr|grep default
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-netstat.png)
 
-![Label]()
 
-1. sudo ipconfig set en0 BOOTP && sudo ipconfig set en0 DHCP
-2. ipconfig getsummary en0:
+* sudo ipconfig set en0 BOOTP && sudo ipconfig set en0 DHCP
+* ipconfig getsummary en0:
 
 ```
 DHCP : <dictionary> {
@@ -91,4 +98,4 @@ Brief description of the result of the exercises. An image can speak more than a
 How do I find my ZyXEL router username and password?
 First, you will need to log in via IP Address. To do this, open any browser and navigate to 192.168. 1.1. The default username is admin and the default password is 1234.
 
-![Label]()
+![Result](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-02-result.png)
