@@ -21,10 +21,10 @@ A network protocol are set of rules or agreement how connected devices communica
 **TCP and UDP, are responsible for transporting internet packets.**
 ![TCP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-tcp.png)
  
-**UDP utilises a ‘fire and forget’ strategy, whereas TCP utilises a ‘Three-way handshake’. TCP is therefore more reliable, but UDP is significantly faster.**
+**Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a computer network.**
 ![TLS](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-tls.png)
 
-**Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a computer network.**
+**UDP utilises a ‘fire and forget’ strategy, whereas TCP utilises a ‘Three-way handshake’. TCP is therefore more reliable, but UDP is significantly faster.**
 ![UDP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-udp.png)
 
 
