@@ -91,13 +91,13 @@ Issue 1: The rest of the team did not had an in-dept experience using Git en Git
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Made a GitHub Account with a profile ReadMe.md:**
-![GitHub Account](https://github.com/agcdtmr/angeline-cloud-10-repo/blob/main/00_includes/githubaccount.png)
+![GitHub Account](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/githubaccount.png)
 
 **Created a repository using GitHub, cloned it local repo and pushed a code to the remote repo:**
-![repository](https://github.com/agcdtmr/angeline-cloud-10-repo/blob/main/00_includes/repo.png)
+![repository](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/repo.png)
 
 **Added my teammates as collaborators:**
-![collaborators](https://github.com/agcdtmr/angeline-cloud-10-repo/blob/main/00_includes/collabs.png)
+![collaborators](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/collabs.png)
 
 **Clone the repositories of my teammates:**
 ![Clone collaborators](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/clone1.png)
