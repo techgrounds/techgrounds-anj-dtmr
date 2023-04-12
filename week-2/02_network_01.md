@@ -80,7 +80,7 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: It was overwhelming because this is my first time learning about networking, it was especially difficult to understand the tech terminologies and connect them from each other. I open a lot of resources as much as I could, learn, note down, reread again and again until I can explain it myself to other person. I used ChatGPT in the end to have additional simplier explanation.
 
-Issue 2: The education system from where I came from did not encouraged a student to ask a lot of questions, that's why I did not develop a skills to ask questions, how to formulate a good question and how to summarize a concept from what I just heard from other person, I tend to keep it to myself especially when I know that I understood it already and my brain is digesting at the same moment (another reason is that I notice that I'm a fast learner and keep missing a lot of small details like summarizing the concept verbally in return).
+Issue 2: The education system from where I came from did not encouraged a student to ask a lot of questions, that's why I did not develop a skills to ask questions, how to formulate a good question and how to summarize a concept from what I just heard from other person, I tend to keep it to myself especially when I know that I understood it already and my brain is digesting at the same moment (another reason is that I notice that I'm a fast learner and keep missing a lot of small details like summarizing the concept verbally in return). With the help of the excellent rapport I built with my team mates, I make sure I take notes on how they explain things and how they answer from feedbacks.
 
 ## Result
 
