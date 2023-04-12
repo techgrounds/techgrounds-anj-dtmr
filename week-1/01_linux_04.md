@@ -23,7 +23,7 @@
 
 `usermod -aG sudo username`
 
-- [x] Locate the files that store [users](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-users1.png), [passwords](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-verify.png), and [groups](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-grp.png). See if you can find your newly created user’s data in there.
+- [x] Locate the files that store [users](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-04-users1.png), [passwords](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-04-verify.png), and [groups](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/linux/lnx-04-grp.png). See if you can find your newly created user’s data in there.
 
 Password:
 `cd /etc/shadow`
@@ -59,4 +59,4 @@ cat ~/.bash_history
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Created a new user:**
-![Users](https://github.com/techgrounds/techgrounds-agcdtmr/blob/main/00_includes/linux/lnx-04-users.png)
+![Users](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-1-includes/chatgpt-terminal-history.jpg)
