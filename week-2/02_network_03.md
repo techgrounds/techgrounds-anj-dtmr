@@ -12,21 +12,21 @@ A network protocol are set of rules or agreement how connected devices communica
 
 ## Opdrachten
 
-- [x] Identify several other protocols and their associated OSI layer. Name at least one for each layer.
+- [] Identify several other protocols and their associated OSI layer. Name at least one for each layer.
 
-The layer 4 protocols, TCP and UDP, are responsible for transporting internet packets. UDP utilises a ‘fire and forget’ strategy, whereas TCP utilises a ‘Three-way handshake’. TCP is therefore more reliable, but UDP is significantly faster.
-
-Protocols in higher layers, like HTTPS and SSH, all have their own use cases. Most of these protocols have a default port number.
-
-[Check what I did]()
-
-- [x] Figure out who determines what protocols we use and what is needed to introduce your own protocol.
-
-[Take a peek]()
+- [] Figure out who determines what protocols we use and what is needed to introduce your own protocol.
 
 - [x] Look into wireshark and install this program. Try and capture a bit of your own network data. Search for a protocol you know and try to understand how it functions.
 
-[Have a look]()
+**TCP and UDP, are responsible for transporting internet packets.**
+![TCP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-tcp.png)
+ 
+**Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a computer network.**
+![TLS](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-tls.png)
+
+**UDP utilises a ‘fire and forget’ strategy, whereas TCP utilises a ‘Three-way handshake’. TCP is therefore more reliable, but UDP is significantly faster.**
+![UDP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-udp.png)
+
 
 ## Sources list used for solving the exercise
 
@@ -40,11 +40,11 @@ Protocols in higher layers, like HTTPS and SSH, all have their own use cases. Mo
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: When I was installing wireshark on mac it did not come to my mind to read the installation guide first. I had a problem with my local device permissions. All I needed actually was to read the documentary and follow it. If I did that I would find out that I need to install another package called chmodBPF. At the end I asked the guidance of my teammates because everything about the interface of wireshark, seems overwhelming and unfamiliar.
+[Issue 1](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-issue1.png): When I was installing wireshark on mac it did not come to my mind to read the installation guide first. I had a problem with my local device permissions. All I needed actually was to read the documentary and follow it. If I did that I would find out that I need to install another package called chmodBPF. At the end I asked the guidance of my teammates because everything about the interface of wireshark, seems overwhelming and unfamiliar.
 
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Label]()
+**Successfully installed wireshark:**
+![wireshark](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-wireshark.png)
