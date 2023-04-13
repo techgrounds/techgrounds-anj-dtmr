@@ -51,7 +51,7 @@ An IPv4 address (Internet Protocol version 4) are addresses are 32-bit integers 
 It's a new set of IP addresses that won't need a NAT or private address, because it is able to produce 340 undecillion IP addresses
 
 **The differences between IPv4 and IPv6**
-![Label]()
+![differences](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-difference.png)
 
 ## Key terminology
 
@@ -71,17 +71,21 @@ It's a new set of IP addresses that won't need a NAT or private address, because
 
 - [x] Ontdek wat je publieke IP adres is van je laptop en mobiel op wifi.
       Zijn de adressen hetzelfde of niet? Leg uit waarom.
-      ![Label]()
+      ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-public.png)
+      ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-public1.png)
 
 - [x] Ontdek wat je privé IP adres is van je laptop en mobiel op wifi.
       Zijn de adressen hetzelfde of niet? Leg uit waarom.
-      ![Label]()
+      ![laptop](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-iplaptop.png)
+      ![iphone](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-ipphone.PNG)
 
 - [x] Verander het privé IP adres van je mobiel naar dat van je laptop. Wat gebeurt er dan?
-      ![Label]()
+      ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-samelaptop.PNG)
+      ![Error](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-error1.PNG)
 
 - [x] Probeer het privé IP adres van je mobiel te veranderen naar een adres buiten je netwerk. Wat gebeurt er dan? Tip: vergeet niet je instellingen weer terug te zetten wanneer je klaar bent met de opdracht.
-      ![Label]()
+      ![Error](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-error.PNG)
+      ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-random.PNG)
 
 ## Sources list used for solving the exercise
 
@@ -96,10 +100,3 @@ It's a new set of IP addresses that won't need a NAT or private address, because
 Short description of the challeges encountered, and how I solved them:
 
 Issue 1: I did the tasks very smoothly. Understanding the logic and history behind the making of IP Addresses numbers and the key terminilogies and connect them with each other to understand the whole concept was the challenge. Again, googling, researching, reading, watching short videos, taking enough pause and discussing it back to my teammate really helps.
-
-## Results
-
-Brief description of the result of the exercises. An image can speak more than a thousand words.
-
-**Description:**
-![Label]()
