@@ -89,6 +89,7 @@ It's a new set of IP addresses that won't need a NAT or private address, because
 - [Use this to check your IP Address](https://www.avast.com/what-is-my-ip#mac)
 - [What's The Difference Between External And Local IP Addresses?](https://www.h3xed.com/web-and-internet/whats-the-difference-between-external-and-local-ip-addresses#:~:text=An%20external%20or%20public%20IP,and%20devices%20connected%20to%20it.)
 - [IPv4 vs. IPv6: What’s the Difference?](https://www.avast.com/c-ipv4-vs-ipv6-addresses)
+- [How to Change IP Address on iPhone](https://clearvpn.com/blog/how-to-change-ip-address-on-iphone/)
 
 ## Overcome challenges:
 
