@@ -117,7 +117,7 @@ Here's the step-by-step guide on how I approach this question:
 - What is switch and where should I place switch? Should I place a switch in this network topology?
 - Why need to convert ip address to binary for subnetting? IP addresses are represented in decimal format, but computers and networking devices communicate using binary. To properly subnet a network, we need to identify the network portion and host portion of an IP address using binary values, which requires converting the IP address to binary format. That the computer understand
 
-[Check the whole steps here](00_includes/week-2-includes/ntw-06-steps.png)
+[Check the whole steps here](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-06-steps.png)
 
 - [x] Plaats de architectuur die je hebt gemaakt inclusief een korte uitleg in de Github repository die je met de learning coach hebt gedeeld.
 
@@ -138,4 +138,4 @@ Issue 1: Time management. From understand the different terminologies and concep
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Description:**
-![Network Architecture Diagram](00_includes/week-2-includes/ntw-06-result.png)
+![Network Architecture Diagram](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-06-result.png)
