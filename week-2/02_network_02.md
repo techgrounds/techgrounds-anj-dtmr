@@ -89,7 +89,7 @@ router (ip_mult): {192.168.1.1}
 }
 ```
 
-Issue 2: Ask better questions. Are the Internet Gateway and Internet the same? No, the Internet Gateway and the Internet are not the same things.
+Issue 3: Ask better questions. Are the Internet Gateway and Internet the same? No, the Internet Gateway and the Internet are not the same things.
 
 The Internet Gateway is a device or a set of devices that connects a local network to the Internet, allowing the devices on that network to access the Internet. It acts as a bridge between the local network and the wider Internet.
 
