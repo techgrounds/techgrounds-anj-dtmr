@@ -131,7 +131,7 @@ Here's the step-by-step guide on how I approach this question:
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: Time management. From understand the different terminologies and concept about subnetting, I come to the conclusion that the tasks above is a whole different kind of task, I was tricked and confused, but that was fun! Though I spent a day or two understanding the how these subnetting is connected to what we learned about OSI and TCP/IP models, network devices, protocols, binary and hex, and IP address. I also come to conclusion that I still really don't get them :D. But see the diagram below to prove the basic understanding I had from the last days.
+Issue 1: From understanding the different terminologies and concept about subnetting, I come to the conclusion that the tasks above is a whole different kind of task, I was tricked and confused, but that was really fun! because I see the pattern and steps why we needed to understand the theory first and all these concepts, that leads us to this new adventure. Though I spent a day or two understanding the how these subnetting is connected to what we learned about OSI and TCP/IP models, network devices, protocols, binary and hex, and IP address. I also come to conclusion that I still really don't get them :D. But see the diagram below to prove the basic understanding I had from the last days. Small wins, are big wins!
 
 ## Results
 
