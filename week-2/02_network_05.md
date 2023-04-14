@@ -99,4 +99,4 @@ It's a new set of IP addresses that won't need a NAT or private address, because
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: I did the tasks very smoothly. Understanding the logic and history behind the making of IP Addresses numbers and the key terminilogies and connect them with each other to understand the whole concept was the challenge. Again, googling, researching, reading, watching short videos, taking enough pause and discussing it back to my teammate really helps.
+Issue 1: I did the tasks very smoothly. Understanding the logic and history behind the making of IP Addresses numbers and the key terminologies and connect them with each other to understand the whole concept was the challenge. Again, googling, researching, reading, watching short videos, taking enough pause and discussing it back to my teammate really helps.
