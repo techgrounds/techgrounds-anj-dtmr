@@ -14,7 +14,7 @@ A network protocol are set of rules or agreement how connected devices communica
 
 - [x] Identify several other protocols and their associated OSI layer. Name at least one for each layer.
 
-Remember when we said that OSI and TCP/IP made the transfering of the data easier between networks? It comes of course with set of rules.
+Remember when we said that OSI and TCP/IP made the transfering of the data easier between networks? It comes of course with set of rules, The protocols.
 
 | OSI          | LAYER | Protocols                                                                                |
 | ------------ | ----- | ---------------------------------------------------------------------------------------- |
