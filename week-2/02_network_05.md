@@ -84,8 +84,9 @@ It's a new set of IP addresses that won't need a NAT or private address, because
       ![Error](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-error1.PNG)
 
 - [x] Probeer het privé IP adres van je mobiel te veranderen naar een adres buiten je netwerk. Wat gebeurt er dan? Tip: vergeet niet je instellingen weer terug te zetten wanneer je klaar bent met de opdracht.
-      ![Error](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-error.PNG)
       ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-random.PNG)
+      ![Error](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-error.PNG)
+
 
 ## Sources list used for solving the exercise
 
