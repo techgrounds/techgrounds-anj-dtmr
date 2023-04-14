@@ -1,12 +1,12 @@
 # OSI Stack
 
-**What is Computer Networking?** The first thing that comes to my mind is communication. It is the way we, humans, communicate to one another to understand each other and possibly create something new out of it. Computer Networks is made up of nodes, nodes makes it possible for our devices like laptop, smartphone, tablet and servers and other devices to communicate and pass data or resources from one device to another. In human setting, node would be the people and language is the medium.
+**What is Computer Networking?** The first thing that comes to my mind is communication. It is the way we, humans, communicate to one another to understand each other and possibly create something new out of it. While Computer Networks is made up of nodes, nodes makes it possible for our devices like laptop, smartphone, tablet and servers and other devices to communicate and pass data or resources from one device to another. In human setting, node would be the people and language is the medium.
 
 Networking can be wired and wireless, but of course to make wireless possible to, there's physical infrastracture somewhere too like switches, routers and access point.
 
 Network relies on standard protocols such as HTTP, UDP/IP and TCP/IP. These protocols standardized how certain data should be sent or received.
 
-Today transfering data is mostly like a blink of an eye.But before everything that we know on how computer transfer data from one device to another, these devices could not even talk with one another.
+Today transfering data is mostly like a blink of an eye. But before everything that we know on how computer transfer data from one device to another, these devices could not even talk with one another.
 
 That's why these two models of computer networking below were developed.
 
@@ -55,7 +55,6 @@ Uses and more explanation according to ChatGPT:
 ![Difference](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-difference1.png)
 
 ![Difference](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-01-difference2.png)
-
 
 ## Opdrachten
 

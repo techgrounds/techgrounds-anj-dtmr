@@ -2,7 +2,7 @@
 
 IP stands for Internet Protocol, which is a set of rules for the format of data that devices transfer over the internet. IP addresses let computers and devices communicate with one another over the internet. Without them, no one would know who’s saying what, or to whom.
 
-What is IP Addressing? Is a unique address assigned to every device that uses internet protocol on a network and helps identify those devices from one another. Analogy: This address, much like a house address, so when the post office needs to deliver a package to our house it knows where house number, street, and city it will lead the deliver personel, like IP Address it tells other devices where to send data or where is received from.
+What is IP Address? Is a unique address assigned to every device that uses internet protocol on a network and helps identify those devices from one another. Analogy: This address, much like a house address, so when the post office needs to deliver a package to our house it knows where house number, street, and city it will lead the deliver personel, like IP Address it tells other devices where to send data or where is received from.
 
 How many IP address are there in one device? 256
 But how many usable does one device have, where are the ? 253

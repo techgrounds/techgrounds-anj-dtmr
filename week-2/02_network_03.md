@@ -12,21 +12,34 @@ A network protocol are set of rules or agreement how connected devices communica
 
 ## Opdrachten
 
-- [] Identify several other protocols and their associated OSI layer. Name at least one for each layer.
+- [x] Identify several other protocols and their associated OSI layer. Name at least one for each layer.
 
-- [] Figure out who determines what protocols we use and what is needed to introduce your own protocol.
+Remember when we said that OSI and TCP/IP made the transfering of the data easier between networks? It comes of course with set of rules.
+
+| OSI          | LAYER | Protocols                                                                                |
+| ------------ | ----- | ---------------------------------------------------------------------------------------- |
+| APPLICATION  | 7     | HTTP, SMTP, DHCP, FTP, Telnet, SNMP and SMPP                                             |
+| Presentation | 6     | XDR, TLS, SSL and MIME                                                                   |
+| Session      | 5     | PPTP, SAP, L2TP and NetBIOS                                                              |
+| TRANSPORT    | 4     | Transmission Control Protocol (TCP), UDP, SPX, DCCP and SCTP                             |
+| NETWORK      | 3     | Internet Protocol (IPv4), Internet Protocol (IPv6), IPX, AppleTalk, ICMP, IPSec and IGMP |
+| DATA LINK    | 2     | ARP, CSLIP, HDLC, IEEE.802.3, PPP, X-25, SLIP, ATM, SDLS and PLIP                        |
+| PHYSICAL     | 1     | Bluetooth, PON, OTN, DSL, IEEE.802.11, IEEE.802.3, L431 and TIA 449                      |
+
+- [x] Figure out who determines what protocols we use and what is needed to introduce your own protocol.
+
+* Protocols are developed by industry-wide organizations. The ARPA (Advanced Research Project Agency) part of the US Defense program was the first organization to introduce the concept of a standardized protocol. The Internet Engineering Task Force (IETF) and the Internet Society that oversees the IETF oversee the Internet protocols, and the Internet Consortium for Assigned Names and Numbers (ICANN) controls the DNS hierarchy and the allocation of IP addresses
 
 - [x] Look into wireshark and install this program. Try and capture a bit of your own network data. Search for a protocol you know and try to understand how it functions.
 
 **TCP and UDP, are responsible for transporting internet packets.**
 ![TCP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-tcp.png)
- 
+
 **Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a computer network.**
 ![TLS](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-tls.png)
 
 **UDP utilises a ‘fire and forget’ strategy, whereas TCP utilises a ‘Three-way handshake’. TCP is therefore more reliable, but UDP is significantly faster.**
 ![UDP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-udp.png)
-
 
 ## Sources list used for solving the exercise
 
