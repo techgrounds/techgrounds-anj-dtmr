@@ -87,7 +87,6 @@ It's a new set of IP addresses that won't need a NAT or private address, because
       ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-random.PNG)
       ![Error](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-05-error.PNG)
 
-
 ## Sources list used for solving the exercise
 
 - [Notes](https://docs.google.com/document/d/1AmVU1y8qaYjyz-SMJ2NM0YXoQ703eJor/edit#)
