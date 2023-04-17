@@ -142,4 +142,4 @@ Issue 1: From understanding the different terminologies and concept about subnet
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Understoodd better that I only needed to use one range of IP address.**
-![Result](00_includes/week-2-includes/ntw-06-result.png](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-06-result.png)
+![Result](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-06-result.png)
