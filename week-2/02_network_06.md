@@ -126,6 +126,8 @@ Here's the step-by-step guide on how I approach this question:
 - [Notes](https://docs.google.com/document/d/1Fc6F6PrLet-jgRSbJ56ezrvh9pLvoBWq/edit)
 - [CIDR](https://www.youtube.com/watch?v=bgamrwBxejc)
 - [Subnetting Course](https://www.youtube.com/playlist?list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF)
+- [Subnet mask](https://hub.packtpub.com/understanding-address-spaces-and-subnetting-in-ipv4-tutorial/)
+- [Subnetting calculator](https://davidbombal.com/subnetting-concepts-calculator/)
 
 ## Overcome challenges:
 
@@ -133,9 +135,11 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: From understanding the different terminologies and concept about subnetting, I come to the conclusion that the tasks above is a whole different kind of task, I was tricked and confused, but that was really fun! because I see the pattern and steps why we needed to understand the theory first and all these concepts, that leads us to this new adventure. Though I spent a day or two understanding the how these subnetting is connected to what we learned about OSI and TCP/IP models, network devices, protocols, binary and hex, and IP address. I also come to conclusion that I still really don't get them :D. But see the diagram below to prove the basic understanding I had from the last days. Small wins, are big wins!
 
+![Issue 2](/Users/agcdtmr/Desktop/tech-engineer/techgrounds-anj-dtmr/00_includes/week-2-includes/ntw-06-issue2.png): My understanding was wrong, I thought I need to use 3 different ranges of IP addresses. Before I began doing the next task, I ask my team mates to run through my this diagram with me, and tell me if my understanding and their understandings are align. They told me how I can reedit it better and repeat what they said, so that they would know that I understood correctly.
+
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Network Architecture Diagram](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-06-result.png)
+**Understand better that I only needed to use one range of IP address.**
+![Result](00_includes/week-2-includes/ntw-06-result.png)
