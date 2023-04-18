@@ -1,22 +1,27 @@
 # Networking case study
 
-Introduction
-Case studies are a little different from the regular exercises you do here at Techgrounds. Up until now every exercise has introduced a new topic, where you had to figure out how to make it work. In a case study we combine your previously learned knowledge with a real life example (or a fictional example closely resembling a real life situation).
+Steps I took to solve this task:
 
-In this case study you take the role of a network administrator setting up a network in the new office of a small e-commerce company. Of course there are multiple ways to go about this problem, but this company has specifically said that network security is extremely important to them.
-The office contains the following devices:
-A web server where our webshop is hosted
-A database with login credentials for users on the webshop
-5 workstations for the office workers
-A printer
-An AD server
-A file server containing internal documents
+1. What is Network Administrator? What is their normal roles in a company?
 
-As a network administrator you get to choose which networking devices get used.
+Network Administrator is responsible for installing, maintaining and upgrading any software or hardware required to efficiently run a computer network.0 They oversee the information technology within an organization, serving as the go-to people for major computer or technical issues. In charge of the wired and wireless networks in an organization, including the necessary hardware and software. System administrators manage the installation of hardware and software for the entire organization, including any servers, and ordering hardware for the organization.
 
-What is ?
+2. What is the role of a network administrator setting up a network in the new office of a small e-commerce company?
 
-Learned how to use these different commands:
+![Role of NA](00_includes/week-3-includes/ntw-07-role.png)
+
+3. Requirement analysis
+
+- new office means new networking of a small e-commerce company
+- network security is **extremely** important
+- office contains:
+  ● A web server where our webshop is hosted
+  ● A database with login credentials for users on the webshop
+  ● 5 workstations for the office workers
+  ● A printer
+  ● An AD server
+  ● A file server containing internal documents
+- As a network administrator you get to choose which networking devices get used.
 
 ## Key terminology
 
