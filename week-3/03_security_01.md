@@ -35,13 +35,11 @@ Closed ports have no application listening on them, though they could open up at
 
 - [x] Scan the network of your Linux machine using nmap. What do you find?
 
-[Check what I did]()
-
 - [x] Open Wireshark in Windows/MacOS Machine. Analyse what happens when you open an internet browser. (Tip: you will find that Zoom is constantly sending packets over the network. You can either turn off Zoom for a minute, or look for the packets sent by the browser between the packets sent by Zoom.)
 
 ## Sources list used for solving the exercise
 
-- [Notes]()
+- [Notes](https://drive.google.com/drive/folders/1ngTMmDk8hX61yQQGFieqFLswh6UdoEGO)
 - [Computer Security](https://bootcamp.berkeley.edu/blog/what-is-computer-security/#:~:text=But%20what%20is%20computer%20security,security%20and%20computer%20safety%20practices.)
 - [How to use the nmap command: 2-Minute Linux Tips](https://www.youtube.com/watch?v=H2vpIyStRU0)
 - [How to scan for IP addresses on your network with Linux](https://www.techrepublic.com/article/how-to-scan-for-ip-addresses-on-your-network-with-linux/)
@@ -50,14 +48,13 @@ Closed ports have no application listening on them, though they could open up at
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: Ask better questions
+[Issue 1:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-issue1.png) From this command nmap -v -sn 192.168.0.0/16 10.0.0.0/8 I received a infinite looking text the only way to stop it was to terminate the command line.
+
+Issue 2: Ask better questions
 
 - What is a raw IP packets? How does it differ from IP or packets?
-  Issue 2:
 
-Issue 3: nmap -v -sn 192.168.0.0/16 10.0.0.0/8
-
-Issue 4: The only documentary I could find and understand about nMap was the one's how to install it. I tried the man nmap command and found out it also works with nmap. By reading the documentary + the resources about I learned how to use these different commands, I made sure I to update my Linux machine first:
+Issue 3: The only documentary I could find and understand about nMap was the one's how to install it. I tried the man nmap command and found out it also works with nmap. By reading the documentary + the resources about I learned how to use these different commands, I made sure I to update my Linux machine first:
 
 ```
 sudo apt-get update
@@ -73,5 +70,28 @@ sudo nmap -sT -O 10.171.154.221/22
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Because I could not find an easy read documentation about the different nmap commands, I ask ChatGPT:**
-![Label]()
+**Because I could not find an easy read documentation about the different nmap commands, I ask ChatGPT the explanation:**
+![nmap](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-chatgpt.png)
+
+**Played around these commands**
+![nmap](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-iflist.png)
+
+![nmap](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-nmap.png)
+
+![nmap](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-scan.png)
+
+![nmap](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-sn.png)
+
+![nmap](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-sp.png)
+
+![nmap](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-st-o-a.png)
+
+![nmap](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-st-o.png)
+
+**Monitored wireshark**
+![zoom & wireshark](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-wireshark.png)
+
+
+
+
+
