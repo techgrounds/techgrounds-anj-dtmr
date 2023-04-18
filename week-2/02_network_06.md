@@ -128,6 +128,7 @@ Here's the step-by-step guide on how I approach this question:
 - [Subnetting Course](https://www.youtube.com/playlist?list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF)
 - [Subnet mask](https://hub.packtpub.com/understanding-address-spaces-and-subnetting-in-ipv4-tutorial/)
 - [Subnetting calculator](https://davidbombal.com/subnetting-concepts-calculator/)
+- [Beer:30](https://www.youtube.com/watch?v=oopkClg1kxM)
 
 ## Overcome challenges:
 
