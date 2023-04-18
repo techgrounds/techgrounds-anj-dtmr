@@ -46,14 +46,15 @@ Learned how to use these different commands:
 
 Short description of the challeges encountered, and how I solved them:
 
-## Issue 1: Ask better questions
+Issue 1: Ask better questions
 
 -
-- Issue 2:
-  Issue 3:
-  Issue 4:
-  Issue 5:
-  Issue 6:
+
+Issue 2:
+Issue 3:
+Issue 4:
+Issue 5:
+Issue 6:
 
 ## Results
 
