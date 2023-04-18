@@ -16,6 +16,30 @@ Here you may find **all the repositories** I did during the training
 - [Bash scripting](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_07.md)
 - [Cron Jobs](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_08.md)
 
+**Week 2:**
+
+- [OSI Stack](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_01.md)
+- [Network Devices](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_02.md)
+- [Protocols](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_03.md)
+- [Counting in Binary and Hex](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_04.md)
+- [IP Addresses](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_05.md)
+- [Subnetting](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_06.md)
+- [Subnetting Presentation](https://www.canva.com/design/DAFgCHe6Xbc/Tqp50zekrvO3GKFVojH6oQ/edit?analyticsCorrelationId=603ff8f7-2f7e-4212-bfc5-a303ee06036b)
+
+
+**Week 3:**
+
+- [Networking case study]()
+- [Network Detection]()
+- [Firewalls]()
+- [Identity and Access Management]()
+- [Symmetric Encryption]()
+- [Assymetric Encryption]()
+- [Public Key Infrastructure]()
+- [Passwords]()
+- [Detection, response and analysis]()
+
+
 ## How my files are organized
 
 ```
