@@ -88,7 +88,7 @@ Brief description of the result of the exercises. An image can speak more than a
 
 ![nmap](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-st-o.png)
 
-**Monitored wireshark**
+**Monitored wireshark acivity when I opened and close zoom and browsers**
 ![zoom & wireshark](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-wireshark.png)
 
 
