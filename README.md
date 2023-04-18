@@ -42,13 +42,18 @@ root
  |  |- 02_network_05
  |  |- 02_network_06
  | 
+ |- week-3
+ |  |- 03_network_07
+ |  |- 03_security_01
+ |  |- 03_security_02
+ |  |- 03_security_03
+ |  |- 03_security_04
+ |  |- 03_security_05
+ |  |- 03_security_06
+ |  |- 03_security_07
+ |  |- 03_security_08
  |
  |
- |
- |- 02_Cloud_1
- |- 02_Cloud_2
- |- 02_Cloud_⋮
- |- 02_Cloud_6
  |
  |- 03_Project
  |  |- Code
