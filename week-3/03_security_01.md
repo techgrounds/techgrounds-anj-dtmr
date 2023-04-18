@@ -57,9 +57,7 @@ Issue 1: Ask better questions
 
 Issue 3: nmap -v -sn 192.168.0.0/16 10.0.0.0/8
 
-Issue 4: The only documentary I could find and understand about nMap was the one's how to install it. I tried the man nmap command and found out it also works with nmap. By reading the documentary + the resources about I earned how to use these different commands:
-
-I made sure I to update my Linux machine first.
+Issue 4: The only documentary I could find and understand about nMap was the one's how to install it. I tried the man nmap command and found out it also works with nmap. By reading the documentary + the resources about I learned how to use these different commands, I made sure I to update my Linux machine first:
 
 ```
 sudo apt-get update
