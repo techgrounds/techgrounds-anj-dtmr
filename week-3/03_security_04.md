@@ -64,4 +64,4 @@ Issue 2: By watching a lot of video about Encryption, I began to conclude that I
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Task done! Made a fun game too**
-![Label]()
+![cipher](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-04-result.png)
