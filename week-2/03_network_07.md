@@ -43,7 +43,7 @@ Network Administrator is responsible for installing, maintaining and upgrading a
 - [x] Design a network architecture for the above use case.
 - [x] Explain your design decisions
 
-Security is extremely important for this company, so I research how can network be protected, what kind of devices/software used in the current time. In this case, we can use firewall. I separated the network base of which of the devices are for WAN and LAN. I found out that I can use DMZ to protect both of my internal and external networks. So that even though an attacker could reach my external network, I have another protection, so it can not easily affect the internal network.
+Security is extremely important for this company, so I research how can network be protected, what kind of devices/software used in the current time. In this case, we can use firewall. I separated the network base of which of the devices are for WAN and LAN. I found out that I can use DMZ to protect both of my internal and external networks. So that even though an attacker could reach my external network, I have another protection, it wont easily reach and affect the internal network.
 
 ## Sources list used for solving the exercise
 
