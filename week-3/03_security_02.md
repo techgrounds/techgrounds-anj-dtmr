@@ -84,7 +84,7 @@ sudo ufw status
 ```
 
 ![Deny](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-deny.png)
-![Deny]([sec-02-deny2.png](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-deny2.png))
+![Deny](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-deny2.png)
 
 
 ## Sources list used for solving the exercise
