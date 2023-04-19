@@ -108,14 +108,14 @@ Here's the step-by-step guide on how I approach this question:
 
 5. I note down all the confusions and questions I have:
 
-- What is the purpose of configuring a firewall or router in a NAT network?
-- What is the purpose of a NAT gateway in a network?
-- Which subnet requires outbound traffic to be translated by the NAT gateway in a typical NAT network?
-- What is the purpose of configuring an internet gateway in a NAT network?
-- What is the difference between a public subnet and a private subnet in a NAT network?
-- Why is it important to place a firewall or router between the private subnet and the public subnet?
-- What is switch and where should I place switch? Should I place a switch in this network topology?
-- Why need to convert ip address to binary for subnetting? IP addresses are represented in decimal format, but computers and networking devices communicate using binary. To properly subnet a network, we need to identify the network portion and host portion of an IP address using binary values, which requires converting the IP address to binary format. That the computer understand
+- [ ] What is the purpose of configuring a firewall or router in a NAT network?
+- [ ] What is the purpose of a NAT gateway in a network?
+- [ ] Which subnet requires outbound traffic to be translated by the NAT gateway in a typical NAT network?
+- [ ] What is the purpose of configuring an internet gateway in a NAT network?
+- [ ] What is the difference between a public subnet and a private subnet in a NAT network?
+- [ ] Why is it important to place a firewall or router between the private subnet and the public subnet?
+- [ ] What is switch and where should I place switch? Should I place a switch in this network topology?
+- [ ] Why need to convert ip address to binary for subnetting? IP addresses are represented in decimal format, but computers and networking devices communicate using binary. To properly subnet a network, we need to identify the network portion and host portion of an IP address using binary values, which requires converting the IP address to binary format. That the computer understand
 
 [Check the whole steps here](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-06-steps.png)
 
