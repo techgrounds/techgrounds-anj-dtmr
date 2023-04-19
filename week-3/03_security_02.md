@@ -99,8 +99,9 @@ Short description of the challeges encountered, and how I solved them:
 Issue 1: Asking better questions
 
 - [ ] what's the difference between sudo ufw allow ssh and sudo ufw allow 22? I accidentally used them both, what's happening in my machine then? How can I troubleshoot to know that something is working incorrectly?
-- [ ] why do I need to "deny the incoming" first then "allow outgoing"? Which incoming? The packets? Why do we need to deny incoming before changing the rules?
 - [ ] Why we use servername+web_port as the domain name? How do we compare it with IP address network and host portions?
+- [ ] why do I need to "deny the incoming" first then "allow outgoing"? Which incoming? The packets? Why do we need to deny incoming before changing the rules?
+![Chatgpt](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-chatgpt.png)
 
 Issue 2: I thought using ip addr show command that I am getting the right IP address to use for the default page, after trying out a lot of combinations from different articles. In the end I asked my team mates on what resources they have for this.
 
