@@ -52,7 +52,7 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 2: Ask better questions
 
-- What is a raw IP packets? How does it differ from IP or packets?
+- [ ] What is a raw IP packets? How does it differ from IP or packets?
 
 Issue 3: The only documentary I could find and understand about nMap was the one's how to install it. I tried the man nmap command and found out it also works with nmap. By reading the documentary + the resources about I learned how to use these different commands, I made sure I to update my Linux machine first:
 
@@ -90,8 +90,3 @@ Brief description of the result of the exercises. An image can speak more than a
 
 **Monitored wireshark acivity when I opened and close zoom and browsers**
 ![zoom & wireshark](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-01-wireshark.png)
-
-
-
-
-
