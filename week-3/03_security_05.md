@@ -24,8 +24,7 @@
 
 - [x] Send an asymmetrically encrypted message to one of your peers via the public Slack channel. They should be able to decrypt the message using a key. The recipient should be able to read the message, but it should remain a secret to everyone else. You are not allowed to use any private messages or other communication channels besides the public Slack channel.
 
-1st Message:
-eFPFGKw1dXwPx7KPK1SaczNdUVUNWocqvPCUgR7Ph3NU0VJTYNH/Zu9Aaf1UEn1jViPTzlBTDRi0zJEbueeBTaKNCy4j5LwgSbVQRsr5AeY0VO4AT9B6zJWKJi44bLBb8xXIndxvcBG0f8vfGLymbKr/7pM2Z8IoPLSLM/Exm5A=
+- Secret Message: eFPFGKw1dXwPx7KPK1SaczNdUVUNWocqvPCUgR7Ph3NU0VJTYNH/Zu9Aaf1UEn1jViPTzlBTDRi0zJEbueeBTaKNCy4j5LwgSbVQRsr5AeY0VO4AT9B6zJWKJi44bLBb8xXIndxvcBG0f8vfGLymbKr/7pM2Z8IoPLSLM/Exm5A=
 
 ![Message](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-05-result1.png)
 
