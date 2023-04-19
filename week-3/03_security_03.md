@@ -16,8 +16,8 @@
 
 For simpler explanation and analogy, I ask ChatGPT:
 
-![]()
-![]()
+![Simpler explanation](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-03.png)
+![Analogy](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-03-analogy.png)
 
 ## Sources list used for solving the exercise
 
