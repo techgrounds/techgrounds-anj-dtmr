@@ -36,7 +36,7 @@ cipher: 4f6+LZ88hvDyiDK7BKj8qFV1ESwdBsgtSIxJm8tmMtTai934J0Q+ww==
 key: decipher
 clue: This is not the end. PNG steganography.
 
-3. I generated an AI image using [bruzu](https://bruzu.com/demos/ai-image-generator-from-text). Then I used a [website](https://incoherency.co.uk/image-steganography/#unhide) to hide my final message. My peers need to unhide the photo using [image steganography](https://incoherency.co.uk/image-steganography/)
+3. I generated an AI image using [bruzu](https://bruzu.com/demos/ai-image-generator-from-text). Then I used a [website](https://incoherency.co.uk/image-steganography/#unhide) to hide my final message. My peers need to unhide the photo using [image steganography](https://incoherency.co.uk/image-steganography/), to finally solve the hidden message.
 
 - [x] Analyse the shortcomings of symmetric encryption for sending messages.
 
