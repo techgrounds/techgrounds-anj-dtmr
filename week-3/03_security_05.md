@@ -29,7 +29,7 @@ Private key = RSA_Private_Key (Saved my private rsa key to a .env file, then tol
 1st Message:
 eFPFGKw1dXwPx7KPK1SaczNdUVUNWocqvPCUgR7Ph3NU0VJTYNH/Zu9Aaf1UEn1jViPTzlBTDRi0zJEbueeBTaKNCy4j5LwgSbVQRsr5AeY0VO4AT9B6zJWKJi44bLBb8xXIndxvcBG0f8vfGLymbKr/7pM2Z8IoPLSLM/Exm5A=
 
-![Result1]()
+![Message](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-05-result1.png)
 
 - [x] Analyse the difference between this method and symmetric encryption.
 
@@ -49,5 +49,5 @@ Issue 1: I think without my teammates discussion about the task, I can't do this
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Label]()
+**Played around my "secret" message using the public and private key:**
+![result](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-05-result.png)
