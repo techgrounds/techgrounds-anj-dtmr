@@ -1,10 +1,5 @@
 # Firewalls
 
-What is Firewalls?
-
-Access Control List: Permission (Allowed/Denied), IP Address, Protocol, Destination, Port
-
-A web server is a software program that responds to requests from web browsers and serves web pages to them over the internet or a local network. When you enter a website URL into a web browser, the browser sends a request to the web server hosting that website, and the server responds by sending back the web page that you requested. The web server is responsible for processing these requests, finding the requested web page or resource, and delivering it to the client web browser. Some examples of popular web servers include Apache, Nginx, and Microsoft IIS.
 
 **Firewall Types:**
 
@@ -14,6 +9,7 @@ A web server is a software program that responds to requests from web browsers a
 ## Key terminology
 
 - [ ] De verschillende types firewall
+- [ ] Access Control List: Permission (Allowed/Denied), IP Address, Protocol, Destination, Port
 - [ ] stateful / stateless
 - [ ] hardware / software
 - [ ] CentOS en REHL
@@ -24,6 +20,7 @@ A web server is a software program that responds to requests from web browsers a
 - [ ] firewall daemon (firewalld)
 - [ ] iptables
 - [ ] HTTP traffic / http-verkeer
+- [ ] A web server is a software program that responds to requests from web browsers and serves web pages to them over the internet or a local network. When you enter a website URL into a web browser, the browser sends a request to the web server hosting that website, and the server responds by sending back the web page that you requested. The web server is responsible for processing these requests, finding the requested web page or resource, and delivering it to the client web browser. Some examples of popular web servers include Apache, Nginx, and Microsoft IIS.
 
 ## Benodigdheden
 
@@ -40,14 +37,14 @@ A web server is a software program that responds to requests from web browsers a
 Here's the step by step process how I completed these tasks:
 
 1. Familiarized myself with the different key terminologies and how they work and relate to each other.
-2. Ubuntu comes with Apache pre-installed. I umade sure I updated/installed Apache (a web server)
+2.  I made sure I updated/installed Apache (a web server) of my Ubuntu VM. I am certain we can use other web server aside form Apache but because Ubuntu comes with Apache pre-installed, let's not make our lives complicated.
 
 ```
 sudo apt-get update
 sudo apt-get install apache2
 ```
 
-3. Start my web server
+3. To verify if all the installations are complete. I start my web server default page. To view the default page installed with the web server, I used this combination http://servername:web_port(I got this numbers from our learning coach who provided the VM environment details).
 
 ```
 sudo service apache2 start
@@ -55,9 +52,10 @@ sudo service apache2 status
 apachectl configtest
 ```
 
-4. View the default page installed with the web server using this combination servername:web_port(I got this numbers from our learning coach who provided the VM environment details)
+![Apache Default Page](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-defaultpage.png)
 
-5. Research about Ubuntu's built-in firewall
+
+4. Research about Ubuntu's built-in firewall. Check the current status of ufw.  
 
 sudo ufw default deny incoming - blocks all incoming traffic
 sudo ufw default allow outgoing - allows all outgoing traffic
@@ -75,13 +73,19 @@ sudo ufw status
 
 ```
 
-6.
+![ufw](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-ufw.png)
+
+5. Set up firewall rules to block web traffic but allow SSH traffic. Verified this by running the default page again, it should give an error. And I should still able to able to SSH into the VM.
 
 ```
 sudo ufw deny Apache
 sudo ufw status
 
 ```
+
+![Deny](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-deny.png)
+![Deny]([sec-02-deny2.png](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-deny2.png))
+
 
 ## Sources list used for solving the exercise
 
@@ -104,11 +108,12 @@ Issue 1: Asking better questions
 
 Issue 2: I thought using ip addr show command that I am getting the right IP address to use for the default page, after trying out a lot of combinations from different articles. In the end I asked my team mates on what resources they have for this.
 
-Issue 3: I accidentally used both of these commands: sudo ufw allow ssh and sudo ufw allow 22. I used the command sudo ufw reset to restart all the steps I did. I was hesitant at first if I should do a reset, but I was too curious not to try. No harm was done. Gelukkig maar.
+[Issue 3:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-issue3.png) I accidentally used both of these commands: sudo ufw allow ssh and sudo ufw allow 22. I used the command sudo ufw reset to restart all the steps I did. I was hesitant at first if I should do a reset, but I was too curious not to try. No harm was done. Gelukkig maar.
 
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Label]()
+**Reset and configure my webserver, ufw and rules successfully:**
+![Result](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-reset.png)
+
