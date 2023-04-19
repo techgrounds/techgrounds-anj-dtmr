@@ -29,9 +29,9 @@ Here you may find **all the repositories** I did during the training
 
 **Week 3:**
 
-- [Networking case study]()
-- [Network Detection]()
-- [Firewalls]()
+- [Networking case study](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_network_07.md)
+- [Network Detection](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_01.md)
+- [Firewalls](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_02.md)
 - [Identity and Access Management]()
 - [Symmetric Encryption]()
 - [Assymetric Encryption]()
