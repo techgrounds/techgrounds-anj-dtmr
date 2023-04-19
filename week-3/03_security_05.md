@@ -18,11 +18,9 @@
 
 - [x] Generate a key pair.
 
-Public key:
+- Public key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCfQR1FJnvzV85vEUn0l/gXXRUXei+WQdXC9j8zbtNwb+w1CFVGo8yPuYftnvHeOIBgGrtj24wu0rKnWX58NndBDkfa91UEjoqsx7Wn5Eivv6C991FkUuX3iLSJ4WKDCU4uEPDpuSbLJYlg9EoyHi8XOYfSfSt0rtwFXvJdfHUrLQIDAQAB
 
-MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCfQR1FJnvzV85vEUn0l/gXXRUXei+WQdXC9j8zbtNwb+w1CFVGo8yPuYftnvHeOIBgGrtj24wu0rKnWX58NndBDkfa91UEjoqsx7Wn5Eivv6C991FkUuX3iLSJ4WKDCU4uEPDpuSbLJYlg9EoyHi8XOYfSfSt0rtwFXvJdfHUrLQIDAQAB
-
-Private key = RSA_Private_Key (Saved my private rsa key to a .env file, then told my .gitignore file to ignore it)
+- Private key = RSA_Private_Key (Saved my private rsa key to a .env file, then told my .gitignore file to ignore it)
 
 - [x] Send an asymmetrically encrypted message to one of your peers via the public Slack channel. They should be able to decrypt the message using a key. The recipient should be able to read the message, but it should remain a secret to everyone else. You are not allowed to use any private messages or other communication channels besides the public Slack channel.
 
