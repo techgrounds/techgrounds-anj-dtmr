@@ -5,3 +5,4 @@
 *.gdoc
 *.idea
 *.DS_Store
+.env
