@@ -1,6 +1,5 @@
 # Firewalls
 
-
 **Firewall Types:**
 
 - Host-based firewall
@@ -37,7 +36,7 @@
 Here's the step by step process how I completed these tasks:
 
 1. Familiarized myself with the different key terminologies and how they work and relate to each other.
-2.  I made sure I updated/installed Apache (a web server) of my Ubuntu VM. I am certain we can use other web server aside form Apache but because Ubuntu comes with Apache pre-installed, let's not make our lives complicated.
+2. I made sure I updated/installed Apache (a web server) of my Ubuntu VM. I am certain we can use other web server aside form Apache but because Ubuntu comes with Apache pre-installed, let's not make our lives complicated.
 
 ```
 sudo apt-get update
@@ -54,8 +53,7 @@ apachectl configtest
 
 ![Apache Default Page](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-defaultpage.png)
 
-
-4. Research about Ubuntu's built-in firewall. Check the current status of ufw.  
+4. Research about Ubuntu's built-in firewall. Check the current status of ufw.
 
 sudo ufw default deny incoming - blocks all incoming traffic
 sudo ufw default allow outgoing - allows all outgoing traffic
@@ -86,7 +84,6 @@ sudo ufw status
 ![Deny](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-deny.png)
 ![Deny](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-deny2.png)
 
-
 ## Sources list used for solving the exercise
 
 - [Notes](https://drive.google.com/drive/folders/1ngTMmDk8hX61yQQGFieqFLswh6UdoEGO)
@@ -101,9 +98,9 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: Asking better questions
 
-- what's the difference between sudo ufw allow ssh and sudo ufw allow 22? I accidentally used them both, what's happening in my machine then? How can I troubleshoot to know that something is working incorrectly?
-- why do I need to "deny the incoming" first then "allow outgoing"? Which incoming? The packets? Why do we need to deny incoming before changing the rules?
-- Why we use servername+web_port as the domain name? How do we compare it with IP address network and host portions?
+- [ ] what's the difference between sudo ufw allow ssh and sudo ufw allow 22? I accidentally used them both, what's happening in my machine then? How can I troubleshoot to know that something is working incorrectly?
+- [ ] why do I need to "deny the incoming" first then "allow outgoing"? Which incoming? The packets? Why do we need to deny incoming before changing the rules?
+- [ ] Why we use servername+web_port as the domain name? How do we compare it with IP address network and host portions?
 
 Issue 2: I thought using ip addr show command that I am getting the right IP address to use for the default page, after trying out a lot of combinations from different articles. In the end I asked my team mates on what resources they have for this.
 
@@ -115,4 +112,3 @@ Brief description of the result of the exercises. An image can speak more than a
 
 **Reset and configure my webserver, ufw and rules successfully:**
 ![Result](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-02-reset.png)
-
