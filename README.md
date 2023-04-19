@@ -25,11 +25,11 @@ Here you may find **all the repositories** I did during the training
 - [IP Addresses](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_05.md)
 - [Subnetting](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_06.md)
 - [Subnetting Presentation](https://www.canva.com/design/DAFgCHe6Xbc/Tqp50zekrvO3GKFVojH6oQ/edit?analyticsCorrelationId=603ff8f7-2f7e-4212-bfc5-a303ee06036b)
+- [Networking case study](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/03_network_07.md)
 
 
 **Week 3:**
 
-- [Networking case study](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_network_07.md)
 - [Network Detection](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_01.md)
 - [Firewalls](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_02.md)
 - [Identity and Access Management](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_03.md)
