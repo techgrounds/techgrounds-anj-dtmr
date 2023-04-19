@@ -8,7 +8,7 @@ Network Administrator is responsible for installing, maintaining and upgrading a
 
 2. What is the role of a network administrator setting up a network in the new office of a small e-commerce company?
 
-![Role of NA](00_includes/week-3-includes/ntw-07-role.png)
+![Role of NA](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-07-role.png)
 
 3. Requirement analysis
 
@@ -61,4 +61,4 @@ Issue 1: I have to be honest, drawing network architecture is the most challengi
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Get to understand more of networking:**
-![Label]()
+![result](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-07-result.png)
