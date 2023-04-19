@@ -65,9 +65,9 @@ root
  |  |- 02_network_04
  |  |- 02_network_05
  |  |- 02_network_06
+ |  |- 03_network_07
  | 
  |- week-3
- |  |- 03_network_07
  |  |- 03_security_01
  |  |- 03_security_02
  |  |- 03_security_03
