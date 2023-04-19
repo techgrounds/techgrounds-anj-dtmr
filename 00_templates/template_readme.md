@@ -14,21 +14,13 @@ Learned how to use these different commands:
 
 ## Opdrachten
 
-### Opdracht 1:
-
 - [x]
 
 [Check what I did]()
 
-### Opdracht 2:
-
 - [x]
 
 [Take a peek]()
-
-## Opdrachten
-
-### Opdracht:
 
 - [x]
 
