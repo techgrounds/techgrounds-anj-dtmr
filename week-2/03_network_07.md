@@ -19,13 +19,20 @@ Network Administrator is responsible for installing, maintaining and upgrading a
   ● A database with login credentials for users on the webshop
   ● 5 workstations for the office workers
   ● A printer
-  ● An AD server
+  ● An Active Directory (AD) Server
   ● A file server containing internal documents
 - As a network administrator you get to choose which networking devices get used.
 
+4. Prioritize and separate my network devices into internal and external networks.
+
 ## Key terminology
 
-- [ ]
+- [ ] Firewall
+- [ ] Database Server
+- [ ] DMZ (Demilitarized Zone) network
+- [ ] Active Directory (AD) Server
+- [ ] File Server
+- [ ] Firewall
 
 ## Benodigdheden
 
@@ -34,31 +41,24 @@ Network Administrator is responsible for installing, maintaining and upgrading a
 ## Opdrachten
 
 - [x] Design a network architecture for the above use case.
-
-[Check what I did]()
-
 - [x] Explain your design decisions
 
-[Take a peek]()
+Security is extremely important for this company, so I research how can network be protected, what kind of devices/software used in the current time. In this case, we can use firewall. I separated the network base of which of the devices are for WAN and LAN. I found out that I can use DMZ to protect both of my internal and external networks. So that even though an attacker could reach my external network, I have another protection, so it can not easily affect the internal network.
 
 ## Sources list used for solving the exercise
 
-- [Notes]()
+- [Notes](https://drive.google.com/drive/folders/1ngTMmDk8hX61yQQGFieqFLswh6UdoEGO)
+- [DMZ](https://www.youtube.com/watch?v=dqlzQXo1wqo)
 
 ## Overcome challenges:
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1:
-Issue 2:
-Issue 3:
-Issue 4:
-Issue 5:
-Issue 6:
+Issue 1: I have to be honest, drawing network architecture is the most challenging so far. What I did is read the challenges of the trainees, what kind of new terminologies are there. Aside from reading, watching a Youtube video that uses animation to visualize how networking really helps.
 
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
+**Get to understand more of networking:**
 ![Label]()
