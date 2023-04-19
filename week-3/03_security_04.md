@@ -32,9 +32,9 @@ Here's the step by step process how I completed the 2nd task:
 
 2. Choose a symmetric encryption algorithm (like Advanced Encryption Standard (AES)) to encrypt a message. In this task I used [Blowfish](http://sladex.org/blowfish.js/) to generate a random encryption key to encrypt the message.
 
-cipher: 4f6+LZ88hvDyiDK7BKj8qFV1ESwdBsgtSIxJm8tmMtTai934J0Q+ww==
-key: decipher
-clue: This is not the end. PNG steganography.
+- cipher: 4f6+LZ88hvDyiDK7BKj8qFV1ESwdBsgtSIxJm8tmMtTai934J0Q+ww==
+- key: decipher
+- clue: This is not the end. PNG steganography.
 
 3. I generated an AI image using [bruzu](https://bruzu.com/demos/ai-image-generator-from-text). Then I used a [website](https://incoherency.co.uk/image-steganography/#unhide) to hide my final message. My peers need to unhide the photo using [image steganography](https://incoherency.co.uk/image-steganography/), to finally solve the hidden message.
 
