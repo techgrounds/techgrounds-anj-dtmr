@@ -46,7 +46,7 @@ Learned how to use these different commands:
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: Ask better questions
+Issue 1: Asking better questions
 
 -
 
