@@ -16,15 +16,15 @@
 
 - [x] Create a self-signed certificate on your VM.
 
-![SSL Certificate]()
+![SSL Certificate](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-06-result.png)
 
 - [x] Analyze some certification paths of known websites (ex. techgrounds.nl / google.com/ ing.nl).
 
-![]()
+![Certs](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-06-techgrounds.png)
 
 - [x] Find the list of trusted certificate roots on your system (bonus points if you also find it in your VM).
 
-![Certs]()
+![Certs](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-06-trusted.png)
 
 Here's the step by step process how I completed the 1st task:
 
@@ -98,13 +98,15 @@ Issue 1: Asking better questions
 
 Similarly, a self-signed certificate is like a digital signature that a server uses to encrypt and authenticate its communications with clients over the internet. The server signs its own certificate using its private key, which is then used to establish an encrypted connection with clients. While the certificate isn't verified by a trusted third party, clients can still trust it if they know and recognize the server's digital signature.
 
-Issue 2: The redirection between http to htpps was not successful, I asked the help of team mates why, we run through the process from the beginning, but even after one and half hour we conclude not finding the solution. I then decided to stick what the task is and that's to create a self-signed certificate only. And move further to the next tasks.
+[Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-06-issue2.png) The redirection between http to htpps was not successful, I asked the help of team mates why, we run through the process from the beginning, but even after one and half hour we conclude not finding the solution. I then decided to stick what the task is and that's to create a self-signed certificate only. And move further to the next tasks.
 
-Issue 3: The Apache is denied that's why the default http page was not loading. I went back to the last task where we learned this, and applied the same process.
+![Issue2](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-06-issue2.1.png)
+
+[Issue 3:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-06-issue3.png) The Apache is denied that's why the default http page was not loading. I went back to the last task where we learned this, and applied the same process.
 
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Label]()
+**Successfully create a self-signed certificate:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-06-result1.png)
