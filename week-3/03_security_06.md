@@ -98,7 +98,9 @@ Issue 1: Asking better questions
 
 Similarly, a self-signed certificate is like a digital signature that a server uses to encrypt and authenticate its communications with clients over the internet. The server signs its own certificate using its private key, which is then used to establish an encrypted connection with clients. While the certificate isn't verified by a trusted third party, clients can still trust it if they know and recognize the server's digital signature.
 
-Issue 2:
+Issue 2: The redirection between http to htpps was not successful, I asked the help of team mates why, we run through the process from the beginning, but even after one and half hour we conclude not finding the solution. I then decided to stick what the task is and that's to create a self-signed certificate only. And move further to the next tasks.
+
+Issue 3: The Apache is denied that's why the default http page was not loading. I went back to the last task where we learned this, and applied the same process.
 
 ## Results
 
