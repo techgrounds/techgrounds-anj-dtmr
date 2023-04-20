@@ -27,7 +27,6 @@ Here you may find **all the repositories** I did during the training
 - [Subnetting Presentation](https://www.canva.com/design/DAFgCHe6Xbc/Tqp50zekrvO3GKFVojH6oQ/edit?analyticsCorrelationId=603ff8f7-2f7e-4212-bfc5-a303ee06036b)
 - [Networking case study](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/03_network_07.md)
 
-
 **Week 3:**
 
 - [Network Detection](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_01.md)
@@ -38,7 +37,6 @@ Here you may find **all the repositories** I did during the training
 - [Public Key Infrastructure]()
 - [Passwords]()
 - [Detection, response and analysis]()
-
 
 ## How my files are organized
 
@@ -66,7 +64,7 @@ root
  |  |- 02_network_05
  |  |- 02_network_06
  |  |- 03_network_07
- | 
+ |
  |- week-3
  |  |- 03_security_01
  |  |- 03_security_02
@@ -85,5 +83,3 @@ root
  |  |- Log
  |
 ```
-
-  <!-- |- descriptions < To prevent duplicate (inconsistent) descriptions you can use this folder and then link to it from your exercises. -->
