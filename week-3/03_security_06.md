@@ -28,7 +28,7 @@
 
 Here's the step by step process how I completed the 1st task:
 
-1. Update my virtual machine and allow Apache to open up the http and https ports using the commands below
+1. Update my virtual machine and allow Apache to open up the http and https ports using the commands below:
 
 ```
 sudo apt-get update
@@ -38,7 +38,7 @@ sudo ufw allow "Apache Full"
 sudo ufw status
 ```
 
-2. Install the SSL module: Run the following command to install the SSL module in Apache and installing OpenSSL is a prerequisite for enabling SSL in Apache, and sudo a2enmod ssl is a specific command that enables the SSL module in Apache.
+2. Install the SSL module: Run the following command to install the SSL module in Apache and install OpenSSL is a prerequisite for enabling SSL in Apache, and sudo a2enmod ssl is a specific command that enables the SSL module in Apache.
 
 ```
 sudo apt install openssl
@@ -50,7 +50,7 @@ sudo systemctl restart apache2
 sudo systemctl status apache2
 ```
 
-3. Create a certificate and private key without a pem passphrase
+3. Create a certificate and private key without a pem passphrase.
 
 ```
 sudo openssl req -x509 -newkey rsa:4096 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt -days 365 -nodes
@@ -62,7 +62,7 @@ sudo openssl req -x509 -newkey rsa:4096 -keyout /etc/ssl/private/apache-selfsign
 sudo nano /etc/apache2/sites-available/default-ssl.conf
 ```
 
-In this file, add the following lines:
+In the above file, I added the following lines:
 
 SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
 SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
@@ -108,5 +108,5 @@ Similarly, a self-signed certificate is like a digital signature that a server u
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Successfully create a self-signed certificate:**
+**Successfully created a self-signed certificate:**
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-06-result1.png)
