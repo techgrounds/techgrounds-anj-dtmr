@@ -17,6 +17,8 @@
 
 - [x] A Company makes daily backups of their database. The database is automatically recovered when a failure happens using the most recent available backup. The recovery happens on a different physical machine than the original database, and the entire process takes about 15 minutes. What is the RPO of the database?
 
+According to veritas.com RPO: Refers to the maximum file age that your organization must recover from its backup storage to resume normal operations after a disaster. RPO will determine your minimum backup frequency. For instance, if your organization’s RPO is five hours, your system must back up data at least every five hours.
+
 1. We should define what the RPO of the database is. RPO is a measure of how much data a company is willing to lose in the event of failure. Using RPO we should specify the point in time to which data must be recovered.
 
 2. In the case since the company backups of their database daily. The point in time to which data must be recovered should be 24 hours. The company decided that in an attack, they are willing to lose a maximum 1 day worth of resources, having to calculate the difference between the backups scheduling.
@@ -24,6 +26,8 @@
 3. Analysing more the case, I could not find a way of how detection, response, and analysis are directly necessary because there is no attack requiring the security implementation at the first place. I see this as prevention of the future attacks rather.
 
 - [x] An automatic failover to a backup web server has been configured for a website Because the backup has to be powered on first and has to pull the newest version of the website from GitHub, the process takes about 8 minutes. What is the RTO of the website?
+
+According to veritas.com RTO: Refers to the maximum amount of time after a disaster for your organization to recover its files from backup storage and return to normal operations. In other words, RTO is the maximum downtime amount that your organization can handle. If your organization’s RTO is two hours, it cannot afford to be down for longer than that.
 
 1. Again we should first define what RTO of the website is. Recovery Time Objective is the maximum time allowed to recover a system or service after an outage or disaster. In this case, the RTO of the website is 8 minutes. This means that the website should be back up and running within 8 minutes after a failure of the primary web server.
 
@@ -42,6 +46,7 @@ Why is it important to analize and document these kinds of incident? Evaluating 
 ## Sources list used for solving the exercise
 
 - [Notes](https://drive.google.com/drive/folders/1ngTMmDk8hX61yQQGFieqFLswh6UdoEGO)
+- [Backup and Recovery of Data: The Essential Guide](https://www.veritas.com/information-center/data-backup-and-recovery)
 
 ## Overcome challenges:
 
