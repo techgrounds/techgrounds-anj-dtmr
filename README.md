@@ -6,6 +6,7 @@ Here you may find **all the repositories** I did during the training
 
 **Week 1:**
 
+- [StandUp Notes](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/00_scrumnotes/week-1-scrumnotes)
 - [Git and GitHub](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_git_github.md)
 - [Set up SSH-connection to the virtual machine using Linux machine](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_01.md)
 - [Linux Machine Files and Directories](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-1/01_linux_02.md)
@@ -18,6 +19,7 @@ Here you may find **all the repositories** I did during the training
 
 **Week 2:**
 
+- [StandUp Notes](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/00_scrumnotes/week-2-scrumnotes)
 - [OSI Stack](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_01.md)
 - [Network Devices](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_02.md)
 - [Protocols](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_03.md)
@@ -29,6 +31,7 @@ Here you may find **all the repositories** I did during the training
 
 **Week 3:**
 
+- [StandUp Notes](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/00_scrumnotes/week-3-scrumnotes)
 - [Network Detection](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_01.md)
 - [Firewalls](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_02.md)
 - [Identity and Access Management](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_03.md)
