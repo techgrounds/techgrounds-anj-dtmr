@@ -24,8 +24,8 @@ Here you may find **all the repositories** I did during the training
 - [Counting in Binary and Hex](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_04.md)
 - [IP Addresses](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_05.md)
 - [Subnetting](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_06.md)
-- [Subnetting Presentation](https://www.canva.com/design/DAFgCHe6Xbc/Tqp50zekrvO3GKFVojH6oQ/edit?analyticsCorrelationId=603ff8f7-2f7e-4212-bfc5-a303ee06036b)
 - [Networking case study](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/03_network_07.md)
+- [Subnetting Presentation](https://www.canva.com/design/DAFgCHe6Xbc/Tqp50zekrvO3GKFVojH6oQ/edit?analyticsCorrelationId=603ff8f7-2f7e-4212-bfc5-a303ee06036b)
 
 **Week 3:**
 
@@ -36,14 +36,15 @@ Here you may find **all the repositories** I did during the training
 - [Assymetric Encryption](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_05.md)
 - [Public Key Infrastructure](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_06.md)
 - [Passwords](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_07.md)
-- [Detection, response and analysis]()
+- [Detection, response and analysis](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_08.md)
 
 ## How my files are organized
 
 ```
 root
- |- 00_includes < A place for all the screenshots
- |- 00_templates < A place to find all my customized templates
+ |- 00_includes < The directory for all the screenshots
+ |- 00_templates < The directory to find all my customized templates
+ |- 00_scrumnotes < The directory for all the standup and other notes
  |
  |- week-1
  |  |- 01_git_github
