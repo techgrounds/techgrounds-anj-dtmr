@@ -32,7 +32,7 @@
 
 ## Sources list used for solving the exercise
 
-- [Notes](https://drive.google.com/drive/folders/1ngTMmDk8hX61yQQGFieqFLswh6UdoEGO)
+- [Notes](https://docs.google.com/document/d/1VThJ-ab-pm3doub9Y_zXVP-i7jSp5PMd/edit?usp=share_link&ouid=107074379260818287409&rtpof=true&sd=true)
 
 ## Overcome challenges:
 
