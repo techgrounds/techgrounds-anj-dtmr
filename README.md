@@ -34,8 +34,8 @@ Here you may find **all the repositories** I did during the training
 - [Identity and Access Management](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_03.md)
 - [Symmetric Encryption](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_04.md)
 - [Assymetric Encryption](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_05.md)
-- [Public Key Infrastructure]()
-- [Passwords]()
+- [Public Key Infrastructure](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_06.md)
+- [Passwords](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_07.md)
 - [Detection, response and analysis]()
 
 ## How my files are organized
