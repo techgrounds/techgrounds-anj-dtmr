@@ -3,9 +3,12 @@
 ## Key terminology
 
 - [ ] Public Key Infrastructure (PKI)
+- [ ] SSL (Secure Socket Layer)
+- [ ] Hashing Algorithm
+- [ ] certificate authority
 - [ ] digital certificates
 - [ ] public-key encryption
-- [ ] X.509 standard.
+- [ ] X.509 standard
 
 ## Benodigdheden
 
