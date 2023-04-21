@@ -36,14 +36,15 @@ Here you may find **all the repositories** I did during the training
 - [Assymetric Encryption](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_05.md)
 - [Public Key Infrastructure](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_06.md)
 - [Passwords](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_07.md)
-- [Detection, response and analysis]()
+- [Detection, response and analysis](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_08.md)
 
 ## How my files are organized
 
 ```
 root
- |- 00_includes < A place for all the screenshots
- |- 00_templates < A place to find all my customized templates
+ |- 00_includes < The directory for all the screenshots
+ |- 00_templates < The directory to find all my customized templates
+ |- 00_scrumnotes < The directory for all the standup and other notes
  |
  |- week-1
  |  |- 01_git_github
