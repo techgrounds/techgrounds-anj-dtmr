@@ -24,11 +24,10 @@
 
 - [x] Create a new user in Linux with the password 12345. Look up the hash in a Rainbow Table.
 
-[]()
+![New User](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-07-new.png)
 
 - [x] Despite the bad password, and the fact that Linux uses common hashing algorithms, you won’t get a match in the Rainbow Table. This is because the password is salted. To understand how salting works, find a peer who has the same password in /etc/shadow, and compare hashes.
 
-![New User](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-07-new.png)
 ![Salted Password](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-07-pass.png)
 
 ## Sources list used for solving the exercise
