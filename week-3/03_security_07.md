@@ -19,8 +19,8 @@
 
 - [x] Below are two MD5 password hashes. One is a weak password, the other is a string of 16 randomly generated characters. Try to look up both hashes in a Rainbow Table.
 
-[1. 03F6D7D1D9AAE7160C05F71CE485AD31]()
-[2. 03D086C9B98F90D628F2D1BD84CFA6CA]()
+[1. 03F6D7D1D9AAE7160C05F71CE485AD31](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-07-md5.png)
+[2. 03D086C9B98F90D628F2D1BD84CFA6CA](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-07-md51.png)
 
 - [x] Create a new user in Linux with the password 12345. Look up the hash in a Rainbow Table.
 
@@ -28,7 +28,8 @@
 
 - [x] Despite the bad password, and the fact that Linux uses common hashing algorithms, you won’t get a match in the Rainbow Table. This is because the password is salted. To understand how salting works, find a peer who has the same password in /etc/shadow, and compare hashes.
 
-[]()
+![New User](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-07-new.png)
+![Salted Password](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-07-pass.png)
 
 ## Sources list used for solving the exercise
 
@@ -50,5 +51,5 @@ Issue 1: Asking better questions
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Label]()
+**This is the new user's salted password, it cannot be encrypted by a Rainbow Table:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-07-salt.png)
