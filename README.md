@@ -24,8 +24,8 @@ Here you may find **all the repositories** I did during the training
 - [Counting in Binary and Hex](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_04.md)
 - [IP Addresses](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_05.md)
 - [Subnetting](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/02_network_06.md)
-- [Subnetting Presentation](https://www.canva.com/design/DAFgCHe6Xbc/Tqp50zekrvO3GKFVojH6oQ/edit?analyticsCorrelationId=603ff8f7-2f7e-4212-bfc5-a303ee06036b)
 - [Networking case study](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-2/03_network_07.md)
+- [Subnetting Presentation](https://www.canva.com/design/DAFgCHe6Xbc/Tqp50zekrvO3GKFVojH6oQ/edit?analyticsCorrelationId=603ff8f7-2f7e-4212-bfc5-a303ee06036b)
 
 **Week 3:**
 
