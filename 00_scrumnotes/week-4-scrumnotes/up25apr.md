@@ -49,7 +49,7 @@ Team 1:
 
 - Danny: tot aws opdracht 7 bereikt
 - Akram: tot opdracht 6 bereikt
-- Rogier: tot opdracht 6 bereikt
+- Rogier: tot opdracht 6 bereikt, probleem met inloggen met Azure VM via powershell maar iedereen in de team was klaar om hem te helpen. Het was gelukt uiteindelijk
 - Angeline:
 - [x] Brainstorm for Scrum Meeting
 - [x] vandaag bereikt: tot opdracht 6
