@@ -31,11 +31,13 @@ Team #:
 - [ ] pomodoro dan kan tot avond werken, lange pause nemen
 - [ ] 25 minuten rabbit hole (theory) en time boxing daarna opdracht
 - [ ] 12:30 samen komen - samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
+- [ ] 15:30 samen komen
 - [ ] soft skills doel vandaag:
 - [ ] Monday: Group Presentation
 - [ ] Thursday: Presentation delen
 - [ ] Wednesday: Individual Presentatie en feedback geven
 - [ ] Friday: KC
+- [ ] Friday: Studiedag-AWS met Danny kijken
 - [ ] Friday: Opdrachten Deadline
 - [ ] Friday: Retrospective
 - [ ] Feedback geven:
@@ -61,7 +63,7 @@ Team #:
 - Angeline:
 - [ ] Brainstorm for Scrum Meeting
 - [ ] vandaag bereikt:
-- [ ] self-reflectie:
+- [ ] self-reflection:
 - [ ] vanavond: stop om 17u
 
 ### Other Notes
