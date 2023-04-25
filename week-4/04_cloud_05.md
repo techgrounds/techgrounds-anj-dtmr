@@ -18,19 +18,34 @@
 ### Opdracht 1
 
 - [x] Maak een Azure Storage Account. Zorg dat alleen jij toegang hebt tot de data.
+
+![Blob Storage](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-storage.png)
+
 - [x] Plaats data in een storage service naar keuze via de console (bijvoorbeeld een kattenfoto in Blob storage).
+
+![Uploading](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-blob-uploading.png)
+
 - [x] Haal de data op naar je eigen computer door middel van de Azure Storage Explorer.
 
-![Blob Storage]()
+![Error https](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-https.png)
+
 
 ### Opdracht 2
 
 - [x] Maak een nieuwe container aan.
 - [x] Upload de 4 bestanden die samen de AWS Demo Website vormen.
+
+![Files](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-web-files.png)
+
 - [x] Zorg dat Static Website Hosting aan staat.
+
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-website.png)
+
 - [x] Deel de URL met een teamgenoot. Zorg ervoor dat zij de website kunnen zien.
 
-![Static Website]()
+**Shared the links to my team mates**
+![slack](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-slack.png)
+
 
 ## Sources list used for solving the exercise
 
@@ -50,8 +65,8 @@ Issue 1: Asking better questions
 - [ ] hoe ziet de AZ-900 exam eruit?
 - [ ] Is het belangrijk op de IP address aan te passen voor azure voor opdracht 5?
 
-Issue 2:
-Issue 3:
+[Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-issue2-resourcegrp.png) Was unsure about the resources group, I look up more where my account is connected
+[Issue 3:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-issue3.png) First uploaded the directory, then tried uploading only the files separately. And it was indeed the solution
 Issue 4:
 Issue 5:
 Issue 6:
@@ -60,5 +75,12 @@ Issue 6:
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
-![Label]()
+**Uploaded datasets from kaggle:**
+![datasets](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-datasets.png)
+
+**Successfully installed Azure Storage Explorer:**
+![Azure Storage Explorer](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-install.png)
+
+
+**Working static website**
+![website](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-static.png
