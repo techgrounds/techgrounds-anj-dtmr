@@ -83,4 +83,4 @@ Brief description of the result of the exercises. An image can speak more than a
 ![Azure Storage Explorer](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-install.png)
 
 **Working static website**
-![website](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-static.png
+![website](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-static.png)
