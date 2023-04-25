@@ -24,18 +24,19 @@ Team #:
 - Angeline:
 - [ ] gister/ avond bereikt:
 - [ ] 8:30 active recalling met gebruikt van flashcards quizlet brainscape anki
+- [x] 5 min practice typing
+- [ ] Brainstorm for Scrum Meeting
 - [ ] vandaag doelen:
 - [ ] pomodoro dan kan tot avond werken, lange pause nemen
-- [ ] 15-20 minuten rabbit hole en time boxing
-- [ ] samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
+- [ ] 25 minuten rabbit hole (theory) en time boxing daarna opdracht
+- [ ] 12:30 samen komen - samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 - [ ] soft skills doel vandaag:
-- [ ] Challenge:
 - [ ] Monday: Group Presentation
 - [ ] Thursday: Presentation delen
 - [ ] Wednesday: Individual Presentatie en feedback geven
 - [ ] Friday: KC
 - [ ] Friday: Opdrachten Deadline
-- [ ] Vragen
+- [ ] Friday: Retrospective
 - [ ] Feedback geven:
 - [ ] Nieuwe woorden:
 
@@ -45,20 +46,11 @@ Team #:
 -
 -
 - Angeline:
-
-## Brainstorm for Scrum Meeting
-
-### Wat ging goed?
-
-- Voorbeeld: We gebruikten de Pomedoro techniek en dat was heel fijn om mee te werken.
-
-### Wat kan beter?
-
-- Voorbeeld: We deden iets te lang over onze standups.
-
-### Wat kunnen wij doen om het te verbeteren?
-
-- Voorbeeld: Tijdens een standup gaan wij elkaar beter op de rit houden.
+- [ ] Challenge:
+- [ ] Vragen & Screen sharing
+- [ ]
+- [ ]
+- [ ]
 
 ## Dagafsluiting:
 
@@ -66,6 +58,7 @@ Team #:
 -
 -
 - Angeline:
+- [ ] Brainstorm for Scrum Meeting
 - [ ] vandaag bereikt:
 - [ ] self-reflectie:
 - [ ] vanavond: stop om 17u
@@ -73,3 +66,8 @@ Team #:
 ### Other Notes
 
 Je kan nadat iedereen is geweest verder ingaan op specifieke problemen.
+
+-
+-
+-
+-
