@@ -68,6 +68,7 @@ Issue 1: Asking better questions
 - [ ] Is het belangrijk op de IP address aan te passen voor azure voor opdracht 5?
 
 [Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-issue2-resourcegrp.png) Was unsure about the resources group, I look up more where my account is connected.
+
 [Issue 3:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-issue3.png) First uploaded the directory, then tried uploading only the files separately. And it was indeed the solution
 
 
