@@ -14,6 +14,6 @@ Achteraf: Plaats een kopie van de retro in je eigen repository.
 
 - Voorbeeld: We deden iets te lang over onze standups.
 
-## Wat kunnen wij doen om het te verbeteren?
+## Wat kunnen wij doen om het te verbeteren? What can we commit to make this better?
 
 - Voorbeeld: Tijdens een standup gaan wij elkaar beter op de rit houden.
