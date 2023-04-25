@@ -1,9 +1,5 @@
 # Subject
 
-What is ?
-
-Learned how to use these different commands:
-
 ## Key terminology
 
 - [ ]
