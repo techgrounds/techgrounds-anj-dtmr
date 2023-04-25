@@ -29,6 +29,14 @@
 
 ![Certs](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-3-includes/sec-06-trusted.png)
 
+Learning Coach Feedback: Ik heb gekeken naar je opdracht over PKI. Bij de opdracht Find the list of trusted certificate roots on your system (bonus points if you also find it in your VM). heb je niet de juiste lijst gevonden (je kwam wel in de buurt).
+In Linux staat hij in /etc/ssl/certs/ca-certificates
+In Windows staat hij nog ergens anders
+
+```
+cd /etc/ssl/certs/ca-certificates
+```
+
 Here's the step by step process how I completed the 1st task:
 
 1. Update my virtual machine and allow Apache to open up the http and https ports using the commands below:
