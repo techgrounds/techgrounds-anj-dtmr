@@ -25,6 +25,7 @@ Team #:
 - [ ] gister/ avond bereikt:
 - [ ] 8:30 active recalling met gebruikt van flashcards quizlet brainscape anki
 - [x] 5 min practice typing
+- [ ]
 - [ ] Brainstorm for Scrum Meeting
 - [ ] vandaag doelen:
 - [ ] pomodoro dan kan tot avond werken, lange pause nemen
