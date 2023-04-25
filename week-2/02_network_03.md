@@ -55,6 +55,8 @@ Short description of the challeges encountered, and how I solved them:
 
 [Issue 1](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-2-includes/ntw-03-issue1.png): When I was installing wireshark on mac it did not come to my mind to read the installation guide first. I had a problem with my local device permissions. All I needed actually was to read the documentary and follow it. If I did that I would find out that I need to install another package called chmodBPF. At the end I asked the guidance of my teammates because everything about the interface of wireshark, seems overwhelming and unfamiliar. It looks within not in my generation haha
 
+Learning Coach Feedback: Ik heb je opdracht over protocols nagekeken. Goed dat je hebt geleerd dat documentatie lezen vaak handig is.
+
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
