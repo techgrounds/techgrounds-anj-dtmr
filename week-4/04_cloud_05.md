@@ -27,6 +27,8 @@
 
 - [x] Haal de data op naar je eigen computer door middel van de Azure Storage Explorer.
 
+![Explorer](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-explorer.png)
+
 ![Error https](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-https.png)
 
 
@@ -67,9 +69,7 @@ Issue 1: Asking better questions
 
 [Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-issue2-resourcegrp.png) Was unsure about the resources group, I look up more where my account is connected
 [Issue 3:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-issue3.png) First uploaded the directory, then tried uploading only the files separately. And it was indeed the solution
-Issue 4:
-Issue 5:
-Issue 6:
+
 
 ## Results
 
@@ -80,7 +80,6 @@ Brief description of the result of the exercises. An image can speak more than a
 
 **Successfully installed Azure Storage Explorer:**
 ![Azure Storage Explorer](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-install.png)
-
 
 **Working static website**
 ![website](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-static.png
