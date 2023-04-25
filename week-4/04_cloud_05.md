@@ -79,7 +79,7 @@ Brief description of the result of the exercises. An image can speak more than a
 **Uploaded datasets from kaggle:**
 ![datasets](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-datasets.png)
 
-**Successfully installed Azure Storage Explorer:**
+**Successfully installed Azure Storage Explorer using homebrew:**
 ![Azure Storage Explorer](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-install.png)
 
 **Working static website**
