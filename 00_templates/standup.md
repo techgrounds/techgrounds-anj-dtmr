@@ -36,7 +36,6 @@ Team #:
 - Angeline:
 - [ ] 10 mins before the first meeting: acive recalling with the use of flashcards/quizlet/brainscape/anki
 - [ ] 5 min practice typing
-- [ ] Brainstorm for Scrum Meeting
 - [ ] vandaag doelen:
 - [ ] soft skills doel vandaag:
 - [ ] 25mins pomodoro dan kan tot avond werken, lange pause nemen
