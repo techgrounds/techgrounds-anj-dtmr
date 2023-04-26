@@ -15,7 +15,10 @@ Because of its infrastracture, cloud has the ability to **increase or decrease**
 
 Three different types of cloud scalability - vertical, horizontal, and diagonal
 
-![]()
+![Scaling](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-03-scaling.png)
+
+![Scaling](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-03-scaling1.png)
+
 
 - Elasticity
 
