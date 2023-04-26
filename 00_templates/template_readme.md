@@ -29,6 +29,7 @@
 ## Sources list used for solving the exercise
 
 - [Notes]()
+- [Flashcard]()
 
 ## Overcome challenges:
 
