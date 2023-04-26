@@ -81,7 +81,7 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: Asking better questions
 
-- [ ] what is your budget is not the right question, but how both the company and client can have win-win
+- [ ] what is your budget is not the right question, but how both the company and client can have win-win result from using cloud computing
 - [ ] What are the main purposes of Azure Cost Management? to provide cost analysis, budget, cost data export and recommendation related to it
 
 [Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-02-issue2.png) The forgot password attempt to access the azure portal did not work out. Reached out to our learning coach for assistance to create a temporary password.
