@@ -45,8 +45,29 @@ systemctl enable apache2
 systemctl restart apache2
 ```
 
+![Create](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-createVM.png)
+![Review](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-reviewVM.png)
+![Private key](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-privekey.png)
+![Overview](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-overview.png)
+![Activity Log](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-activitylog.png)
+![Properties](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-properties.png)
+
+
 - [x] Controleer of je server werkt.
+
+![Connect](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-connect.png)
+![Login](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-loginssh.png)
+![chmod](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-chmod.png)
+![Commands](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-VMcommands.png)
+![Networks](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-network.png)
+![Monitoring](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-VMmonitoring.png)
+
+
 - [x] Let op! Vergeet na de opdracht niet alles weer weg te gooien. Je kan elk onderdeel individueel verwijderen, of je kan in 1 keer de resource group verwijderen.
+
+![Stopping](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-stopping.png)
+![Deleting](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-deleting.png)
+![Deleted](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-06-deleted.png)
 
 ## Sources list used for solving the exercise
 
@@ -63,16 +84,3 @@ Issue 1: Asking better questions
 
 - [ ] Het wordt aangeraden om network security groups te configureren op subnet niveau (en dus niet op instance niveau) waar mogelijk, maar soms heb je een allow/deny rule nodig op een specifieke instance, dus de optie is er
 - [ ] User data is een nieuwe versie van Custom data. Het grootste verschil is dat user data beschikbaar blijft gedurende de hele levensduur van de VM
-
-Issue 2:
-Issue 3:
-Issue 4:
-Issue 5:
-Issue 6:
-
-## Results
-
-Brief description of the result of the exercises. An image can speak more than a thousand words.
-
-**Description:**
-![Label]()
