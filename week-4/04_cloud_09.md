@@ -1,6 +1,6 @@
 # Shared Responsibility Model
 
-# Introduction to Cloud Computing
+## Introduction to Cloud Computing
 
 Today, cloud represents a huge market, one that is continuing to grow at an unprecedented scale. Enormous computational power, once considered a prerogative of large enterprises, is now available at the fingertips of even the smallest of businesses and individual developers, thanks to Cloud. Moreover, the Cloud makes all this computational power highly affordable with pay-as-you-go economics. If you look at some of the key emerging technologies of our times, such as Artificial Intelligence, the Internet of Things, Blockchain and Analytics, all of these technologies work with massive amounts of data and need huge storage space and computational power in order to work, making cloud possibly the only viable platform for these technologies.
 
