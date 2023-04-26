@@ -58,6 +58,11 @@ CAPEX vs OPEX: When it comes to financing IT projects, there are two types of ex
 ## Opdrachten
 
 - [x] Maak een alert aan waarmee je eigen kosten kan monitoren.
+
+![Budget](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-02-createbudget.png)
+
+![Alert](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-02-alert.png)
+
 - [x] Begrijp de opties die Azure aanbiedt om je uitgaven in te zien.
 
 ## Sources list used for solving the exercise
@@ -79,4 +84,4 @@ Issue 1: Asking better questions
 - [ ] what is your budget is not the right question, but how both the company and client can have win-win
 - [ ] What are the main purposes of Azure Cost Management? to provide cost analysis, budget, cost data export and recommendation related to it
 
-Issue 2: The forgot password attempt to access the azure portal did not work out. Reached out to our learning coach for assistance to create a temporary password.
+[Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-02-issue2.png) The forgot password attempt to access the azure portal did not work out. Reached out to our learning coach for assistance to create a temporary password.
