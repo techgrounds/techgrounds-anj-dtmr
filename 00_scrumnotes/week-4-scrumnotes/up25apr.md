@@ -29,7 +29,7 @@ Team 1:
 - [x] vandaag doelen: begin met opdracht 5 en 6 dan in de avond scrijf de rapport voor opdracht 1-4
 - [x] 12:30 samen komen
 - [x] 15:30 samen komen
-- [x] 2 pomodoro
+- [x] 6 25mins pomodoro
 - [x] 25 minuten rabbit hole (theory) en time boxing daarna opdracht
 - [x] samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 
@@ -39,8 +39,8 @@ Team 1:
 - Akram: Niets specifiek
 - Rogier: opdracht 4 hoe kunnen we dat doen
 - Angeline:
-- [ ] Challenge: schrijven van de markdowns
-- [ ] Vragen:
+- [x] Challenge: schrijven van de markdowns
+- [x] Vragen:
 - hoe ziet de AZ-900 exam eruit?
 - Is het belangrijk op de IP address aan te passen voor azure voor opdracht 5?
 - AWS met Danny kijken
@@ -54,6 +54,6 @@ Team 1:
 - [x] Brainstorm for Scrum Meeting
 - [x] vandaag bereikt: tot opdracht 6
 - [x] verder werken vanavond om opdracht 1-4 afmaken
-- [x] self-reflection: time-boxing really helps to keep up with the group, also alloting a time for everyone to make a task keeps everyone's accountability higher
+- [x] self-reflection: time-boxing really helps to keep up with the group, also alloting a time for everyone to make a task and a time for group discussion keeps everyone's accountability higher
 
 ### Other Notes
