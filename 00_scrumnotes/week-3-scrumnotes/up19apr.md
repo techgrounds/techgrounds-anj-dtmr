@@ -41,10 +41,10 @@ Team 1:
 - [x] vandaag bereikt: 3, 4, 5, start again with flashcards
 - [x] self-reflectie: ik ben meer comfortabel met mijn team en ietsje minder ongemakelijk voel, ik heb mijn screen gedeeld en hun hulp gevraagd
 - [x] vanavond: stop om 17u
-- [ ] guiding principles:
-- 8:30 I am ready, active recalling for 10 minutes
-- As a Peer, you are honest, critical and helpful
-- You are 100% responsible (for how you deal with situations)
-- You are 100% motivated (to develop IT, project & soft skills)
-- You are dedicated to a lifelong learning journey
-- learnings of Atomic Habits: Work space is work space from 9-17
+- [x] guiding principles:
+
+1st, I am Not here for short sprints, I'm here for the marathon-long-term commitment. I'll take 100% responsibility to motivate myself. By learning to be more creative on managing my frustrations better, consistent with my learning: 8:30 I set my mind, active recalling and taking care of myself: enough breaks, hydrate, stretch. and keep improving my inquisitiveness by starting to ask even the question is not perfect.
+
+2nd, As a peer, I ask and Clear Expectations, I am honest, I am proactive, leading supportively, Striving for efficiency, Encouraging and helpful, solution-oriented, Constructive on my feedback, Act respectfully and Celebrating diversity.
+
+3rd, Learning Requires Consistent Effective Action. I'll keep experimenting what works for me, like time-blocking, pomodoro, doing flashcards, Work in my designated work space from 9-17, not checking slack or work related during the weekends.
