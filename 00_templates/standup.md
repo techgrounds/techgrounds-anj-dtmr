@@ -38,12 +38,12 @@ Team #:
 - [ ] 5 min practice typing
 - [ ] Brainstorm for Scrum Meeting
 - [ ] vandaag doelen:
+- [ ] soft skills doel vandaag:
 - [ ] 25mins pomodoro dan kan tot avond werken, lange pause nemen
 - [ ] 25 minuten rabbit hole (theory) en time boxing daarna opdracht
 - [ ] 12:30 samen komen - samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 - [ ] 10 mins after the Q&A: acive recalling with the use of flashcards/quizlet/brainscape/anki
 - [ ] 15:30 samen komen
-- [ ] soft skills doel vandaag:
 - [ ] Monday: Group Presentation
 - [ ] Thursday: Presentation delen
 - [ ] Wednesday: Individual Presentatie en feedback geven
