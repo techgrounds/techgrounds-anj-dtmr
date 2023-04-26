@@ -134,5 +134,10 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: Asking better questions
 
-- [ ]
-- [ ]
+- [ ] How can I visualize shared responsibility? 
+
+![Shared](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-09-shared-responsibility.svg)
+
+![Shared](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-09-shared.jpeg)
+
+![Shared](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-09-shared1.png)
