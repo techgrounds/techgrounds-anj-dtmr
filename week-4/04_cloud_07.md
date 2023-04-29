@@ -70,7 +70,7 @@ Opened the first VM I made in the terminal with SSH and followed this [documenta
 Opened the first VM I made in the terminal with SSH and followed this [documentation](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal?tabs=ubuntu) 
 ![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-vim2-start.png)
 
-then in my root folder, I created another directory where I would save the mounted snapshot disk. Here you will find that I successfully can see the snapshots disk of the shared disk from the first VM
+then in my root folder, I created another directory where I would save the mounted snapshot disk. Here you will find that I successfully can view the snapshots disk of the shared disk from the first VM
 ![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-vim2-result.png)
 
 Here's what inside my resource group after completing the task
