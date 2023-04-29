@@ -50,4 +50,28 @@ Issue 3: Because of the issue above, and the frustrations of not grasping the co
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Here's the step by step guide how I did it::**
-![Label]()
+
+Create 2 Linux VM
+- With my VM I created from their the resource group and created a new disk enabling the sharing for atleast 2 VM's
+![vim1](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-vim1.png)
+![vim2](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-vim2.png)
+
+
+From the shared disk I created, I made a snapshot. Then from that snapshot, I created a disk out of it.
+![shared disk snapshot](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-snapshot.png)
+![disk](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-snapshot-disk.png)
+
+Then from that disk of snapshot, I've added it to the second VM where I should mount the snapshot.
+![disk](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-vim2-disk.png)
+
+Opened the first VM I made in the terminal with SSH and followed this [documentation](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal?tabs=ubuntu)
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-vim1-start.png)
+
+Opened the first VM I made in the terminal with SSH and followed this [documentation](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal?tabs=ubuntu) 
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-vim2-start.png)
+
+then in my root folder, I created another directory where I would save the mounted snapshot disk
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-vim2-result.png)
+
+Here's what inside my resource group after completing the task
+![rsc](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-07-resource-grp.png)
