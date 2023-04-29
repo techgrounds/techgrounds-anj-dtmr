@@ -19,7 +19,6 @@
 - [x] Zet een webserver aan. Zorg dat de poorten voor zowel SSH als HTTP geopend zijn.
 - [x] Maak een NSG in je VNET. Zorg ervoor dat je webserver nog steeds bereikbaar is via HTTP, maar dat SSH geblokkeerd wordt.
 
-![]()
 
 ## Sources list used for solving the exercise
 
@@ -31,4 +30,27 @@
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Did not had issue doing this task. Here's the step by step guide how I did it:**
-![Label]()
+
+
+Here you may find when my web server is working with SSH and HTTP
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-08-ssh-aan.png)
+
+Created NSG
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-08-nsg-create.png)
+
+Here we can see that my SSH and HTTP are "allowed"
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-08-nsg-allow.png)
+
+Using the portal I found where I can adjust the action I want with the SSH
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-08-ssh-deny.png)
+
+Denied the SSH
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-08-deny1.png)
+
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-08-ssh-portal-off.png)
+
+Here you may see that my Apache default page is still working in HTTP, while connection was timed out in my terminal, where I was trying to access SSH
+![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-08-ssh-off.png)
+
+Here's what inside my resource group after completing the task
+https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-08-resource.png
