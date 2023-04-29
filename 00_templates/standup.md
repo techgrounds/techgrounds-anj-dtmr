@@ -7,7 +7,7 @@ guiding principles:
 
 2nd, As a peer, I ask and Clear Expectations, I am honest, I am proactive, leading supportively, Striving for efficiency, Encouraging and helpful, solution-oriented, Constructive on my feedback, Act respectfully and Celebrating diversity.
 
-3rd, Learning Requires Consistent Effective Action. I'll keep experimenting what works for me, like time-blocking, pomodoro, doing flashcards, Work in my designated work space from 9-17, not checking slack or work related during the weekends.
+3rd, Learning Requires Consistent Effective Action. I'll keep experimenting what works for me, like time-blocking, pomodoro, doing flashcards, Work in my designated work space from 9-17, not checking slack or work related during the weekends. (I could do that because I finish all my task for the week, in case not I am blocking a time during the weekends to continue).
 
 ---
 
