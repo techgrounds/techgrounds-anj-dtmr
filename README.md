@@ -41,6 +41,20 @@ Here you may find **all the repositories** I did during the training
 - [Passwords](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_07.md)
 - [Detection, response and analysis](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-3/03_security_08.md)
 
+**Week 4:**
+
+- [StandUp Notes](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/00_scrumnotes/week-4-scrumnotes)
+- [Azure Global Infrastructure](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_01.md)
+- [Cost Management + Billing](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_02.md)
+- [Advantages of the cloud](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_03.md)
+- [Azure Core Services](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_04.md)
+- [Azure Storage Account](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_05.md)
+- [Azure Virtual Machines](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_06.md)
+- [Azure Disk Storage](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_07.md)
+- [Firewalls](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_08.md)
+- [Shared Responsibility Model](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_09.md)
+- [Azure Virtual Network (VNet)](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_10.md)
+
 ## How my files are organized
 
 ```
@@ -79,6 +93,17 @@ root
  |  |- 03_security_07
  |  |- 03_security_08
  |
+ |- week-4
+ |  |- 04_cloud_01
+ |  |- 04_cloud_02
+ |  |- 04_cloud_03
+ |  |- 04_cloud_04
+ |  |- 04_cloud_05
+ |  |- 04_cloud_06
+ |  |- 04_cloud_07
+ |  |- 04_cloud_08
+ |  |- 04_cloud_09
+ |  |- 04_cloud_10
  |
  |
  |- 03_Project
