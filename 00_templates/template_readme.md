@@ -6,7 +6,7 @@
 
 ## Benodigdheden
 
-- [x]
+- [x] Je Azure Cloud omgeving
 
 ## Opdrachten
 
