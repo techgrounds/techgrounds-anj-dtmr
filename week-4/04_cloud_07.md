@@ -49,5 +49,5 @@ Issue 3: Because of the issue above, and the frustrations of not grasping the co
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Description:**
+**Here's the step by step guide how I did it::**
 ![Label]()
