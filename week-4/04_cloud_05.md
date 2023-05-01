@@ -1,5 +1,10 @@
 # Azure Storage Account
 
+Storage Services zoals:
+
+- Google Drive
+- Dropbox
+
 ## Key terminology
 
 - [ ] Data repository
@@ -31,7 +36,6 @@
 
 ![Error https](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-https.png)
 
-
 ### Opdracht 2
 
 - [x] Maak een nieuwe container aan.
@@ -47,7 +51,6 @@
 
 **Shared the links to my team mates**
 ![slack](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-slack.png)
-
 
 ## Sources list used for solving the exercise
 
@@ -70,7 +73,6 @@ Issue 1: Asking better questions
 [Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-issue2-resourcegrp.png) Was unsure about the resources group, I look up more where my account is connected.
 
 [Issue 3:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-05-issue3.png) First uploaded the directory, then tried uploading only the files separately. And it was indeed the solution
-
 
 ## Results
 
