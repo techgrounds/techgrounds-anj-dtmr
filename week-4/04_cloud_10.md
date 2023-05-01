@@ -77,10 +77,10 @@ Brief description of the result of the exercises. An image can speak more than a
 First I created a Virtual Network following the requirements above with 2 subnets.
 ![VN](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-10-issue2.png)
 
-I created a VM following the requirements above. With the subnet 2 that should have internet connection
+I created a VM following the requirements above. With the one subnet without internet and one subnet that should have internet connection
 ![Create](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-10-vm.png)
 
-With the subnet 2 that should have internet connection
+With the subnet that should have internet connection
 ![overview](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-10-vm-overview.png)
 ![VM](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-10-vm-sub2.png)
 ![net](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-10-vmnetwork.png)
