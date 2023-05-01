@@ -40,7 +40,7 @@ Team #:
 - [ ] soft skills doel vandaag:
 - [ ] 25mins pomodoro dan kan tot avond werken, lange pause nemen
 - [ ] 25 minuten rabbit hole (theory) en time boxing daarna opdracht
-- [ ] 12:30 samen komen - samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
+- [ ] 12:30 samen komen - samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie probleem deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 - [ ] 10 mins after the Q&A: acive recalling with the use of flashcards/quizlet/brainscape/anki
 - [ ] 15:30 samen komen
 - [ ] Monday: Group Presentation
@@ -60,7 +60,7 @@ Team #:
 -
 - Angeline:
 - [ ] Challenge:
-- [ ] Vragen & Screen sharing
+- Vragen & Screen sharing
 - [ ]
 - [ ]
 - [ ]
