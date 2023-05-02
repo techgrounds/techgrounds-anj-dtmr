@@ -99,7 +99,6 @@ Brief description of the result of the exercises. An image can speak more than a
 **The instances turned into 2:**
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-scale2.png)
 
-
 **The instances turned into 3:**
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-scale3.png)
 
