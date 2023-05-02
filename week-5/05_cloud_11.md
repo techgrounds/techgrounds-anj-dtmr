@@ -72,7 +72,7 @@ Issue 1: Asking better questions
 - [ ] What are the difference between VMSS and Availability Set
 - [ ] zijn de networking default settings incompatible met de opdracht? Je hebt geen load balancer met defaults. Alleen een NIC en geen SSH / http
 
-Issue 2: The first day, I could not find the way I could add http port while I was creating the VMSS. I took enough sleep and ready myself for another day. Please check below how I run through this task smoothly after a good night of sleep.
+[Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-issue2.png) The first day, I could not find the way I could add http port while I was creating the VMSS. I took enough sleep and ready myself for another day. Please check below how I run through this task smoothly after a good night of sleep.
 
 ## Results
 
@@ -80,5 +80,58 @@ Brief description of the result of the exercises. An image can speak more than a
 
 **Here's the step by step guide how I did it::**
 
-**Description:**
-![Label]()
+**Create a VMSS:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-createvmss.png)
+
+**Made sure I adjust the Networking part for network interface:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-create-nic.png)
+
+**By doing that I did not need to manually add inbound port rule. Here's the result:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-create-net.png)
+
+**VMSS Overview:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-vmss-overview.png)
+
+**By setting the initial instances into 2, I got this after deploying:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-initial-instances.png)
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-create-inst.png)
+
+**Successfully run the apache default page using the vmss public ip address:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-apache.png)
+
+**Successfully run the apache default page using the vmss public ip address and in incognito browser:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-incognito.png)
+
+**Successfully run the apache default page using the load balancer public ip address in incognito:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-lb-pubip.png)
+
+**After some time, I check my monitoring for vmss, and my initial 2 instances is now 1:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-monitor.png)
+
+**Using the stress command, I played around how my instances would react to :**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-stress.png)
+
+**The instances turned into 2:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-scale2.png)
+
+
+**The instances turned into 3:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-scale3.png)
+
+**The instances turned into 4:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-scale4.png)
+
+**Running load testing with 1 to 2 instances:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-test.png)
+
+**Running load testing with 1 to 4 instances:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-testrun.png)
+
+**Finally it went back to 2 at a certain time:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-back22.png)
+
+**Resource group:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-rsc-grp.png)
+
+**Did not forget to delete it:**
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-delete.png)
