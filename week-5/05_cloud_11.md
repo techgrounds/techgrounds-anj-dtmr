@@ -55,6 +55,7 @@ Issue 1: Asking better questions
 
 - [ ] What are the difference between VMSS and Availability Set
 - [ ] zijn de networking default settings incompatible met de opdracht? Je hebt geen load balancer met defaults. Alleen een NIC en geen SSH / http
+- [ ] Why there are 2 ip addresses 1 the same for VMSS and load balancer and one each for the instances?
 
 [Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-issue2.png) The first day, I could not find the way I could add http port while I was creating the VMSS. I took enough sleep and ready myself for another day. Please check below how I run through this task smoothly after a good night of sleep.
 
