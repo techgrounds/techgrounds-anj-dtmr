@@ -4,58 +4,35 @@ Een standup is bedoeld om in 15 minuten afgerond te hebben. Zorg ervoor dat jij 
 
 ## Wat heb ik gedaan? Wat heb ik bereikt sinds de vorige daily standup? What did you do the last day?
 
-- Danny:
-- Akram:
-- Rogier:
-- Angeline:
-- [ ] gister/ avond bereikt:
+- Danny: Klaar met alle opdrachten
+- Akram: Klaar met alle opdrachten maar nog even opdracht 10 checken met Casper
+- Rogier: Tot opdracht 9 af
+- Angeline: Stucked at 7 and 10. The rest are done
 
 ## Wat ga ik doen? Wat ga ik vandaag bereiken? What are you going to do today?
 
-- Danny:
-- Akram:
-- Rogier:
-- Angeline:
-- [ ] 10 mins before the first meeting: acive recalling with the use of flashcards/quizlet/brainscape/anki
-- [ ] 5 min practice typing
-- [ ] vandaag doelen:
-- [ ] soft skills doel vandaag:
-- [ ] 25mins pomodoro dan kan tot avond werken, lange pause nemen
-- [ ] 25 minuten rabbit hole (theory) en time boxing daarna opdracht
-- [ ] 12:30 samen komen - samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
-- [ ] 10 mins after the Q&A: acive recalling with the use of flashcards/quizlet/brainscape/anki
-- [ ] 15:30 samen komen
-- [ ] Monday: Group Presentation
-- [ ] Thursday: Presentation delen
-- [ ] Wednesday: Individual Presentatie en feedback geven
-- [ ] Friday: KC Finished! Score:14/18 Percent: 78%
-- [ ] Friday: Studiedag-AWS met Danny kijken
-- [ ] Friday: Opdrachten Deadline
-- [ ] Friday: Retrospective
+- Danny: Gaat verdiepen met de onderwerpen van deze week. Rabbit hole day. Presentatie voorbereiden
+- Akram: opdracht 10 dubbel checken. Presentatie voorbereiden
+- Rogier: opdracht 10
+- Angeline: opdracht 7 en 10
+- [x] Friday: KC Finished! Score:14/18 Percent: 78%
+- [x] Friday: Retrospective
 
 ## Loop ik ergens tegenaan? Heb ik hierbij hulp nodig? kan het team me daarbij helpen? Wat is je energie-niveau vandaag? What are the most pressing issues you are facing? And do you need help?
 
-- Danny:
-- Akram:
-- Rogier:
+- Danny: Presentatie voorbereiden
+- Akram: Presentatie voorbereiden
+- Rogier: Opdracht 10
 - Angeline:
-- [ ] Challenge:
-- [ ] Vragen & Screen sharing
-- [ ]
-- [ ]
-- [ ]
+- [ ] Challenge: 7 en 10
 
 ## Dagafsluiting:
 
-- Danny:
-- Akram:
-- Rogier:
 - Angeline:
-- [ ] Brainstorm for Scrum Meeting
-- [ ] vandaag bereikt:
-- [ ] 10 mins before/after the dagafsluiting: acive recalling with the use of flashcards/quizlet/brainscape/anki
+- [x] Brainstorm for Scrum Meeting
+- [x] vandaag bereikt: finally understood how snapshots works, finished the opracht 7. And beginning at opdracht 10
 - [ ] self-reflection:
-- [ ] vanavond: stop om 17u
+- [x] vanavond: stop om 17u
 
 ### Other Notes
 
@@ -77,11 +54,18 @@ Achteraf: Plaats een kopie van de retro in je eigen repository.
 - pomodoro
 - focus
 - time-blocking
-- team work
+- Teamwork ook bevordert door bovenstaande.
+- Inovatief en probleemoplosend te werk gegaan. Daarvoor vele voordelen kunnen behalen zoals goede time-managment en goede vragen kunnen stellen.
+- Accountabilty standaard verhoogt en gehanteerd door bovenstaande.
 
 ## Wat kan beter?
 
-- vragen stellen - cultuur anders
+- Anj: vragen stellen - cultuur anders
 - beter rapport schrijven (en op schema)
+- Betere vragen leren vormen.
+- Productiviteit verhogen.
+- Efficiënter bronnen gebruiken
 
 ## Wat kunnen wij doen om het te verbeteren? What can we commit to make this better?
+
+- Akram: Ik denk dat we voortdurend moeten blijven verbeteren met waar we al mee bezig zijn, want het werkt. Gedurende de tijd zullen er specifieke punten naar boven komen waar we aan kunnen werken.
