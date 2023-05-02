@@ -60,7 +60,7 @@ Team #:
 -
 - Angeline:
 - [ ] Challenge:
-- Vragen & Screen sharing
+- Vragen & Screen sharing / vragen bij q&a te noteren
 - [ ]
 - [ ]
 - [ ]
