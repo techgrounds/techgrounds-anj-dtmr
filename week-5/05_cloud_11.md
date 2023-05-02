@@ -16,17 +16,7 @@
 
 ### Opdracht 1:
 
-● Maak een Virtual Machine Scale Set met de volgende vereisten:
-○ Ubuntu Server 20.04 LTS - Gen1
-○ Size: Standard_B1ls
-○ Allowed inbound ports:
-■ SSH (22)
-
-■ HTTP (80)
-○ OS Disk type: Standard SSD
-○ Networking: defaults
-○ Boot diagnostics zijn niet nodig
-○ Custom data:
+- Maak een Virtual Machine Scale Set met de volgende vereisten: Ubuntu Server 20.04 LTS - Gen1, Size: Standard_B1ls, Allowed inbound ports: SSH (22), HTTP (80), OS Disk type: Standard SSD, Networking: defaults, Boot diagnostics zijn niet nodig, Initial Instance Count: 2, Scaling Policy: Custom, Aantal VMs: minimaal 1 en maximaal 4, Voeg een VM toe bij 75% CPU gebruik, Verwijder een VM bij 30% CPU gebruik Custom data:
 
 ```
 #!/bin/bash
@@ -38,16 +28,10 @@ systemctl enable apache2
 systemctl restart apache2
 ```
 
-○ Initial Instance Count: 2
-○ Scaling Policy: Custom
-■ Aantal VMs: minimaal 1 en maximaal 4
-○ Voeg een VM toe bij 75% CPU gebruik
-○ Verwijder een VM bij 30% CPU gebruik
-
 ### Opdracht 2:
 
-● Controleer of je via het endpoint van je load balancer bij de webserver kan komen.
-● Voer een load test uit op je server(s) om auto scaling the activeren. Er kan een delay zitten in het creëren van nieuwe VMs, afhankelijk van de settings in je VM Scale Set.
+- Controleer of je via het endpoint van je load balancer bij de webserver kan komen.
+- Voer een load test uit op je server(s) om auto scaling the activeren. Er kan een delay zitten in het creëren van nieuwe VMs, afhankelijk van de settings in je VM Scale Set.
 
 ## Sources list used for solving the exercise
 
