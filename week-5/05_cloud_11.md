@@ -46,6 +46,7 @@ systemctl restart apache2
 - [Create azure virtual machine scale set](https://www.youtube.com/watch?v=Y_STYgRQyAE)
 - [What are Virtual Machine Scale Sets?](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview)
 - [Azure Load Balancer Tutorial](https://www.youtube.com/watch?v=T7XU6Lz8lJw)
+- [How to Impose High CPU Load and Stress Test on Linux Using ‘Stress-ng’ Tool](https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/)
 
 ## Overcome challenges:
 
