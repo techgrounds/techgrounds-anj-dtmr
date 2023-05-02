@@ -93,7 +93,7 @@ Brief description of the result of the exercises. An image can speak more than a
 **After some time, I check my monitoring for vmss, and my initial 2 instances is now 1:**
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-monitor.png)
 
-**Using the stress command, I played around how my instances would react to :**
+**Using the stress command, I played around how my instances would react to autoscaling:**
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-11-stress.png)
 
 **The instances turned into 2:**
