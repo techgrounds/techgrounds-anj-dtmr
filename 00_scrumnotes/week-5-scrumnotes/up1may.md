@@ -28,7 +28,6 @@ Team #3:
 - [x] soft skills doel vandaag: efficienter werken door praktisch opdracht focussen
 - [x] 25mins pomodoro
 - [x] Bericht aan Casper over afspraak op 9 mei
-- [ ] Delen aan teammates over afspraak op 9 mei
 - [x] 15:30 samen komen - samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie deze probleem aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 - [x] Monday: Group Presentation
 - [ ] Nieuwe woorden: opslag, sodanig,
