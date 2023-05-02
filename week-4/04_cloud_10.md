@@ -14,7 +14,7 @@
 
 ## Opdrachten
 
-###Opdracht 1:
+### Opdracht 1:
 
 - [x] Maak een Virtual Network met de volgende vereisten:
       Region: West Europe
@@ -28,7 +28,7 @@
       Name: Subnet-2
       IP Range: 10.0.1.0/24
 
-###Opdracht 2:
+### Opdracht 2:
 
 - [x] Maak een VM met de volgende vereisten: Een apache server moet met de volgende custom data geïnstalleerd worden:
 
@@ -59,20 +59,17 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: Asking better questions
 
-- [ ] 
+- [ ]
 
 [Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-10-issue2.1.png) I could not create a new ip address space because of the conflict. I deleted the NetworkWatcher and repeat the process
 
 [Issue 3:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-10-issue3.2.png) Even after deleting this NetworkWatcher I still got the error. I played around the portal and found out that I need to delete the default ip address.
-
-
 
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Here's the step by step guide how I did it::**
-
 
 First I created a Virtual Network following the requirements above with 2 subnets.
 ![VN](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-10-issue2.png)
@@ -104,5 +101,3 @@ Here's the glimpse of resource group after completing the task
 
 Deleted
 ![](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-4-includes/az-10-deleting.png)
-
-
