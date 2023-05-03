@@ -47,7 +47,7 @@ Team #:
 - [ ] Thursday: Presentation delen
 - [ ] Wednesday: Individual Presentatie en feedback geven
 - [ ] Friday: KC
-- [ ] Friday: Studiedag-AWS met Danny kijken
+- [ ] Friday: Studiedag
 - [ ] Friday: Opdrachten Deadline
 - [ ] Friday: Retrospective
 - [ ] Feedback geven:
