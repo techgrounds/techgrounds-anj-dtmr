@@ -30,7 +30,7 @@ Team #3:
 - [x] Bericht aan Casper over afspraak op 9 mei
 - [x] 15:30 samen komen - samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie deze probleem aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 - [x] Monday: Group Presentation
-- [ ] Nieuwe woorden: opslag, sodanig,
+- [x] Nieuwe woorden: opslag, sodanig,
 
 ## Loop ik ergens tegenaan? Heb ik hierbij hulp nodig? kan het team me daarbij helpen? Wat is je energie-niveau vandaag? What are the most pressing issues you are facing? And do you need help?
 
