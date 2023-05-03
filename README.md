@@ -1,6 +1,6 @@
 # Cloud Engineering Training
 
-Here you may find **all the repositories** I did during the training
+Here you may find **all the projects** I did during the training
 
 ## Projects
 
