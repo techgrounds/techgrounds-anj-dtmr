@@ -118,7 +118,15 @@ Issue 6:
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
 **Azure Files:**
-![Label]()
+
+1. Create a storage account. Select the storage account from your dashboard. On the storage account page, in the Data storage section, select File shares. On the menu at the top of the File shares page, select + File share. The New file share page drops down. 
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-fileshare.png)
+
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-fs-overview.png)
+
+2. I've created a VM using the azure shell, using the scripts below.
 
 ```
 group=azure-files-tutorial
@@ -145,7 +153,32 @@ az vm show \
 cat clouddrive/$name.json
 ```
 
-to connect the VM that I made and the fileshare that I made, I copy pasted on Azure bash shell the script from the portal
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-createVM.png)
+
+3. I downloaded the Microsoft Remote Desktop and open the VM. I used the given informations and ip address from the portal.
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-mremote.png)
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-windows.png)
+
+4. To connect the VM that I made and the fileshare that I manually made, go to Storage Account > File Share > Click the file share created > Connect > copy the script > Open the powershell/CLI from your Microsoft Remote Desktop > Paste the script and press Enter. To test if the connection is successful, go back to Azure portal and upload a sample image using the Upload button.
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-upload.png)
+
+5. Go back to Microsoft Remote Desktop and check if the file is there
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-checkuploadVM.png)
+
+6. Try creating a text file from Microsoft Remote Desktop
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-maketxtVM.png)
+
+7. Check if it's at the File Share section of your Azure portal.
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-portalcheck.png)
+
+8. Check and delete the resource group
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-rsc.png)
+
 
 **Azure Database:**
 
@@ -163,11 +196,9 @@ to connect the VM that I made and the fileshare that I made, I copy pasted on Az
 
 5. To test the database. In Azure resources menu, select All resources. Search for and select the SQL database resource Type, and ensure that your new database was created. You might need to refresh the page. 
 
-
 6. Select db1, the SQL database created.
-7. In the SQL database menu, select Query editor (preview). The Query editor (preview) pane appears.
-
-![Label]()
+7. 
+8. In the SQL database menu, select Query editor (preview). The Query editor (preview) pane appears.
 
 8. A sign in page will appear, signin using your credentials. If you did not enabled your firewall, you might not able to log in.
 
