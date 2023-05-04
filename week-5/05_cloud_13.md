@@ -92,6 +92,7 @@
 - [Intro File Share](https://github.com/MarczakIO/azure4everyone-samples/tree/master/azure-files-introduction)
 - [Explore Azure database and analytics services](https://learn.microsoft.com/en-us/training/modules/azure-database-fundamentals/)
 - [Create a SQL database](https://learn.microsoft.com/en-us/training/modules/azure-database-fundamentals/exercise-create-sql-database)
+- [Quickstart: Create an Azure SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/instance-create-quickstart?view=azuresql)
 
 ## Overcome challenges:
 
@@ -141,3 +142,6 @@ cat clouddrive/$name.json
 ```
 
 to connect the VM that I made and the fileshare that I made, I copy pasted on Azure bash shell the script from the portal
+
+**Azure Database:**
+![Label]()
