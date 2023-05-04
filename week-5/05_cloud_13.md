@@ -90,6 +90,8 @@
 - [Flashcard]()
 - [App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/)
 - [Intro File Share](https://github.com/MarczakIO/azure4everyone-samples/tree/master/azure-files-introduction)
+- [Explore Azure database and analytics services](https://learn.microsoft.com/en-us/training/modules/azure-database-fundamentals/)
+- [Create a SQL database](https://learn.microsoft.com/en-us/training/modules/azure-database-fundamentals/exercise-create-sql-database)
 
 ## Overcome challenges:
 
