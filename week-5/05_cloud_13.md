@@ -103,7 +103,11 @@ Issue 1: Asking better questions
 - [ ]
 - [ ]
 
-Issue 2:
+Issue 2: Too expensive to make databases. I was afraid to go over the budget, so i kept playing around the portal, until I found a much more cheaper choice.
+
+![hundred](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-issue2.1.png)
+![thousand](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-issue2.png)
+
 Issue 3:
 Issue 4:
 Issue 5:
@@ -144,4 +148,58 @@ cat clouddrive/$name.json
 to connect the VM that I made and the fileshare that I made, I copy pasted on Azure bash shell the script from the portal
 
 **Azure Database:**
+
+1. Signed in to the Azure portal.
+2. Selected Create a resource > Databases > SQL database. The Create SQL Database pane appears.
+3. Click the +Add button and entered the following values for each setting. Also here I used the existing sample data. Selected Review + create to validate configuration entries.
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-create-db.png)
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-create-db1.png)
+
+4. When deployment is complete, select Go to resource. The db1 SQL database Overview pane shows the essentials of the newly deployed database
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-deploying-details.png)
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-db-overview.png)
+
+5. To test the database. In Azure resources menu, select All resources. Search for and select the SQL database resource Type, and ensure that your new database was created. You might need to refresh the page. 
+
+
+6. Select db1, the SQL database created.
+7. In the SQL database menu, select Query editor (preview). The Query editor (preview) pane appears.
+
 ![Label]()
+
+8. A sign in page will appear, signin using your credentials. If you did not enabled your firewall, you might not able to log in.
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-sigin-error.png)
+
+9. To enable the firewall, in the Query editor menu, select Overview (your edits will be lost), and in the command bar, select Set server firewall. The Firewall settings page appears. In the Client IP address section, your IP will be shown (verify that it is the same client IP address from the error you received in the previous step). In the command bar select Add your client IPv4 address. This will add a Rule name that contains your IP address in both the Start IP and End IP fields. Select Save to save this firewall rule.
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-Set-server%20firewall.png)
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-Setserver%20firewall-success.png)
+
+10. To continue testing the database, select your db1 database in the breadcrumb at the top of the page to return to your SQL database, and then select Query editor (preview) from the menu. Sign in again as sqluser, with the password Pa$$w0rd1234. This time you should succeed. It might take a couple of minutes for the new firewall rule to be deployed. If you still get an error, verify the client IP address in the error, and return to Firewall settings to add the correct client IP address.
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-login-success.png)
+
+11. After you sign in successfully, the query pane appears. Enter the following SQL query into the editor pane.
+```
+SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
+FROM SalesLT.ProductCategory pc
+JOIN SalesLT.Product p
+ON pc.productcategoryid = p.productcategoryid;
+```
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-dbsample.png)
+
+12. Select Run, and then review the query results in the Results pane. The query should run successfully.
+
+
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-query.png)
+
+13. Check the server, resource group and delete.
+
+![Server](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-sqlserver.png)
+![Server](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-sqlserver-db.png)
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-dbrsc.png)
+![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-delete.png)
