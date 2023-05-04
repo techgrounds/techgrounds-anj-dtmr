@@ -148,13 +148,13 @@ cat clouddrive/$name.json
 
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-createVM.png)
 
-3. I downloaded the Microsoft Remote Desktop and open the VM. I used the given informations and ip address from the portal.
+3. I downloaded the Microsoft Remote Desktop and open the VM. I used the given informations and ip address from the portal. To connect the VM that I made and the fileshare that I manually made, go to Storage Account > File Share > Click the file share created > Connect > copy the script > Open the powershell/CLI from your Microsoft Remote Desktop > Paste the script and press Enter.
 
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-mremote.png)
 
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-windows.png)
 
-4. To connect the VM that I made and the fileshare that I manually made, go to Storage Account > File Share > Click the file share created > Connect > copy the script > Open the powershell/CLI from your Microsoft Remote Desktop > Paste the script and press Enter. To test if the connection is successful, go back to Azure portal and upload a sample image using the Upload button.
+4. To test if the connection is successful, go back to Azure portal and upload a sample image using the Upload button.
 
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-upload.png)
 
