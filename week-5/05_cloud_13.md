@@ -100,18 +100,13 @@ Short description of the challeges encountered, and how I solved them:
 
 Issue 1: Asking better questions
 
-- [ ]
-- [ ]
+- [ ] As cloud engineer, how can I make sure that I optimize all the possible resources and services?
 
 Issue 2: Too expensive to make databases. I was afraid to go over the budget, so i kept playing around the portal, until I found a much more cheaper choice.
 
 ![hundred](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-issue2.1.png)
 ![thousand](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-issue2.png)
 
-Issue 3:
-Issue 4:
-Issue 5:
-Issue 6:
 
 ## Results
 
@@ -122,8 +117,6 @@ Brief description of the result of the exercises. An image can speak more than a
 1. Create a storage account. Select the storage account from your dashboard. On the storage account page, in the Data storage section, select File shares. On the menu at the top of the File shares page, select + File share. The New file share page drops down. 
 
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-fileshare.png)
-
-
 ![Label](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-5-includes/az-13-fs-overview.png)
 
 2. I've created a VM using the azure shell, using the scripts below.
