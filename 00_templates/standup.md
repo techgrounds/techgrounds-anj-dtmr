@@ -44,6 +44,7 @@ Team #:
 <!-- - [ ] 10 mins after the Q&A: acive recalling with the use of flashcards/quizlet/brainscape/anki -->
 - [ ] 15:30 samen komen
 - [ ] Monday: Group Presentation
+- [ ] Share the presentation at the slack group chat
 - [ ] Thursday: Presentation delen
 - [ ] Wednesday: Individual Presentatie en feedback geven
 - [ ] Friday: KC
