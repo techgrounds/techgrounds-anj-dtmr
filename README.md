@@ -62,6 +62,7 @@ Here you may find **all the projects** I did during the training
 - [Well-Architected Framework](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-5/05_cloud_12.md)
 - [Files, AppServices, CDN, DNS, Database](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-5/05_cloud_13.md)
 - [Presentation: Well-Architected Framework](https://prezi.com/view/1px1mtg95K0WUB755HMx/)
+- [Whiteboard: Well-Architected Framework](https://jamboard.google.com/d/1iKdx4dlijen6sJTonqlaV7g54Xf6aHNwU2jVQrIUrwo/edit?usp=sharing)
 
 <!-- - []() -->
 
