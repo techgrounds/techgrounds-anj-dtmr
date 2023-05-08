@@ -117,6 +117,10 @@ root
  |  |- 04_cloud_09
  |  |- 04_cloud_10
  |
+ |- week-5
+ |  |- 04_cloud_11
+ |  |- 04_cloud_12
+ |  |- 04_cloud_13
  |
  |- 03_Project
  |  |- Code
