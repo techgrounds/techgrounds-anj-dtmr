@@ -55,6 +55,17 @@ Here you may find **all the projects** I did during the training
 - [Shared Responsibility Model](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_09.md)
 - [Azure Virtual Network (VNet)](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-4/04_cloud_10.md)
 
+**Week 5:**
+
+- [StandUp Notes](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/00_scrumnotes/week-5-scrumnotes)
+- [Azure Load Balancer (ALB) & Auto Scaling](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-5/05_cloud_11.md)
+- [Well-Architected Framework](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-5/05_cloud_12.md)
+- [Files, AppServices, CDN, DNS, Database](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-5/05_cloud_13.md)
+- [Presentation: Well-Architected Framework](https://prezi.com/view/1px1mtg95K0WUB755HMx/)
+
+<!-- - []() -->
+
+
 ## How my files are organized
 
 ```
