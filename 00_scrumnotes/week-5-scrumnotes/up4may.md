@@ -52,6 +52,7 @@ Team #3:
 - Angeline:
 - [x] Brainstorm for Scrum Meeting
 - [x] vandaag bereikt: week 3 opdrachten af
+- [ ] self-reflection: I noticed that because I want to be aware of my cost using the azure portal, I was rushing to finish the tasks and did not had enough time to play around the dashboard and to check the different services further
 - [x] vanavond: stop om 17u
 
 # Retro van Groep 3 van week 5
