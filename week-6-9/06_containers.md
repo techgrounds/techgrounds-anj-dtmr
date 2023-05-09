@@ -1,0 +1,61 @@
+# Containers
+
+Containers zijn een manier om applicaties te draaien in een geïsoleerde omgeving. Dit betekent dat de applicatie en alle afhankelijkheden in een container zitten en niet op het host-besturingssysteem. Containers zijn lichtgewicht en kunnen snel worden opgestart en gestopt. Dit maakt ze ideaal voor het bouwen van schaalbare microservices-architecturen.
+
+Containers worden gebruikt om applicaties te isoleren van de onderliggende infrastructuur. Dit betekent dat de applicatie in een container kan worden uitgevoerd zonder dat deze afhankelijk is van de onderliggende infrastructuur. Containers kunnen worden gebruikt om applicaties te draaien op verschillende besturingssystemen en hardwareplatforms.
+
+Containers kunnen worden gebruikt om bestaande applicaties te moderniseren en te migreren naar de cloud. Containers kunnen ook worden gebruikt om nieuwe applicaties te bouwen die zijn ontworpen voor schaalbaarheid en flexibiliteit.
+
+Containers kunnen worden gebruikt in on-premises omgevingen om applicaties te draaien op lokale hardware. Containers kunnen ook worden gebruikt in cloudomgevingen zoals Azure om applicaties te draaien op virtuele machines of Kubernetes-clusters.
+
+Containers kunnen worden gecombineerd met andere diensten zoals Azure Kubernetes Service (AKS) om schaalbare microservices-architecturen te bouwen.
+
+Het verschil tussen containers en andere gelijksoortige diensten zoals virtuele machines is dat containers lichtgewicht zijn en snel kunnen worden opgestart en gestopt. Virtuele machines zijn zwaarder en hebben meer resources nodig om te draaien.
+
+U kunt containers vinden in de Azure Portal onder de categorie "Container Instances". U kunt deze dienst inschakelen door een container image te uploaden naar Azure Container Registry of door een container image te maken met behulp van Docker of een andere container engine.
+
+U kunt deze dienst koppelen aan andere resources zoals virtuele machines, Kubernetes-clusters of Azure Functions door gebruik te maken van Azure Resource Manager-sjablonen of door gebruik te maken van de Azure Portal.
+
+Source:
+(1) 80/20 Rule of Tank Containers - LinkedIn. https://www.linkedin.com/pulse/8020-rule-tank-containers-shashi-kallada.
+(2) Container shipping - statistics & facts | Statista. https://www.statista.com/topics/1367/container-shipping/.
+(3) Understanding the Pareto principle (The 80/20 rule) - Asana. https://asana.com/resources/pareto-principle-80-20-rule.
+(4) Free Docker Tutorial - Containers 101 | Udemy. https://www.udemy.com/course/containers-101/.
+(5) Containers 101: Docker fundamentals | InfoWorld. https://www.infoworld.com/article/3077875/containers-101-docker-fundamentals.html.
+(6) What are Containers and Why do You Need them | Rackspace. https://www.rackspace.com/blog/containers-101.
+
+## Bestudeer
+
+**1.**
+
+<!-- I want to learn about Containers. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
+
+Waar is Containers voor?
+Waar wordt Containers voor gebruikt?
+Hoe past Containers / vervangt Containers in een on-premises setting?
+Hoe kan ik Containers combineren met andere diensten?
+Wat is het verschil tussen Containers en andere gelijksoortige diensten?
+Waar kan ik deze dienst vinden in de console?
+Hoe zet ik deze dienst aan?
+Hoe kan ik deze dienst koppelen aan andere resources?
+
+## Opdrachten
+
+## Sources list used for solving the exercise
+
+- [Notes]()
+- [Flashcard]()
+
+## Overcome challenges:
+
+Short description of the challeges encountered, and how I solved them:
+
+Issue 1: Asking better questions
+
+- [ ]
+
+## Results
+
+Brief description of the result of the exercises. An image can speak more than a thousand words.
+
+**Here's the step by step guide how I did it::**
