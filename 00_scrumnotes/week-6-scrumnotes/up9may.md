@@ -29,8 +29,8 @@ Team #3:
 - Roan:
 - Eligio:
 - Angeline:
-- [ ] dinsdag: vanaf 12 (kunnen jullie een overview aan mij vertellen over de Q&A)
-- [ ] woensdag: 10:30am pas (kunnen jullie een overview aan mij vertellen over de ochtend meeting)
+- [x] dinsdag: vanaf 12 (kunnen jullie een samenvatting aan mij vertellen over de Q&A)
+- [x] woensdag: 10:30am pas (kunnen jullie een samenvatting aan mij vertellen over de ochtend meeting)
 
 ## Dagafsluiting:
 
@@ -38,7 +38,7 @@ Team #3:
 - Roan:
 - Eligio:
 - Angeline:
-- [x] vandaag bereikt: theorie af
+- [x] vandaag bereikt: theorie rapport van alle opdrachten af
 - [x] vandaag: stop om 12u voor naturalisatieceremonie
 
 ### Other Notes
