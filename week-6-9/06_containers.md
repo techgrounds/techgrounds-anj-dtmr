@@ -1,5 +1,7 @@
 # Containers
 
+Azure Containers are a way to package and run applications in a portable and isolated environment. They are like a lunch box that contains all the food you need for your lunch. The lunch box is portable and can be carried around easily. Similarly, Azure Containers are portable and can be moved between different environments such as development, testing, and production. They are also isolated from other applications running on the same machine, which makes them more secure and reliable.
+
 Containers zijn een manier om applicaties te draaien in een geïsoleerde omgeving. Dit betekent dat de applicatie en alle afhankelijkheden in een container zitten en niet op het host-besturingssysteem. Containers zijn lichtgewicht en kunnen snel worden opgestart en gestopt. Dit maakt ze ideaal voor het bouwen van schaalbare microservices-architecturen.
 
 Containers worden gebruikt om applicaties te isoleren van de onderliggende infrastructuur. Dit betekent dat de applicatie in een container kan worden uitgevoerd zonder dat deze afhankelijk is van de onderliggende infrastructuur. Containers kunnen worden gebruikt om applicaties te draaien op verschillende besturingssystemen en hardwareplatforms.
@@ -45,6 +47,7 @@ Hoe kan ik deze dienst koppelen aan andere resources?
 
 - [Notes]()
 - [Flashcard]()
+- [What are containers?](https://cloud.google.com/learn/what-are-containers)
 
 ## Overcome challenges:
 
