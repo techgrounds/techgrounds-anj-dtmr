@@ -1,5 +1,7 @@
 # Azure Advisor
 
+Azure Advisor is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments. It is like a personal trainer that helps you achieve your fitness goals by providing you with personalized advice and recommendations. Similarly, Azure Advisor provides you with personalized recommendations to improve the performance, security, and high availability of your resources while looking for opportunities to reduce your overall Azure spend.
+
 Azure Advisor is een dienst die klanten helpt bij het optimaliseren van hun Azure-implementaties. Het is een gepersonaliseerde cloudconsultant die uw resourceconfiguratie en gebruiktelemetrie analyseert en vervolgens oplossingen aanbeveelt om de prestaties, beveiliging en hoge beschikbaarheid van uw resources te verbeteren terwijl u op zoek bent naar mogelijkheden om uw kosten te verlagen².
 
 Azure Advisor kan worden gebruikt in on-premises omgevingen om klanten te helpen bij het optimaliseren van lokale hardware en software. Azure Advisor kan ook worden gebruikt in cloudomgevingen zoals Azure om klanten te helpen bij het optimaliseren van virtuele machines of Kubernetes-clusters.
