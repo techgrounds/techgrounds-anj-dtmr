@@ -1,5 +1,7 @@
 # Azure Activity Log
 
+Azure Activity Log is a platform log in Azure that provides insight into subscription-level events. It is like a diary that keeps track of all the important events that happen in your life. Similarly, Azure Activity Log keeps track of all the important events that happen in your Azure subscription. It includes information like when a resource is modified or a virtual machine is started
+
 Azure Activity Log is een dienst die klanten helpt bij het bewaken van hun Azure-resources. Het biedt inzicht in de activiteit van de resource en helpt bij het oplossen van problemen en het identificeren van trends.
 
 Azure Activity Log kan worden gebruikt in on-premises omgevingen om klanten te helpen bij het bewaken van lokale hardware en software. Azure Activity Log kan ook worden gebruikt in cloudomgevingen zoals Azure om klanten te helpen bij het bewaken van virtuele machines of Kubernetes-clusters.
