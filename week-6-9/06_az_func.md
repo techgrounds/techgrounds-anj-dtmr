@@ -1,6 +1,8 @@
 # Azure Functions
 
-Azure Functions is een serverless oplossing waarmee u minder code kunt schrijven, minder infrastructuur hoeft te onderhouden en kosten kunt besparen. In plaats van u zorgen te maken over het implementeren en onderhouden van servers, biedt de cloudinfrastructuur alle up-to-date resources die nodig zijn om uw applicaties draaiende te houden¹.
+Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure. It is like a vending machine that dispenses snacks when you insert coins. Similarly, Azure Functions executes your code when an event occurs
+
+Azure Functions is een serverless oplossing waarmee u minder code kunt schrijven, minder infrastructuur hoeft te onderhouden en kosten kunt besparen. In plaats van u zorgen te maken over het implementeren en onderhouden van servers, biedt de cloudinfrastructuur alle up-to-date resources die nodig zijn om uw applicaties draaiende te houden.
 
 Azure Functions kan worden gebruikt in on-premises omgevingen om klanten te helpen bij het optimaliseren van lokale hardware en software. Azure Functions kan ook worden gebruikt in cloudomgevingen zoals Azure om klanten te helpen bij het optimaliseren van virtuele machines of Kubernetes-clusters.
 
