@@ -1,6 +1,12 @@
 # Event Grid, Queue Storage, Service Bus
 
-Azure Event Grid is een volledig beheerde gebeurtenisrouteringsservice waarmee u eenvoudig gebeurtenissen kunt publiceren en abonneren op Azure-services of externe bronnen¹. Azure Queue Storage is een service voor het opslaan van berichten die worden gebruikt om berichten tussen toepassingen te verzenden². Azure Service Bus is een volledig beheerde service voor berichtenverzending en -ontvangst³.
+Azure Event Grid is a fully-managed event routing service that enables you to react in near-real time to changes happening across your Azure resources and third-party applications. It is like a mailman who delivers letters to your mailbox when they arrive. Similarly, Azure Event Grid delivers events to your application when they occur.
+
+Azure Queue Storage is a service for storing large numbers of messages that can be accessed from anywhere in the world via authenticated calls using HTTP or HTTPS. It is like a post office box where you can store your letters until you are ready to pick them up. Similarly, Azure Queue Storage stores your messages until you are ready to retrieve them.
+
+Azure Service Bus is a messaging service that enables reliable and secure communication between applications and services. It is like a telephone operator who connects your call to the right person. Similarly, Azure Service Bus routes messages between applications and services.
+
+Azure Event Grid is een volledig beheerde gebeurtenisrouteringsservice waarmee u eenvoudig gebeurtenissen kunt publiceren en abonneren op Azure-services of externe bronnen. Azure Queue Storage is een service voor het opslaan van berichten die worden gebruikt om berichten tussen toepassingen te verzenden. Azure Service Bus is een volledig beheerde service voor berichtenverzending en -ontvangst.
 
 Azure Event Grid kan worden gebruikt in on-premises omgevingen om klanten te helpen bij het optimaliseren van lokale hardware en software. Azure Queue Storage en Azure Service Bus kunnen ook worden gebruikt in cloudomgevingen zoals Azure om klanten te helpen bij het optimaliseren van virtuele machines of Kubernetes-clusters.
 
