@@ -1,6 +1,8 @@
 # Azure Monitor
 
-Azure Monitor is een uitgebreide monitoringoplossing voor het verzamelen, analyseren en reageren op telemetrie uit uw cloud- en on-premises omgevingen. U kunt Azure Monitor gebruiken om de beschikbaarheid en prestaties van uw applicaties en services te maximaliseren¹².
+Azure Monitor is a comprehensive monitoring solution for collecting, analyzing, and responding to telemetry from your cloud and on-premises environments. It is like a security camera that records everything that happens in your house. Similarly, Azure Monitor records everything that happens in your cloud and on-premises environments so that you can easily monitor the performance of your applications and services.
+
+Azure Monitor is een uitgebreide monitoringoplossing voor het verzamelen, analyseren en reageren op telemetrie uit uw cloud- en on-premises omgevingen. U kunt Azure Monitor gebruiken om de beschikbaarheid en prestaties van uw applicaties en services te maximaliseren.
 
 Azure Monitor kan worden gebruikt in on-premises omgevingen om klanten te helpen bij het optimaliseren van lokale hardware en software. Azure Monitor kan ook worden gebruikt in cloudomgevingen zoals Azure om klanten te helpen bij het optimaliseren van virtuele machines of Kubernetes-clusters.
 
