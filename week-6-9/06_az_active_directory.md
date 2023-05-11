@@ -1,8 +1,10 @@
 # Azure Active Directory
 
-Azure Active Directory (Azure AD), onderdeel van Microsoft Entra, is een identiteitsservice voor ondernemingen die eenmalige aanmelding, meervoudige verificatie en voorwaardelijke toegang biedt en daarmee bescherming biedt tegen 99,9 procent van alle cyberbeveiligingsaanvallen³¹.
+Azure Active Directory is the next evolution of identity and access management solutions for the cloud. It is like a digital phone book that stores all your contacts in one place. Similarly, Azure Active Directory stores all your user accounts and passwords in one place so that you can easily manage them and control access to your applications and resources
 
-Azure Active Directory is een cloudgebaseerde identiteits- en toegangsbeheerservice. Azure AD stelt uw medewerkers in staat om externe resources te openen, zoals Microsoft 365, het Azure-portaal en duizenden andere SaaS-applicaties².
+Azure Active Directory (Azure AD), onderdeel van Microsoft Entra, is een identiteitsservice voor ondernemingen die eenmalige aanmelding, meervoudige verificatie en voorwaardelijke toegang biedt en daarmee bescherming biedt tegen 99,9 procent van alle cyberbeveiligingsaanvallen.
+
+Azure Active Directory is een cloudgebaseerde identiteits- en toegangsbeheerservice. Azure AD stelt uw medewerkers in staat om externe resources te openen, zoals Microsoft 365, het Azure-portaal en duizenden andere SaaS-applicaties.
 
 Azure Active Directory kan worden gebruikt in on-premises omgevingen om klanten te helpen bij het optimaliseren van lokale hardware en software. Azure Active Directory kan ook worden gebruikt in cloudomgevingen zoals Azure om klanten te helpen bij het optimaliseren van virtuele machines of Kubernetes-clusters.
 
@@ -36,6 +38,7 @@ Hoe kan ik deze dienst koppelen aan andere resources?
 
 - [Notes]()
 - [Flashcard]()
+- [Azure Active Directory](https://www.youtube.com/watch?v=AtAb_8Av4iU)
 
 ## Overcome challenges:
 
