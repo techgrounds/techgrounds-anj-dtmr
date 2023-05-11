@@ -1,5 +1,7 @@
 # CosmosDB
 
+Azure Cosmos DB is a globally distributed, multi-model database service that lets you elastically and independently scale throughput and storage across any number of Azure regions worldwide. It is like a library that stores all your books in one place but allows you to access them from anywhere in the world. Similarly, Azure Cosmos DB stores all your data in one place but allows you to access it from anywhere in the world
+
 Cosmos DB is een multi-model database service die wereldwijd gedistribueerd is en ontworpen is om de schaalbaarheid en beschikbaarheid van uw applicaties te verbeteren door middel van een reeks consistente API's en servicegaranties.
 
 Cosmos DB kan worden gebruikt in on-premises omgevingen om klanten te helpen bij het optimaliseren van lokale hardware en software. Cosmos DB kan ook worden gebruikt in cloudomgevingen zoals Azure om klanten te helpen bij het optimaliseren van virtuele machines of Kubernetes-clusters.
