@@ -1,5 +1,7 @@
 # Azure App Configuration
 
+Azure App Configuration is a service that helps you manage your application settings and feature flags in a central location. It is like a pantry where you store all your ingredients and spices. You can easily access them whenever you need them and make changes to them as needed. Similarly, Azure App Configuration provides you with a central location to store all your application settings and feature flags. You can easily access them from your applications and make changes to them as needed.
+
 Azure App Configuration is een Azure-service die gebruikers in staat stelt om configuratie binnen de cloud te beheren. Gebruikers kunnen App Configuration stores maken om key-value instellingen op te slaan en opgeslagen instellingen te consumeren vanuit applicaties, build pipelines, release processen, microservices en andere Azure-resources³.
 
 Azure App Configuration is gebouwd voor snelheid, schaalbaarheid en beveiliging. Het is een universele, volledig beheerde configuratieopslag die snelle ophaling van configuraties mogelijk maakt voor elke Azure-applicatie. Het biedt volledige gegevensversleuteling, zowel in rust als tijdens transport. Het is ook naadloos geïntegreerd met populaire frameworks zoals .NET en Java Spring².
