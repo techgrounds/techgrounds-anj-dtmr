@@ -1,5 +1,9 @@
 # Azure Support Plans
 
+Azure Support Plans are a way to get technical support from Microsoft when you have issues with your Azure services. They are like a car insurance policy that you buy to protect yourself from unexpected accidents. Just like how you can call your insurance company when you have an accident, you can contact Microsoft when you have issues with your Azure services.
+
+There are different types of support plans that offer different levels of support and response times. For example, the Developer plan offers an initial response to your Azure technical support requests within one business day1. The ProDirect plan offers 24/7 technical support and faster response times.
+
 Azure Support Plans zijn een reeks ondersteuningsabonnementen die klanten kunnen kopen om toegang te krijgen tot technische ondersteuning en andere voordelen. Er zijn verschillende niveaus van ondersteuning beschikbaar, waaronder Basic, Developer, Standard en Professional Direct.
 
 Azure Support Plans worden gebruikt om klanten te helpen bij het oplossen van problemen met Azure-services en -oplossingen. Dit kan variëren van hulp bij het oplossen van technische problemen tot het bieden van advies over de beste manier om Azure-services te gebruiken.
