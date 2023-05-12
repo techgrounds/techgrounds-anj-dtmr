@@ -42,4 +42,11 @@ Issue 1: Choosing which tasks I should do for this. Looked for Azure Monitor tut
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-![]()
+Create Metric
+![Create Metric](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/monitor-scope.png)
+
+![24hours](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/monitor-metrics-24.png)
+
+![30mins](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/monitor-metrics-30.png)
+
+![30days](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/monitor-metrics-30days.png)
