@@ -12,33 +12,26 @@ U kunt deze dienst vinden in de Azure Portal onder de categorie "Cosmos DB". U k
 
 ## Bestudeer
 
-**1.**
-
-<!-- I want to learn about CosmosDB. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
-
-Waar is CosmosDB voor?
-Waar wordt CosmosDB voor gebruikt?
-Hoe past CosmosDB / vervangt CosmosDB in een on-premises setting?
-Hoe kan ik CosmosDB combineren met andere diensten?
-Wat is het verschil tussen CosmosDB en andere gelijksoortige diensten?
-Waar kan ik deze dienst vinden in de console?
-Hoe zet ik deze dienst aan?
-Hoe kan ik deze dienst koppelen aan andere resources?
-
-## Opdrachten
+- [x] Waar is CosmosDB voor?
+- [x] Waar wordt CosmosDB voor gebruikt?
+- [x] Hoe past CosmosDB / vervangt CosmosDB in een on-premises setting?
+- [x] Hoe kan ik CosmosDB combineren met andere diensten?
+- [x] Wat is het verschil tussen CosmosDB en andere gelijksoortige diensten?
+- [x] Waar kan ik deze dienst vinden in de console?
+- [x] Hoe zet ik deze dienst aan?
+- [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Sources list used for solving the exercise
 
 - [Notes]()
 - [Flashcard]()
+- [Create an Azure Cosmos DB account, database, container, and items from the Azure portal](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-portal)
 
 ## Overcome challenges:
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: Asking better questions
-
-- [ ]
+Issue 1: Choosing which tasks I should do for this. Looked for Azure Monitor tutorials and followed it accordingly
 
 ## Results
 
