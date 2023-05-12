@@ -25,7 +25,7 @@ U kunt deze dienst vinden in de Azure Portal onder de categorie "Monitor". U kun
 
 ## Sources list used for solving the exercise
 
-- [Notes]()
+- [Notes](https://drive.google.com/drive/folders/1oq5p0FOoMbA4ok5wxRSFHa1inBFMSxRx)
 - [Flashcard]()
 - [Analyze metrics for an Azure resource](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/tutorial-metrics)
 - Azure Monitor overview - Azure Monitor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-monitor/overview.
