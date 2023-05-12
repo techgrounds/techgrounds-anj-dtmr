@@ -38,10 +38,28 @@ U kunt deze dienst vinden in de Azure Portal onder de categorie "Active Director
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: Asking better questions
+[Issue 1](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/issue1.png): When I made the tenant, I could not sign in to my account anymore. I refreshed my browser and waited for few minutes then logged in again.
 
-- [ ]
 
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
+
+
+Created Tenant
+![tenant](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/create-tenant.png)
+
+Delete Tenant
+![delete](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/delete-tenant.png)
+
+
+Create Test Group
+![group](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/testgroup.png)
+
+![group](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/group-members.png)
+
+![Owner](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/group-owner.png)
+
+![properties](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/group-prop.png)
+
+![overview](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/grp-overview.png)
