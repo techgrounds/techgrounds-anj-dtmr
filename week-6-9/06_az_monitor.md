@@ -10,25 +10,16 @@ Het verschil tussen Azure Monitor en andere gelijksoortige diensten is dat Azure
 
 U kunt deze dienst vinden in de Azure Portal onder de categorie "Monitor". U kunt deze dienst inschakelen door u aan te melden bij de Azure Portal en vervolgens Monitor te openen.
 
-Source:
-(1) Azure Monitor overview - Azure Monitor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-monitor/overview.
-(2) Azure Monitor - Modern Observability Tools | Microsoft Azure. https://azure.microsoft.com/en-us/products/monitor/.
-(3) Azure Monitor documentation - Azure Monitor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-monitor/.
-
 ## Bestudeer
 
-**1.**
-
-<!-- I want to learn about Azure Monitor. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
-
-Waar is Azure Monitor voor?
-Waar wordt Azure Monitor voor gebruikt?
-Hoe past Azure Monitor / vervangt Azure Monitor in een on-premises setting?
-Hoe kan ik Azure Monitor combineren met andere diensten?
-Wat is het verschil tussen Azure Monitor en andere gelijksoortige diensten?
-Waar kan ik deze dienst vinden in de console?
-Hoe zet ik deze dienst aan?
-Hoe kan ik deze dienst koppelen aan andere resources?
+- [x] Waar is Azure Monitor voor?
+- [x] Waar wordt Azure Monitor voor gebruikt?
+- [x] Hoe past Azure Monitor / vervangt Azure Monitor in een on-premises setting?
+- [x] Hoe kan ik Azure Monitor combineren met andere diensten?
+- [x] Wat is het verschil tussen Azure Monitor en andere gelijksoortige diensten?
+- [x] Waar kan ik deze dienst vinden in de console?
+- [x] Hoe zet ik deze dienst aan?
+- [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Opdrachten
 
@@ -36,17 +27,19 @@ Hoe kan ik deze dienst koppelen aan andere resources?
 
 - [Notes]()
 - [Flashcard]()
+- [Analyze metrics for an Azure resource](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/tutorial-metrics)
+- Azure Monitor overview - Azure Monitor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-monitor/overview.
+- Azure Monitor - Modern Observability Tools | Microsoft Azure. https://azure.microsoft.com/en-us/products/monitor/.
+- Azure Monitor documentation - Azure Monitor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-monitor/.
 
 ## Overcome challenges:
 
 Short description of the challeges encountered, and how I solved them:
 
-Issue 1: Asking better questions
-
-- [ ]
+Issue 1: Choosing which tasks I should do for this. Looked for Azure Monitor tutorials and followed it accordingly
 
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Here's the step by step guide how I did it::**
+![]()
