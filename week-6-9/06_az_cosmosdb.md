@@ -37,4 +37,14 @@ Issue 1: Choosing which tasks I should do for this. Looked for Azure Monitor tut
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
-**Here's the step by step guide how I did it::**
+**Created NoSQL DB**
+![NoSQL DB](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/cosmos-create.png)
+![overview](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/cosmos-overview.png)
+![Log](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/cosmos-act-log.png)
+![Insights](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/cosmos-insights.png)
+
+**Added Container, Items and configure filter**
+![Item](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/cosmos-item.png)
+
+**Delete**
+![Delete](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/cosmos-delete.png)
