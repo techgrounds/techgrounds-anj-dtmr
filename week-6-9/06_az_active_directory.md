@@ -12,25 +12,16 @@ Het verschil tussen Azure Active Directory en andere gelijksoortige diensten is 
 
 U kunt deze dienst vinden in de Azure Portal onder de categorie "Active Directory". U kunt deze dienst inschakelen door u aan te melden bij de Azure Portal en vervolgens Active Directory te openen.
 
-Source:
-(1) Azure Active Directory | Microsoft Azure. https://azure.microsoft.com/nl-nl/products/active-directory/.
-(2) Azure Active Directory | Microsoft Azure. https://azure.microsoft.com/en-ca/products/active-directory/.
-(3) What is Azure Active Directory? - Microsoft Entra. https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis.
-
 ## Bestudeer
 
-**1.**
-
-<!-- I want to learn about Azure Active Directory. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
-
-Waar is Azure Active Directory voor?
-Waar wordt Azure Active Directory voor gebruikt?
-Hoe past Azure Active Directory / vervangt Azure Active Directory in een on-premises setting?
-Hoe kan ik Azure Active Directory combineren met andere diensten?
-Wat is het verschil tussen Azure Active Directory en andere gelijksoortige diensten?
-Waar kan ik deze dienst vinden in de console?
-Hoe zet ik deze dienst aan?
-Hoe kan ik deze dienst koppelen aan andere resources?
+- [x] Waar is Azure Active Directory voor?
+- [x] Waar wordt Azure Active Directory voor gebruikt?
+- [x] Hoe past Azure Active Directory / vervangt Azure Active Directory in een on-premises setting?
+- [x] Hoe kan ik Azure Active Directory combineren met andere diensten?
+- [x] Wat is het verschil tussen Azure Active Directory en andere gelijksoortige diensten?
+- [x] Waar kan ik deze dienst vinden in de console?
+- [x] Hoe zet ik deze dienst aan?
+- [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Opdrachten
 
@@ -39,6 +30,9 @@ Hoe kan ik deze dienst koppelen aan andere resources?
 - [Notes]()
 - [Flashcard]()
 - [Azure Active Directory](https://www.youtube.com/watch?v=AtAb_8Av4iU)
+- Azure Active Directory | Microsoft Azure. https://azure.microsoft.com/nl-nl/products/active-directory/.
+- Azure Active Directory | Microsoft Azure. https://azure.microsoft.com/en-ca/products/active-directory/.
+- What is Azure Active Directory? - Microsoft Entra. https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis.
 
 ## Overcome challenges:
 
