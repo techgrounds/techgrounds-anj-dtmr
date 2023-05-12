@@ -30,6 +30,7 @@ U kunt deze dienst vinden in de Azure Portal onder de categorie "Active Director
 - [Notes]()
 - [Flashcard]()
 - [Azure Active Directory](https://www.youtube.com/watch?v=AtAb_8Av4iU)
+- [Manage Azure Active Directory groups and group membership](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/how-to-manage-groups)
 - Azure Active Directory | Microsoft Azure. https://azure.microsoft.com/nl-nl/products/active-directory/.
 - Azure Active Directory | Microsoft Azure. https://azure.microsoft.com/en-ca/products/active-directory/.
 - What is Azure Active Directory? - Microsoft Entra. https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis.
