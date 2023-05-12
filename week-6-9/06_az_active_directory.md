@@ -45,5 +45,3 @@ Issue 1: Asking better questions
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
-
-**Here's the step by step guide how I did it::**
