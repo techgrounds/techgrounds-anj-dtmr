@@ -25,20 +25,22 @@ Team Azure:
 - Sjoerd: zelf-gemaakt documentaire volgen
 - Rogier: oefenexamen maken, verder studeren waar belangrijk vindt,
 - Angeline: nog niet klaar van de opdrachten van vorige week
-- [ ] vandaag doelen: 4 rapporten afmaken, en 2 oefenexamens doen
-- [ ] soft skills doel vandaag: herhaal wat mensen zei voor meer duidelijkheden
+- [x] vandaag doelen: 4 rapporten afmaken, en 2 oefenexamens doen
+- [x] soft skills doel vandaag: herhaal wat mensen zei voor meer duidelijkheden
+- [x] Cegeka email beantwoorden
+- [x] Miro board: https://miro.com/welcomeonboard/WENqdUcydEh1dmtVR2FXbURoeGRLVTg3YjA1N2RuRko2NnZsNUpMRzlwZXU0VWptbGpWMG85MTBKejlMdlIyWXwzNDU4NzY0NTE3MzUyNjgyMzQ1fDI=?share_link_id=48088940418
 - [ ] Challenge:
 - [ ] Nieuwe woorden:
 - [ ] Feedback geven:
 
 ## Groep
 
-- [ ] 12:30 samen komen - samen een opdracht discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie probleem deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
-- [ ] 15:30 samen komen en Brainstorm for Scrum Meeting
 - [x] Monday: Choose a Scrum Master
+- [ ] 12:30 samen komen - samen onderwerpen discuseeren: hoe ver je bent? (hoef niet te delen), hoe wil jullie probleem deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
+- [ ] 15:30 samen komen en Brainstorm for Scrum Meeting
 
 - Vragen & Screen sharing / vragen bij q&a te noteren
-- [ ]
+- [ ] Kunnen we een Miro board gebruiken voor ons standups, dagafsluiting, scrum meetings?
 - [ ]
 - [ ]
 
