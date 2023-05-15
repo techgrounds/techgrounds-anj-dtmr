@@ -26,7 +26,7 @@ Team #:
 -
 -
 - Angeline:
-- [ ] gister/ avond bereikt:
+- [ ] gister / avond bereikt:
 
 ## Wat ga ik doen? Wat ga ik vandaag bereiken? What are you going to do today?
 
