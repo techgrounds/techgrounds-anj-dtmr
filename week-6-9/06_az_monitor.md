@@ -21,8 +21,6 @@ U kunt deze dienst vinden in de Azure Portal onder de categorie "Monitor". U kun
 - [x] Hoe zet ik deze dienst aan?
 - [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
-## Opdrachten
-
 ## Sources list used for solving the exercise
 
 - [Notes](https://drive.google.com/drive/folders/1oq5p0FOoMbA4ok5wxRSFHa1inBFMSxRx)
