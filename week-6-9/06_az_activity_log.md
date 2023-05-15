@@ -14,20 +14,14 @@ U kunt deze dienst vinden in de Azure Portal onder de categorie "Activity Log". 
 
 ## Bestudeer
 
-**1.**
-
-<!-- I want to learn about Azure Activity Log. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
-
-Waar is Azure Activity Log voor?
-Waar wordt Azure Activity Log voor gebruikt?
-Hoe past Azure Activity Log / vervangt Azure Activity Log in een on-premises setting?
-Hoe kan ik Azure Activity Log combineren met andere diensten?
-Wat is het verschil tussen Azure Activity Log en andere gelijksoortige diensten?
-Waar kan ik deze dienst vinden in de console?
-Hoe zet ik deze dienst aan?
-Hoe kan ik deze dienst koppelen aan andere resources?
-
-## Opdrachten
+- [x] Waar is Azure Activity Log voor?
+- [x] Waar wordt Azure Activity Log voor gebruikt?
+- [x] Hoe past Azure Activity Log / vervangt Azure Activity Log in een on-premises setting?
+- [x] Hoe kan ik Azure Activity Log combineren met andere diensten?
+- [x] Wat is het verschil tussen Azure Activity Log en andere gelijksoortige diensten?
+- [x] Waar kan ik deze dienst vinden in de console?
+- [x] Hoe zet ik deze dienst aan?
+- [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Sources list used for solving the exercise
 
