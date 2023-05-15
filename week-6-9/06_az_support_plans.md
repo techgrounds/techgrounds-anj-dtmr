@@ -18,32 +18,24 @@ U kunt deze dienst vinden in de Azure Portal onder de categorie "Support + billi
 
 U kunt deze dienst koppelen aan andere resources zoals virtuele machines, Kubernetes-clusters of Azure Functions door gebruik te maken van Azure Resource Manager-sjablonen of door gebruik te maken van de Azure Portal.
 
-Source:
-(1) Azure Support Plans Comparison | Microsoft Azure. https://azure.microsoft.com/en-us/support/plans/.
-(2) Azure Support Plans Comparison | Microsoft Azure. https://azure.microsoft.com/en-in/support/plans/.
-(3) Support Plans—Support Scope and Responsiveness | Microsoft Azure. https://azure.microsoft.com/en-gb/support/plans/response/.
-
 ## Bestudeer
 
-**1.**
-
-<!-- I want to learn about Azure Support Plans. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
-
-Waar is Azure Support Plans voor?
-Waar wordt Azure Support Plans voor gebruikt?
-Hoe past Azure Support Plans / vervangt Azure Support Plans in een on-premises setting?
-Hoe kan ik Azure Support Plans combineren met andere diensten?
-Wat is het verschil tussen Azure Support Plans en andere gelijksoortige diensten?
-Waar kan ik deze dienst vinden in de console?
-Hoe zet ik deze dienst aan?
-Hoe kan ik deze dienst koppelen aan andere resources?
-
-## Opdrachten
+- [x] Waar is Azure Support Plans voor?
+- [x] Waar wordt Azure Support Plans voor gebruikt?
+- [x] Hoe past Azure Support Plans / vervangt Azure Support Plans in een on-premises setting?
+- [x] Hoe kan ik Azure Support Plans combineren met andere diensten?
+- [x] Wat is het verschil tussen Azure Support Plans en andere gelijksoortige diensten?
+- [x] Waar kan ik deze dienst vinden in de console?
+- [x] Hoe zet ik deze dienst aan?
+- [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Sources list used for solving the exercise
 
 - [Notes]()
 - [Flashcard]()
+- Azure Support Plans Comparison | Microsoft Azure. https://azure.microsoft.com/en-us/support/plans/.
+- Azure Support Plans Comparison | Microsoft Azure. https://azure.microsoft.com/en-in/support/plans/.
+- Support Plans—Support Scope and Responsiveness | Microsoft Azure. https://azure.microsoft.com/en-gb/support/plans/response/.
 
 ## Overcome challenges:
 
