@@ -89,3 +89,6 @@ I chose to Create a function in Azure with Python using Visual Studio Code and Z
 
 10. Delete the resources
 ![delete](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/func-delete.png)
+
+
+Here's the [code](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/week-6-9/function%20app/api) I used
