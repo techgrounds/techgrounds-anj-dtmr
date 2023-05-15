@@ -12,32 +12,24 @@ Het verschil tussen Azure App Configuration en andere gelijksoortige diensten is
 
 U kunt deze dienst vinden in de Azure Portal onder de categorie "App Configuration". U kunt deze dienst inschakelen door u aan te melden bij de Azure Portal en vervolgens App Configuration te openen.
 
-Source:
-(1) Azure App Configuration - Github. https://github.com/Azure/AppConfiguration.
-(2) App Configuration | Microsoft Azure. https://azure.microsoft.com/en-us/products/app-configuration/.
-(3) What is Azure App Configuration? | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview.
-
 ## Bestudeer
 
-**1.**
-
-<!-- I want to learn about Azure App Configuration. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
-
-Waar is Azure App Configuration voor?
-Waar wordt Azure App Configuration voor gebruikt?
-Hoe past Azure App Configuration / vervangt Azure App Configuration in een on-premises setting?
-Hoe kan ik Azure App Configuration combineren met andere diensten?
-Wat is het verschil tussen Azure App Configuration en andere gelijksoortige diensten?
-Waar kan ik deze dienst vinden in de console?
-Hoe zet ik deze dienst aan?
-Hoe kan ik deze dienst koppelen aan andere resources?
-
-## Opdrachten
+- [x] Waar is Azure App Configuration voor?
+- [x] Waar wordt Azure App Configuration voor gebruikt?
+- [x] Hoe past Azure App Configuration / vervangt Azure App Configuration in een on-premises setting?
+- [x] Hoe kan ik Azure App Configuration combineren met andere diensten?
+- [x] Wat is het verschil tussen Azure App Configuration en andere gelijksoortige diensten?
+- [x] Waar kan ik deze dienst vinden in de console?
+- [x] Hoe zet ik deze dienst aan?
+- [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Sources list used for solving the exercise
 
 - [Notes]()
 - [Flashcard]()
+- Azure App Configuration - Github. https://github.com/Azure/AppConfiguration.
+- App Configuration | Microsoft Azure. https://azure.microsoft.com/en-us/products/app-configuration/.
+- What is Azure App Configuration? | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview.
 
 ## Overcome challenges:
 
