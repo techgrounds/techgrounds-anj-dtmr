@@ -18,36 +18,28 @@ U kunt containers vinden in de Azure Portal onder de categorie "Container Instan
 
 U kunt deze dienst koppelen aan andere resources zoals virtuele machines, Kubernetes-clusters of Azure Functions door gebruik te maken van Azure Resource Manager-sjablonen of door gebruik te maken van de Azure Portal.
 
-Source:
-(1) 80/20 Rule of Tank Containers - LinkedIn. https://www.linkedin.com/pulse/8020-rule-tank-containers-shashi-kallada.
-(2) Container shipping - statistics & facts | Statista. https://www.statista.com/topics/1367/container-shipping/.
-(3) Understanding the Pareto principle (The 80/20 rule) - Asana. https://asana.com/resources/pareto-principle-80-20-rule.
-(4) Free Docker Tutorial - Containers 101 | Udemy. https://www.udemy.com/course/containers-101/.
-(5) Containers 101: Docker fundamentals | InfoWorld. https://www.infoworld.com/article/3077875/containers-101-docker-fundamentals.html.
-(6) What are Containers and Why do You Need them | Rackspace. https://www.rackspace.com/blog/containers-101.
-
 ## Bestudeer
 
-**1.**
-
-<!-- I want to learn about Containers. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
-
-Waar is Containers voor?
-Waar wordt Containers voor gebruikt?
-Hoe past Containers / vervangt Containers in een on-premises setting?
-Hoe kan ik Containers combineren met andere diensten?
-Wat is het verschil tussen Containers en andere gelijksoortige diensten?
-Waar kan ik deze dienst vinden in de console?
-Hoe zet ik deze dienst aan?
-Hoe kan ik deze dienst koppelen aan andere resources?
-
-## Opdrachten
+- [x] Waar is Containers voor?
+- [x] Waar wordt Containers voor gebruikt?
+- [x] Hoe past Containers / vervangt Containers in een on-premises setting?
+- [x] Hoe kan ik Containers combineren met andere diensten?
+- [x] Wat is het verschil tussen Containers en andere gelijksoortige diensten?
+- [x] Waar kan ik deze dienst vinden in de console?
+- [x] Hoe zet ik deze dienst aan?
+- [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Sources list used for solving the exercise
 
 - [Notes]()
 - [Flashcard]()
 - [What are containers?](https://cloud.google.com/learn/what-are-containers)
+- 80/20 Rule of Tank Containers - LinkedIn. https://www.linkedin.com/pulse/8020-rule-tank-containers-shashi-kallada.
+- Container shipping - statistics & facts | Statista. https://www.statista.com/topics/1367/container-shipping/.
+- Understanding the Pareto principle (The 80/20 rule) - Asana. https://asana.com/resources/pareto-principle-80-20-rule.
+- Free Docker Tutorial - Containers 101 | Udemy. https://www.udemy.com/course/containers-101/.
+- Containers 101: Docker fundamentals | InfoWorld. https://www.infoworld.com/article/3077875/containers-101-docker-fundamentals.html.
+- What are Containers and Why do You Need them | Rackspace. https://www.rackspace.com/blog/containers-101.
 
 ## Overcome challenges:
 
