@@ -10,27 +10,16 @@ Het verschil tussen Azure Functions en andere gelijksoortige diensten is dat Azu
 
 U kunt deze dienst vinden in de Azure Portal onder de categorie "Functions". U kunt deze dienst inschakelen door u aan te melden bij de Azure Portal en vervolgens Functions te openen.
 
-Source:
-(1) Azure Functions Overview | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview.
-(2) Getting started with Azure Functions | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-functions/functions-get-started.
-(3) Azure Functions – Serverless Functions in Computing | Microsoft Azure. https://azure.microsoft.com/en-au/products/functions/.
-
 ## Bestudeer
 
-**1.**
-
-<!-- I want to learn about Azure Functions. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
-
-Waar is Azure Functions voor?
-Waar wordt Azure Functions voor gebruikt?
-Hoe past Azure Functions / vervangt Azure Functions in een on-premises setting?
-Hoe kan ik Azure Functions combineren met andere diensten?
-Wat is het verschil tussen Azure Functions en andere gelijksoortige diensten?
-Waar kan ik deze dienst vinden in de console?
-Hoe zet ik deze dienst aan?
-Hoe kan ik deze dienst koppelen aan andere resources?
-
-## Opdrachten
+- [x] Waar is Azure Functions voor?
+- [x] Waar wordt Azure Functions voor gebruikt?
+- [x] Hoe past Azure Functions / vervangt Azure Functions in een on-premises setting?
+- [x] Hoe kan ik Azure Functions combineren met andere diensten?
+- [x] Wat is het verschil tussen Azure Functions en andere gelijksoortige diensten?
+- [x] Waar kan ik deze dienst vinden in de console?
+- [x] Hoe zet ik deze dienst aan?
+- [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Sources list used for solving the exercise
 
@@ -40,7 +29,9 @@ Hoe kan ik deze dienst koppelen aan andere resources?
 - [Create a function in Azure with Python using Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python?pivots=python-mode-configuration)
 - [Zip deployment for Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/deployment-zip-push)
 - [Resolve errors for resource not found](https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-not-found?tabs=bicep)
-- []
+- Azure Functions Overview | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview.
+- Getting started with Azure Functions | Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-functions/functions-get-started.
+- Azure Functions – Serverless Functions in Computing | Microsoft Azure. https://azure.microsoft.com/en-au/products/functions/.
 
 ## Overcome challenges:
 
