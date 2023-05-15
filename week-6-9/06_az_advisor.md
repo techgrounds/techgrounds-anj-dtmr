@@ -12,32 +12,24 @@ Het verschil tussen Azure Advisor en andere gelijksoortige diensten is dat Azure
 
 U kunt deze dienst vinden in de Azure Portal onder de categorie "Advisor". U kunt deze dienst inschakelen door u aan te melden bij de Azure Portal en vervolgens Advisor te openen.
 
-Source:
-(1) Azure Advisor documentation - Azure Advisor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/advisor/.
-(2) Introduction to Azure Advisor - Azure Advisor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/advisor/advisor-overview.
-(3) Get started with Azure Advisor - Azure Advisor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/advisor/advisor-get-started.
-
 ## Bestudeer
 
-**1.**
-
-<!-- I want to learn about Azure Advisor. Identify and share the most important 20% of learnings from this topic that will help me understand 80% of it. -->
-
-Waar is Azure Advisor voor?
-Waar wordt Azure Advisor voor gebruikt?
-Hoe past Azure Advisor / vervangt Azure Advisor in een on-premises setting?
-Hoe kan ik Azure Advisor combineren met andere diensten?
-Wat is het verschil tussen Azure Advisor en andere gelijksoortige diensten?
-Waar kan ik deze dienst vinden in de console?
-Hoe zet ik deze dienst aan?
-Hoe kan ik deze dienst koppelen aan andere resources?
-
-## Opdrachten
+- [x] Waar is Azure Advisor voor?
+- [x] Waar wordt Azure Advisor voor gebruikt?
+- [x] Hoe past Azure Advisor / vervangt Azure Advisor in een on-premises setting?
+- [x] Hoe kan ik Azure Advisor combineren met andere diensten?
+- [x] Wat is het verschil tussen Azure Advisor en andere gelijksoortige diensten?
+- [x] Waar kan ik deze dienst vinden in de console?
+- [x] Hoe zet ik deze dienst aan?
+- [x] Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Sources list used for solving the exercise
 
 - [Notes]()
 - [Flashcard]()
+- Azure Advisor documentation - Azure Advisor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/advisor/.
+- Introduction to Azure Advisor - Azure Advisor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/advisor/advisor-overview.
+- Get started with Azure Advisor - Azure Advisor | Microsoft Learn. https://learn.microsoft.com/en-us/azure/advisor/advisor-get-started.
 
 ## Overcome challenges:
 
