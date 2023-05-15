@@ -43,7 +43,6 @@ Issue 1: Asking better questions
 
 [Issue 2:](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/func-issue2.png) I could not upload the API using VSCode, it's not showing the resources. I use the portal to follow the rest of the steps to solve this.
 
-
 ## Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
@@ -53,6 +52,7 @@ Brief description of the result of the exercises. An image can speak more than a
 I chose to Create a function in Azure with Python using Visual Studio Code and Zip deployment for Azure Functions
 
 1. Configure the environment:
+
 - [x] An Azure account with an active subscription.
 - [x] Visual Studio Code
 - [x] Python extension and a versions that are supported by Azure Functions
@@ -61,34 +61,33 @@ I chose to Create a function in Azure with Python using Visual Studio Code and Z
 ![azure](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/1func-vscode-dl-azure.png)
 
 2. Sign in to Azure from VSCode
-![signin](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/2func-signedin.png)
+   ![signin](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/2func-signedin.png)
 
-4. Create a local project
-![local](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/3func-createfunc.png)
-![proj](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/4func-funcoverview.png)
+3. Create a local project
+   ![local](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/3func-createfunc.png)
+   ![proj](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/4func-funcoverview.png)
 
-5. Run the function locally
-![run](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/5func-run.png)
+4. Run the function locally
+   ![run](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/5func-run.png)
 
-6. Then execute the function
-![execute](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/6func-runmsg.png) 
+5. Then execute the function
+   ![execute](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/6func-runmsg.png)
 
 ![HTTP](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/8func-browser-works.png)
 ![name](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/9func-namechange.png)
 
 7. Create function app using the azure portal
-![funcapp](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/10func-createfuncapp-portal.png)
+   ![funcapp](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/10func-createfuncapp-portal.png)
 
 ![overview](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/func-app-overview1.png)
 
 8. Upload API
-![upload](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/11func-upload.png)
+   ![upload](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/11func-upload.png)
 
 9. Copy the URL from the overview and check if your func app is working
-![working](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/12func-browser.png)
+   ![working](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/12func-browser.png)
 
 10. Delete the resources
-![delete](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/func-delete.png)
+    ![delete](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_includes/week-6-includes/func-delete.png)
 
-
-Here's the [code](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/week-6-9/function%20app/api) I used
+Here's the [code](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/week-6-9/function-app/api) I used
