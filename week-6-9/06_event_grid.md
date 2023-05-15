@@ -1,4 +1,4 @@
-# Event Grid, Queue Storage, Service Bus
+# Event Grid
 
 Azure Event Grid is a fully-managed event routing service that enables you to react in near-real time to changes happening across your Azure resources and third-party applications. It is like a mailman who delivers letters to your mailbox when they arrive. Similarly, Azure Event Grid delivers events to your application when they occur.
 
