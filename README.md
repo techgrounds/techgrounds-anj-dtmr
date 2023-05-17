@@ -64,6 +64,21 @@ Here you may find **all the projects** I did during the training
 - [Presentation: Well-Architected Framework](https://prezi.com/view/1px1mtg95K0WUB755HMx/)
 - [Whiteboard: Well-Architected Framework](https://jamboard.google.com/d/1iKdx4dlijen6sJTonqlaV7g54Xf6aHNwU2jVQrIUrwo/edit?usp=sharing)
 
+**Week 6-9:**
+
+- [Azure Active Directory](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_az_active_directory.md)
+- [Azure Activity Log](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_az_activity_log.md)
+- [Azure Advisor](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_az_advisor.md)
+- [Azure App Configuration](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_az_app_config.md)
+- [CosmosDB](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_az_cosmosdb.md)
+- [Azure Functions](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_az_func.md)
+- [Azure Monitor](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_az_monitor.md)
+- [Azure Support Plans](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_az_support_plans.md)
+- [Container](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_containers.md)
+- [Event Grid](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_event_grid.md)
+- [Queue Storage](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_queue_storage.md)
+- [Service Bus](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_service_bus.md)
+
 <!-- - []() -->
 
 
