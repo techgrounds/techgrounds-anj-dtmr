@@ -50,6 +50,7 @@ Hoe was vandaag? Heb je nog vragen aan Casper? wat heb je nog kunnen doen? tot h
 - Angeline:
 - [x] vandaag bereikt: 2 oefentoets
 - [x] vanavond: stop om 17u
+- [ ] kahoot 3 vragen voorbereiden
 
 ### Other Notes
 
@@ -58,3 +59,5 @@ Hoe was vandaag? Heb je nog vragen aan Casper? wat heb je nog kunnen doen? tot h
 Groep Update:
 
 verschil over api en rest api, nsg, udr, gesprek over oefentoets
+
+- en kan iemand anders tot woensdag ff scrum master zijn want ik ben ook ff weg voor dinsdag en woensdag
