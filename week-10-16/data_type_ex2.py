@@ -9,6 +9,11 @@
 name = input("Type your name: ")
 age = input("Type your age: ")
 
+# print name variable's value and data type
 print(name, "data type:", type(name))
+
+# print age variable's value and data type
 # print(age, "data type:", type(age))
+
+# # print age variable's value and data type but convert it to int
 print(age, "data type:", type(int(age)))
