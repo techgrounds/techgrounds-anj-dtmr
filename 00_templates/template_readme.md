@@ -6,7 +6,8 @@
 
 ## Benodigdheden
 
-- [x] Je Azure Cloud omgeving
+- [x] Python
+- [x] VS Code
 
 ## Opdrachten
 
