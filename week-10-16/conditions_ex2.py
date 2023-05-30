@@ -19,6 +19,3 @@ while True:
         print(f"{usr_num} is just the right number")
         break
 
-
-
-
