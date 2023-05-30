@@ -7,6 +7,9 @@
 - [ ] int
 - [ ] float
 - [ ] Comments
+- [ ] type() function
+- [ ] print() function
+- [ ] input() function
 
 ## Benodigdheden
 
@@ -15,21 +18,27 @@
 
 ## Opdrachten
 
-- [x]
+Exercise 1:
+
+- [x] Create a new script.
+- [x] Copy the code below into your script.
+      '''a = 'int'
+      b = 7
+      c = False
+      d = '18.5''''
+- [x] Determine the data types of all four variables (a, b, c, d) using a built in function.
+- [x] Make a new variable x and give it the value b + d. Print the value of x. This will raise an error. Fix it so that print(x) prints a float.
+- [x] Write a comment above every line of code that tells the reader what is going on in your script.
 
 [Check what I did]()
 
-- [x]
+Exercise 2:
+
+- [x] Create a new script.
+- [x] Use the input() function to get input from the user. Store that input in a variable.
+- [x] Find out what data type the output of input() is. See if it is different for different kinds of input (numbers, words, etc.).
 
 [Take a peek]()
-
-- [x]
-
-[Have a look]()
-
-## Optional next steps:
-
-- [ ]
 
 ## Sources list used for solving the exercise
 
