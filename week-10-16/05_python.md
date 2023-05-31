@@ -37,7 +37,7 @@ number is higher than, lower than, or equal to 100.
 
 ## Overcome challenges:
 
-Short description of the challeges encountered, and how I solved them:
+Short description of the challenges encountered, and how I solved them:
 
 Issue 1: Asking better questions
 
