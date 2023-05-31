@@ -5,7 +5,7 @@
 # ● Write the information to a csv file (comma-separated values). The data should not be
 # overwritten when you run the script multiple times.
 
-import csv
+from csv import *
 
 user_info = {}
 
@@ -24,7 +24,7 @@ print(user_info)
 
 with open('08_user_data.csv', mode='a') as csv_file:
     fieldnames = ['First name', 'Last name', 'Job title', 'Company']
-    writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-
-    writer.writeheader()
+    writer = DictWriter(csv_file, fieldnames)
     writer.writerow(user_info)
+
+    csv_file.close()
