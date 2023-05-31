@@ -11,6 +11,7 @@ x = 5
 setting it equal to the first value in the second part of the line called
 range(). every time the loop loops, i becomes the next value in the second
 part of the line (in this case range()) '''
+
 # for i in range(0, 50):
 for i in range(1, 51):
     # ● Print the value of i in the for loop.
