@@ -2,7 +2,7 @@
 
 ## Key terminology
 
-- [ ]
+- [ ] Dictionaries (dict)
 
 ## Benodigdheden
 
@@ -11,26 +11,36 @@
 
 ## Opdrachten
 
+Exercise 1:
+● Create a new script.
+● Create a dictionary with the following keys and values:
+Key Value
+First name Casper
+Last name Velzen
+Job title Learning coach
+Company Techgrounds
+● Loop over the dictionary and print every key-value pair in the terminal.
 - [x]
 
 [Check what I did]()
 
+Exercise 2:
+● Create a new script.
+● Use user input to ask for their information (first name, last name, job title, company).
+Store the information in a dictionary.
+● Write the information to a csv file (comma-separated values). The data should not be
+overwritten when you run the script multiple times.
 - [x]
 
 [Take a peek]()
 
-- [x]
-
-[Have a look]()
-
-## Optional next steps:
-
-- [ ]
 
 ## Sources list used for solving the exercise
 
 - [Notes]()
 - [Flashcard]()
+- [Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
+- [Python - Loop Dictionaries](https://www.w3schools.com/python/python_dictionaries_loop.asp)
 
 ## Overcome challenges:
 
