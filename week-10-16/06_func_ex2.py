@@ -9,6 +9,10 @@ def myfunction():
 
 myfunction()
 
+
+
+
+
 # ● Rewrite your function so that it takes a string as an argument. Then, it should print
 # “Hello, <string>”.
 
