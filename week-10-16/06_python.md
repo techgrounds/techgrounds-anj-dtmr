@@ -60,7 +60,6 @@ parameters. You are not allowed to edit any code below the second comment.
 - [How do I set a function parameter as a string in python?](https://stackoverflow.com/questions/38002719/how-do-i-set-a-function-parameter-as-a-string-in-python)
 - [Python Functions](https://www.w3schools.com/python/python_functions.asp)
 - [How to Run Your Python Scripts](https://realpython.com/run-python-scripts/#:~:text=To%20run%20Python%20scripts%20with,see%20the%20phrase%20Hello%20World!)
-- 
 
 
 ## Overcome challenges:
