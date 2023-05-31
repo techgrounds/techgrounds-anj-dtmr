@@ -5,9 +5,9 @@
 # ● Create a third variable named z. The value of z should be the sum of x and y.
 # ● Print the value of z.
 
-var_x = 5
-var_y = 10
+x = 5
+y = 10
 
-var_z = var_x + var_y
+z = x + y
 
-print(var_z)
+print(z)
