@@ -14,7 +14,6 @@ while True:
         print("This is higher, choose lower number")
     elif usr_num < answer:
         print("This is lower, choose higher number")
-        continue
     else:
         print(f"{usr_num} is just the right number")
         break
