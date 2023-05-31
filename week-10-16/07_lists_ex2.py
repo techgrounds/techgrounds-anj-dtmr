@@ -30,4 +30,3 @@ for i in range(len(five_int)):
     if i == len(five_int) - 1:
         # print('last item is', five_int[i]) ## printing/checking the last item
         print(five_int[0] + five_int[i])
-
