@@ -9,8 +9,8 @@
 
 
 # Here I am creating a list called five_int
-# five_int = [9, 80, 16, 67, 35]
-five_int = [1, 2, 3, 4, 5]
+five_int = [9, 80, 16, 67, 35]
+# five_int = [1, 2, 3, 4, 5]
 
 # Using print statement, I'm printing the list in the console
 print(f"This is my list: {five_int}")
