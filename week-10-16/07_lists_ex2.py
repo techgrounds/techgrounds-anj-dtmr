@@ -17,7 +17,7 @@ print(f"This is my list: {five_int}")
 
 # to simplify my for loop I use range function to loop through each item in my list
 # i = the index of each item in the list
-# len(five_int) = 5
+# len(five_int) = count of items inside the list
 for i in range(len(five_int)):
     # print('index', i) ## printing/checking the index of every item
 
