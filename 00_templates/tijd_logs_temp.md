@@ -13,14 +13,6 @@
 
 ---
 
-## Beslissing Documentatie
-
-1. 
-I decided to watch/do these:
-
-- [Notes]()
-- [Flashcard]()
-
 
 ## Results
 
