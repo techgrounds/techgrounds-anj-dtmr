@@ -17,10 +17,11 @@
 # 		print(i)
 
 
-for i in range(10):
+for i in range(7):
     if i < 5:
         print(i)
-    elif i > 9:
+    elif i < 5 and i > 5:
         break
     else:
         print(i)
+
