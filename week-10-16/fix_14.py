@@ -14,6 +14,11 @@
 
 
 def rtn(x):
-    foo = rtn(3)
+    return (x)
+
+    rtn(3)
     if foo < rtn(4):
-        return True
+        print(True)
+
+
+
