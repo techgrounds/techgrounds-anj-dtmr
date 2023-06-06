@@ -37,7 +37,7 @@ Team Azure:
 - Sjoerd:
 - Rogier:
 - Angeline:
-- [ ] gister / avond bereikt:
+- [ ] gister / sinds de vorige bereikt:
 - [ ] vandaag doelen: 1 anki, 1 typing practice, 1 code challenge
 - [ ] soft skills doel vandaag (Learning to learn, Peer 2 peer learning and Searching, 
 Computational thinking, Rules, values and guiding principles, Time management, Presenting, 
@@ -45,10 +45,9 @@ Self reflection, Solution oriented, Networking, Assertiveness, Communication, Em
 Proactive, Self management, Team work, Empathie.):
 - [ ] 12:30 samen komen - samen een opdracht discusseren: hoe ver je bent? (hoef niet te delen), hoe wil jullie probleem deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 - [ ] Friday: Studiedag
-- [ ] Friday: Retrospective
 - [ ] Feedback geven:
 - [ ] Nieuwe woorden:
-- [ ] Challenge:
+
 
 - Vragen & Screen sharing / vragen bij q&a te noteren
 - [ ] 
