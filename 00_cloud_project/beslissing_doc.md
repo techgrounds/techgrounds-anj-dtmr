@@ -1,6 +1,6 @@
 ## Beslissing Documentatie
 
-Why did you used this services? Write out your considerations and substantiate your decisions. Assumptions and improvements
+Why did you used this services? Write out your considerations and substantiate your decisions. Assumptions and improvements.
 
 June 5, 2023
 
@@ -22,8 +22,4 @@ I decided to watch/do these:
 
 June 7, 2023
 
-1.
-
-I decided to watch/do these:
-
-- []()
+1. Today I focused on documentation. I don't have any specific to write here now.
