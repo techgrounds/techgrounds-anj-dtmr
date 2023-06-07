@@ -14,15 +14,11 @@ Overall, the project aims to apply and expand knowledge of cloud technologies, a
 
 The following deliverables are expected in your GitHub repository at the end of this project:
 
-- [ ] [A working CDK / Bicep app from the MVP]()
-
-- [ ] [Design Documentation]()
-
-- [ ] [Decision Documentation]()
-
-- [ ] [Time logs]()
-
-- [ ] [Final presentation]()
+- A working CDK / Bicep app from the MVP
+- Design Documentation
+- Decision Documentation
+- Time logs
+- Final presentation
 
 ## Requirements
 
