@@ -29,30 +29,25 @@ Team Azure:
 2. Wat ga ik doen? Wat ga ik vandaag bereiken? What are you going to do today?
 3. Loop ik ergens tegenaan? Heb ik hierbij hulp nodig? kan het team me daarbij helpen? Wat is je energie-niveau vandaag? What are the most pressing issues you are facing? And do you need help?
 
-
 - Jenny:
-- Roan:
+- Roan: beginnen met services
 - Akram:
-- Jon:
-- Sjoerd:
-- Rogier:
+- Jon: verder met exploratie
+- Sjoerd: planning
+- Rogier: blij mee van wat bereikt heb de laatste dagen,
 - Angeline:
-- [ ] gister / sinds de vorige bereikt:
-- [ ] vandaag doelen: 1 anki, 1 typing practice, 1 code challenge
-- [ ] soft skills doel vandaag (Learning to learn, Peer 2 peer learning and Searching, 
-Computational thinking, Rules, values and guiding principles, Time management, Presenting, 
-Self reflection, Solution oriented, Networking, Assertiveness, Communication, Employability,
-Proactive, Self management, Team work, Empathie.):
-- [ ] 12:30 samen komen - samen een opdracht discusseren: hoe ver je bent? (hoef niet te delen), hoe wil jullie probleem deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
-- [ ] Friday: Studiedag
-- [ ] Feedback geven:
-- [ ] Nieuwe woorden:
-
+- [x] gister / sinds de vorige bereikt: puzzelen tussen user stories en de eisen
+- [x] vandaag doelen: write project info, assumption and services, start de vscode
+- [ ] soft skills doel vandaag (Learning to learn, Peer 2 peer learning and Searching,
+      Computational thinking, Rules, values and guiding principles, Time management, Presenting,
+      Self reflection, Solution oriented, Networking, Assertiveness, Communication, Employability,
+      Proactive, Self management, Team work, Empathie.):
+- [x] 12:30 samen komen - samen een opdracht discusseren: hoe ver je bent? (hoef niet te delen), hoe wil jullie probleem deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 
 - Vragen & Screen sharing / vragen bij q&a te noteren
-- [ ] 
-- [ ]
-
+- [ ] Waarom zijn er twee vnet? twee vnet is belangrijk voor isolatie
+- [ ] Zullen we nieuwe repository aanmaken?
+- [ ] Wat is de volgorde om deze projecten te starten? Imagine the physical hardware
 
 ## Groep
 
@@ -62,7 +57,6 @@ Groep Update:
 
 -
 
-
 ## Dagafsluiting:
 
 - [ ] 15:30 samen komen / checkin
@@ -70,19 +64,13 @@ Groep Update:
 
 Hoe was vandaag? Heb je nog vragen aan Casper? wat heb je nog kunnen doen? tot hoever was je? Wat zijn je resultaten? Heb je een oefentoets gedaan?
 
-- Jenny:
-- Roan:
-- Akram:
-- Jon:
-- Sjoerd:
-- Rogier:
+- Jenny: exploratie en bicep sandbox
+- Roan: exploratie
+- Akram: bicep sandbox
+- Jon: exploratie
+- Sjoerd: exploratie
+- Rogier: management server bijna af
 - Angeline:
-- [ ] vandaag bereikt:
-- [ ] 10 mins before/after the dagafsluiting: active recalling with the use of flashcards/quizlet/brainscape/anki
-- [ ] self-reflection:
-- [ ] vanavond: stop om 17u
-
+- [x] vanavond: stop om 17u
 
 ### Other Notes
-
-
