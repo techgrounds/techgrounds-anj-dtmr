@@ -19,3 +19,11 @@ I decided to watch/do these:
 
 - [What is infrastructure as code (IaC)?](https://learn.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code)
 - [Fundamentals of Bicep](https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/)
+
+June 7, 2023
+
+1.
+
+I decided to watch/do these:
+
+- []()
