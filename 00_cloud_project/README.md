@@ -12,7 +12,7 @@
 
 - [ ] [Decision Documentation](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_cloud_project/beslissing_doc.md)
 
-- [ ] [Time logs]()
+- [ ] [Time logs](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/00_cloud_project/tijd_logs)
 
 - [ ] [Final presentation]()
 
