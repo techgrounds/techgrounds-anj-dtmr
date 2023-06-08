@@ -20,7 +20,8 @@
 
 ## Setting Up my IaC using Azure Bicep Environment
 
-Prerequisites
+#### Prerequisites
+
 To use Azure Bicep, you'll need a few tools set up on your local machine, all of which are available for macOS, Linux and Windows. These prerequisites include the following:
 
 - [x] an integrated development environment, such as Visual Studio Code;
@@ -38,8 +39,17 @@ To use Azure Bicep, you'll need a few tools set up on your local machine, all of
 
 5. Start Working with Azure CLI Tools in Visual Studio Code
 
+To verify your current version, run:
+`az --version`
+
+To validate your Bicep CLI installation, use:
+`az bicep version`
+
+To login to your azure account, use:
 `az login`
 
 This will open Azure sign-in page on your default browser window. Click on the Signed In button and you will successful login to your Azure account.
 
 We have successfully installed Azure CLI in Visual Studio Code and used it to access our Azure account.
+
+You're done with setting up your Bicep environment.
