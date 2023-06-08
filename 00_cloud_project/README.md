@@ -10,7 +10,7 @@
 
 - [ ] [Design Documentation]()
 
-- [ ] [Decision Documentation]()
+- [ ] [Decision Documentation](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_cloud_project/beslissing_doc.md)
 
 - [ ] [Time logs]()
 
