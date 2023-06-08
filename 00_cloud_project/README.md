@@ -6,6 +6,8 @@
 
 - [ ] [Setting Up my IaC using Azure Bicep Environment]()
 
+- [ ] [Version 1.0 Assumptions and Services](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_cloud_project/v1.0_assumptions_services.md)
+
 - [ ] [A working CDK / Bicep app from the MVP]()
 
 - [ ] [Design Documentation]()
