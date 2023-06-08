@@ -1,6 +1,6 @@
 # Infrastructure as Code (IaC) using Azure Bicep project
 
-- [ ] [Project Description]()
+- [ ] [Project Description](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/00_cloud_project/proj_description_requirements.md)
 
 - [ ] [Miro board for Project Management](https://miro.com/app/board/uXjVMTGcfGo=/?share_link_id=227067548492)
 
