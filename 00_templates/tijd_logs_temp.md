@@ -1,11 +1,14 @@
-# June  , 2023  day
+# June , 2023 day
 
 ## Dagverslag (1 zin)
+
 ## Obstakels & Oplossingen
+
 1. Asking better questions
 
 - [ ]
 - [ ]
+
 2.
 3.
 
@@ -13,6 +16,9 @@
 
 ---
 
+## Plans for tomorrow
+
+1.
 
 ## Results
 
