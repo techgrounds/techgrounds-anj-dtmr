@@ -4,6 +4,13 @@
 
 1. Today, I decided to focus on understanding what the user stories are and its connection to the requirements we have. I used a miro board instead of a traditional kanban board, as this is more flexible.
 
+2. I decided to follow what terminologies I don't know from the project pdf. Because I know, without knowing about these concepts, I won't know how the project should be in a big picture.
+
+I decided to watch/do these:
+
+- [What is infrastructure as code (IaC)?](https://learn.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code)
+- [Fundamentals of Bicep](https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/)
+
 ## Obstakels & Oplossingen
 
 1. Asking better questions
