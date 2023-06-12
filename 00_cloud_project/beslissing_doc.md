@@ -17,3 +17,7 @@ Today I focused on documentation and planning. I don't have any specific to writ
 June 8, 2023
 
 Today I focused on learning bicep and IaC. I don't have any specific to write here now.
+
+June 12, 2023
+
+Today I focused on learning further about bicep.
