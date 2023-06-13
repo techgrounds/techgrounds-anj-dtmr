@@ -2,9 +2,13 @@
 
 ## Dagverslag (1 zin)
 
+Wat zijn jou wins vandaag?-----
+
 - Vandaag heb ik verder bicep geleerd, vooral over parameters and variables.
+
 - Ik heb de bash command om te deployen geleerd en de juiste parameters and path aan te passen.
-- I successfully deploy a resource group using azure cli
+
+- I successfully deploy a resource group using azure cli, check it
 
 ## Obstakels & Oplossingen
 
@@ -17,6 +21,7 @@
 ## Learnings
 
 - I've learned how the syntax of bicep more using parameters and variables.
+- I saw the magic of deploying it on vscode then it appears on the portal.
 
 ---
 
