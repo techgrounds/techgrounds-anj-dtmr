@@ -135,13 +135,30 @@ root
  |  |- 04_cloud_10
  |
  |- week-5
- |  |- 04_cloud_11
- |  |- 04_cloud_12
- |  |- 04_cloud_13
+ |  |- 05_cloud_11
+ |  |- 05_cloud_12
+ |  |- 05_cloud_13
  |
- |- 03_Project
- |  |- Code
- |  |- Documentation
- |  |- Log
+ |- week-6
+ |  |- 06_az_active_directory
+ |  |- 06_az_activity_log
+ |  |- 06_az_advisor
+ |  |- 06_az_app_config
+ |  |- 06_az_cosmosdb
+ |  |- 06_az_func
+ |  |- 06_az_advisor
+ |  |- 06_az_monitor
+ |  |- 06_az_support_plans
+ |  |- 06_containers
+ |  |- 06_event_grid
+ |  |- 06_exam_prep
+ |  |- 06_exam_prep
+ |  |- 06_queue_storage
+ |  |- 06_service_bus
+ |
+ |- week-6-9
+ |  |- Python files
+ |
+
  |
 ```
