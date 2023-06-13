@@ -4,6 +4,8 @@ Here you may find **all the projects** I did during the training
 
 ## Projects
 
+[Cloud Portfolio Project](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project)
+
 **Week 1:**
 
 - [StandUp Notes](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/00_scrumnotes/week-1-scrumnotes)
@@ -79,13 +81,17 @@ Here you may find **all the projects** I did during the training
 - [Queue Storage](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_queue_storage.md)
 - [Service Bus](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_service_bus.md)
 
-<!-- - []() -->
+**Week 10-16:**
+- [Python](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/week-10-16)
 
 
 ## How my files are organized
 
 ```
 root
+ |- 000_cloud_project < Cloud Portfolio Project
+ |- READ.md < Bullet points of this projects
+ |- start.md < Helpful links about the training
  |- 00_includes < The directory for all the screenshots
  |- 00_templates < The directory to find all my customized templates
  |- 00_scrumnotes < The directory for all the standup and other notes
@@ -133,13 +139,29 @@ root
  |  |- 04_cloud_10
  |
  |- week-5
- |  |- 04_cloud_11
- |  |- 04_cloud_12
- |  |- 04_cloud_13
+ |  |- 05_cloud_11
+ |  |- 05_cloud_12
+ |  |- 05_cloud_13
  |
- |- 03_Project
- |  |- Code
- |  |- Documentation
- |  |- Log
+ |- week-6-9
+ |  |- 06_az_active_directory
+ |  |- 06_az_activity_log
+ |  |- 06_az_advisor
+ |  |- 06_az_app_config
+ |  |- 06_az_cosmosdb
+ |  |- 06_az_func
+ |  |- 06_az_advisor
+ |  |- 06_az_monitor
+ |  |- 06_az_support_plans
+ |  |- 06_containers
+ |  |- 06_event_grid
+ |  |- 06_exam_prep
+ |  |- 06_exam_prep
+ |  |- 06_queue_storage
+ |  |- 06_service_bus
+ |
+ |- week-10-16
+ |  |- Python files
+ |
  |
 ```
