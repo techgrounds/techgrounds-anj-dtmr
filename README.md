@@ -79,13 +79,15 @@ Here you may find **all the projects** I did during the training
 - [Queue Storage](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_queue_storage.md)
 - [Service Bus](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/week-6-9/06_service_bus.md)
 
-<!-- - []() -->
+**Week 10-16:**
+- [Python](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/week-10-16)
 
 
 ## How my files are organized
 
 ```
 root
+ |- 000_cloud_project < Cloud Final Project
  |- 00_includes < The directory for all the screenshots
  |- 00_templates < The directory to find all my customized templates
  |- 00_scrumnotes < The directory for all the standup and other notes
