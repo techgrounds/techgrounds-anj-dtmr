@@ -2,6 +2,8 @@
 
 ## Dagverslag (1 zin)
 
+Wat zijn jou wins vandaag?-----
+
 ## Obstakels & Oplossingen
 
 1. Asking better questions
