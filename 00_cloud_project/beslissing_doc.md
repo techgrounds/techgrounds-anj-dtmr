@@ -21,3 +21,7 @@ Today I focused on learning bicep and IaC. I don't have any specific to write he
 June 12, 2023
 
 Today I focused on learning further about bicep.
+
+June 13, 2023
+
+Today I used Azure Vnet to start the virtual network. I would use it to connect the servers.
