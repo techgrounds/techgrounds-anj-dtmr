@@ -20,8 +20,8 @@ Today I focused on learning bicep and IaC. I don't have any specific to write he
 
 June 12, 2023
 
-Today I focused on learning further about bicep.
+Today I focused on learning further about bicep. Deployed a resource group as I find it logical to do, because I remember when we were using the portal we also first make resource group and assign resources to it.
 
 June 13, 2023
 
-Today I used Azure Vnet to start the virtual network. I would use it to connect the servers.
+Today I was trying to deploy Azure Vnet to start the virtual network within the resource group I created. I would use it to connect the servers.
