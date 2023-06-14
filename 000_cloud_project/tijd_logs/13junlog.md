@@ -61,3 +61,5 @@ https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-
 https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/
 
 5. Turn assumptions into a daily planning
+
+6. Ready a bit for the presentation
