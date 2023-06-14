@@ -16,7 +16,9 @@ Wat zijn jou wins vandaag?-----
 
 - [ ] do you have tips on how to start the architecture/ topology? shall I first use the given architecture then build and iterate from it or should I make a topology the way I my assumptions are written? because the challenge also is I cannot see the macro view of this project in an architecture way. I understand how important it is from the beginning
 
-- how to deploy resources using vscode and azure cli
+- [ ] how to deploy resources using vscode and azure cli
+
+- [ ] do you have tips on how to start the architecture/ topology? shall I first use the given architecture then build and iterate from it or should I make a topology the way I my assumptions are written? because the challenge also is I cannot see the macro view of this project in an architecture way. I understand how important it is from the beginning
 
 ## Learnings
 
