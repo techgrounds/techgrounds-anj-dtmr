@@ -29,30 +29,21 @@ Team Azure:
 2. Wat ga ik doen? Wat ga ik vandaag bereiken? What are you going to do today?
 3. Loop ik ergens tegenaan? Heb ik hierbij hulp nodig? kan het team me daarbij helpen? Wat is je energie-niveau vandaag? What are the most pressing issues you are facing? And do you need help?
 
-
 - Jenny:
 - Roan:
 - Akram:
 - Jon:
 - Sjoerd:
 - Rogier:
-- Angeline:
-- [ ] gister / sinds de vorige bereikt:
-- [ ] vandaag doelen: 1 anki, 1 typing practice, 1 code challenge
-- [ ] soft skills doel vandaag (Learning to learn, Peer 2 peer learning and Searching, 
-Computational thinking, Rules, values and guiding principles, Time management, Presenting, 
-Self reflection, Solution oriented, Networking, Assertiveness, Communication, Employability,
-Proactive, Self management, Team work, Empathie.):
-- [ ] 12:30 samen komen - samen een opdracht discusseren: hoe ver je bent? (hoef niet te delen), hoe wil jullie probleem deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
+
+- [ ] 12:30 & 15:30 samen komen - samen een opdracht discusseren: hoe ver je bent? (hoef niet te delen), hoe wil jullie probleem deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 - [ ] Friday: Studiedag
 - [ ] Feedback geven:
 - [ ] Nieuwe woorden:
 
-
 - Vragen & Screen sharing / vragen bij q&a te noteren
-- [ ] 
 - [ ]
-
+- [ ]
 
 ## Groep
 
@@ -61,7 +52,6 @@ Proactive, Self management, Team work, Empathie.):
 Groep Update:
 
 -
-
 
 ## Dagafsluiting:
 
@@ -82,7 +72,4 @@ Hoe was vandaag? Heb je nog vragen aan Casper? wat heb je nog kunnen doen? tot h
 - [ ] self-reflection:
 - [ ] vanavond: stop om 17u
 
-
 ### Other Notes
-
-
