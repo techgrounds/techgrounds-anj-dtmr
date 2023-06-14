@@ -1,0 +1,10 @@
+{
+    "parameters": {
+      "resourceGroupName": {
+        "value": "cloud_project"
+      },
+      "location": {
+        "value": "westeurope"
+      }
+    }
+  }
