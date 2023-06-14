@@ -18,13 +18,13 @@ Wat zijn jou wins vandaag?-----
 
 ## Obstakels & Oplossingen
 
-1. Asking better questions
-
-- [ ]
-- [ ]
+1.
 
 2.
-3.
+3.  Asking better questions
+
+- [ ]
+- [ ]
 
 ## Learnings
 
