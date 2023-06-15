@@ -1,6 +1,6 @@
 //  Use this command to deploy
-// az group create --name TestStorageAcct --location westeurope
-// az deployment group create --resource-group RGTestStorageAcct --template-file vnetmanagement.bicep
+// az group create --name RGTestStorageAcct --location westeurope
+// az deployment group create --resource-group RGTestStorageAcct --template-file storage.bicep
 
 @description('Admin username')
 param adminUsername string
@@ -23,3 +23,6 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   }
   kind: 'StorageV2'
 }
+
+// ToDo:
+//  - Adjust this according to requirements
