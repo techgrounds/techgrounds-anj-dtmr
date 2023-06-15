@@ -36,6 +36,7 @@ Team Azure:
 - Sjoerd:
 - Rogier:
 
+- [ ] peer review
 - [ ] 12:30 & 15:30 samen komen - samen een opdracht discusseren: hoe ver je bent? (hoef niet te delen), hoe wil jullie probleem deze aanpakken?, wil je dat de mensen laat je weten hoe ze dat gedaan hebben?
 - [ ] Friday: Studiedag
 - [ ] Feedback geven:
