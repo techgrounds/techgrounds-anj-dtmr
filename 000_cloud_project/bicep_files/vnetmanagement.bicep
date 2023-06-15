@@ -2,12 +2,12 @@
 // az group create --name RGTestVnetManagement --location westeurope
 // az deployment group create --resource-group RGTestVnetManagement --template-file vnetmanagement.bicep
 
-@description('Admin username')
-param adminUsername string
+// @description('Admin username')
+// param adminUsername string
 
-@description('Admin password')
-@secure()
-param adminPassword string
+// @description('Admin password')
+// @secure()
+// param adminPassword string
 
 @description('Location for all resources.')
 param location string = resourceGroup().location
