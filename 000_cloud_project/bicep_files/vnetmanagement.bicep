@@ -1,6 +1,6 @@
 //  Use this command to deploy
-// az group create --name TestVnetManagement --location westeurope
-// az deployment group create --resource-group RGTestVnetManagement --template-file storage.bicep
+// az group create --name RGTestVnetManagement --location westeurope
+// az deployment group create --resource-group RGTestVnetManagement --template-file vnetmanagement.bicep
 
 @description('Admin username')
 param adminUsername string
@@ -12,7 +12,7 @@ param adminPassword string
 @description('Location for all resources.')
 param location string = resourceGroup().location
 
-var virtualNetworkName = 'vNet'
+var virtualNetworkName = 'vNetManagement'
 var subnetName = 'SubnetManagement'
 
 resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-11-01' = {
@@ -34,3 +34,6 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-11-01' = {
     ]
   }
 }
+
+// ToDo:
+//  - Adjust this according to requirements
