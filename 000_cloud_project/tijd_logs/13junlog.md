@@ -8,7 +8,9 @@ Wat zijn jou wins vandaag?-----
 
 ## Obstakels & Oplossingen
 
-1. Asking better questions
+1. I was trying to deploy a resource group and vnet but it only keeps giving me error about target scope. I gave myself a half day to resolve it, then delete all the code and restart and think of new technique to go further.
+
+2. Asking better questions
 
 - [ ] is there a deployement id for resource group?
 
