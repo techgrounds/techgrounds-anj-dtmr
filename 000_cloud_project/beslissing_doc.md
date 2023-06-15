@@ -24,8 +24,18 @@ Today I focused on learning further about bicep. Deployed a resource group as I 
 
 June 13, 2023
 
-Today I was trying to deploy Azure Vnet to start the virtual network within the resource group I created. I would use it to connect the servers.
+Trial and full of errors days
 
 June 14, 2023
 
+Today I was trying to deploy Azure Vnet to start the virtual network within the resource group I created. I would use it to connect the servers.
+
+<<<<<<< Updated upstream
+June 14, 2023
+
 Today I focused on creating storage account and management vnet in separate files then tested them both if successfully deployed
+=======
+June 15, 2023
+
+I'm focusing on my management side today, because I heard from other trainees that it is the logical resources to do first.
+>>>>>>> Stashed changes
