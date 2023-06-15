@@ -13,7 +13,6 @@ param adminPassword string
 param location string = resourceGroup().location
 
 var virtualNetMngmntName = 'vNetManagement'
-var subnetName = 'SubnetManagement'
 
 resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   name: virtualNetMngmntName
@@ -24,16 +23,14 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         '10.10.10.0/24'
       ]
     }
-  }
-}
-
-resource managementSubnet 'Microsoft.Network/virtualNetworks/subnets@2022-11-01' = {
-  name: '${virtualNetMngmntName}-management-subnet'
-  parent: vnetManagement
-  properties: {
-    addressPrefix: '10.10.10.0/24'
-    serviceEndpoints: []
-    delegations: null
+    subnets: [
+      {
+        name: 'management-subnet'
+        properties: {
+          addressPrefix: '10.10.10.0/24'
+        }
+      }
+    ]
   }
 }
 
