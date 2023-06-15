@@ -2,33 +2,32 @@
 // az group create --name RGTestVnetManagement --location westeurope
 // az deployment group create --resource-group RGTestVnetManagement --template-file vnetmanagement.bicep
 
-@description('Admin username')
-param adminUsername string
+// @description('Admin username')
+// param adminUsername string
 
-@description('Admin password')
-@secure()
-param adminPassword string
+// @description('Admin password')
+// @secure()
+// param adminPassword string
 
 @description('Location for all resources.')
 param location string = resourceGroup().location
 
-var virtualNetworkName = 'vNetManagement'
-var subnetName = 'SubnetManagement'
+var virtualNetMngmntName = 'vNetManagement'
 
-resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-11-01' = {
-  name: virtualNetworkName
+resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
+  name: virtualNetMngmntName
   location: location
   properties: {
     addressSpace: {
       addressPrefixes: [
-        '10.0.0.0/16'
+        '10.10.10.0/24'
       ]
     }
     subnets: [
       {
-        name: subnetName
+        name: 'management-subnet'
         properties: {
-          addressPrefix: '10.0.2.0/24'
+          addressPrefix: '10.10.10.0/24'
         }
       }
     ]
