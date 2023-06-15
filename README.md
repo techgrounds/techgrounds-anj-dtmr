@@ -90,11 +90,11 @@ Here you may find **all the projects** I did during the training
 ```
 root
  |- 000_cloud_project < Cloud Portfolio Project
- |- READ.md < Bullet points of this projects
- |- start.md < Helpful links about the training
  |- 00_includes < The directory for all the screenshots
  |- 00_templates < The directory to find all my customized templates
  |- 00_scrumnotes < The directory for all the standup and other notes
+ |- READ.md < Bullet points of this projects
+ |- start.md < Helpful links about the training
  |
  |- week-1
  |  |- 01_git_github
