@@ -10,7 +10,7 @@
 
 - [ ] [A working CDK / Bicep app from the MVP]()
 
-- [ ] [Design Documentation]()
+- [ ] [Design Documentation](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/ontwerp_documentatie)
 
 - [ ] [Decision Documentation](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/beslissing_doc.md)
 
