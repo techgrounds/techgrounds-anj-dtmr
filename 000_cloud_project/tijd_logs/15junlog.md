@@ -20,6 +20,7 @@ Wat zijn jou wins vandaag?-----
 - [ ] what does it like when a management subnet with nsg bicep
 - [ ] what's the difference of having separate nsg and connecting the nsg to subnet?
 - [ ] why do I need NIC
+- [ ] VMSS hele jaar betaald?
 
 ## Learnings
 
