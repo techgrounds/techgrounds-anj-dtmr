@@ -2,7 +2,7 @@
 
 ## Deliverables
 
-- [ ] [A working CDK / Bicep app from the MVP + Documentatie voor het gebruik van de applicatie + Configuratie voor een MVP deployment]()
+- [ ] [A working CDK / Bicep app from the MVP + Documentatie voor het gebruik van de applicatie + Configuratie voor een MVP deployment](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/bicep_files)
 
 - [ ] [Design Documentation](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/ontwerp_documentatie)
 
