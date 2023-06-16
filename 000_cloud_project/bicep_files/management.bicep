@@ -2,6 +2,9 @@
 /*                              Management Server                             */
 /* -------------------------------------------------------------------------- */
 
+// ToDo:
+//  - Adjust this according to requirements
+
 //  Use this command to deploy
 // az group create --name RGTestVnetManagement --location westeurope
 // az deployment group create --resource-group RGTestVnetManagement --template-file vnetmanagement.bicep
@@ -9,17 +12,6 @@
 // Management Server: 10.20.20.0/24
 // Web/App Server: 10.10.10.0/24
 
-<<<<<<< Updated upstream
-// In Azure, a Virtual Network (VNet) is a fundamental networking construct that enables 
-// you to securely connect and isolate Azure resources, such as virtual machines (VMs), virtual 
-// machine scale sets, and other services. A VNet acts as a virtual representation of a 
-// traditional network, allowing you to define IP address ranges, subnets, and network security policies.
-
-// Dependencies: Azure portal account, Azure Subscription, Azure Resource Group, Azure Region, Address Space, Subnets, Network Security Groups (NSGs)
-// Additional: VnetPeering to connect this management vnet to the app vnet for later
-
-=======
->>>>>>> Stashed changes
 // @description('Admin username')
 // param adminUsername string
 
@@ -30,13 +22,6 @@
 @description('Location for all resources.')
 param location string = resourceGroup().location
 
-<<<<<<< Updated upstream
-var virtualNetMngmntName = 'vNetManagement'
-
-/* -------------------------------------------------------------------------- */
-/*                     Virtual Network with subnet                            */
-/* -------------------------------------------------------------------------- */
-=======
 /* -------------------------------------------------------------------------- */
 /*                     Virtual Network with subnet                            */
 /* -------------------------------------------------------------------------- */
@@ -48,13 +33,10 @@ var virtualNetMngmntName = 'vNetManagement'
 // Dependencies: Azure portal account, Azure Subscription, Azure Resource Group, Azure Region, Address Space, Subnets, Network Security Groups (NSGs)
 // Additional: VnetPeering to connect this management vnet to the app vnet for later
 
->>>>>>> Stashed changes
 // managementSubnet: The management subnet is defined first as it serves as the foundational 
 // component for the other resources. It specifies the address prefix for the subnet where the 
 // management server will be deployed.
 
-<<<<<<< Updated upstream
-=======
 // This creates a virtual network for the management side
 // I've created a separate vnet for the management side to isolate it from the other cloud infrastracture
 // This segregation helps improve security and network performance by controlling traffic flow between resources.
@@ -62,7 +44,6 @@ var virtualNetMngmntName = 'vNetManagement'
 
 var virtualNetMngmntName = 'vNetManagement'
 
->>>>>>> Stashed changes
 resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   name: virtualNetMngmntName
   location: location
@@ -72,10 +53,7 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         '10.20.20.0/24'
       ]
     }
-<<<<<<< Updated upstream
-=======
     // I wrote the subnet inside vnet because of best practice
->>>>>>> Stashed changes
     subnets: [
       {
         name: 'management-subnet'
@@ -96,8 +74,6 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   }
 }
 
-<<<<<<< Updated upstream
-=======
 // ToDo: connect nsg with subnet
 // resource subnet 'Microsoft.Network/virtualNetworks/subnets@2021-05-01' = {
 //   name: '${vnet.name}/${subnetName}'
@@ -109,7 +85,6 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
 //   }
 // }
 
->>>>>>> Stashed changes
 /* -------------------------------------------------------------------------- */
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
@@ -222,8 +197,7 @@ resource managementNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11
 /* -------------------------------------------------------------------------- */
 /*                     Output                                                 */
 /* -------------------------------------------------------------------------- */
+// ToDo:
+// - add output from other resources
 
 output managementVnetId string = vnetManagement.id
-
-// ToDo:
-//  - Adjust this according to requirements
