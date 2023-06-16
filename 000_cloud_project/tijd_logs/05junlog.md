@@ -15,7 +15,7 @@ I decided to watch/do these:
 
 1. Asking better questions
 
-- [ ] How to start this project technically?
+- [ ] How to start this project technically? How do I start my IaC Azure Bicep app project?
 
 2. No clue how to start it. Especially that it was written in Dutch, but I start with noting down the words,
    that are not familiar, translate it, read the sentence again, then decide if it's important for the project or not.
