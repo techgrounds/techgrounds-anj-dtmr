@@ -6,6 +6,12 @@ Wat zijn jou wins vandaag?-----
 
 - I successfully merged the first pull requests I have to main branch for this project
 - Successfully deployed a vnet with subnet, nsg, public ip, nic
+<<<<<<< Updated upstream
+=======
+- Made a draft for the architecture
+- Started storage last friday for post-deployment script but errors
+- I've created a sort of mind mapping for myself for this project using miro board, compare my assumptions to all the requirements given
+>>>>>>> Stashed changes
 
 ## Obstakels & Oplossingen
 
@@ -32,11 +38,20 @@ Additional: VnetPeering to connect this management vnet to the app vnet for late
 
 ## Plans for tomorrow
 
+<<<<<<< Updated upstream
 - ToDo: connect nsg with subnet
 - Write down documentataion on management.bicep
 
 - Review pull requests
 - Architecture
+=======
+- ToDo: connect nsg with subnet within the vnet
+- ToDo: recreate my app network using the management network
+- Write down documentataion on management.bicep
+
+- Review pull requests
+- Adjust the Architecture accordingly
+>>>>>>> Stashed changes
 - Continue microsoft module
 
 https://learn.microsoft.com/en-gb/shows/learn-live/use-bicep-deploy-azure-infrastructure-as-code-ep02-build-first-bicep-template?WT.mc_id=learnlive-20220315A
@@ -51,4 +66,8 @@ https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/
 
 - Turn assumptions into a daily planning
 
+<<<<<<< Updated upstream
 - Ready a bit for the presentation
+=======
+- Ready a bit for the presentation(peer to peer review)
+>>>>>>> Stashed changes
