@@ -62,3 +62,11 @@ That's it! Azure CLI will handle the deployment of your Azure Resource Group usi
 <!-- az deployment group create \
  --template-file resourcegrp.bicep \
  --parameters @parameters.json -->
+<<<<<<< Updated upstream
+=======
+
+<!-- az login
+az account set --subscription 'Cloud Student 1'
+az group create --name TestRGcloud_project --location westeurope
+az deployment group create --resource-group TestRGcloud_project --template-file network.bicep -->
+>>>>>>> Stashed changes
