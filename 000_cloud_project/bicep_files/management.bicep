@@ -6,8 +6,8 @@
 //  - Adjust this according to requirements
 
 //  Use this command to deploy
-// az group create --name RGTestVnetManagement --location westeurope
-// az deployment group create --resource-group RGTestVnetManagement --template-file vnetmanagement.bicep
+// az group create --name Testcloud_project --location westeurope
+// az deployment group create --resource-group Testcloud_project --template-file vnetmanagement.bicep
 
 // Management Server: 10.20.20.0/24
 // Web/App Server: 10.10.10.0/24
@@ -18,6 +18,8 @@
 // @description('Admin password')
 // @secure()
 // param adminPassword string
+
+/* ------------------------------ Resource Group Location ------------------------------ */
 
 @description('Location for all resources.')
 param location string = resourceGroup().location
@@ -114,12 +116,14 @@ resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
           destinationPortRange: '22' // Customize for SSH or RDP port
           // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
           sourceAddressPrefixes: [
+            // ToDo: Find out the right sourceAddressPrefixes
             // Add trusted source IP addresses/ranges
             '10.10.10.0/24'
             '10.20.20.0/24'
           ]
           // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
           destinationAddressPrefixes: [
+            // ToDo: create a var for this
             // Customize for management subnet address range
             '10.20.20.0/24'
           ]
