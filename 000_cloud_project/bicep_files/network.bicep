@@ -1,4 +1,7 @@
-//  Use this command to deploy
+/* -------------------------------------------------------------------------- */
+/*                     Use this command to deploy                             */
+/* -------------------------------------------------------------------------- */
+
 // az login
 // az account set --subscription 'Cloud Student 1'
 // az group create --name TestRGcloud_project --location westeurope
@@ -215,13 +218,13 @@ resource vnetmngntvnetwebapp 'Microsoft.Network/virtualNetworks/virtualNetworkPe
   parent: vnetManagement
   name: '${virtualNetworkName}-${virtualNetworkName_webapp}'
   properties: {
+    remoteVirtualNetwork: {
+      id: vnetWebApp.id
+    }
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
     allowGatewayTransit: false
     useRemoteGateways: false
-    remoteVirtualNetwork: {
-      id: vnetWebApp.id
-    }
   }
 }
 
@@ -457,13 +460,13 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
   parent: vnetWebApp
   name: '${virtualNetworkName_webapp}-${virtualNetworkName}'
   properties: {
+    remoteVirtualNetwork: {
+      id: vnetManagement.id
+    }
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
     allowGatewayTransit: false
     useRemoteGateways: false
-    remoteVirtualNetwork: {
-      id: vnetManagement.id
-    }
   }
 }
 
