@@ -28,3 +28,6 @@ I'm focusing on my management side today, because I heard from other trainees th
 
 June 19, 2023
 I wanted to divide the bicep file into management network and web/app network. It was working individually accordingly, but when I was peering them, I could not get to find a way to connect them. At the end I decided to merge the two files into one and create a peering resource for each. It was a success.
+
+June 20, 2023
+Today I decided to create my key vault first before the vm's from the 2 servers. This is to ready from the start, a place where I can keep my secrets.
