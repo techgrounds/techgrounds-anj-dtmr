@@ -1,6 +1,6 @@
 # June , 2023 day
 
-## Dagverslag (1 zin)
+### Dagverslag (1 zin)
 
 Wat zijn jou wins vandaag?-----
 
@@ -16,25 +16,25 @@ Wat zijn jou wins vandaag?-----
 - [ ] self-reflection:
 - [ ] vanavond: stop om 17u
 
-## Obstakels & Oplossingen
+### Obstakels & Oplossingen
 
 1.
 
 2.
-3.  Asking better questions
+3. Asking better questions
 
 - [ ]
 - [ ]
 
-## Learnings
+### Learnings
 
----
+- [ ]
 
-## Plans for tomorrow
+### Plans for tomorrow
 
 1.
 
-## Results
+### Results
 
 Brief description of the result of the exercises. An image can speak more than a thousand words.
 
@@ -43,6 +43,8 @@ Brief description of the result of the exercises. An image can speak more than a
 **Description:**
 ![Label]()
 
-## Key terminology
+### Key terminology
 
 - [ ]
+
+---
