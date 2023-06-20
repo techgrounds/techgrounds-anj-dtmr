@@ -419,8 +419,6 @@ Remember to replace placeholder values, such as VNet IDs and subnet names, with 
 
 ## Learnings
 
----
-
 ## Plans for tomorrow
 
 - Write down documentataion on management.bicep and web/app.bicep
@@ -439,3 +437,68 @@ https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/
 - Turn assumptions into a daily planning
 
 - Ready a bit for the presentation(peer to peer review)
+
+---
+
+June 20, 2023 Tuesday
+
+## Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+- [ ] gister / sinds de vorige bereikt:
+- [ ] vandaag doelen:
+- [ ] soft skills doel vandaag (Learning to learn, Peer 2 peer learning and Searching,
+      Computational thinking, Rules, values and guiding principles, Time management, Presenting,
+      Self reflection, Solution oriented, Networking, Assertiveness, Communication, Employability,
+      Proactive, Self management, Team work, Empathie.):
+
+- [ ] vandaag bereikt:
+- [ ] 10 mins before/after the dagafsluiting: active recalling with the use of flashcards/quizlet/brainscape/anki
+- [ ] self-reflection:
+- [ ] vanavond: stop om 17u
+
+## Obstakels & Oplossingen
+
+1. Understanding how key vault works, what's requirements for the project and what resource uses it
+
+2. Help others to user prettier for their code.
+
+3. Asking better questions
+
+- [ ] Waarom moet je de port pingen?
+
+Key vault access policies
+
+- [ ] Bij de key vault, wat soort access policies hebben de project nodig, moet ik de object id van jou team nodig, application ID???????? object ID
+
+By specifying the objectId of the admin user, you limit access to only this specific user, reducing the attack surface and potential security risks.
+
+- [ ] how to save the object ID without hard coding it on the keyvault.bicep file. .env file possible????
+
+## Learnings
+
+- learned about using 'existing' than output if you're using module.
+
+## Plans for tomorrow
+
+- zoek welke applicaties hebben de de key vault nodig
+- .env objectID ----- environment
+- Write down documentataion on management.bicep and web/app.bicep
+- Continue microsoft module
+
+https://learn.microsoft.com/en-gb/shows/learn-live/use-bicep-deploy-azure-infrastructure-as-code-ep02-build-first-bicep-template?WT.mc_id=learnlive-20220315A
+
+https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/
+
+https://learn.microsoft.com/en-us/events/learn-events/learnlive-iac-and-bicep/
+
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code?tabs=CLI
+
+https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/
+
+- Turn assumptions into a daily planning
+
+- Ready a bit for the presentation(peer to peer review)
+
+---
