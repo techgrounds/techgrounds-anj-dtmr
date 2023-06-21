@@ -27,7 +27,7 @@ param location string = resourceGroup().location
 // ToDo: Adjust the secrets
 // ToDo: Adjust the certificate
 
-var keyVaultName = 'kv-${uniqueString(resourceGroup().id, 'keyVault')}'
+var keyVaultName = 'keyvault-${uniqueString(resourceGroup().id, 'keyVault')}'
 
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
   name: keyVaultName
