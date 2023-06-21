@@ -58,7 +58,7 @@ This command will return a list of all deployments in the current subscription, 
 
 That's it! Azure CLI will handle the deployment of your Azure Resource Group using the Bicep file you created. You can check the Azure portal or use Azure CLI to verify the deployed resources.
 
-<!-- ToDo: Deploying in group -->
+<!-- ToDo: How to deploy in group -->
 
 <!-- az login
 az account set --subscription 'Cloud Student 1'
