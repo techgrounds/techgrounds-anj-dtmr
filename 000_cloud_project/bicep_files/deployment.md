@@ -28,7 +28,7 @@ Remember to modify the command based on your specific scenario, such as providin
 
 You can run this command directly in the Azure CLI or incorporate it into a script for automation or repeated deployments.
 
-7. Monitor the deployment:
+5. Monitor the deployment:
    - The deployment command will return a deployment ID. You can use this ID to monitor the deployment progress using the following command:
      ```
      az deployment sub show --name <deployment_id>
