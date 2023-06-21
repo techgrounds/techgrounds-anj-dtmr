@@ -1,6 +1,6 @@
 # Weekly Time Logs
 
-## Week 1
+# Week 1
 
 June 5, 2023 Monday
 
@@ -162,7 +162,7 @@ https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/
 
 ---
 
-## Week 2
+# Week 2
 
 June 12, 2023 Monday
 
@@ -382,7 +382,7 @@ Additional: VnetPeering to connect this management vnet to the app vnet for late
 
 ---
 
-## Week 3
+# Week 3
 
 June 19, 2023 Monday
 
@@ -444,25 +444,13 @@ June 20, 2023 Tuesday
 
 ## Dagverslag (1 zin)
 
-Wat zijn jou wins vandaag?-----
-
-- [ ] gister / sinds de vorige bereikt:
-- [ ] vandaag doelen:
-- [ ] soft skills doel vandaag (Learning to learn, Peer 2 peer learning and Searching,
-      Computational thinking, Rules, values and guiding principles, Time management, Presenting,
-      Self reflection, Solution oriented, Networking, Assertiveness, Communication, Employability,
-      Proactive, Self management, Team work, Empathie.):
-
-- [ ] vandaag bereikt:
-- [ ] 10 mins before/after the dagafsluiting: active recalling with the use of flashcards/quizlet/brainscape/anki
-- [ ] self-reflection:
-- [ ] vanavond: stop om 17u
+- Focusing on understanding and deploying key vault
 
 ## Obstakels & Oplossingen
 
 1. Understanding how key vault works, what's requirements for the project and what resource uses it
 
-2. Help others to user prettier for their code.
+2. Help others to use prettier for their code.
 
 3. Asking better questions
 
@@ -482,10 +470,10 @@ By specifying the objectId of the admin user, you limit access to only this spec
 
 ## Plans for tomorrow
 
-- zoek welke applicaties hebben de de key vault nodig
-- .env objectID ----- environment
-- Write down documentataion on management.bicep and web/app.bicep
-- Continue microsoft module
+- [x] zoek welke applicaties hebben de de key vault nodig
+- [x] .env objectID ----- environment
+- [ ] Write down documentataion on management.bicep and web/app.bicep
+- [ ] Continue microsoft module
 
 https://learn.microsoft.com/en-gb/shows/learn-live/use-bicep-deploy-azure-infrastructure-as-code-ep02-build-first-bicep-template?WT.mc_id=learnlive-20220315A
 
@@ -497,8 +485,39 @@ https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-
 
 https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/
 
-- Turn assumptions into a daily planning
+- [x] Turn assumptions into a daily planning
 
-- Ready a bit for the presentation(peer to peer review)
+- [x] Ready a bit for the presentation(peer to peer review)
+
+---
+
+June 21, 2023 Wednesday
+
+### Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+- Deployed key vault and storage account with private container. Now what?
+
+### Obstakels & Oplossingen
+
+1. I deployed a key vault with encryption. When I am deploying a storage account with a container then trying to make a key, I actually did not understand why I am doing that. So I stick to my plan to deploy the basis then understand and adjust the requirements for later.
+
+2. Asking better questions
+
+- [ ] What's the difference from sku: name and properties accountype. from the requirement of post-deployment script which one can you recommend to use
+
+- [ ] Under storage account: there is properties-encryption-services-(blob/file)-key type- difference between account and service. When to use account or service
+
+- [ ] what the connection of encryption under storage account then having a key vault
+
+### Learnings
+
+- [ ] key vault is just like a container with properties I can configure for encryption.
+- [ ]
+
+### Plans for tomorrow
+
+- [ ] Write down documentataion on management.bicep and web/app.bicep
 
 ---
