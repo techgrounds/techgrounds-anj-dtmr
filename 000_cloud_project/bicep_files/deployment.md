@@ -50,4 +50,4 @@ That's it! Azure CLI will handle the deployment of your Azure Resource Group usi
 <!-- az login
 az account set --subscription 'Cloud Student 1'
 az group create --name TestRGcloud_project --location westeurope
-az deployment group create --resource-group TestRGcloud_project --template-file network.bicep -->
+az deployment group create --resource-group TestRGcloud_project --template-file network.bicep keyvault.bicep storage.bicep -->
