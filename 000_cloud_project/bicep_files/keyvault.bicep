@@ -2,6 +2,8 @@
 /*                     Use this command to deploy                             */
 /* -------------------------------------------------------------------------- */
 
+// Reference: https://learn.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/accesspolicies?pivots=deployment-language-bicep
+
 // az login
 // az account set --subscription 'Cloud Student 1'
 // az group create --name TestRGcloud_project --location westeurope
