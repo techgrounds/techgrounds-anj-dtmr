@@ -31,3 +31,6 @@ I wanted to divide the bicep file into management network and web/app network. I
 
 June 20, 2023
 Today I decided to create my key vault first before the vm's from the 2 servers. This is to ready from the start, a place where I can keep my secrets.
+
+June 21, 2023
+Deployed key vault and storage account with container, before deploying the vmss.
