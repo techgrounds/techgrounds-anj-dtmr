@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 <mxfile host="app.diagrams.net" modified="2023-06-19T17:11:45.386Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="sTazx4jZV1fZTWDqVYg9" version="21.5.0" type="device">
   <diagram name="Page-1" id="XU-H3b0H9svQiFO6w6KL">
     <mxGraphModel dx="1158" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+=======
+<mxfile host="app.diagrams.net" modified="2023-06-21T12:08:53.899Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="asGd5BRrqjrrskJHmU3O" version="21.5.0" type="device">
+  <diagram name="Page-1" id="XU-H3b0H9svQiFO6w6KL">
+    <mxGraphModel dx="1093" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+>>>>>>> Stashed changes
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -26,7 +32,11 @@
           <mxGeometry x="502.5" y="80" width="130" height="475" as="geometry" />
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-1" value="" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=default;fillColor=none;fontColor=#000099;strokeColor=#FFB570;" parent="1" vertex="1">
+<<<<<<< Updated upstream
           <mxGeometry x="220" y="145" width="900" height="548" as="geometry" />
+=======
+          <mxGeometry x="230" y="139" width="900" height="548" as="geometry" />
+>>>>>>> Stashed changes
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-10" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;fontColor=#000099;strokeColor=#FFB570;" parent="1" vertex="1">
           <mxGeometry x="330" y="185" width="330" height="340" as="geometry" />
@@ -70,11 +80,16 @@
         <mxCell id="dbXTDxh36JsevE1TjSYH-15" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Virtual_Machine.svg;fontColor=#000099;strokeColor=#FFB570;" parent="1" vertex="1">
           <mxGeometry x="542.5" y="422" width="50" height="46" as="geometry" />
         </mxCell>
+<<<<<<< Updated upstream
         <mxCell id="dbXTDxh36JsevE1TjSYH-18" value="" style="shape=doubleArrow;whiteSpace=wrap;html=1;fontColor=#000099;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="660" y="428" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-19" value="Peering" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="675" y="460" width="60" height="13" as="geometry" />
+=======
+        <mxCell id="dbXTDxh36JsevE1TjSYH-19" value="Peering" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
+          <mxGeometry x="678" y="192" width="60" height="13" as="geometry" />
+>>>>>>> Stashed changes
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.014;entryY=0.472;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#a20025;strokeColor=#990000;fontColor=#000099;" parent="1" target="dbXTDxh36JsevE1TjSYH-15" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -87,7 +102,11 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Qt3NXMY1zpIQPhPqf40f-6" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Virtual_Networks.svg;fontColor=#000099;strokeColor=#FFB570;" parent="1" vertex="1">
+<<<<<<< Updated upstream
           <mxGeometry x="726.5" y="165" width="67" height="40" as="geometry" />
+=======
+          <mxGeometry x="1025" y="164" width="67" height="40" as="geometry" />
+>>>>>>> Stashed changes
         </mxCell>
         <mxCell id="Qt3NXMY1zpIQPhPqf40f-7" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Virtual_Networks.svg;fontColor=#000099;strokeColor=#FFB570;" parent="1" vertex="1">
           <mxGeometry x="330" y="165" width="67" height="40" as="geometry" />
@@ -96,7 +115,11 @@
           <mxGeometry x="330" y="200" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-26" value="Management-vnet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
+<<<<<<< Updated upstream
           <mxGeometry x="710" y="205" width="100" height="30" as="geometry" />
+=======
+          <mxGeometry x="1010" y="200" width="100" height="30" as="geometry" />
+>>>>>>> Stashed changes
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-27" value="&lt;p style=&quot;line-height: 110%; font-size: 9px;&quot;&gt;Management Subnet&lt;br&gt;with NSG&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="743.5" y="290" width="90" height="30" as="geometry" />
@@ -105,7 +128,11 @@
           <mxGeometry x="675" y="386.5" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-31" value="&lt;p style=&quot;line-height: 110%; font-size: 9px;&quot;&gt;App Subnet&lt;br&gt;with NSG&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
+<<<<<<< Updated upstream
           <mxGeometry x="321.83" y="428" width="60" height="30" as="geometry" />
+=======
+          <mxGeometry x="317.91999999999996" y="422" width="60" height="30" as="geometry" />
+>>>>>>> Stashed changes
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-32" value="Availability Zone 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="390" y="100" width="60" height="30" as="geometry" />
@@ -132,6 +159,7 @@
           <mxGeometry x="355" y="648" width="125" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-40" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font color=&quot;#080808&quot;&gt;10.20.20.0/24&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+<<<<<<< Updated upstream
           <mxGeometry x="713.5" y="218" width="93" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-41" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font color=&quot;#080808&quot;&gt;10.10.10.0/24&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" parent="1" vertex="1">
@@ -139,10 +167,31 @@
         </mxCell>
         <mxCell id="dbXTDxh36JsevE1TjSYH-43" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Network_Security_Groups.svg;fontColor=#000099;strokeColor=#FFB570;" parent="1" vertex="1">
           <mxGeometry x="329.99999999999994" y="375" width="43.65" height="53" as="geometry" />
+=======
+          <mxGeometry x="1010" y="215" width="93" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dbXTDxh36JsevE1TjSYH-41" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font color=&quot;#080808&quot;&gt;10.10.10.0/24&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="337.5" y="215" width="60" height="30" as="geometry" />
+>>>>>>> Stashed changes
         </mxCell>
         <mxCell id="JJQ9AiGBg8sY08W0kX3o-1" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/SQL_Database.svg;" parent="1" vertex="1">
           <mxGeometry x="681" y="331" width="48" height="64" as="geometry" />
         </mxCell>
+<<<<<<< Updated upstream
+=======
+        <mxCell id="1RaYKFJEqEAShc90S2Od-1" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Network_Security_Groups.svg;fontColor=#000099;strokeColor=#FFB570;" vertex="1" parent="1">
+          <mxGeometry x="333.5" y="388" width="28.83" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="1RaYKFJEqEAShc90S2Od-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#660066;" edge="1" parent="1" source="1RaYKFJEqEAShc90S2Od-2" target="Qt3NXMY1zpIQPhPqf40f-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RaYKFJEqEAShc90S2Od-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#660066;" edge="1" parent="1" source="1RaYKFJEqEAShc90S2Od-2" target="Qt3NXMY1zpIQPhPqf40f-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RaYKFJEqEAShc90S2Od-2" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#4D27AA;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.peering;" vertex="1" parent="1">
+          <mxGeometry x="687" y="145" width="42" height="42" as="geometry" />
+        </mxCell>
+>>>>>>> Stashed changes
       </root>
     </mxGraphModel>
   </diagram>
