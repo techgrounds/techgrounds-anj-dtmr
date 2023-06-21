@@ -21,7 +21,6 @@ param location string = resourceGroup().location
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-
 /* -------------------------------------------------------------------------- */
 /*                              Management                                    */
 /* -------------------------------------------------------------------------- */
@@ -90,6 +89,7 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         name: subnetName
         properties: {
           addressPrefix: vnet_addressPrefixes
+          // By associating an NSG with a subnet, we can enforce network-level security policies for the resources within that subnet.
           networkSecurityGroup: {
             id: resourceId('Microsoft.Network/networkSecurityGroups', nsgName)
           }
@@ -134,8 +134,8 @@ resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
           protocol: 'Tcp'
           sourcePortRange: '*'
           // destinationPortRange: Specifies the destination port range for the traffic. In this example, it is set to '22', which is the default port for SSH
-          // should it be '3389'
-          destinationPortRange: '3389' // Customize for SSH or RDP port
+          // should it be '3389'?
+          destinationPortRange: '3389' // Customize for RDP port
           // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
           sourceAddressPrefixes: [
             // Add trusted source IP addresses/ranges
@@ -180,6 +180,8 @@ resource managementPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
 // network interface. By placing the network interface definition here, we ensure that the NSG is created
 //  and its properties are accessible.
 
+// The network interface is responsible for connecting the resource to the VNet and a specific subnet within the VNet.
+
 resource managementNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' = {
   name: nicName
   location: location
@@ -216,7 +218,7 @@ resource managementNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11
 
 resource vnetmngntvnetwebapp 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2022-11-01' = {
   parent: vnetManagement
-  name: '${virtualNetworkName}-${virtualNetworkName_webapp}'
+  name: '${virtualNetworkName}-to-${virtualNetworkName_webapp}'
   properties: {
     remoteVirtualNetwork: {
       id: vnetWebApp.id
@@ -239,6 +241,8 @@ resource vnetmngntvnetwebapp 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 // ToDo: Management server is a WINDOWS SERVER
 // ToDo: Web server is a a LINUX SERVER
 // ToDo: Make a key vault first for the 'All VM disks must be encrypted.'
+// ToDo: Connect Availability Set resource
+
 // resource VMManagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
 //   name: 
 //   location: 
@@ -259,7 +263,6 @@ output managementVnetId string = vnetManagement.id
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-
 /* -------------------------------------------------------------------------- */
 /*                              WEB APP                                       */
 /* -------------------------------------------------------------------------- */
@@ -273,10 +276,6 @@ output managementVnetId string = vnetManagement.id
 /* -------------------------------------------------------------------------- */
 /*                     PARAMS & VARS                                          */
 /* -------------------------------------------------------------------------- */
-
-// // location
-// @description('Location for all resources.')
-// param location string = resourceGroup().location
 
 // vnet
 var virtualNetworkName_webapp = 'webapp-vnet'
@@ -332,6 +331,7 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         name: subnetName_webapp
         properties: {
           addressPrefix: vnet_addressPrefixes_webapp
+          // By associating an NSG with a subnet, we can enforce network-level security policies for the resources within that subnet.
           networkSecurityGroup: {
             id: resourceId('Microsoft.Network/networkSecurityGroups', nsgName_webapp)
           }
@@ -422,6 +422,8 @@ resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
 // network interface. By placing the network interface definition here, we ensure that the NSG is created
 //  and its properties are accessible.
 
+// The network interface is responsible for connecting the resource to the VNet and a specific subnet within the VNet.
+
 resource WebAppNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' = {
   name: nicName_webapp
   location: location
@@ -481,6 +483,7 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 // ToDo: Management server is a WINDOWS SERVER
 // ToDo: Web server is a a LINUX SERVER
 // ToDo: Make a key vault first for the 'All VM disks must be encrypted.'
+// ToDo: Connect Availability Set resource
 // resource VMManagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
 //   name: 
 //   location: 
@@ -494,3 +497,47 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 
 output webAppVNetId string = vnetWebApp.id
 // output managementPublicIp string = managementPublicIP.properties.ipTags[0].ipAddress
+
+/* -------------------------------------------------------------------------- */
+/*                     Documentation                                          */
+/* -------------------------------------------------------------------------- */
+
+// This Bicep file deploys a secure network infrastructure with a management server and web server.
+
+// Parameters:
+// - adminUsername: The username for the admin account.
+// - adminPassword: The password for the admin account.
+// - vmNamePrefix: The prefix to use for VM names.
+// - location: The location for all resources.
+// - vmSize: The size of the virtual machines.
+
+// Variables:
+// - availabilitySetName: The name of the availability set.
+// - storageAccountType: The type of the storage account.
+// - storageAccountName: The name of the storage account.
+// - virtualNetworkName: The name of the virtual network.
+// - subnetName: The name of the backend subnet.
+// - loadBalancerName: The name of the internal load balancer.
+// - networkInterfaceName: The name of the network interface.
+// - subnetRef: The reference to the subnet.
+// - numberOfInstances: The number of VM instances.
+
+// Resources:
+// - storageAccount: Deploys a storage account for VM disks and backups.
+// - availabilitySet: Deploys an availability set for high availability and fault tolerance.
+// - virtualNetwork: Deploys a virtual network for network isolation.
+// - subnetManagement: Deploys a subnet for the management server.
+// - subnetApplication: Deploys a subnet for the application server.
+// - nsgManagementSubnet: Deploys a network security group for the management subnet.
+// - nsgApplicationSubnet: Deploys a network security group for the application subnet.
+// - networkInterface: Deploys network interfaces for the VM instances.
+// - loadBalancer: Deploys an internal load balancer for traffic distribution.
+// - vm: Deploys the virtual machines.
+
+// Additional resources:
+// - publicIPAddress: Deploys a public IP address for the management server.
+// - managementNetworkInterface: Deploys a network interface for the management server.
+// - managementNsgRuleSSH: Configures an NSG rule to allow SSH access to the management server.
+// - managementNsgRuleRDP: Configures an NSG rule to allow RDP access to the management server.
+// - bootstrapStorageAccount: Deploys a storage account to store bootstrap and post-deployment scripts.
+// - backupSolution: Deploys the backup solution for the VMs.
