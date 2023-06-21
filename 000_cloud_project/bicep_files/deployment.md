@@ -1,45 +1,32 @@
-To deploy an Azure Resource Group using Bicep in VS Code and Azure CLI, you can follow these steps:
+To deploy multiple Bicep files at once, you can use the Azure CLI by specifying all the Bicep files in a single deployment command. Here's an example:
 
-1. Install the necessary software:
+1. Open a terminal or command prompt.
 
-   - Install Azure CLI: Visit the Azure CLI installation page (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) and follow the instructions for your operating system.
-   - Install Visual Studio Code (VS Code): Download and install VS Code from the official website (https://code.visualstudio.com/).
+2. Login to your Azure account using the following command:
 
-2. Create a Bicep file:
+```shell
+az login
+```
 
-   - Create a new file in VS Code with the `.bicep` extension. For example, `main.bicep`.
+3. Change to the directory containing your Bicep files or provide the full paths to the Bicep files in the deployment command.
 
-3. Write Bicep code:
+4. Run the deployment command with all the Bicep files specified. Here's an example command that deploys `network.bicep`, `storage.bicep`, and `keyvault.bicep`:
 
-   - Write your Azure Resource Manager (ARM) template using the Bicep language in the created file. Define your resource group and other Azure resources you want to deploy. Save the file when you're done.
+```
+az group create --name TestRGcloud_project --location westeurope
 
-4. Sign in to Azure:
+az deployment group create \
+  --resource-group TestRGcloud_project \
+  --template-file network.bicep storage.bicep keyvault.bicep
+```
 
-   - Open a terminal in VS Code by going to `View -> Terminal` or using the keyboard shortcut (`Ctrl+` backtick `).
-   - Run the following command to sign in to your Azure account:
-     ```
-     az login
-     ```
-   - Follow the instructions in the terminal to authenticate and log in to your Azure account.
+Make sure to replace `"MyResourceGroup"` with the name of your desired resource group. The above command deploys the `network.bicep`, `storage.bicep`, and `keyvault.bicep` files in one deployment operation.
 
-5. Set the Azure subscription:
+By executing this command, all the specified Bicep files will be deployed in parallel or sequentially, depending on the size and complexity of the deployment.
 
-   - If you have multiple Azure subscriptions, set the desired subscription for deployment using the following command:
-     ```
-     az account set --subscription 'Cloud Student 1'
-     ```
-   - Replace `<subscription_name_or_id>` with the name or ID of the subscription you want to use.
+Remember to modify the command based on your specific scenario, such as providing the correct resource group name, adjusting file paths, and including any necessary parameters or variables required by the Bicep files.
 
-6. Deploy the Bicep file:
-
-   - Run the following command to deploy the Bicep file:
-
-     ```
-     az deployment sub create --location westeurope --template-file main.bicep --parameters @parameters.json
-     ```
-
-   - Replace `<azure_region>` with the Azure region where you want to deploy your resources.
-   - Make sure to provide the correct path to your Bicep file and parameter file (if any).
+You can run this command directly in the Azure CLI or incorporate it into a script for automation or repeated deployments.
 
 7. Monitor the deployment:
    - The deployment command will return a deployment ID. You can use this ID to monitor the deployment progress using the following command:
