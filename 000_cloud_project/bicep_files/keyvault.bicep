@@ -1,8 +1,8 @@
+// Reference: https://learn.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/accesspolicies?pivots=deployment-language-bicep
+
 /* -------------------------------------------------------------------------- */
 /*                     Use this command to deploy                             */
 /* -------------------------------------------------------------------------- */
-
-// Reference: https://learn.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/accesspolicies?pivots=deployment-language-bicep
 
 // az login
 // az account set --subscription 'Cloud Student 1'
@@ -29,7 +29,7 @@ param location string = resourceGroup().location
 // ToDo: Adjust the secrets
 // ToDo: Adjust the certificate
 
-var keyVaultName = 'keyvault-${uniqueString(resourceGroup().id, 'keyVault')}'
+var keyVaultName = 'keyvault2-${uniqueString(resourceGroup().id, 'keyVault')}'
 
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
   name: keyVaultName
@@ -47,19 +47,20 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
     // The accessPolicies section in the Key Vault resource, determines which users, applications, or services have permissions to interact with the Key Vault and perform specific operations
     accessPolicies: [
       {
-        // Angeline
+        // Angeline: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
+        // ToDo: How to dynamically declare objectId
         objectId: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
         tenantId: subscription().tenantId
-        // Services: Storage - Post-deployment and Data Encryption
+        // Services that needs keyvault: Storage - Post-deployment and Data Encryption
         permissions: {
           // Key Management - Azure Key Vault can be used as a Key Management solution. Azure Key Vault makes it easy to create and control the encryption keys used to encrypt your data.
           keys: [ 'all' ]
           // Secrets Management - Azure Key Vault can be used to Securely store and tightly control access to tokens, passwords, certificates, API keys, and other secrets
           secrets: [ 'all' ]
           // Certificate Management - Azure Key Vault lets you easily provision, manage, and deploy public and private Transport Layer Security/Secure Sockets Layer (TLS/SSL) certificates for use with Azure and your internal connected resources.
-          certificates: [ 'all' ]
+          // certificates: [ 'all' ]
           // Storage Management -
-          storage: [ 'all' ]
+          // storage: [ 'all' ]
         }
       }
       // {
@@ -81,7 +82,8 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
       //   }
       // }
     ]
+    // enabledForDeployment: true
+    // enableSoftDelete: true
+    // softDeleteRetentionInDays: 7
   }
 }
-
-output keyVaultId string = keyVault.id
