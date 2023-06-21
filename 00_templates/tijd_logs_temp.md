@@ -1,4 +1,4 @@
-# June , 2023 day
+June , 2023 day
 
 ### Dagverslag (1 zin)
 
