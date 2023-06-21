@@ -8,7 +8,7 @@
 // az deployment group create --resource-group TestRGcloud_project --template-file network.bicep
 
 /* -------------------------------------------------------------------------- */
-/*                     LOCATION                                               */
+/*                     LOCATION FOR EVERY RESOURCE                            */
 /* -------------------------------------------------------------------------- */
 
 // location
@@ -62,7 +62,7 @@ var IPConfigName = 'management-ipconfig'
 // machine scale sets, and other services. A VNet acts as a virtual representation of a 
 // traditional network, allowing you to define IP address ranges, subnets, and network security policies.
 
-// Dependencies: Azure Subscription, Azure Resource Group, Azure Region, Address Space, Subnets, Network Security Groups (NSGs)
+// Dependencies: Azure Subscription, Azure Resource Group, Azure Region, Address Space (IP Range?), Subnets, Network Security Groups (NSGs)
 // Additional: VnetPeering to connect this management vnet to the app vnet for later
 
 // This creates a virtual network for the management side
@@ -181,6 +181,8 @@ resource managementPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
 //  and its properties are accessible.
 
 // The network interface is responsible for connecting the resource to the VNet and a specific subnet within the VNet.
+
+// Dependencies: Public IP
 
 resource managementNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' = {
   name: nicName
