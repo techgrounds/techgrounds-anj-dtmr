@@ -25,11 +25,7 @@ param location string = resourceGroup().location
 /*                              Key Vault                                     */
 /* -------------------------------------------------------------------------- */
 
-// ToDo: Adjust the keys
-// ToDo: Adjust the secrets
-// ToDo: Adjust the certificate
-
-var keyVaultName = 'keyvault2-${uniqueString(resourceGroup().id, 'keyVault')}'
+var keyVaultName = 'keyvault-${uniqueString(resourceGroup().id, 'keyVault')}'
 
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
   name: keyVaultName
@@ -53,10 +49,13 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
         tenantId: subscription().tenantId
         // Services that needs keyvault: Storage - Post-deployment and Data Encryption
         permissions: {
+          // ToDo: Adjust the keys
           // Key Management - Azure Key Vault can be used as a Key Management solution. Azure Key Vault makes it easy to create and control the encryption keys used to encrypt your data.
           keys: [ 'all' ]
+          // ToDo: Adjust the secrets
           // Secrets Management - Azure Key Vault can be used to Securely store and tightly control access to tokens, passwords, certificates, API keys, and other secrets
           secrets: [ 'all' ]
+          // ToDo: Adjust the certificate
           // Certificate Management - Azure Key Vault lets you easily provision, manage, and deploy public and private Transport Layer Security/Secure Sockets Layer (TLS/SSL) certificates for use with Azure and your internal connected resources.
           // certificates: [ 'all' ]
           // Storage Management -
