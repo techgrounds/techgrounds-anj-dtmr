@@ -86,3 +86,32 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
     // softDeleteRetentionInDays: 7
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                              Key Vault Secret                              */
+/* -------------------------------------------------------------------------- */
+
+// var keyVaultSecretName = 'keyVaultSecretName'
+
+// // Create a secret in Key Vault
+// resource keyVaultSecret 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = {
+//   parent: keyVault
+//   name: keyVaultSecretName
+//   properties: {
+//     value: 'your_secret_value'
+//   }
+// }
+
+@description('Public SSH key for the virtual machine')
+param sshPublicKey string = 'sshSecretName'
+
+@description('Name of the Key Vault secret containing SSH private key')
+param sshSecretName string
+
+resource sshKeySecret 'Microsoft.KeyVault/vaults/secrets@2021-06-01-preview' = {
+  parent: keyVault
+  name: sshSecretName
+  properties: {
+    value: sshPublicKey
+  }
+}
