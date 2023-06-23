@@ -233,88 +233,12 @@ resource vnetmngntvnetwebapp 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 }
 
 /* -------------------------------------------------------------------------- */
-/*                     Virtual Machine / Server                               */
-/* -------------------------------------------------------------------------- */
-// managementVirtualMachine: Finally, the management virtual machine resource is defined. It depends on 
-// the managementNetworkInterface because it requires a network interface to be associated with the virtual 
-// machine. By placing the virtual machine definition last, we ensure that all the necessary dependencies, 
-// such as the network interface, NSG, and subnet, are created and available.
-
-// ToDo: Management server is a WINDOWS SERVER
-// ToDo: Web server is a a LINUX SERVER
-// ToDo: Make a key vault first for the 'All VM disks must be encrypted.'
-// ToDo: Connect Availability Set resource
-
-@secure()
-@description('The administrator username.')
-param adminUsername string
-
-@secure()
-@description('The administrator password.')
-param adminPassword string
-
-var virtualMachineName_mngt = 'vmmanagement'
-var virtualMachineSize_mngt = 'Standard_B1ms'
-// var virtualMachineSize_mngt = 'Standard_B2s'
-var virtualMachineOSVersion_mngt = '2022-Datacenter'
-
-resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
-  name: virtualMachineName_mngt
-  location: location
-  properties: {
-    hardwareProfile: {
-      vmSize: virtualMachineSize_mngt
-    }
-    osProfile: {
-      computerName: virtualMachineName_mngt
-      adminUsername: adminUsername
-      adminPassword: adminPassword
-    }
-    storageProfile: {
-      imageReference: {
-        publisher: 'MicrosoftWindowsServer'
-        offer: 'WindowsServer'
-        sku: virtualMachineOSVersion_mngt
-        version: 'latest'
-      }
-      osDisk: {
-        createOption: 'FromImage'
-        managedDisk: {
-          storageAccountType: 'StandardSSD_LRS'
-        }
-      }
-      dataDisks: [
-        {
-          diskSizeGB: 256
-          lun: 0
-          createOption: 'Empty'
-        }
-      ]
-    }
-    networkProfile: {
-      networkInterfaces: [
-        {
-          id: managementNetworkInterface.id
-        }
-      ]
-    }
-    // diagnosticsProfile: {
-    //   bootDiagnostics: {
-    //     enabled: true
-    //     storageUri: storageAccount.id
-    //   }
-    // }
-  }
-}
-
-/* -------------------------------------------------------------------------- */
 /*                     Output                                                 */
 /* -------------------------------------------------------------------------- */
-// ToDo:
-// - add output from other resources
+// ToDo: add output from other resources
 
 output managementVnetId string = vnetManagement.id
-// output managementPublicIp string = managementPublicIP.properties.ipTags[0].ipAddress
+output managementPublicIpID string = managementPublicIP.id
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -555,48 +479,4 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 // - add output from other resources
 
 output webAppVNetId string = vnetWebApp.id
-// output managementPublicIp string = managementPublicIP.properties.ipTags[0].ipAddress
-
-/* -------------------------------------------------------------------------- */
-/*                     Documentation                                          */
-/* -------------------------------------------------------------------------- */
-
-// This Bicep file deploys a secure network infrastructure with a management server and web server.
-
-// Parameters:
-// - adminUsername: The username for the admin account.
-// - adminPassword: The password for the admin account.
-// - vmNamePrefix: The prefix to use for VM names.
-// - location: The location for all resources.
-// - vmSize: The size of the virtual machines.
-
-// Variables:
-// - availabilitySetName: The name of the availability set.
-// - storageAccountType: The type of the storage account.
-// - storageAccountName: The name of the storage account.
-// - virtualNetworkName: The name of the virtual network.
-// - subnetName: The name of the backend subnet.
-// - loadBalancerName: The name of the internal load balancer.
-// - networkInterfaceName: The name of the network interface.
-// - subnetRef: The reference to the subnet.
-// - numberOfInstances: The number of VM instances.
-
-// Resources:
-// - storageAccount: Deploys a storage account for VM disks and backups.
-// - availabilitySet: Deploys an availability set for high availability and fault tolerance.
-// - virtualNetwork: Deploys a virtual network for network isolation.
-// - subnetManagement: Deploys a subnet for the management server.
-// - subnetApplication: Deploys a subnet for the application server.
-// - nsgManagementSubnet: Deploys a network security group for the management subnet.
-// - nsgApplicationSubnet: Deploys a network security group for the application subnet.
-// - networkInterface: Deploys network interfaces for the VM instances.
-// - loadBalancer: Deploys an internal load balancer for traffic distribution.
-// - vm: Deploys the virtual machines.
-
-// Additional resources:
-// - publicIPAddress: Deploys a public IP address for the management server.
-// - managementNetworkInterface: Deploys a network interface for the management server.
-// - managementNsgRuleSSH: Configures an NSG rule to allow SSH access to the management server.
-// - managementNsgRuleRDP: Configures an NSG rule to allow RDP access to the management server.
-// - bootstrapStorageAccount: Deploys a storage account to store bootstrap and post-deployment scripts.
-// - backupSolution: Deploys the backup solution for the VMs.
+output WebAppPublicIPID string = WebAppPublicIP.id
