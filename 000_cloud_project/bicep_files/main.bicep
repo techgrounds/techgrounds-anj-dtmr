@@ -5,7 +5,7 @@
 // az login
 // az account set --subscription 'Cloud Student 1'
 // az group create --name TestRGcloud_project --location westeurope
-// az deployment group create --resource-group TestRGcloud_project --template-file network.bicep
+// az deployment group create --resource-group TestRGcloud_project --template-file main.bicep
 
 /* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
@@ -47,8 +47,6 @@ var publicIpName = 'management-public-ip'
 var nicName = 'management-nic'
 // addressPrefixes
 var vnet_addressPrefixes = '10.20.20.0/24'
-// security rules
-var securityRulesName = 'management-AllowManagementAccess-security-rules'
 // DNS
 var DNSdomainNameLabel = 'management-server'
 // IP config
@@ -107,7 +105,6 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
     ]
   }
 }
-
 /* -------------------------------------------------------------------------- */
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
@@ -116,6 +113,8 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
 // By placing the NSG definition next, we ensure that the subnet is available and its properties
 // are accessible when defining the security rules.
 
+param allowedIPAddresses array = [ '85.149.106.77' ]
+
 resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   name: nsgName
   location: location
@@ -123,33 +122,76 @@ resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   properties: {
     // security Rule are An array of security rules that define the network traffic rules for the NSG.
     securityRules: [
+      // {
+      //   name: 'All-IP-Blocked'
+      //   properties: {
+      //     description: 'Block all IP addresses except the specific IP'
+      //     // priority: Lower values indicate higher priority. In this case, the rule has a priority of 100.
+      //     priority: 200
+      //     access: 'Deny'
+      //     // direction: Indicates the direction of the traffic. 'Inbound' means the rule applies to incoming traffic.
+      //     direction: '*'
+      //     protocol: '*'
+      //     sourcePortRange: '*'
+      //     destinationPortRange: '*'
+      //     // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
+      //     sourceAddressPrefixes: [ '0.0.0.0/0' ]
+      //     // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
+      //     destinationAddressPrefixes: []
+      //   }
+      // }
+      // // Add additional security rules as needed
+      // {
+      //   name: 'Allow-Admin-Inbound'
+      //   properties: {
+      //     description: 'Allow inbound connections from trusted locations'
+      //     // priority: Lower values indicate higher priority. In this case, the rule has a priority of 100.
+      //     priority: 100
+      //     access: 'Allow'
+      //     // direction: Indicates the direction of the traffic. 'Inbound' means the rule applies to incoming traffic.
+      //     direction: 'Inbound'
+      //     // 'Tcp'?
+      //     protocol: '*'
+      //     sourcePortRange: '*'
+      //     destinationPortRange: '*'
+      //     // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
+      //     sourceAddressPrefixes: [ '${allowedIPAddresses[0]}/32' ]
+      //     // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
+      //     destinationAddressPrefix: 'VirtualNetwork' // Assuming we want to restrict access to the virtual network
+
+      //   }
+      // }
       {
-        name: securityRulesName
+        name: 'specific-inbound-allow'
         properties: {
-          // priority: Lower values indicate higher priority. In this case, the rule has a priority of 100.
-          priority: 100
-          access: 'Allow'
-          // direction: Indicates the direction of the traffic. 'Inbound' means the rule applies to incoming traffic.
+          priority: 200
           direction: 'Inbound'
-          protocol: 'Tcp'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+          destinationAddressPrefix: '*'
           sourcePortRange: '*'
-          // destinationPortRange: Specifies the destination port range for the traffic. In this example, it is set to '22', which is the default port for SSH
-          // should it be '3389'?
-          destinationPortRange: '3389' // Customize for RDP port
-          // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
-          sourceAddressPrefixes: [
-            // Add trusted source IP addresses/ranges
-            '10.20.20.0/24'
-            '10.10.10.0/24'
-          ]
-          // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
-          destinationAddressPrefixes: [
-            // Customize for management subnet address range
-            vnet_addressPrefixes
-          ]
+          destinationPortRange: '*'
+          description: 'Allow specific IP address'
         }
       }
-      // Add additional security rules as needed
+
+      // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
+
+      {
+        name: 'specific-outbound-allow'
+        properties: {
+          priority: 200
+          direction: 'Outbound'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+          destinationAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationPortRange: '*'
+          description: 'Allow specific IP address'
+        }
+      }
     ]
   }
 }
@@ -405,8 +447,6 @@ var publicIpName_webapp = 'webapp-public-ip'
 var nicName_webapp = 'webapp-nic'
 // addressPrefixes
 var vnet_addressPrefixes_webapp = '10.10.10.0/24'
-// security rules
-var securityRulesName_webapp = 'webapp-AllowManagementAccess-security-rules'
 // DNS
 var DNSdomainNameLabel_webapp = 'webapp-server'
 // IP config
@@ -469,10 +509,6 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
 /* -------------------------------------------------------------------------- */
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
-// managementNSG: The management NSG is created next. It depends on the managementSubnet 
-// because the security rules in the NSG refer to the address prefixes of the management subnet. 
-// By placing the NSG definition next, we ensure that the subnet is available and its properties
-// are accessible when defining the security rules.
 
 resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   name: nsgName_webapp
@@ -481,33 +517,65 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   properties: {
     // security Rule are An array of security rules that define the network traffic rules for the NSG.
     securityRules: [
+      // {
+      //   name: securityRulesName_webapp
+      //   properties: {
+      //     // priority: Lower values indicate higher priority. In this case, the rule has a priority of 100.
+      //     priority: 100
+      //     access: 'Allow'
+      //     // direction: Indicates the direction of the traffic. 'Inbound' means the rule applies to incoming traffic.
+      //     direction: 'Inbound'
+      //     protocol: 'Tcp'
+      //     sourcePortRange: '*'
+      //     // destinationPortRange: Specifies the destination port range for the traffic. In this example, it is set to '22', which is the default port for SSH
+      //     // should it be '3389'
+      //     destinationPortRange: '22' // Customize for SSH or RDP port
+      //     // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
+      //     sourceAddressPrefixes: [
+      //       // Add trusted source IP addresses/ranges
+      //       // '10.20.20.0/24'
+      //       // '10.10.10.0/24'
+      //       '85.149.106.77'
+      //     ]
+      //     // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
+      //     destinationAddressPrefixes: [
+      //       // Customize for management subnet address range
+      //       vnet_addressPrefixes_webapp
+      //     ]
+      //   }
+      // }
+      // Add additional security rules as needed
       {
-        name: securityRulesName_webapp
+        name: 'specific-inbound-allow'
         properties: {
-          // priority: Lower values indicate higher priority. In this case, the rule has a priority of 100.
-          priority: 100
-          access: 'Allow'
-          // direction: Indicates the direction of the traffic. 'Inbound' means the rule applies to incoming traffic.
+          priority: 200
           direction: 'Inbound'
-          protocol: 'Tcp'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+          destinationAddressPrefix: '*'
           sourcePortRange: '*'
-          // destinationPortRange: Specifies the destination port range for the traffic. In this example, it is set to '22', which is the default port for SSH
-          // should it be '3389'
-          destinationPortRange: '22' // Customize for SSH or RDP port
-          // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
-          sourceAddressPrefixes: [
-            // Add trusted source IP addresses/ranges
-            '10.20.20.0/24'
-            '10.10.10.0/24'
-          ]
-          // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
-          destinationAddressPrefixes: [
-            // Customize for management subnet address range
-            vnet_addressPrefixes_webapp
-          ]
+          destinationPortRange: '*'
+          description: 'Allow specific IP address'
         }
       }
-      // Add additional security rules as needed
+
+      // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
+
+      {
+        name: 'specific-outbound-allow'
+        properties: {
+          priority: 200
+          direction: 'Outbound'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+          destinationAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationPortRange: '*'
+          description: 'Allow specific IP address'
+        }
+      }
     ]
   }
 }
