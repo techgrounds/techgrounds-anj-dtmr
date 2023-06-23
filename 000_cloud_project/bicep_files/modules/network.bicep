@@ -245,10 +245,67 @@ resource vnetmngntvnetwebapp 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 // ToDo: Make a key vault first for the 'All VM disks must be encrypted.'
 // ToDo: Connect Availability Set resource
 
-// resource VMManagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
-//   name: 
-//   location: 
-// }
+@secure()
+@description('The administrator username.')
+param adminUsername string
+
+@secure()
+@description('The administrator password.')
+param adminPassword string
+
+var virtualMachineName_mngt = 'vmmanagement'
+var virtualMachineSize_mngt = 'Standard_B1ms'
+// var virtualMachineSize_mngt = 'Standard_B2s'
+var virtualMachineOSVersion_mngt = '2022-Datacenter'
+
+resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
+  name: virtualMachineName_mngt
+  location: location
+  properties: {
+    hardwareProfile: {
+      vmSize: virtualMachineSize_mngt
+    }
+    osProfile: {
+      computerName: virtualMachineName_mngt
+      adminUsername: adminUsername
+      adminPassword: adminPassword
+    }
+    storageProfile: {
+      imageReference: {
+        publisher: 'MicrosoftWindowsServer'
+        offer: 'WindowsServer'
+        sku: virtualMachineOSVersion_mngt
+        version: 'latest'
+      }
+      osDisk: {
+        createOption: 'FromImage'
+        managedDisk: {
+          storageAccountType: 'StandardSSD_LRS'
+        }
+      }
+      dataDisks: [
+        {
+          diskSizeGB: 256
+          lun: 0
+          createOption: 'Empty'
+        }
+      ]
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: managementNetworkInterface.id
+        }
+      ]
+    }
+    // diagnosticsProfile: {
+    //   bootDiagnostics: {
+    //     enabled: true
+    //     storageUri: storageAccount.id
+    //   }
+    // }
+  }
+}
 
 /* -------------------------------------------------------------------------- */
 /*                     Output                                                 */
