@@ -521,3 +521,36 @@ Wat zijn jou wins vandaag?-----
 - [ ] Write down documentataion on management.bicep and web/app.bicep
 
 ---
+
+June 23, 2023 Friday
+
+### Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+- deployed management server
+- adjusted 2 nsg's according to the requirements
+
+### Obstakels & Oplossingen
+
+1. I could not find a working and existing API, I decided to move on to another resources I can start with
+
+2. Asking better questions
+
+- [ ] begreep ik het goed over de management nsg? eerst moet alle ip addres blockeren daarna specified ip (of mijn publiek ip)
+
+### Learnings
+
+- [ ] how to merge conflict branches on github
+- [ ]
+
+### Plans for tomorrow
+
+- [ ] Write down documentataion on management.bicep and web/app.bicep
+- [ ] Miro for Monday
+- [ ] VMSS for webserver
+- [ ] Recovery service vault
+- [ ] Database
+- [ ] Data encryption
+
+---
