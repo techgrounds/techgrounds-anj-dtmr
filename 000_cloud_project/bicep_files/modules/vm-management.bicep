@@ -78,6 +78,7 @@ resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
         }
       ]
     }
+    // Uncomment when in main.bicep
     // diagnosticsProfile: {
     //   bootDiagnostics: {
     //     enabled: true
