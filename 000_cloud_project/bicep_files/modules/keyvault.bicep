@@ -102,21 +102,12 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
 //   }
 // }
 
-@description('Public SSH key for the virtual machine')
-param sshPublicKey string = 'sshSecretName'
+// @description('Public SSH key for the virtual machine')
+// param sshPublicKey string = 'sshSecretName'
 
-@description('Name of the Key Vault secret containing SSH private key')
-param sshSecretName string
+// @description('Name of the Key Vault secret containing SSH private key')
+// param sshSecretName string
 
-<<<<<<< Updated upstream:000_cloud_project/bicep_files/modules/keyvault.bicep
-resource sshKeySecret 'Microsoft.KeyVault/vaults/secrets@2021-06-01-preview' = {
-  parent: keyVault
-  name: sshSecretName
-  properties: {
-    value: sshPublicKey
-  }
-}
-=======
 // resource sshKeySecret 'Microsoft.KeyVault/vaults/secrets@2021-06-01-preview' = {
 //   parent: keyVault
 //   name: sshSecretName
@@ -124,4 +115,3 @@ resource sshKeySecret 'Microsoft.KeyVault/vaults/secrets@2021-06-01-preview' = {
 //     value: sshPublicKey
 //   }
 // }
->>>>>>> Stashed changes:000_cloud_project/bicep_files/keyvault.bicep
