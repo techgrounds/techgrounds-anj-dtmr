@@ -37,3 +37,6 @@ Deployed key vault and storage account with container, before deploying the vmss
 
 June 23, 2023
 Today I started with the difficult, deploy a vmss for the web server, since according to my notes the web server needs to be scalable with the best possible price still. But I only keep getting error from the quickstart template from microsoft. I decided to move on to recovery vault, but it seems like there is a problem with the API. So i moved forward with the management server and successfully deployed the cheapest server I could find. I spent the rest of the afternoon trying to understand the requirements for nsg and re-edit my code and successfully deployed it to.
+
+June 26, 2023
+The last few weeks is all discovery about my learning process. Today I asked someone to be a one on one buddy on this project, as I'm confident that would have a positive significant impact on how I can perform and give an mvp result for this project. We've talked about from the start, what we understand and NOT understand from the project
