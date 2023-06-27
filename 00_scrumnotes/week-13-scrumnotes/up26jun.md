@@ -1,4 +1,4 @@
-# Datum , 2023 day Standup
+# June 26, 2023 Monday Standup
 
 READ THIS BEFORE THE START OF EVERYTHING
 guiding principles:
