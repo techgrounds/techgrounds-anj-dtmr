@@ -1,4 +1,13 @@
 /* -------------------------------------------------------------------------- */
+/*                     Use this command to deploy                             */
+/* -------------------------------------------------------------------------- */
+
+// az login
+// az account set --subscription 'Cloud Student 1'
+// az group create --name TestRGcloud_project --location uksouth
+// az deployment group create --resource-group TestRGcloud_project --template-file vm-management.bicep
+
+/* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
 /* -------------------------------------------------------------------------- */
 
@@ -87,3 +96,10 @@ resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
     // }
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                     OUTPUT                                                 */
+/* -------------------------------------------------------------------------- */
+
+output VMmanagementName string = VMmanagement.name
+output VMmanagementID string = VMmanagement.id
