@@ -4,8 +4,8 @@
 
 // az login
 // az account set --subscription 'Cloud Student 1'
-// az group create --name TestRGcloud_project --location westeurope
-// az deployment group create --resource-group TestRGcloud_project --template-file main.bicep
+// az group create --name TestRGcloud_project --location uksouth
+// az deployment group create --resource-group TestRGcloud_project --template-file params.bicep
 
 /* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
