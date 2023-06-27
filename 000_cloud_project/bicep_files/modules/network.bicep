@@ -530,5 +530,9 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 // ToDo:
 // - add output from other resources
 
-output webAppVNetId string = vnetWebApp.id
-// output webAppPublicIp string = webAppPublicIP.properties.ipTags[0].ipAddress
+output vnetmanagementID string = vnetManagement.name
+output vnetWebAppID string = vnetWebApp.name
+output vnetManagementSubnet1ID string = vnetManagement.properties.subnets[0].name
+output vnetWebAppSubnet2ID string = vnetWebApp.properties.subnets[0].name
+output nsgManagementID string = nsgManagement.name
+output nsgWebAppID string = nsgWebApp.name
