@@ -542,12 +542,100 @@ Wat zijn jou wins vandaag?-----
 ### Learnings
 
 - [ ] how to merge conflict branches on github
-- [ ]
 
 ### Plans for tomorrow
 
 - [ ] Write down documentataion on management.bicep and web/app.bicep
-- [ ] Miro for Monday
+- [ ] Miro planning
+- [ ] VMSS for webserver
+- [ ] Recovery service vault
+- [ ] Database
+- [ ] Data encryption
+
+---
+
+June 27, 2023 Monday
+
+### Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+- [ ] I finally accepted that I need a one-on-one learning buddy and find a way to ask someone.
+
+### Obstakels & Oplossingen
+
+1. aws nacl in azure = nsg
+
+2. nsg and route table difference
+
+Network Security Groups (NSGs) and Route Tables are both networking components in cloud infrastructure that serve different purposes:
+
+1. Network Security Groups (NSGs): NSGs are a fundamental networking security feature that control inbound and outbound network traffic to and from Azure resources. They act as virtual firewalls, allowing you to define rules that permit or deny traffic based on source and destination IP addresses, ports, and protocols. NSGs can be associated with subnets, network interfaces, or individual virtual machines.
+
+Key points about NSGs:
+
+- They operate at the transport layer (Layer 4) of the networking stack.
+- They provide security by allowing or denying traffic based on defined rules.
+- They can be used to control network traffic within a subnet or between subnets.
+- NSGs are stateful, meaning they keep track of the connection state to allow corresponding traffic.
+
+2. Route Tables: Route Tables are used to control traffic routing within a virtual network. They contain a collection of routes that determine the path for network traffic to follow. Each route specifies a destination IP range and the next hop type, which can be a virtual appliance, a VPN gateway, or the Azure Internet gateway. Route Tables are associated with subnets and determine how traffic is directed within the virtual network.
+
+Key points about Route Tables:
+
+- They operate at the network layer (Layer 3) of the networking stack.
+- They control the flow of traffic within the virtual network.
+- They determine the next hop for packets based on destination IP ranges.
+- Multiple subnets within a virtual network can be associated with the same Route Table.
+- Route Tables can be used for custom routing scenarios, such as forcing traffic through a virtual appliance or VPN connection.
+
+In summary, NSGs focus on traffic filtering and enforcing security rules at the transport layer, while Route Tables handle traffic routing decisions at the network layer within a virtual network. NSGs control access to resources based on defined rules, while Route Tables determine the path that network traffic takes within a virtual network. 3. Asking better questions
+
+- [ ] Difference between confidential and trusted VM = in this project use none because security cost a lot in cloud
+
+### Learnings
+
+- [ ] I work better if atleast I have a one-on-one buddy
+
+### Plans for tomorrow
+
+- [ ] Write down documentataion on management.bicep and web/app.bicep
+- [ ] Miro planning
+- [ ] VMSS for webserver
+- [ ] Recovery service vault
+- [ ] Database
+- [ ] Data encryption
+
+---
+
+June 27, 2023 Tuesday
+
+### Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+- [ ] I've cleaned up my files and coded the output so I can work on the modules
+- [ ] Errors, errors, errors
+
+### Obstakels & Oplossingen
+
+1. Deploying the web server with the key vault and disk ecryption. I keep getting error that I dont have key vault access. I did not able to find a solution yet. But because my files keep growing I decided to clean it up then tomorrow I can work on it with a fresh start and a fresh eye
+
+2. Using the peering between two vnets, one peering is enough
+3. Asking better questions
+
+- [ ]
+- [ ]
+
+### Learnings
+
+- [ ] I should have used modules from the start
+- [ ] nic is connecting my azure resources, then the public ip connects it outside that azure network
+
+### Plans for tomorrow
+
+- [ ] Write down documentataion on management.bicep and web/app.bicep
+- [ ] Miro planning
 - [ ] VMSS for webserver
 - [ ] Recovery service vault
 - [ ] Database
