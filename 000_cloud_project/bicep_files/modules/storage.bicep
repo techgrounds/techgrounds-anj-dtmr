@@ -66,5 +66,6 @@ resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/contai
   ]
 }
 
-output storageAccountConnectionString string = storageAccount.properties.primaryEndpoints.blob
+output storageAccountConnectionStringBlobEndpoint string = storageAccount.properties.primaryEndpoints.blob
 output storageContainerUrl string = storageContainer.properties.publicAccess
+output storageAccountName string = storageAccount.name
