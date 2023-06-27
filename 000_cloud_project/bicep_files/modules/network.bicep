@@ -413,6 +413,21 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
       //   }
       // }
       // Add additional security rules as needed
+
+      {
+        name: 'Allow-HTTP'
+        properties: {
+          protocol: 'Tcp'
+          sourcePortRange: '*'
+          destinationPortRange: '80'
+          sourceAddressPrefix: '*'
+          destinationAddressPrefix: '*'
+          access: 'Allow'
+          priority: 100
+          direction: 'Inbound'
+        }
+      }
+
       {
         name: 'specific-inbound-allow'
         properties: {
@@ -448,23 +463,23 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   }
 }
 
-// /* -------------------------------------------------------------------------- */
-// /*                     Public IP                                              */
-// /* -------------------------------------------------------------------------- */
-// // PublicIP: The  public IP resource is created next. It provides a 
-// // public IP address for the web server, allowing it to be accessible from the internet. 
-// // Public IP resource does not have any dependencies on other resources.
+/* -------------------------------------------------------------------------- */
+/*                     Public IP                                              */
+/* -------------------------------------------------------------------------- */
+// PublicIP: The  public IP resource is created next. It provides a 
+// public IP address for the web server, allowing it to be accessible from the internet. 
+// Public IP resource does not have any dependencies on other resources.
 
-// resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
-//   name: publicIpName_webapp
-//   location: location
-//   properties: {
-//     publicIPAllocationMethod: 'Dynamic'
-//     dnsSettings: {
-//       domainNameLabel: DNSdomainNameLabel_webapp
-//     }
-//   }
-// }
+// public ip
+var publicIpName_webapp = 'webapp-public-ip'
+
+resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
+  name: publicIpName_webapp
+  location: location
+  properties: {
+    publicIPAllocationMethod: 'Static'
+  }
+}
 
 /* -------------------------------------------------------------------------- */
 /*                     Network Interface Card                                 */
@@ -492,9 +507,9 @@ resource WebAppNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01'
             id: '${vnetWebApp.id}/subnets/${subnetName_webapp}'
           }
           privateIPAllocationMethod: 'Dynamic'
-          // publicIPAddress: {
-          //   id: WebAppPublicIP.id
-          // }
+          publicIPAddress: {
+            id: WebAppPublicIP.id
+          }
         }
       }
     ]
@@ -525,14 +540,40 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 }
 
 /* -------------------------------------------------------------------------- */
-/*                     Output                                                 */
+/*                     Mngmnt Output                                          */
 /* -------------------------------------------------------------------------- */
 // ToDo:
-// - add output from other resources
+// - OUTPUT
 
-output vnetmanagementID string = vnetManagement.name
-output vnetWebAppID string = vnetWebApp.name
-output vnetManagementSubnet1ID string = vnetManagement.properties.subnets[0].name
-output vnetWebAppSubnet2ID string = vnetWebApp.properties.subnets[0].name
-output nsgManagementID string = nsgManagement.name
-output nsgWebAppID string = nsgWebApp.name
+output vnetmanagementName string = vnetManagement.name
+output vnetmanagementID string = vnetManagement.id
+/////////////////////////////
+output ManagementSubnetID string = vnetManagement.properties.subnets[0].name
+/////////////////////////////
+output nsgManagementName string = nsgManagement.name
+output nsgManagementID string = nsgManagement.id
+/////////////////////////////
+output managementPublicIPName string = managementPublicIP.name
+output managementPublicIPID string = managementPublicIP.id
+/////////////////////////////
+output managementNetworkInterfaceName string = managementNetworkInterface.name
+output managementNetworkInterfaceID string = managementNetworkInterface.id
+
+/* -------------------------------------------------------------------------- */
+/*                     WEBAPP Output                                          */
+/* -------------------------------------------------------------------------- */
+
+output vnetWebAppName string = vnetWebApp.name
+output vnetWebAppID string = vnetWebApp.id
+/////////////////////////////
+output WebAppSubnetID string = vnetWebApp.properties.subnets[0].id
+/////////////////////////////
+output nsgWebAppID string = nsgWebApp.id
+output nsgWebAppName string = nsgWebApp.name
+/////////////////////////////
+output WebAppPublicIPName string = WebAppPublicIP.name
+output WebAppPublicIPID string = WebAppPublicIP.id
+/////////////////////////////
+output WebAppNetworkInterfaceName string = WebAppNetworkInterface.name
+output WebAppNetworkInterfaceID string = WebAppNetworkInterface.id
+/////////////////////////////
