@@ -2,7 +2,7 @@
 // /*                     Use this command to deploy                             */
 // /* -------------------------------------------------------------------------- */
 
-// // az group create --name TestRGcloud_project --location westeurope
+// // az group create --name TestRGcloud_project --location uksouth
 // // az deployment group create --resource-group TestRGcloud_project --template-file storage.bicep
 
 /* -------------------------------------------------------------------------- */
@@ -66,6 +66,14 @@ resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/contai
   ]
 }
 
-output storageAccountConnectionStringBlobEndpoint string = storageAccount.properties.primaryEndpoints.blob
-output storageContainerUrl string = storageContainer.properties.publicAccess
+// /* -------------------------------------------------------------------------- */
+// /*                     OUTPUT - STORAGE & CONTAINER                           */
+// /* -------------------------------------------------------------------------- */
+
 output storageAccountName string = storageAccount.name
+output storageAccountID string = storageAccount.id
+output storageAccountConnectionStringBlobEndpoint string = storageAccount.properties.primaryEndpoints.blob
+
+output storageContainerName string = storageContainer.name
+output storageContainerID string = storageContainer.id
+output storageContainerUrl string = storageContainer.properties.publicAccess
