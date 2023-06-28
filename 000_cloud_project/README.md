@@ -16,7 +16,7 @@
 
 8. [Weekly Time Logs](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/08_weekly_time_logs.md)
 
-9. [Contributing and Version Control](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/09_conclusion_additional_resources.md)
+9. [Conclusion and Additional Resources](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/09_conclusion_additional_resources.md)
 
 10. [Final presentation]()
 
