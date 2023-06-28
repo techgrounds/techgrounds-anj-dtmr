@@ -24,7 +24,7 @@ This file:
 
 ## File and Directory Purpose
 
-- README.md: The readme file of the Root Directory [000_cloud_project]() provides an overview of the project, its purpose, and instructions on how to use or contribute to the project. It includes information on prerequisites, setup instructions, and deployment steps.
+- README.md: The readme file of the Root Directory [000_cloud_project/v1.0]() provides an overview of the project, its purpose, and instructions on how to use or contribute to the project. It includes information on prerequisites, setup instructions, and deployment steps.
 
 - main.bicep: The main.bicep file is the entry point of the Bicep project. In v1.0, it will contain all the resources that I successfully can deploy
 
