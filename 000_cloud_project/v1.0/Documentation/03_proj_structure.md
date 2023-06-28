@@ -26,9 +26,7 @@ This file:
 
 - README.md: The readme file of the Root Directory [000_cloud_project](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project) provides an overview of the project, its purpose, and instructions on how to use or contribute to the project. It includes information on prerequisites, setup instructions, and deployment steps.
 
-- main.bicep: The main.bicep file is the entry point of the Bicep project. In v1.0, it will contain all the resources that I successfully can deploy
-
-In v1.1 I will develop it into a file where defines the main infrastructure resources and their relationships. It may include imports to other Bicep files or modules.
+- main.bicep: The main.bicep file is the entry point of the Bicep project. In v1.0, it will contain all the resources that I successfully can deploy. In v1.1 I will develop it into a file where defines the main infrastructure resources and their relationships. It may include imports to other Bicep files or modules.
 
 - deploy.sh: Deployment scripts or files provide automation for deploying the infrastructure. They may use the Azure CLI or other deployment tools to execute the deployment process. Check the [Deployment Process](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/04_deployment_process.md) for instructions.
 
