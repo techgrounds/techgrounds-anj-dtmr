@@ -1,8 +1,10 @@
 # Deployment Process
 
-Explain the steps required to deploy the infrastructure using Bicep.
-Include any required parameters or variables and explain how they are used.
-Provide examples or code snippets illustrating the deployment process.
+- Explain the steps required to deploy the infrastructure using Bicep.
+- Include any required parameters or variables and explain how they are used.
+- Provide examples or code snippets illustrating the deployment process.
+
+For this project, I created a custom deployment script using the Bicep CLI to automate the deployment of this Bicep project.
 
 To deploy multiple Bicep files at once, you can use the Azure CLI by specifying all the Bicep files in a single deployment command. Here's an example:
 
