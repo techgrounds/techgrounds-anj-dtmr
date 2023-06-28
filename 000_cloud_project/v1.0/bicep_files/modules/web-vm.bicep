@@ -19,10 +19,6 @@ param location string = resourceGroup().location
 /*                     PARAMS & VARS                                          */
 /* -------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------- */
-/*                     Virtual Machine / Server                               */
-/* -------------------------------------------------------------------------- */
-
 param webAppadmin_username string = 'webAppadmin'
 @secure()
 param webAppadmin_password string // = 'Password!@321'
@@ -37,6 +33,16 @@ param vm_sku string = '20_04-lts'
 // resource keyKeyVault 'Microsoft.KeyVault/vaults/keys@2022-07-01' existing = {
 //   name: keyVaultKeyName
 // }
+
+param nicName_webapp string
+
+resource WebAppNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' existing = {
+  name: nicName_webapp
+}
+
+/* -------------------------------------------------------------------------- */
+/*                     Virtual Machine / Server                               */
+/* -------------------------------------------------------------------------- */
 
 resource vmWebApp 'Microsoft.Compute/virtualMachines@2023-03-01' = {
   name: '${vmNamePrefix}-${vmWebAppName}'

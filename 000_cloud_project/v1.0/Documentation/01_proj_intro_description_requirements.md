@@ -1,0 +1,65 @@
+# Cloud Project Introduction and Overview
+
+This file:
+
+- Provide a brief introduction to the project and its purpose.
+- Outline the scope and objectives of the project.
+- Outline the deliverables and v1.0 requirements
+- Explain the benefits of using Bicep for infrastructure provisioning.
+
+## What this project is all about?
+
+This project is focused on helping a company transition to the cloud by building an Infrastructure as Code (IaC) application.
+
+## Scope and objectives of the project
+
+The project is divided into two phases: v1.0 and v1.1.
+
+In v1.0, the goal is to deliver the IaC application and all the required documentation based on the existing architecture and requirements. The application should include features such as encrypted VM disks, daily backups of the web server, automated installation of the web server, accessibility of the admin/management server through a public IP, restricted access to the admin/management server from trusted locations, protection of subnets with firewalls, and restricted SSH or RDP connections to the web server from the admin server. The application should be developed using Azure Bicep.
+
+During the project, we worked individually on our own elaborations but in teams. Each member worked on the same user stories, and collaboration and knowledge sharing among teams are encouraged. There were sprint reviews and retrospectives at the end of each sprint to discuss progress, improvements, and any challenges faced.
+
+Overall, the project aims to apply and expand knowledge of cloud technologies, automation, and infrastructure deployment, while working in a team environment, talking with a product owner and delivering a functional and well-documented solution for the company's cloud transition.
+
+## Deliverables:
+
+The following deliverables are expected in your GitHub repository at the end of this project:
+
+- A working CDK / Bicep app from the MVP
+- Design Documentation
+- Decision Documentation
+- Time logs
+- Final presentation
+
+## Requirements
+
+- All VM disks must be encrypted.
+- The Web server should be backed up daily. Backups must be retained for 7 days.
+- The Web server must be installed in an automated manner.
+- The admin/management server must be reachable by a public IP.
+- The admin/management server should be accessible only from trusted locations (office/admin's home)
+- The following IP ranges are used: 10.10.10.0/24 & 10.20.20.0/24
+- All subnets must be protected by a firewall at the subnet level.
+- SSH or RDP connections to the Web server should only be established from the admin server.
+- Don't be afraid to suggest or implement improvements in the architecture, but make hard choices so you can meet the deadline.
+
+## What is Bicep and its usage benefits
+
+Bicep is:
+
+- a Domain-Specific Language (DSL) meaning it is a programming language or syntax specifically designed to address a particular domain or problem space, in Bicep's case is for Azure resources.
+- a declarative syntax for defining meaning it describe what should be accomplished rather than specifying how it should be done.
+
+It offers several benefits for infrastructure provisioning compared to traditional methods like ARM templates or manual configuration:
+
+1. Abstraction and Simplification: Bicep provides a higher-level, declarative language that simplifies the provisioning of infrastructure. It abstracts away the complexities of writing low-level ARM templates, allowing engineers to focus on the desired end state rather than the implementation details.
+
+2. Consistency and Reusability: Bicep promotes code reuse by allowing engineers to define reusable modules, similar to using standardized building blocks in construction. This enables consistent provisioning across multiple environments or projects and reduces duplication of effort.
+
+3. Scalability and Maintainability: With Bicep, engineers can easily scale infrastructure by defining resources as code. Adding or modifying resources becomes as straightforward as updating the blueprint. This approach also makes it easier to maintain and track changes over time, improving collaboration and reducing the risk of configuration drift.
+
+4. Readability and Understandability: Bicep's syntax is more concise and readable compared to raw ARM templates. It uses familiar programming constructs, making it easier for both developers and infrastructure engineers to understand and contribute to the codebase. The code acts as a clear documentation of the infrastructure design.
+
+5. Integration with Azure Ecosystem: Bicep is specifically designed for provisioning Azure resources and seamlessly integrates with the Azure ecosystem. It leverages the Azure Resource Manager (ARM) APIs and supports all Azure resource types and features, ensuring compatibility and access to the latest Azure capabilities.
+
+6. Tooling and Ecosystem Support: Bicep benefits from a growing ecosystem of tools, extensions, and community support. It has its own command-line interface (CLI) for compiling and deploying Bicep files. Additionally, it can be integrated into existing DevOps pipelines and works well with Azure DevOps, Azure CLI, and other popular CI/CD tools.

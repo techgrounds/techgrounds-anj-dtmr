@@ -1,4 +1,12 @@
-# Documentation
+# Getting Started
+
+This file:
+
+- Describe the prerequisites for using the Bicep project (e.g., required tools, permissions, dependencies).
+- Provide instructions for setting up the development environment (installing Bicep CLI, configuring Azure credentials, etc.).
+- Explain how to clone or download the project repository.
+
+- [ ] [A working CDK / Bicep app from the MVP + Documentatie voor het gebruik van de applicatie + Configuratie voor een MVP deployment](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/bicep_files)
 
 This Bicep file deploys a secure network infrastructure with a management server and web server.
 
