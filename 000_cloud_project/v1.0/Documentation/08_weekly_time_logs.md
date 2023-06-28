@@ -642,3 +642,36 @@ Wat zijn jou wins vandaag?-----
 - [ ] Data encryption
 
 ---
+
+June 28, 2023 Wednesday
+
+### Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+- Clean and write the Documentation
+
+### Obstakels & Oplossingen
+
+1. What kind of documentation do I need to write but by
+
+2. I was the only one who stopped the developing and focused on documentation, I understand that MVP is important in terms of the technical infrastracture. But having a well documented project is also important for me.
+3. Asking better questions
+
+- [ ] what is the convention for outputs?
+
+### Learnings
+
+- [ ] I feel more confident to move on with the development of this project, now that I know I have something to submit for version 1.0
+
+### Plans for tomorrow
+
+- [ ] Continue with key vault
+- [ ] Write down documentataion on management.bicep and web/app.bicep
+- [ ] Miro planning
+- [ ] VMSS for webserver
+- [ ] Recovery service vault
+- [ ] Database
+- [ ] Data encryption
+
+---
