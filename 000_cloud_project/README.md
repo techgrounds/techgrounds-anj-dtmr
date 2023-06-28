@@ -1,6 +1,6 @@
 # Infrastructure as Code (IaC) using Azure Bicep project
 
-1. [Project Introduction and Overview](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/proj_description_requirements.md)
+1. [Project Introduction and Overview]()
 
 2. [Getting Started]()
 
