@@ -1,4 +1,4 @@
-# Cloud Project Introduction and Overview
+# Cloud Project
 
 This file:
 
@@ -7,7 +7,7 @@ This file:
 - Outline the deliverables and v1.0 requirements
 - Explain the benefits of using Bicep for infrastructure provisioning.
 
-## What this project is all about?
+## Introduction and Overview
 
 This project is focused on helping a company transition to the cloud by building an Infrastructure as Code (IaC) application.
 
