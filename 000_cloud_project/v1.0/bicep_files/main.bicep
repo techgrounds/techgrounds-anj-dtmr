@@ -931,3 +931,9 @@ output keyKeyVaultName string = keyKeyVault.name
 // - managementNsgRuleRDP: Configures an NSG rule to allow RDP access to the management server.
 // - bootstrapStorageAccount: Deploys a storage account to store bootstrap and post-deployment scripts.
 // - backupSolution: Deploys the backup solution for the VMs.
+
+// # Deployment Outputs and Artifacts
+
+// Explain the outputs of the infrastructure deployment, such as resource group details, resource URIs, or connection strings.
+// Document any artifacts generated during the deployment process (e.g., ARM templates).
+// Describe how to access or use the deployed resources.

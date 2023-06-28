@@ -8,7 +8,7 @@
 
 4. [Deployment Process]()
 
-5. [Configuration and Customization]()
+5. [Decision Documentation]()
 
 6. [Infrastructure Architecture]()
 

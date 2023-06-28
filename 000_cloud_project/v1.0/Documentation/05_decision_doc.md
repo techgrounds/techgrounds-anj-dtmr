@@ -1,4 +1,4 @@
-## Beslissing Documentatie
+## Decision Documentation
 
 Why did you used this services? Write out your considerations and substantiate your decisions. Assumptions and improvements.
 
