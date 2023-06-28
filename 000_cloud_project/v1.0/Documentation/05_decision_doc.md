@@ -40,3 +40,9 @@ Today I started with the difficult, deploy a vmss for the web server, since acco
 
 June 26, 2023
 The last few weeks is all discovery about my learning process. Today I asked someone to be a one on one buddy on this project, as I'm confident that would have a positive significant impact on how I can perform and give an mvp result for this project. We've talked about from the start, what we understand and NOT understand from the project
+
+June 27, 2023
+Yesterday was about key vault, I could not proceed to recovery service fault without it.
+
+June 28, 2023
+It is 3 days before the submission, I decided to focus on cleaning up the working code that I have, the resources that can be deployed and the documentation.
