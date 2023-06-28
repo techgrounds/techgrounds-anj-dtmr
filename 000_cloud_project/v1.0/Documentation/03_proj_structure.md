@@ -9,7 +9,7 @@ This file:
 ## Project structure and organization
 
 1. Root Directory: The root directory of the project serves as the main entry point.
-   Root Directory ->> [000_cloud_project]()
+   Root Directory ->> [000_cloud_project/v1.0]()
 
    Please note that I divided the directories of my v1.0 and v1.1 for my own learning and documentation.
 
