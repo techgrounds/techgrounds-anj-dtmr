@@ -84,4 +84,4 @@ Here's the official documentation how to [Install Bicep tools](https://learn.mic
 
 Now you have successfully cloned or downloaded the Bicep project repository. You can open the project in your preferred code editor, such as Visual Studio Code, and start playing around with the Bicep files in the repository.
 
-Go back to the main README.md for the next steps on documentation or go to Deployment Process to start deploying Azure resources.
+Go back to the main [README.md]() for the next steps on documentation or go to[Deployment Process]() to start deploying Azure resources.
