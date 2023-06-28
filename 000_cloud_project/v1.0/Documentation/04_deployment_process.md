@@ -28,4 +28,4 @@ This will execute the script and initiate the deployment using the Azure CLI.
 
 This [bash script]() will authenticate with Azure CLI using the `az login` command, set the desired Azure subscription using `az account set`, and then deploy the Bicep template using `az deployment group create`. Make sure you have the Azure CLI installed and logged in with appropriate permissions to perform the deployment.
 
-4. Open the azure portal to
+4. Open the azure portal to double check all the succesfully deployed resources.
