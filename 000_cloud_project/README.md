@@ -1,8 +1,26 @@
 # Infrastructure as Code (IaC) using Azure Bicep project
 
-## Deliverables
+1. [Project Introduction and Overview](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/proj_description_requirements.md)
 
-- [ ] [A working CDK / Bicep app from the MVP + Documentatie voor het gebruik van de applicatie + Configuratie voor een MVP deployment](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/bicep_files)
+2. [Getting Started]()
+
+3. [Project Structure]()
+
+4. [Deployment Process]()
+
+5. [Configuration and Customization]()
+
+6. [Infrastructure Architecture]()
+
+7. [Deployment Outputs and Artifacts]()
+
+8. [Troubleshooting and FAQs]()
+
+9. [Contributing and Version Control]()
+
+10. [Conclusion and Additional Resources]()
+
+## Deliverables
 
 - [ ] [Design Documentation](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/ontwerp_documentatie)
 
@@ -12,11 +30,9 @@
 
 - [ ] [Final presentation]()
 
+## Additional Links
 
-
-## Addtional Links
-
-- [ ] [Project Description](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/proj_description_requirements.md)
+- [ ]
 
 - [ ] [Version 1.0 Assumptions and Services](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0_assumptions_services.md)
 
