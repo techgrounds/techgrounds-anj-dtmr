@@ -69,7 +69,7 @@ Here's the official documentation how to [Install Bicep tools](https://learn.mic
 
 ## How to clone or download the project repository
 
-1. Access the Bicep project repository: Go to the [GitHub website](https://github.com/) and log in to your account. Navigate to the Bicep project. Here's the [repository](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project).
+1. Access the Bicep project repository: Go to the [GitHub website](https://github.com/) and log in to your account. Navigate to the Bicep project. Here's the [repository](https://github.com/techgrounds/techgrounds-anj-dtmr). The project root folder is 000_cloud_project/v1.0.
 
 2. Choose a cloning method:
 
