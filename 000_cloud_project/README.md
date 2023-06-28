@@ -1,22 +1,22 @@
 # Infrastructure as Code (IaC) using Azure Bicep project
 
-1. [Project Introduction and Overview]()
+1. [Project Introduction and Overview](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/01_proj_intro_description_requirements.md)
 
-2. [Getting Started]()
+2. [Getting Started](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/02_getting_started.md)
 
-3. [Project Structure]()
+3. [Project Structure](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/03_proj_structure.md)
 
-4. [Deployment Process]()
+4. [Deployment Process](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/04_deployment_process.md)
 
-5. [Decision Documentation]()
+5. [Decision Documentation](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/05_decision_doc.md)
 
-6. [Design Documentation or Infrastructure Architecture]()
+6. [Design Documentation or Infrastructure Architecture](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/06_infrastructure_architecture.md)
 
-7. [v1.0 Assumptions & Services]()
+7. [v1.0 Assumptions & Services](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/07_v1.0_assumptions_services.md)
 
-8. [Weekly Time Logs]()
+8. [Weekly Time Logs](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/08_weekly_time_logs.md)
 
-9. [Contributing and Version Control]()
+9. [Contributing and Version Control](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/09_conclusion_additional_resources.md)
 
 10. [Final presentation]()
 
