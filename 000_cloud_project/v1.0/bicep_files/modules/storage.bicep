@@ -12,13 +12,16 @@
 @description('Location for all resources.')
 param location string = resourceGroup().location
 
-// /* -------------------------------------------------------------------------- */
-// /*                     STORAGE                                                */
-// /* -------------------------------------------------------------------------- */
-
+/* -------------------------------------------------------------------------- */
+/*                     PARAMS & VARS                                          */
+/* -------------------------------------------------------------------------- */
 // ToDo: How to dynamically create a name without hard coding
 param storageAccountPrefix string = 'storage'
 param storageAccountName string = '${storageAccountPrefix}${uniqueString(resourceGroup().id)}'
+
+// /* -------------------------------------------------------------------------- */
+// /*                     STORAGE                                                */
+// /* -------------------------------------------------------------------------- */
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   name: storageAccountName

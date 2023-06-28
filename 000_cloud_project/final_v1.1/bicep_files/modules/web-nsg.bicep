@@ -26,6 +26,8 @@ var nsgName_webapp = 'webapp-nsg'
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
 
+param allowedIPAddresses array = [ '85.149.106.77' ]
+
 resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   name: nsgName_webapp
   location: location
@@ -55,81 +57,56 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
       //     ]
       //     // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
       //     destinationAddressPrefixes: [
-      //       // Customize for management subnet address range
+      //       // Customize for webapp subnet address range
       //       vnet_addressPrefixes_webapp
       //     ]
       //   }
       // }
       // Add additional security rules as needed
-      // {
-      //   name: 'specific-inbound-allow'
-      //   properties: {
-      //     priority: 200
-      //     direction: 'Inbound'
-      //     access: 'Allow'
-      //     protocol: '*'
-      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     description: 'Allow specific IP address'
-      //   }
-      // }
 
-      // // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
-
-      // {
-      //   name: 'specific-outbound-allow'
-      //   properties: {
-      //     priority: 200
-      //     direction: 'Outbound'
-      //     access: 'Allow'
-      //     protocol: '*'
-      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     description: 'Allow specific IP address'
-      //   }
-      // }
       {
-        name: 'HTTPS-rule'
+        name: 'Allow-HTTP'
         properties: {
-          protocol: 'TCP'
-          sourceAddressPrefix: '*'
-          destinationAddressPrefix: '*'
-          sourcePortRange: '*'
-          destinationPortRange: '443'
-          access: 'Allow'
-          priority: 1000
-          direction: 'Inbound'
-        }
-      }
-      {
-        name: 'HTTP-rule'
-        properties: {
-          protocol: 'TCP'
-          sourceAddressPrefix: '*'
-          destinationAddressPrefix: '*'
+          protocol: 'Tcp'
           sourcePortRange: '*'
           destinationPortRange: '80'
+          sourceAddressPrefix: '*'
+          destinationAddressPrefix: '*'
           access: 'Allow'
-          priority: 1080
+          priority: 100
           direction: 'Inbound'
         }
       }
-      // Web/App Server: 10.10.10.0/24
+
       {
-        name: 'SSH-rule'
+        name: 'specific-inbound-allow'
         properties: {
-          protocol: 'TCP'
-          sourceAddressPrefix: '10.10.10.10/32'
-          sourcePortRange: '*'
-          destinationAddressPrefix: '*'
-          destinationPortRange: '22'
-          access: 'Allow'
-          priority: 1200
+          priority: 200
           direction: 'Inbound'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+          destinationAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationPortRange: '*'
+          description: 'Allow specific IP address'
+        }
+      }
+
+      // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
+
+      {
+        name: 'specific-outbound-allow'
+        properties: {
+          priority: 200
+          direction: 'Outbound'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+          destinationAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationPortRange: '*'
+          description: 'Allow specific IP address'
         }
       }
     ]

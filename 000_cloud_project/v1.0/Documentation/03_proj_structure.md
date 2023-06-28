@@ -19,7 +19,7 @@ This file:
 3. Modules Directory: The modules directory contains reusable Bicep modules.
    Modules Directory ->> [modules]()
 
-4. Scripts Directory: The scripts directory contain scripts or utilities used in this project, such as deployment scripts, helper scripts, or configuration scripts.
+4. Scripts: The scripts directory contain scripts or utilities used in this project, such as deployment scripts, helper scripts, or configuration scripts.
    Scripts Directory ->> [bash]()
 
 ## File and Directory Purpose

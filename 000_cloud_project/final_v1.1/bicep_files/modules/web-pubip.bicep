@@ -21,14 +21,12 @@ param location string = resourceGroup().location
 
 // public ip
 var publicIpName_webapp = 'webapp-public-ip'
-// DNS
-var DNSdomainNameLabel_webapp = 'webapp-server'
 
 /* -------------------------------------------------------------------------- */
 /*                     Public IP                                              */
 /* -------------------------------------------------------------------------- */
-// managementPublicIP: The management public IP resource is created next. It provides a 
-// public IP address for the management server, allowing it to be accessible from the internet. 
+// PublicIP: The  public IP resource is created next. It provides a 
+// public IP address for the web server, allowing it to be accessible from the internet. 
 // Public IP resource does not have any dependencies on other resources.
 
 resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
@@ -36,9 +34,6 @@ resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
   location: location
   properties: {
     publicIPAllocationMethod: 'Static'
-    dnsSettings: {
-      domainNameLabel: DNSdomainNameLabel_webapp
-    }
   }
 }
 
@@ -48,6 +43,3 @@ resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
 
 output WebAppPublicIPName string = WebAppPublicIP.name
 output WebAppPublicIPID string = WebAppPublicIP.id
-
-output webAppPublicIpAddress string = WebAppPublicIP.properties.ipAddress
-output webAppDnsDomainNameLabel string = WebAppPublicIP.properties.dnsSettings.domainNameLabel

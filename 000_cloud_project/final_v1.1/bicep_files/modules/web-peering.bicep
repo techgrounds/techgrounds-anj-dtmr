@@ -29,5 +29,3 @@
 //     useRemoteGateways: false
 //   }
 // }
-
-// output vnetWebAppVnetMngnPEERINGId string = vnetwebappvnetmngnt.id

@@ -124,7 +124,7 @@ param location string = resourceGroup().location
 /*                              Key Vault                                     */
 /* -------------------------------------------------------------------------- */
 
-var keyVaultName = 'keyvault-${uniqueString(resourceGroup().id)}'
+var keyVaultName = 'mykeyvault${uniqueString(resourceGroup().id)}'
 
 resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
   name: keyVaultName
@@ -139,56 +139,79 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
       name: 'standard'
     }
     tenantId: subscription().tenantId
-    // The accessPolicies section in the Key Vault resource, determines which users, applications, or services have permissions to interact with the Key Vault and perform specific operations
+    enabledForDeployment: true
+    enableSoftDelete: true
+    softDeleteRetentionInDays: 7
+    // enablePurgeProtection: false
+    enabledForTemplateDeployment: true
+    createMode: 'default'
+    // enableRbacAuthorization: true
+    // publicNetworkAccess: 'disabled'
     accessPolicies: [
       {
-        // Angeline: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
-        // ToDo: How to dynamically declare objectId
         objectId: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
         tenantId: subscription().tenantId
-        // Services that needs keyvault: Storage - Post-deployment and Data Encryption
         permissions: {
-          // ToDo: Adjust the keys
-          // Key Management - Azure Key Vault can be used as a Key Management solution. Azure Key Vault makes it easy to create and control the encryption keys used to encrypt your data.
-          keys: [ 'all' ]
-          // ToDo: Adjust the secrets
-          // Secrets Management - Azure Key Vault can be used to Securely store and tightly control access to tokens, passwords, certificates, API keys, and other secrets
-          secrets: [ 'all' ]
-          // ToDo: Adjust the certificate
-          // Certificate Management - Azure Key Vault lets you easily provision, manage, and deploy public and private Transport Layer Security/Secure Sockets Layer (TLS/SSL) certificates for use with Azure and your internal connected resources.
-          certificates: [ 'all' ]
-          // Storage Management -
-          // storage: [ 'all' ]
+          keys: [
+            'all'
+          ]
         }
       }
-      // {
-      //   // Casper
-      //   objectId:
-      //   tenantId: subscription().tenantId
-      //   permissions: {
-      //     secrets: [ 'all' ]
-      //   }
-      //   // zoek welke applicaties hebben de de key vault nodig
-      //   // .env objectID ----- environment
-      // }
-      // {
-      //   // Shikha
-      //   objectId:
-      //   tenantId: subscription().tenantId
-      //   permissions: {
-      //     secrets: [ 'all' ]
-      //   }
-      // }
     ]
-    // enabledForDeployment: true
-    // enableSoftDelete: true
-    // softDeleteRetentionInDays: 7
-    // enablePurgeProtection: true
-    // enabledForTemplateDeployment: true
-    // createMode: 'default'
-    // enableRbacAuthorization: true
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                              Key Vault Policy                              */
+/* -------------------------------------------------------------------------- */
+
+// The accessPolicies section in the Key Vault resource, determines which users, applications, or services have permissions to interact with the Key Vault and perform specific operations
+
+// resource KeyVaultPolicy 'Microsoft.KeyVault/vaults/accessPolicies@2023-02-01' = {
+//   name: 'keyvaultpolicy'
+//   properties: {
+//     accessPolicies: [
+//       {
+//         // Angeline: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
+//         // ToDo: How to dynamically declare objectId
+//         objectId: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
+//         tenantId: subscription().tenantId
+//         // Services that needs keyvault: Storage - Post-deployment and Data Encryption
+//         permissions: {
+//           // ToDo: Adjust the keys
+//           // Key Management - Azure Key Vault can be used as a Key Management solution. Azure Key Vault makes it easy to create and control the encryption keys used to encrypt your data.
+//           keys: [ 'all' ]
+//           // ToDo: Adjust the secrets
+//           // Secrets Management - Azure Key Vault can be used to Securely store and tightly control access to tokens, passwords, certificates, API keys, and other secrets
+//           // secrets: [ 'all' ]
+//           // ToDo: Adjust the certificate
+//           // Certificate Management - Azure Key Vault lets you easily provision, manage, and deploy public and private Transport Layer Security/Secure Sockets Layer (TLS/SSL) certificates for use with Azure and your internal connected resources.
+//           // certificates: [ 'all' ]
+//           // Storage Management -
+//           // storage: [ 'all' ]
+//         }
+//       }
+//       // {
+//       //   // Casper
+//       //   objectId:
+//       //   tenantId: subscription().tenantId
+//       //   permissions: {
+//       //     secrets: [ 'all' ]
+//       //   }
+//       //   // zoek welke applicaties hebben de de key vault nodig
+//       //   // .env objectID ----- environment
+//       // }
+//       // {
+//       //   // Shikha
+//       //   objectId:
+//       //   tenantId: subscription().tenantId
+//       //   permissions: {
+//       //     secrets: [ 'all' ]
+//       //   }
+//       // }
+//     ]
+//   }
+// }
 
 /* -------------------------------------------------------------------------- */
 /*                              OUTPUT KEY VAULT                              */
@@ -281,43 +304,43 @@ resource keyKeyVault 'Microsoft.KeyVault/vaults/keys@2022-07-01' = {
 output keyKeyVaultID string = keyKeyVault.id
 output keyKeyVaultName string = keyKeyVault.name
 
-/* -------------------------------------------------------------------------- */
-/*                     DISK ENCRYPTION                                        */
-/* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /*                     DISK ENCRYPTION                                        */
+// /* -------------------------------------------------------------------------- */
 
-resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' = {
-  name: 'diskEncryptionSet'
-  location: location
-  // tags: {
-  //   tagName1: 'tagValue1'
-  //   tagName2: 'tagValue2'
-  // }
-  identity: {
-    type: 'SystemAssigned'
-    // 'None'
-    // 'SystemAssigned'
-    // 'SystemAssigned, UserAssigned'
-    // 'UserAssigned'
-    // userAssignedIdentities: {}
-  }
-  properties: {
-    rotationToLatestKeyVersionEnabled: true
-    activeKey: {
-      keyUrl: keyKeyVault.properties.keyUriWithVersion
-      // keyVault.properties.vaultUri
-      // 'https://<vaultEndpoint>/keys/<keyName>/<keyVersion>.'
-      sourceVault: {
-        id: keyVault.id
-      }
-    }
-    encryptionType: 'EncryptionAtRestWithCustomerKey'
-    // federatedClientId: 'string'
-  }
-}
+// resource diskEncryptionSet 'Microsoft.Compute/diskEncryptionSets@2022-07-02' = {
+//   name: 'diskEncryptionSet'
+//   location: location
+//   // tags: {
+//   //   tagName1: 'tagValue1'
+//   //   tagName2: 'tagValue2'
+//   // }
+//   identity: {
+//     type: 'SystemAssigned'
+//     // 'None'
+//     // 'SystemAssigned'
+//     // 'SystemAssigned, UserAssigned'
+//     // 'UserAssigned'
+//     // userAssignedIdentities: {}
+//   }
+//   properties: {
+//     rotationToLatestKeyVersionEnabled: true
+//     activeKey: {
+//       keyUrl: keyKeyVault.properties.keyUriWithVersion
+//       // keyVault.properties.vaultUri
+//       // 'https://<vaultEndpoint>/keys/<keyName>/<keyVersion>.'
+//       sourceVault: {
+//         id: keyVault.id
+//       }
+//     }
+//     encryptionType: 'EncryptionAtRestWithCustomerKey'
+//     // federatedClientId: 'string'
+//   }
+// }
 
-/* -------------------------------------------------------------------------- */
-/*                              OUTPUT DISK ENCRYPTION                        */
-/* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /*                              OUTPUT DISK ENCRYPTION                        */
+// /* -------------------------------------------------------------------------- */
 
-output diskEncryptionSetName string = diskEncryptionSet.name
-output diskEncryptionSetID string = diskEncryptionSet.id
+// output diskEncryptionSetName string = diskEncryptionSet.name
+// output diskEncryptionSetID string = diskEncryptionSet.id

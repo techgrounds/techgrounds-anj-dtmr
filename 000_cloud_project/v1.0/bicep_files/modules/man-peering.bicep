@@ -5,7 +5,7 @@
 // az login
 // az account set --subscription 'Cloud Student 1'
 // az group create --name TestRGcloud_project --location uksouth
-// az deployment group create --resource-group TestRGcloud_project --template-file web-peering.bicep
+// az deployment group create --resource-group TestRGcloud_project --template-file man-peering.bicep
 
 /* -------------------------------------------------------------------------- */
 /*                     PEERING                                                */
@@ -14,14 +14,14 @@
 // VNet peering enables virtual machines and other resources in one VNet to communicate with resources in the peered VNet, 
 // as if they were part of the same network.
 
-// ToDo: VnetPeering to connect this webapp vnet to the management vnet
+// ToDo: VnetPeering to connect this management vnet to the app vnet
 
-// resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2022-11-01' = {
-//   parent: vnetWebApp
-//   name: '${virtualNetworkName_webapp}-${virtualNetworkName}'
+// resource vnetmngntvnetwebapp 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2022-11-01' = {
+//   parent: vnetManagement
+//   name: '${virtualNetworkName}-to-${virtualNetworkName_webapp}'
 //   properties: {
 //     remoteVirtualNetwork: {
-//       id: vnetManagement.id
+//       id: vnetWebApp.id
 //     }
 //     allowVirtualNetworkAccess: true
 //     allowForwardedTraffic: false
@@ -30,4 +30,8 @@
 //   }
 // }
 
-// output vnetWebAppVnetMngnPEERINGId string = vnetwebappvnetmngnt.id
+/* -------------------------------------------------------------------------- */
+/*                     Output                                                 */
+/* -------------------------------------------------------------------------- */
+
+// output vnetmngntvnetwebappPEERINGId string = vnetmngntvnetwebapp.id

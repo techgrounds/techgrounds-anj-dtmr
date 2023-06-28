@@ -8,7 +8,7 @@ This file:
 
 ## Prerequisites for using this Bicep project
 
-- [ ] Azure Subscription: You need an active Azure subscription to provision and manage resources using Bicep. If you don't have an Azure subscription, you can create a free account on the Azure portal. In this case if you are a Techground student, your learning coach will provide help and details (like email) upon creating your azure account with an azure subscription under the academy.
+- [ ] Azure Subscription: You need an active Azure subscription to provision and manage resources using Bicep. If you don't have an Azure subscription, you can create a free account on the Azure portal. In this case if you are a Techgrounds student, your learning coach will provide help and details (like email) upon creating your azure account with an azure subscription under the academy.
 
 - [ ] Azure CLI: The Azure CLI is often used in conjunction with Bicep for managing Azure resources. It's a cross-platform command-line tool that provides a set of commands for interacting with Azure services. Install the Azure CLI if you haven't already. Bicep relies on Azure CLI for authenticating and executing deployment commands. Follow this [instructions](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
 
@@ -20,7 +20,7 @@ This file:
 
 - [ ] Text Editor or Integrated Development Environment (IDE): Choose a text editor or IDE that suits your preferences for editing Bicep files. Popular choices include Visual Studio Code (with the Bicep extension installed), Visual Studio, or any other text editor with syntax highlighting and Bicep language support.
 
-Optional and not needed in this project:
+Optional but not needed in this project:
 
 - [ ] Azure Service Principal (optional): In certain scenarios, you might need to create an Azure Service Principal to authenticate and authorize access to your Azure resources. This is commonly used when integrating Bicep deployments into automated pipelines or when deploying resources to separate Azure tenants or subscriptions.
 - [ ] Bicep CLI (optional): Install the Bicep CLI, which is the command-line tool used to compile and deploy Bicep files. The CLI is available for different operating systems (Windows, macOS, Linux) and can be downloaded from the official Bicep GitHub repository or installed through package managers like Homebrew (macOS) or Chocolatey (Windows).

@@ -47,26 +47,14 @@ var publicIpName = 'management-public-ip'
 var nicName = 'management-nic'
 // addressPrefixes
 var vnet_addressPrefixes = '10.20.20.0/24'
-// DNS
-var DNSdomainNameLabel = 'management-server'
+// // DNS
+// var DNSdomainNameLabel = 'management-server'
 // IP config
 var IPConfigName = 'management-ipconfig'
 
 /* -------------------------------------------------------------------------- */
 /*                     Virtual Network with subnet                            */
 /* -------------------------------------------------------------------------- */
-// In Azure, a Virtual Network (VNet) is a fundamental networking construct that enables 
-// you to securely connect and isolate Azure resources, such as virtual machines (VMs), virtual 
-// machine scale sets, and other services. A VNet acts as a virtual representation of a 
-// traditional network, allowing you to define IP address ranges, subnets, and network security policies.
-
-// Dependencies: Azure Subscription, Azure Resource Group, Azure Region, Address Space (IP Range?), Subnets, Network Security Groups (NSGs)
-// Additional: VnetPeering to connect this management vnet to the app vnet for later
-
-// This creates a virtual network for the management side
-// I've created a separate vnet for the management side to isolate it from the other cloud infrastracture
-// This segregation helps improve security and network performance by controlling traffic flow between resources.
-// Within VNet, I created a subnet to further segment the resources inside the vnet like virtual machine for the server
 
 resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   name: virtualNetworkName
@@ -77,11 +65,6 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         vnet_addressPrefixes
       ]
     }
-    // I wrote the subnet inside vnet because of best practice
-
-    // managementSubnet: The management subnet is defined first as it serves as the foundational 
-    // component for the other resources. It specifies the address prefix for the subnet where the 
-    // management server will be deployed.
     subnets: [
       {
         name: subnetName
@@ -91,20 +74,12 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
           networkSecurityGroup: {
             id: resourceId('Microsoft.Network/networkSecurityGroups', nsgName)
           }
-          // serviceEndpoints: [
-          //   // Add service endpoints if required
-          // ]
-          // // ToDo: Check the requirements if delegation is needed
-          // delegation: {
-          //   name: 'delegation'
-          //   properties: {
-          //     serviceName: 'Microsoft.Authorization/roleAssignments'
-          //   }
         }
       }
     ]
   }
 }
+
 /* -------------------------------------------------------------------------- */
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
@@ -120,7 +95,7 @@ resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   location: location
   // Contains the set of properties for the NSG, including the security rules.
   properties: {
-    // security Rule are An array of security rules that define the network traffic rules for the NSG.
+    // security rules are An array of security rules that define the network traffic rules for the NSG.
     securityRules: [
       // {
       //   name: 'All-IP-Blocked'
@@ -161,35 +136,61 @@ resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
 
       //   }
       // }
+      // {
+      //   name: 'specific-inbound-allow'
+      //   properties: {
+      //     priority: 200
+      //     direction: 'Inbound'
+      //     access: 'Allow'
+      //     protocol: '*'
+      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+      //     destinationAddressPrefix: '*'
+      //     sourcePortRange: '*'
+      //     destinationPortRange: '*'
+      //     description: 'Allow specific IP address'
+      //   }
+      // }
+
+      // // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
+
+      // {
+      //   name: 'specific-outbound-allow'
+      //   properties: {
+      //     priority: 200
+      //     direction: 'Outbound'
+      //     access: 'Allow'
+      //     protocol: '*'
+      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+      //     destinationAddressPrefix: '*'
+      //     sourcePortRange: '*'
+      //     destinationPortRange: '*'
+      //     description: 'Allow specific IP address'
+      //   }
+      // }
       {
-        name: 'specific-inbound-allow'
+        name: 'SSH-rule'
         properties: {
-          priority: 200
-          direction: 'Inbound'
-          access: 'Allow'
-          protocol: '*'
+          protocol: 'TCP'
           sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
           destinationAddressPrefix: '*'
           sourcePortRange: '*'
-          destinationPortRange: '*'
-          description: 'Allow specific IP address'
+          destinationPortRange: '22'
+          access: 'Allow'
+          priority: 1000
+          direction: 'Inbound'
         }
       }
-
-      // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
-
       {
-        name: 'specific-outbound-allow'
+        name: 'RDP-rule'
         properties: {
-          priority: 200
-          direction: 'Outbound'
-          access: 'Allow'
-          protocol: '*'
+          protocol: 'TCP'
           sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
           destinationAddressPrefix: '*'
           sourcePortRange: '*'
-          destinationPortRange: '*'
-          description: 'Allow specific IP address'
+          destinationPortRange: '3389'
+          access: 'Allow'
+          priority: 1100
+          direction: 'Inbound'
         }
       }
     ]
@@ -207,10 +208,10 @@ resource managementPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
   name: publicIpName
   location: location
   properties: {
-    publicIPAllocationMethod: 'Dynamic'
-    dnsSettings: {
-      domainNameLabel: DNSdomainNameLabel
-    }
+    publicIPAllocationMethod: 'Static'
+    // dnsSettings: {
+    //   domainNameLabel: DNSdomainNameLabel
+    // }
   }
 }
 
@@ -229,9 +230,9 @@ resource managementPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
 resource managementNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' = {
   name: nicName
   location: location
-  dependsOn: [
-    nsgManagement
-  ]
+  // dependsOn: [
+  //   nsgManagement
+  // ]
   properties: {
     ipConfigurations: [
       {
@@ -241,7 +242,9 @@ resource managementNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11
             // The ID is written like this because I wrote down the subnet inside the vnet
             id: '${vnetManagement.id}/subnets/${subnetName}'
           }
-          privateIPAllocationMethod: 'Dynamic'
+          privateIPAddress: '10.20.20.10'
+          privateIPAddressVersion: 'IPv4'
+          privateIPAllocationMethod: 'Static'
           publicIPAddress: {
             id: managementPublicIP.id
           }
@@ -273,6 +276,63 @@ resource vnetmngntvnetwebapp 'Microsoft.Network/virtualNetworks/virtualNetworkPe
     useRemoteGateways: false
   }
 }
+
+// // /* -------------------------------------------------------------------------- */
+// // /*                     STORAGE                                                */
+// // /* -------------------------------------------------------------------------- */
+
+// // ToDo: How to dynamically create a name without hard coding
+// param storageAccountPrefix string = 'storage'
+// param storageAccountName string = '${storageAccountPrefix}${uniqueString(resourceGroup().id)}'
+
+// resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
+//   name: storageAccountName
+//   location: location
+//   sku: {
+//     name: 'Standard_LRS'
+//   }
+//   kind: 'StorageV2'
+//   properties: {
+//     supportsHttpsTrafficOnly: true
+//     encryption: {
+//       services: {
+//         file: {
+//           enabled: true
+//         }
+//         blob: {
+//           enabled: true
+//         }
+//       }
+//       keySource: 'Microsoft.Storage'
+//     }
+//     networkAcls: {
+//       defaultAction: 'Deny'
+//       bypass: 'AzureServices'
+//     }
+//   }
+// }
+
+// // /* -------------------------------------------------------------------------- */
+// // /*                     CONTAINER                                              */
+// // /* -------------------------------------------------------------------------- */
+
+// // ToDo: How to dynamically create a name without hard coding
+// param containerNamePrefix string = 'container'
+// param containerName string = '${containerNamePrefix}${uniqueString(resourceGroup().id)}'
+
+// resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
+//   name: '${storageAccountName}/default/${containerName}'
+//   properties: {
+//     // Deze script moeten niet publiekelijk toegankelijk zijn.
+//     publicAccess: 'None'
+//   }
+//   dependsOn: [
+//     storageAccount
+//   ]
+// }
+
+// output storageAccountConnectionString string = storageAccount.properties.primaryEndpoints.blob
+// output storageContainerUrl string = storageContainer.properties.publicAccess
 
 // /* -------------------------------------------------------------------------- */
 // /*                     STORAGE                                                */
@@ -328,7 +388,16 @@ resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/contai
   ]
 }
 
-output storageAccountConnectionString string = storageAccount.properties.primaryEndpoints.blob
+// /* -------------------------------------------------------------------------- */
+// /*                     OUTPUT - STORAGE & CONTAINER                           */
+// /* -------------------------------------------------------------------------- */
+
+output storageAccountName string = storageAccount.name
+output storageAccountID string = storageAccount.id
+output storageAccountConnectionStringBlobEndpoint string = storageAccount.properties.primaryEndpoints.blob
+
+output storageContainerName string = storageContainer.name
+output storageContainerID string = storageContainer.id
 output storageContainerUrl string = storageContainer.properties.publicAccess
 
 /* -------------------------------------------------------------------------- */
@@ -343,6 +412,8 @@ output storageContainerUrl string = storageContainer.properties.publicAccess
 // ToDo: Web server is a a LINUX SERVER
 // ToDo: Make a key vault first for the 'All VM disks must be encrypted.'
 // ToDo: Connect Availability Set resource
+
+var storageAccountConnectionStringBlobEndpoint = storageAccount.properties.primaryEndpoints.blob
 
 @secure()
 @description('The administrator username.')
@@ -360,6 +431,9 @@ var virtualMachineOSVersion_mngt = '2022-Datacenter'
 resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
   name: virtualMachineName_mngt
   location: location
+  identity: {
+    type: 'SystemAssigned'
+  }
   properties: {
     hardwareProfile: {
       vmSize: virtualMachineSize_mngt
@@ -380,6 +454,10 @@ resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
         createOption: 'FromImage'
         managedDisk: {
           storageAccountType: 'StandardSSD_LRS'
+          // ToDo: Encrypt the disk
+          // diskEncryptionSet: {
+          //   id: diskEncryptionSet.id
+          // }
         }
       }
       dataDisks: [
@@ -397,23 +475,21 @@ resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
         }
       ]
     }
-    // diagnosticsProfile: {
-    //   bootDiagnostics: {
-    //     enabled: true
-    //     storageUri: storageAccount.id
-    //   }
-    // }
+    diagnosticsProfile: {
+      bootDiagnostics: {
+        enabled: true
+        storageUri: storageAccountConnectionStringBlobEndpoint
+      }
+    }
   }
 }
 
 /* -------------------------------------------------------------------------- */
 /*                     Output                                                 */
 /* -------------------------------------------------------------------------- */
-// ToDo:
-// - add output from other resources
 
-output managementVnetId string = vnetManagement.id
-// output managementPublicIp string = managementPublicIP.properties.ipTags[0].ipAddress
+output VMmanagementName string = VMmanagement.name
+output VMmanagementID string = VMmanagement.id
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -447,8 +523,8 @@ var publicIpName_webapp = 'webapp-public-ip'
 var nicName_webapp = 'webapp-nic'
 // addressPrefixes
 var vnet_addressPrefixes_webapp = '10.10.10.0/24'
-// DNS
-var DNSdomainNameLabel_webapp = 'webapp-server'
+// // DNS
+// var DNSdomainNameLabel_webapp = 'webapp-server'
 // IP config
 var IPConfigName_webapp = 'webapp-ipconfig'
 
@@ -507,6 +583,16 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                     Output                                                 */
+/* -------------------------------------------------------------------------- */
+// ToDo:
+// - add output from other resources
+
+output vnetWebAppName string = vnetWebApp.name
+output vnetWebAppID string = vnetWebApp.id
+output WebAppSubnetID string = vnetWebApp.properties.subnets[0].id
+
+/* -------------------------------------------------------------------------- */
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
 
@@ -545,40 +631,83 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
       //   }
       // }
       // Add additional security rules as needed
+      // {
+      //   name: 'specific-inbound-allow'
+      //   properties: {
+      //     priority: 200
+      //     direction: 'Inbound'
+      //     access: 'Allow'
+      //     protocol: '*'
+      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+      //     destinationAddressPrefix: '*'
+      //     sourcePortRange: '*'
+      //     destinationPortRange: '*'
+      //     description: 'Allow specific IP address'
+      //   }
+      // }
+
+      // // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
+
+      // {
+      //   name: 'specific-outbound-allow'
+      //   properties: {
+      //     priority: 200
+      //     direction: 'Outbound'
+      //     access: 'Allow'
+      //     protocol: '*'
+      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+      //     destinationAddressPrefix: '*'
+      //     sourcePortRange: '*'
+      //     destinationPortRange: '*'
+      //     description: 'Allow specific IP address'
+      //   }
+      // }
       {
-        name: 'specific-inbound-allow'
+        name: 'HTTPS-rule'
         properties: {
-          priority: 200
-          direction: 'Inbound'
-          access: 'Allow'
-          protocol: '*'
-          sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+          protocol: 'TCP'
+          sourceAddressPrefix: '*'
           destinationAddressPrefix: '*'
           sourcePortRange: '*'
-          destinationPortRange: '*'
-          description: 'Allow specific IP address'
+          destinationPortRange: '443'
+          access: 'Allow'
+          priority: 1000
+          direction: 'Inbound'
         }
       }
-
-      // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
-
       {
-        name: 'specific-outbound-allow'
+        name: 'HTTP-rule'
         properties: {
-          priority: 200
-          direction: 'Outbound'
-          access: 'Allow'
-          protocol: '*'
-          sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
+          protocol: 'TCP'
+          sourceAddressPrefix: '*'
           destinationAddressPrefix: '*'
           sourcePortRange: '*'
-          destinationPortRange: '*'
-          description: 'Allow specific IP address'
+          destinationPortRange: '80'
+          access: 'Allow'
+          priority: 1080
+          direction: 'Inbound'
+        }
+      }
+      // Web/App Server: 10.10.10.0/24
+      {
+        name: 'SSH-rule'
+        properties: {
+          protocol: 'TCP'
+          sourceAddressPrefix: '10.10.10.10/32'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '22'
+          access: 'Allow'
+          priority: 1200
+          direction: 'Inbound'
         }
       }
     ]
   }
 }
+
+output nsgWebAppID string = nsgWebApp.id
+output nsgWebAppName string = nsgWebApp.name
 
 /* -------------------------------------------------------------------------- */
 /*                     Public IP                                              */
@@ -591,12 +720,18 @@ resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
   name: publicIpName_webapp
   location: location
   properties: {
-    publicIPAllocationMethod: 'Dynamic'
-    dnsSettings: {
-      domainNameLabel: DNSdomainNameLabel_webapp
-    }
+    publicIPAllocationMethod: 'Static'
+    // dnsSettings: {
+    //   domainNameLabel: DNSdomainNameLabel_webapp
+    // }
   }
 }
+
+output WebAppPublicIPName string = WebAppPublicIP.name
+output WebAppPublicIPID string = WebAppPublicIP.id
+
+output webAppPublicIpAddress string = WebAppPublicIP.properties.ipAddress
+output webAppDnsDomainNameLabel string = WebAppPublicIP.properties.dnsSettings.domainNameLabel
 
 /* -------------------------------------------------------------------------- */
 /*                     Network Interface Card                                 */
@@ -633,6 +768,8 @@ resource WebAppNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01'
   }
 }
 
+output nic_webappID string = WebAppNetworkInterface.id
+
 /* -------------------------------------------------------------------------- */
 /*                     PEERING                                                */
 /* -------------------------------------------------------------------------- */
@@ -656,6 +793,8 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
   }
 }
 
+output vnetWebAppVnetMngnPEERINGId string = vnetwebappvnetmngnt.id
+
 /* -------------------------------------------------------------------------- */
 /*                     Virtual Machine / Server                               */
 /* -------------------------------------------------------------------------- */
@@ -674,21 +813,85 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 // }
 
 /* -------------------------------------------------------------------------- */
-/*                     Output                                                 */
-/* -------------------------------------------------------------------------- */
-// ToDo:
-// - add output from other resources
-
-output webAppVNetId string = vnetWebApp.id
-// output managementPublicIp string = managementPublicIP.properties.ipTags[0].ipAddress
-
-/* -------------------------------------------------------------------------- */
-/*                     Documentation                                          */
+/*                              Key Vault                                     */
 /* -------------------------------------------------------------------------- */
 
-// This Bicep file deploys a secure network infrastructure with a management server and web server.
+var keyVaultName = 'mykeyvault${uniqueString(resourceGroup().id)}'
+
+resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
+  name: keyVaultName
+  // Find out if this key vault should be a child of other resources
+  // parent:
+  location: location
+  properties: {
+    // stock-keeping unit refers to the pricing tier or level of service for the Key Vault instance.
+    sku: {
+      family: 'A'
+      // 'standard' SKU is typically more cost-effective compared to higher-tier SKUs. If budget is a consideration and the desired features of the 'standard' SKU meet the project's requirements, it can be a suitable choice.
+      name: 'standard'
+    }
+    tenantId: subscription().tenantId
+    enabledForDeployment: true
+    enableSoftDelete: true
+    softDeleteRetentionInDays: 7
+    // enablePurgeProtection: false
+    enabledForTemplateDeployment: true
+    createMode: 'default'
+    // enableRbacAuthorization: true
+    // publicNetworkAccess: 'disabled'
+    accessPolicies: [
+      {
+        objectId: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
+        tenantId: subscription().tenantId
+        permissions: {
+          keys: [
+            'all'
+          ]
+        }
+      }
+    ]
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              OUTPUT KEY VAULT                              */
+/* -------------------------------------------------------------------------- */
+
+output keyVaultName string = keyVaultName
+output keyVaultID string = keyVault.id
+output keyVaultURI string = keyVault.properties.vaultUri
+
+/* -------------------------------------------------------------------------- */
+/*                              Key Vault Key                                 */
+/* -------------------------------------------------------------------------- */
+
+// Reference: https://learn.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/keys?pivots=deployment-language-bicep#keyattributes
+
+resource keyKeyVault 'Microsoft.KeyVault/vaults/keys@2022-07-01' = {
+  name: 'keyVaultKey'
+  parent: keyVault
+  properties: {
+    attributes: {
+      enabled: true
+    }
+    keySize: 2048 // For example: 2048, 3072, or 4096 for RSA.
+    kty: 'RSA'
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              OUTPUT KEY                                    */
+/* -------------------------------------------------------------------------- */
+
+output keyKeyVaultID string = keyKeyVault.id
+output keyKeyVaultName string = keyKeyVault.name
+
+/* -------------------------------------------------------------------------- */
+/*                              DOCUMENTATION                                 */
+/* -------------------------------------------------------------------------- */
 
 // Parameters:
+
 // - adminUsername: The username for the admin account.
 // - adminPassword: The password for the admin account.
 // - vmNamePrefix: The prefix to use for VM names.
@@ -696,6 +899,7 @@ output webAppVNetId string = vnetWebApp.id
 // - vmSize: The size of the virtual machines.
 
 // Variables:
+
 // - availabilitySetName: The name of the availability set.
 // - storageAccountType: The type of the storage account.
 // - storageAccountName: The name of the storage account.
@@ -707,6 +911,7 @@ output webAppVNetId string = vnetWebApp.id
 // - numberOfInstances: The number of VM instances.
 
 // Resources:
+
 // - storageAccount: Deploys a storage account for VM disks and backups.
 // - availabilitySet: Deploys an availability set for high availability and fault tolerance.
 // - virtualNetwork: Deploys a virtual network for network isolation.
@@ -719,6 +924,7 @@ output webAppVNetId string = vnetWebApp.id
 // - vm: Deploys the virtual machines.
 
 // Additional resources:
+
 // - publicIPAddress: Deploys a public IP address for the management server.
 // - managementNetworkInterface: Deploys a network interface for the management server.
 // - managementNsgRuleSSH: Configures an NSG rule to allow SSH access to the management server.

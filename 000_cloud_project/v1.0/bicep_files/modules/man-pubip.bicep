@@ -4,8 +4,8 @@
 
 // az login
 // az account set --subscription 'Cloud Student 1'
-// az group create --name TestRGcloud_project --location uksouth
-// az deployment group create --resource-group TestRGcloud_project --template-file web-pubip.bicep
+// az group create --name TestRGcloud_project --location westeurope
+// az deployment group create --resource-group TestRGcloud_project --template-file man-pubip.bicep
 
 /* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
@@ -20,9 +20,9 @@ param location string = resourceGroup().location
 /* -------------------------------------------------------------------------- */
 
 // public ip
-var publicIpName_webapp = 'webapp-public-ip'
+var publicIpName = 'management-public-ip'
 // DNS
-var DNSdomainNameLabel_webapp = 'webapp-server'
+var DNSdomainNameLabel = 'management-server'
 
 /* -------------------------------------------------------------------------- */
 /*                     Public IP                                              */
@@ -31,13 +31,13 @@ var DNSdomainNameLabel_webapp = 'webapp-server'
 // public IP address for the management server, allowing it to be accessible from the internet. 
 // Public IP resource does not have any dependencies on other resources.
 
-resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
-  name: publicIpName_webapp
+resource managementPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
+  name: publicIpName
   location: location
   properties: {
     publicIPAllocationMethod: 'Static'
     dnsSettings: {
-      domainNameLabel: DNSdomainNameLabel_webapp
+      domainNameLabel: DNSdomainNameLabel
     }
   }
 }
@@ -46,8 +46,8 @@ resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
 /*                     Output                                                 */
 /* -------------------------------------------------------------------------- */
 
-output WebAppPublicIPName string = WebAppPublicIP.name
-output WebAppPublicIPID string = WebAppPublicIP.id
+output managementPublicIPName string = managementPublicIP.name
+output managementPublicIPID string = managementPublicIP.id
 
-output webAppPublicIpAddress string = WebAppPublicIP.properties.ipAddress
-output webAppDnsDomainNameLabel string = WebAppPublicIP.properties.dnsSettings.domainNameLabel
+output managementPublicIPAddress string = managementPublicIP.properties.ipAddress
+output managementDnsDomainNameLabel string = managementPublicIP.properties.dnsSettings.domainNameLabel
