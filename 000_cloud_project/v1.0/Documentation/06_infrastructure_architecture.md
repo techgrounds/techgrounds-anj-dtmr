@@ -56,6 +56,7 @@ For the v1.0 **requirements** I was able to:
 - [x] I should submit a GitHub repository with .bicep files on the main branch.
 - [x] Portal cost under 50 euros.
 - [x] Use GitHub branches for version control.
+- [x] Customize apache script for the web server.
 
 
 For the v1.0 **requirements** I was NOT able to:
