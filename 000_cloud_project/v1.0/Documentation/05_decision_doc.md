@@ -45,4 +45,19 @@ June 27, 2023
 Yesterday was about key vault, I could not proceed to recovery service fault without it.
 
 June 28, 2023
-It is 3 days before the submission, I decided to focus on cleaning up the working code that I have, the resources that can be deployed and the documentation.
+It is 3 days before the submission, I decided to focus on cleaning up the working code that I have, the resources that can be successfully deployed and the documentation.
+
+June 29, 2023
+Yesterday I felt accomplished on having a well documented project. Today I focused on separating my storage accounts for management server, web server and for post deployment scripts. Because according to our dear AI friend:
+
+it's important to note that while you can have multiple VMs in one storage account, it might not be the most optimal configuration for a management server and a web server, especially from a security standpoint. Here's why:
+
+Management Server: A management server typically requires administrative access to manage and control other resources in your Azure environment. Placing your management server and its associated VM in the same storage account as your web server could increase the attack surface. If an attacker gains access to your web server, they may also be able to access the management server files or manipulate the shared storage resources, potentially compromising your management infrastructure.
+
+Web Server: A web server is publicly accessible and can be prone to security vulnerabilities and attacks. Placing it in the same storage account as your management server could expose your management resources to potential attacks targeting your web server. Isolating the web server and its associated VM in a separate storage account provides an additional layer of security, making it more challenging for an attacker to compromise your management infrastructure.
+
+Best practices recommend implementing proper network segmentation and isolation to protect critical resources. It is advisable to separate your management server and web server into separate Azure subscriptions, resource groups, and storage accounts to minimize the impact of a security breach.
+
+By following this approach, you can enhance the security posture of your infrastructure and reduce the potential risks associated with having both the management server and web server in the same storage account.
+
+I'll leave this decision here until the next version's requirements and move on to building the web server today and tomorrow.
