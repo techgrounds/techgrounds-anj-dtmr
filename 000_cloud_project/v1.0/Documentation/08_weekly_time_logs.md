@@ -649,7 +649,7 @@ June 28, 2023 Wednesday
 
 Wat zijn jou wins vandaag?-----
 
-- Clean and write the Documentation
+- Clean the bicep code and write the Documentation
 
 ### Obstakels & Oplossingen
 
@@ -673,5 +673,44 @@ Wat zijn jou wins vandaag?-----
 - [ ] Recovery service vault
 - [ ] Database
 - [ ] Data encryption
+
+---
+
+June , 2023 day
+
+### Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+- Successfully have a working deployed web server
+- Documentation is also finished
+
+### Obstakels & Oplossingen
+
+1. I decided to give it a try and make a web server without checking what my other team mates had done. Using a quickstart from microsoft, understanding its properties and dependecies. I finally deployed a basic web server. I had a problem with my NIC dependsOn, but I found out that I can do that too under the properties.
+
+2. Asking better questions
+
+- [ ] can i have 2 azure vm's in one storage account? would it be safe for both management server and web server?
+- [ ] do we need a separate storage account and containers for the servers and post deployment scripts?
+- [ ] What is better to move forward to, after doing the web server? Is it apache or the key vault?
+- [ ] How can I use draw.io outside a browser and on vscode?
+- [ ] Difference between putting a dependent resource under dependsOn and under properties?
+
+### Learnings
+
+- [ ] Web Server is a virtual machine
+- [ ] In this project key vault is dependent on disk encryption for vm's disk
+
+### Plans for tomorrow
+
+- [ ] apache
+- [ ] Continue with key vault
+- [ ] Data encryption
+- [ ] Write down documentataion on management.bicep and web/app.bicep
+- [ ] Miro planning
+- [ ] VMSS for webserver
+- [ ] Recovery service vault
+- [ ] Database
 
 ---
