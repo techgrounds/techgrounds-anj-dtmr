@@ -8,6 +8,8 @@ This file:
 
 ## The Given Project Architecture
 
+![image info](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/06_diagram/topology.png)
+
 According to the design of the architecture:
 
 - I should create my network and its bicep scripts inside my subscription.
