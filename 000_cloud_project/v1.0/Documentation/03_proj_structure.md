@@ -22,6 +22,8 @@ This file:
 4. Scripts: The scripts directory contain scripts or utilities used in this project, such as deployment scripts, helper scripts, or configuration scripts.
    Scripts Directory ->> [000_cloud_project/v1.0/bash](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.0/bash)
 
+5. Documentation Directory: All the markdown files I wrote consist of the deployment process documentation and all the deliverables.
+
 ## File and Directory Purpose
 
 - README.md: The readme file of the Root Directory [000_cloud_project](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project) provides an overview of the project, its purpose, and instructions on how to use or contribute to the project. It includes information on prerequisites, setup instructions, and deployment steps.
