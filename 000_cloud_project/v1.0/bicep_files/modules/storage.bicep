@@ -22,6 +22,10 @@ param storageAccountName string = '${storageAccountPrefix}${uniqueString(resourc
 // /* -------------------------------------------------------------------------- */
 // /*                     STORAGE                                                */
 // /* -------------------------------------------------------------------------- */
+// The Bicep template includes a section for creating a storage account and a storage container.
+// The storage account is used to store and manage data for the management server.
+
+// Todo: PostScript --- // Deze script moeten niet publiekelijk toegankelijk zijn.
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   name: storageAccountName
@@ -53,15 +57,16 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
 // /* -------------------------------------------------------------------------- */
 // /*                     CONTAINER                                              */
 // /* -------------------------------------------------------------------------- */
+//  The storage container is configured to restrict public access.
 
 // ToDo: How to dynamically create a name without hard coding
+// ToDo: For now the container is publicly not accessible, check the requirements for this
 param containerNamePrefix string = 'container'
 param containerName string = '${containerNamePrefix}${uniqueString(resourceGroup().id)}'
 
 resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
   name: '${storageAccountName}/default/${containerName}'
   properties: {
-    // Deze script moeten niet publiekelijk toegankelijk zijn.
     publicAccess: 'None'
   }
   dependsOn: [
