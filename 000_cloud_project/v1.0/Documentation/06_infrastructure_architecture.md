@@ -28,12 +28,12 @@ For the v1.0 **user stories** I was able to:
 - [x] have a clear understanding what the requirements of the application are.
 - [x] have a clear record of the assumptions.
 - [x] have a clear overview of the Cloud Infrastructure the application needs.
-- [x] have a working application with which to deploy a working management server.
-- [x] have a working application with which to deploy a working web server.
+- [x] have a working application with which to deploy a working management server (RDP).
+- [x] have a working application with which to deploy a working web server (SSH).
 - [x] have a working application that allows to deploy a secure network.
-- [x] have a storage solution in which bootstrap/post-deployment script can be stored.
-- [x] write documentation how to use the application.
-- [x] write documentation how to deploy an MVP for testing.
+- [x] have a storage solution in which bootstrap/post-deployment script can be stored. Deployed a storage account with a private container.
+- [x] provide documentation or user guides to explain how to use the application.
+- [x] submit a well-documentated project how to deploy an MVP for testing and deploy the infrastructure.
 
 For the v1.0 **user stories** I was NOT able to:
 - [ ] encrypt all data in the infrastructure.
@@ -52,16 +52,21 @@ For the v1.0 **requirements** I was able to:
 - [x] Understand the need of a public IP for the web server must.
 - [x] Deploy a Key Vault.
 - [x] Use Github Release to tag the v1.0.
+- [x] Deploy a resource group using azure cli.
+- [x] I should submit a GitHub repository with .bicep files on the main branch.
+- [x] Portal cost under 50 euros. 
 
 
 For the v1.0 **requirements** I was NOT able to:
-- [ ] Deploy a SQL Database that is connected to the both servers only.
+- [ ] Deploy a SQL Database that is connected to both the web server and admin/management server.
 - [ ] Deploy a Recovery Service Vault
 - [ ] Deploy the VM's to an Availability Set
 - [ ] All VM disks must be encrypted.
-- [ ] The Web server should be backed up daily. Backups must be retained for 7 days.
-
-
+- [ ] The Web server should be backed up daily. Backups must be retained for 7 days. Create a Recovery Services Vault and configure it to back up the VMs in the webserver subnet.
+- [ ] (Not a must but best practice) Use module writing the bicep template.
+- [ ] Utilize Key Vault to securely store any secrets or credentials required for accessing and executing the bootstrap/post-deployment scripts.
+- [ ] Use Key Vault to manage and store the cryptographic keys required for encrypting and decrypting the data within the infrastructure.
+- [ ] Connect the web and admin server to the Key Vault to retrieve necessary secrets.
 
 
 
