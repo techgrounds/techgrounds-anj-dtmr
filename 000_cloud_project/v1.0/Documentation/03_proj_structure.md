@@ -14,13 +14,13 @@ This file:
    Please note that I divided the directories of my v1.0 and v1.1 for my own learning and documentation.
 
 2. Bicep Files: Bicep files have the .bicep extension and define the infrastructure resources and their configurations in a declarative manner.
-   Bicep Files ->> [bicep_files](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.0/bicep_files)
+   Bicep Files ->> [000_cloud_project/v1.0/bicep_files](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.0/bicep_files)
 
 3. Modules Directory: The modules directory contains reusable Bicep modules.
-   Modules Directory ->> [modules](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.0/bicep_files/modules)
+   Modules Directory ->> [000_cloud_project/v1.0/bicep_files/modules](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.0/bicep_files/modules)
 
 4. Scripts: The scripts directory contain scripts or utilities used in this project, such as deployment scripts, helper scripts, or configuration scripts.
-   Scripts Directory ->> [bash](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.0/bash)
+   Scripts Directory ->> [000_cloud_project/v1.0/bash](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.0/bash)
 
 ## File and Directory Purpose
 
