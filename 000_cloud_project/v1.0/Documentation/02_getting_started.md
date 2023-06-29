@@ -25,7 +25,7 @@ Optional but not needed in this project:
 - [ ] Azure Service Principal (optional): In certain scenarios, you might need to create an Azure Service Principal to authenticate and authorize access to your Azure resources. This is commonly used when integrating Bicep deployments into automated pipelines or when deploying resources to separate Azure tenants or subscriptions.
 - [ ] Bicep CLI (optional): Install the Bicep CLI, which is the command-line tool used to compile and deploy Bicep files. The CLI is available for different operating systems (Windows, macOS, Linux) and can be downloaded from the official Bicep GitHub repository or installed through package managers like Homebrew (macOS) or Chocolatey (Windows).
 
-## Instructions for setting up the environment for this project
+## Setting up the environment for this project
 
 To set up your development environment for working with Bicep, follow these instructions:
 
@@ -69,7 +69,7 @@ Here's the official documentation how to [Install Bicep tools](https://learn.mic
 
 ## How to clone or download the project repository
 
-1. Access the Bicep project repository: Go to the [GitHub website](https://github.com/) and log in to your account. Navigate to the Bicep project. Here's the [repository](https://github.com/techgrounds/techgrounds-anj-dtmr). The project root folder is 000_cloud_project/v1.0.
+1. Access the Bicep project repository: Go to the [GitHub website](https://github.com/) and log in to your account. Navigate to the Bicep project. Here's the [repository](https://github.com/techgrounds/techgrounds-anj-dtmr). 
 
 2. Choose a cloning method:
 
@@ -83,5 +83,7 @@ Here's the official documentation how to [Install Bicep tools](https://learn.mic
 - If you cloned the repository using Git/GitHub Desktop, the repository will be cloned to a directory with the same name as the repository. Navigate to that directory in your command-line interface or file explorer to access the repository files.
 
 Now you have successfully cloned or downloaded the Bicep project repository. You can open the project in your preferred code editor, such as Visual Studio Code, and start playing around with the Bicep files in the repository.
+
+The project root folder is 000_cloud_project/v1.0.
 
 Go back to the main [README.md]() for the next steps on documentation or go to [Deployment Process]() to start deploying Azure resources.
