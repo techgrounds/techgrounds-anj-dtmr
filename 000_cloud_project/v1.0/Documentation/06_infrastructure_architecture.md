@@ -25,7 +25,6 @@ According to the design of the architecture:
 ![image info](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/06_diagram/cloud_architecture.drawio.png)
 
 For the v1.0 user stories I was able to:
-
 - [x] have a clear understanding what the requirements of the application are
 - [x] have a clear record of the assumptions
 - [x] have a clear overview of the Cloud Infrastructure the application needs
@@ -37,11 +36,10 @@ For the v1.0 user stories I was able to:
 - [x] write documentation how to deploy an MVP for testing
 
 For the v1.0 user stories I was NOT able to:
-
 - [ ] encrypt all data in the infrastructure
 - [ ] have a backup every day that is maintained for 7 days
 
-
+For the v1.0 requirements I was able to:
 - [x] The Web server must be installed in an automated manner.
 - [x] The admin/management server must be reachable by a public IP.
 - [x] The admin/management server should be accessible only from trusted locations (office/admin's home)
@@ -51,7 +49,6 @@ For the v1.0 user stories I was NOT able to:
 
 
 For the v1.0 requirements I was NOT able to:
-
 - [ ] All VM disks must be encrypted.
 - [ ] The Web server should be backed up daily. Backups must be retained for 7 days.
 
