@@ -695,7 +695,7 @@ resource containerWebApp 'Microsoft.Storage/storageAccounts/blobServices/contain
 
 output storageAccountWebAppName string = storageAccountWebApp.name
 output storageAccountWebAppID string = storageAccountWebApp.id
-output storageAccountWebAppConnectionStringBlobEndpoint string = storageAccountManagement.properties.primaryEndpoints.blob
+output storageAccountWebAppConnectionStringBlobEndpoint string = storageAccountWebApp.properties.primaryEndpoints.blob
 
 output containerWebAppName string = containerWebApp.name
 output containerWebAppID string = containerWebApp.id
