@@ -5,7 +5,7 @@
 // az login
 // az account set --subscription 'Cloud Student 1'
 // az group create --name TestRGcloud_project --location westeurope
-// az deployment group create --resource-group TestRGcloud_project --template-file main.bicep
+// az deployment group create --resource-group TestRGcloud_project --template-file main-storage.bicep
 
 /* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
@@ -231,17 +231,17 @@ resource vnetmngntvnetwebapp 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 }
 
 // /* -------------------------------------------------------------------------- */
-// /*                     STORAGE                                                */
+// /*                     MANAGEMENT SERVER - STORAGE                            */
 // /* -------------------------------------------------------------------------- */
 // The Bicep template includes a section for creating a storage account and a storage container.
 // The storage account is used to store and manage data for the management server.
 
 // ToDo: How to dynamically create a name without hard coding
-param storageAccountPrefix string = 'storage'
-param storageAccountName string = '${storageAccountPrefix}${uniqueString(resourceGroup().id)}'
+param storageAccountManagementPrefix string = 'stgmngmt'
+param storageAccountManagementName string = '${storageAccountManagementPrefix}${uniqueString(resourceGroup().id)}'
 
-resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
-  name: storageAccountName
+resource storageAccountManagement 'Microsoft.Storage/storageAccounts@2022-09-01' = {
+  name: storageAccountManagementName
   location: location
   sku: {
     name: 'Standard_LRS'
@@ -268,22 +268,22 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
 }
 
 // /* -------------------------------------------------------------------------- */
-// /*                     CONTAINER                                              */
+// /*                     MANAGEMENT SERVER - CONTAINER                          */
 // /* -------------------------------------------------------------------------- */
 //  The storage container is configured to restrict public access.
 
 // ToDo: How to dynamically create a name without hard coding
 // ToDo: For now the container is publicly not accessible, check the requirements for this
-param containerNamePrefix string = 'container'
-param containerName string = '${containerNamePrefix}${uniqueString(resourceGroup().id)}'
+param containerManagementNamePrefix string = 'contmngmt'
+param containerManagementName string = '${containerManagementNamePrefix}${uniqueString(resourceGroup().id)}'
 
-resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
-  name: '${storageAccountName}/default/${containerName}'
+resource containerManagement 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
+  name: '${storageAccountManagementName}/default/${containerManagementName}'
   properties: {
     publicAccess: 'None'
   }
   dependsOn: [
-    storageAccount
+    storageAccountManagement
   ]
 }
 
@@ -291,16 +291,16 @@ resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/contai
 // /*                     OUTPUT - STORAGE & CONTAINER                           */
 // /* -------------------------------------------------------------------------- */
 
-output storageAccountName string = storageAccount.name
-output storageAccountID string = storageAccount.id
-output storageAccountConnectionStringBlobEndpoint string = storageAccount.properties.primaryEndpoints.blob
+output storageAccountManagementName string = storageAccountManagement.name
+output storageAccountManagementID string = storageAccountManagement.id
+output storageAccountManagementConnectionStringBlobEndpoint string = storageAccountManagement.properties.primaryEndpoints.blob
 
-output storageContainerName string = storageContainer.name
-output storageContainerID string = storageContainer.id
-output storageContainerUrl string = storageContainer.properties.publicAccess
+output containerManagementName string = containerManagement.name
+output containerManagementID string = containerManagement.id
+output containerManagementUrl string = containerManagement.properties.publicAccess
 
 /* -------------------------------------------------------------------------- */
-/*                     Virtual Machine / Server                               */
+/*                     MANAGEMENT SERVER - Virtual Machine / Server           */
 /* -------------------------------------------------------------------------- */
 // managementVirtualMachine: Finally, the management virtual machine resource is defined. It depends on 
 // the managementNetworkInterface because it requires a network interface to be associated with the virtual 
@@ -317,7 +317,7 @@ output storageContainerUrl string = storageContainer.properties.publicAccess
 // account. The virtual machine/server is associated with the management subnet and has a public 
 // IP address for external access.
 
-var storageAccountConnectionStringBlobEndpoint = storageAccount.properties.primaryEndpoints.blob
+var storageAccountManagementConnectionStringBlobEndpoint = storageAccountManagement.properties.primaryEndpoints.blob
 
 // adminUsername: The administrator username for the management virtual machine/server.
 // adminPassword: The administrator password for the management virtual machine/server.
@@ -385,7 +385,7 @@ resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
     diagnosticsProfile: {
       bootDiagnostics: {
         enabled: true
-        storageUri: storageAccountConnectionStringBlobEndpoint
+        storageUri: storageAccountManagementConnectionStringBlobEndpoint
       }
     }
   }
@@ -632,8 +632,77 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 
 output vnetWebAppVnetMngnPEERINGId string = vnetwebappvnetmngnt.id
 
+// /* -------------------------------------------------------------------------- */
+// /*                     WEB APP - STORAGE                                      */
+// /* -------------------------------------------------------------------------- */
+// The Bicep template includes a section for creating a storage account and a storage container.
+// The storage account is used to store and manage data for the web server.
+
+// ToDo: How to dynamically create a name without hard coding
+param storageAccountWebAppPrefix string = 'stgwebapp'
+param storageAccountWebAppName string = '${storageAccountWebAppPrefix}${uniqueString(resourceGroup().id)}'
+
+resource storageAccountWebApp 'Microsoft.Storage/storageAccounts@2022-09-01' = {
+  name: storageAccountWebAppName
+  location: location
+  sku: {
+    name: 'Standard_LRS'
+  }
+  kind: 'StorageV2'
+  properties: {
+    supportsHttpsTrafficOnly: true
+    encryption: {
+      services: {
+        file: {
+          enabled: true
+        }
+        blob: {
+          enabled: true
+        }
+      }
+      keySource: 'Microsoft.Storage'
+    }
+    networkAcls: {
+      defaultAction: 'Deny'
+      bypass: 'AzureServices'
+    }
+  }
+}
+
+// /* -------------------------------------------------------------------------- */
+// /*                     WEB APP - CONTAINER                                    */
+// /* -------------------------------------------------------------------------- */
+//  The storage container is configured to restrict public access.
+
+// ToDo: How to dynamically create a name without hard coding
+// ToDo: For now the container is publicly not accessible, check the requirements for this
+param containerWebAppNamePrefix string = 'contwebapp'
+param containerWebAppName string = '${containerWebAppNamePrefix}${uniqueString(resourceGroup().id)}'
+
+resource containerWebApp 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
+  name: '${storageAccountWebAppName}/default/${containerWebAppName}'
+  properties: {
+    publicAccess: 'None'
+  }
+  dependsOn: [
+    storageAccountWebApp
+  ]
+}
+
+// /* -------------------------------------------------------------------------- */
+// /*                     OUTPUT - STORAGE & CONTAINER                           */
+// /* -------------------------------------------------------------------------- */
+
+output storageAccountWebAppName string = storageAccountWebApp.name
+output storageAccountWebAppID string = storageAccountWebApp.id
+output storageAccountWebAppConnectionStringBlobEndpoint string = storageAccountManagement.properties.primaryEndpoints.blob
+
+output containerWebAppName string = containerWebApp.name
+output containerWebAppID string = containerWebApp.id
+output containerWebAppUrl string = containerWebApp.properties.publicAccess
+
 /* -------------------------------------------------------------------------- */
-/*                     Virtual Machine / Server                               */
+/*                     WEB APP - Virtual Machine / Server                     */
 /* -------------------------------------------------------------------------- */
 // Defines the virtual machine/server for the web application.
 
@@ -722,6 +791,75 @@ resource keyKeyVault 'Microsoft.KeyVault/vaults/keys@2022-07-01' = {
 
 output keyKeyVaultID string = keyKeyVault.id
 output keyKeyVaultName string = keyKeyVault.name
+
+// /* -------------------------------------------------------------------------- */
+// /*                     POSTDEPLOYMENTSCRIPT - STORAGE                         */
+// /* -------------------------------------------------------------------------- */
+// The Bicep template includes a section for creating a storage account and a storage container.
+// The storage account is used to store and manage data for the POSTDEPLOYMENTSCRIPT.
+
+// ToDo: How to dynamically create a name without hard coding
+param storageAccountPrefix string = 'storage'
+param storageAccountName string = '${storageAccountPrefix}${uniqueString(resourceGroup().id)}'
+
+resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
+  name: storageAccountName
+  location: location
+  sku: {
+    name: 'Standard_LRS'
+  }
+  kind: 'StorageV2'
+  properties: {
+    supportsHttpsTrafficOnly: true
+    encryption: {
+      services: {
+        file: {
+          enabled: true
+        }
+        blob: {
+          enabled: true
+        }
+      }
+      keySource: 'Microsoft.Storage'
+    }
+    networkAcls: {
+      defaultAction: 'Deny'
+      bypass: 'AzureServices'
+    }
+  }
+}
+
+// /* -------------------------------------------------------------------------- */
+// /*                     POSTDEPLOYMENTSCRIPT CONTAINER                         */
+// /* -------------------------------------------------------------------------- */
+//  The storage container is configured to restrict public access.
+
+// ToDo: How to dynamically create a name without hard coding
+// ToDo: For now the container is publicly not accessible, check the requirements for this
+param containerNamePrefix string = 'container'
+param containerName string = '${containerNamePrefix}${uniqueString(resourceGroup().id)}'
+
+resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
+  name: '${storageAccountName}/default/${containerName}'
+  properties: {
+    publicAccess: 'None'
+  }
+  dependsOn: [
+    storageAccount
+  ]
+}
+
+// /* -------------------------------------------------------------------------- */
+// /*                     OUTPUT - STORAGE & CONTAINER                           */
+// /* -------------------------------------------------------------------------- */
+
+output storageAccountName string = storageAccount.name
+output storageAccountID string = storageAccount.id
+output storageAccountConnectionStringBlobEndpoint string = storageAccount.properties.primaryEndpoints.blob
+
+output storageContainerName string = storageContainer.name
+output storageContainerID string = storageContainer.id
+output storageContainerUrl string = storageContainer.properties.publicAccess
 
 /* -------------------------------------------------------------------------- */
 /*                              TODO                                          */
