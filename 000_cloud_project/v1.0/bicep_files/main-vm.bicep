@@ -805,7 +805,9 @@ output keyKeyVaultName string = keyKeyVault.name
 // machine. By placing the virtual machine definition last, we ensure that all the necessary dependencies, 
 // such as the network interface, NSG, and subnet, are created and available.
 
-// Resource: https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-bicep?tabs=CLI
+// Resource: 
+// - https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-bicep?tabs=CLI
+// - https://medium.com/codex/how-to-create-a-linux-virtual-machine-with-azure-bicep-template-e22f50f2baea
 
 // // adminUsername: The administrator username for the management virtual machine/server.
 // // adminPassword: The administrator password for the management virtual machine/server.
