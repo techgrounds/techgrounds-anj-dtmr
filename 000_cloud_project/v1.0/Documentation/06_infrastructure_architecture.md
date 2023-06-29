@@ -54,7 +54,8 @@ For the v1.0 **requirements** I was able to:
 - [x] Use Github Release to tag the v1.0.
 - [x] Deploy a resource group using azure cli.
 - [x] I should submit a GitHub repository with .bicep files on the main branch.
-- [x] Portal cost under 50 euros. 
+- [x] Portal cost under 50 euros.
+- [x] Use GitHub branches for version control.
 
 
 For the v1.0 **requirements** I was NOT able to:
