@@ -51,6 +51,7 @@ For the v1.0 **requirements** I was able to:
 - [x] Connect all the resources, using NIC, to the vnet of both servers.
 - [x] Understand the need of a public IP for the web server must.
 - [x] Deploy a Key Vault.
+- [x] Use Github Release to tag the v1.0.
 
 
 For the v1.0 **requirements** I was NOT able to:
