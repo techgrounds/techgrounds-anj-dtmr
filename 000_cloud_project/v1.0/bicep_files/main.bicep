@@ -24,16 +24,23 @@ param location string = resourceGroup().location
 /* -------------------------------------------------------------------------- */
 /*                              Management                                    */
 /* -------------------------------------------------------------------------- */
-
-// ToDo:
-//  - Adjust this according to requirements
-
-// Management Server: 10.20.20.0/24
-// Web/App Server: 10.10.10.0/24
+// The management server will be used to manage and control various resources within the Azure environment. 
+// It will have a private IP address within the management subnet and a public IP address to allow external access.
 
 /* -------------------------------------------------------------------------- */
 /*                     PARAMS & VARS                                          */
 /* -------------------------------------------------------------------------- */
+
+// Management Server: 10.20.20.0/24
+// Web/App Server: 10.10.10.0/24
+
+// virtualNetworkName: The name of the virtual network for the management server.
+// subnetName: The name of the subnet within the virtual network.
+// nsgName: The name of the network security group associated with the subnet.
+// publicIpName: The name of the public IP address resource.
+// nicName: The name of the network interface card.
+// vnet_addressPrefixes: The address prefixes for the virtual network.
+// IPConfigName: The name of the IP configuration for the network interface card.
 
 // vnet
 var virtualNetworkName = 'management-vnet'
@@ -55,6 +62,8 @@ var IPConfigName = 'management-ipconfig'
 /* -------------------------------------------------------------------------- */
 /*                     Virtual Network with subnet                            */
 /* -------------------------------------------------------------------------- */
+// The Bicep template creates a virtual network with a subnet for the management server. 
+// The subnet is associated with a network security group to enforce network-level security policies.
 
 resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   name: virtualNetworkName
@@ -88,6 +97,10 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
 // By placing the NSG definition next, we ensure that the subnet is available and its properties
 // are accessible when defining the security rules.
 
+// The network security group (NSG) controls inbound and outbound traffic to the management server. 
+// The NSG includes security rules that define the network traffic rules. By default, inbound traffic is 
+// blocked, except for specific IP addresses defined in the rules.
+
 param allowedIPAddresses array = [ '85.149.106.77' ]
 
 resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
@@ -95,78 +108,8 @@ resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   location: location
   // Contains the set of properties for the NSG, including the security rules.
   properties: {
-    // security rules are An array of security rules that define the network traffic rules for the NSG.
+    // security rules are an array of security rules that define the network traffic rules for the NSG.
     securityRules: [
-      // {
-      //   name: 'All-IP-Blocked'
-      //   properties: {
-      //     description: 'Block all IP addresses except the specific IP'
-      //     // priority: Lower values indicate higher priority. In this case, the rule has a priority of 100.
-      //     priority: 200
-      //     access: 'Deny'
-      //     // direction: Indicates the direction of the traffic. 'Inbound' means the rule applies to incoming traffic.
-      //     direction: '*'
-      //     protocol: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
-      //     sourceAddressPrefixes: [ '0.0.0.0/0' ]
-      //     // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
-      //     destinationAddressPrefixes: []
-      //   }
-      // }
-      // // Add additional security rules as needed
-      // {
-      //   name: 'Allow-Admin-Inbound'
-      //   properties: {
-      //     description: 'Allow inbound connections from trusted locations'
-      //     // priority: Lower values indicate higher priority. In this case, the rule has a priority of 100.
-      //     priority: 100
-      //     access: 'Allow'
-      //     // direction: Indicates the direction of the traffic. 'Inbound' means the rule applies to incoming traffic.
-      //     direction: 'Inbound'
-      //     // 'Tcp'?
-      //     protocol: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
-      //     sourceAddressPrefixes: [ '${allowedIPAddresses[0]}/32' ]
-      //     // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
-      //     destinationAddressPrefix: 'VirtualNetwork' // Assuming we want to restrict access to the virtual network
-
-      //   }
-      // }
-      // {
-      //   name: 'specific-inbound-allow'
-      //   properties: {
-      //     priority: 200
-      //     direction: 'Inbound'
-      //     access: 'Allow'
-      //     protocol: '*'
-      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     description: 'Allow specific IP address'
-      //   }
-      // }
-
-      // // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
-
-      // {
-      //   name: 'specific-outbound-allow'
-      //   properties: {
-      //     priority: 200
-      //     direction: 'Outbound'
-      //     access: 'Allow'
-      //     protocol: '*'
-      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     description: 'Allow specific IP address'
-      //   }
-      // }
       {
         name: 'SSH-rule'
         properties: {
@@ -204,6 +147,14 @@ resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
 // public IP address for the management server, allowing it to be accessible from the internet. 
 // Public IP resource does not have any dependencies on other resources.
 
+// The management server requires a public IP address to allow external access. 
+// The Bicep template creates a public IP address resource with a static allocation method.
+
+// Static Allocation:
+// With static allocation, we can specify a specific public IP address to be associated with the resource.
+// The IP address remains the same even if the resource is deallocated, stopped, or restarted.
+// Static allocation is suitable when the resource requires a fixed IP address that remains consistent throughout its lifecycle.
+
 resource managementPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
   name: publicIpName
   location: location
@@ -221,11 +172,13 @@ resource managementPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
 // managementNetworkInterface: The management network interface is defined next. It depends on the 
 // managementNSG because it needs the NSG's configuration to associate the security rules with the 
 // network interface. By placing the network interface definition here, we ensure that the NSG is created
-//  and its properties are accessible.
-
-// The network interface is responsible for connecting the resource to the VNet and a specific subnet within the VNet.
+//  and its properties are accessible. The network interface is responsible for connecting the resource 
+// to the VNet and a specific subnet within the VNet.
 
 // Dependencies: Public IP
+
+// The network interface card (NIC) connects the management server to the virtual network and subnet. 
+// It includes an IP configuration that specifies the subnet and associates the public IP address resource.
 
 resource managementNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' = {
   name: nicName
@@ -277,66 +230,11 @@ resource vnetmngntvnetwebapp 'Microsoft.Network/virtualNetworks/virtualNetworkPe
   }
 }
 
-// // /* -------------------------------------------------------------------------- */
-// // /*                     STORAGE                                                */
-// // /* -------------------------------------------------------------------------- */
-
-// // ToDo: How to dynamically create a name without hard coding
-// param storageAccountPrefix string = 'storage'
-// param storageAccountName string = '${storageAccountPrefix}${uniqueString(resourceGroup().id)}'
-
-// resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
-//   name: storageAccountName
-//   location: location
-//   sku: {
-//     name: 'Standard_LRS'
-//   }
-//   kind: 'StorageV2'
-//   properties: {
-//     supportsHttpsTrafficOnly: true
-//     encryption: {
-//       services: {
-//         file: {
-//           enabled: true
-//         }
-//         blob: {
-//           enabled: true
-//         }
-//       }
-//       keySource: 'Microsoft.Storage'
-//     }
-//     networkAcls: {
-//       defaultAction: 'Deny'
-//       bypass: 'AzureServices'
-//     }
-//   }
-// }
-
-// // /* -------------------------------------------------------------------------- */
-// // /*                     CONTAINER                                              */
-// // /* -------------------------------------------------------------------------- */
-
-// // ToDo: How to dynamically create a name without hard coding
-// param containerNamePrefix string = 'container'
-// param containerName string = '${containerNamePrefix}${uniqueString(resourceGroup().id)}'
-
-// resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
-//   name: '${storageAccountName}/default/${containerName}'
-//   properties: {
-//     // Deze script moeten niet publiekelijk toegankelijk zijn.
-//     publicAccess: 'None'
-//   }
-//   dependsOn: [
-//     storageAccount
-//   ]
-// }
-
-// output storageAccountConnectionString string = storageAccount.properties.primaryEndpoints.blob
-// output storageContainerUrl string = storageContainer.properties.publicAccess
-
 // /* -------------------------------------------------------------------------- */
 // /*                     STORAGE                                                */
 // /* -------------------------------------------------------------------------- */
+// The Bicep template includes a section for creating a storage account and a storage container.
+// The storage account is used to store and manage data for the management server.
 
 // ToDo: How to dynamically create a name without hard coding
 param storageAccountPrefix string = 'storage'
@@ -372,15 +270,16 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
 // /* -------------------------------------------------------------------------- */
 // /*                     CONTAINER                                              */
 // /* -------------------------------------------------------------------------- */
+//  The storage container is configured to restrict public access.
 
 // ToDo: How to dynamically create a name without hard coding
+// ToDo: For now the container is publicly not accessible, check the requirements for this
 param containerNamePrefix string = 'container'
 param containerName string = '${containerNamePrefix}${uniqueString(resourceGroup().id)}'
 
 resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
   name: '${storageAccountName}/default/${containerName}'
   properties: {
-    // Deze script moeten niet publiekelijk toegankelijk zijn.
     publicAccess: 'None'
   }
   dependsOn: [
@@ -413,7 +312,15 @@ output storageContainerUrl string = storageContainer.properties.publicAccess
 // ToDo: Make a key vault first for the 'All VM disks must be encrypted.'
 // ToDo: Connect Availability Set resource
 
+// The Bicep template creates the management virtual machine/server. 
+// It depends on the previously created resources, such as the network interface card and storage 
+// account. The virtual machine/server is associated with the management subnet and has a public 
+// IP address for external access.
+
 var storageAccountConnectionStringBlobEndpoint = storageAccount.properties.primaryEndpoints.blob
+
+// adminUsername: The administrator username for the management virtual machine/server.
+// adminPassword: The administrator password for the management virtual machine/server.
 
 @secure()
 @description('The administrator username.')
@@ -500,6 +407,7 @@ output VMmanagementID string = VMmanagement.id
 /* -------------------------------------------------------------------------- */
 /*                              WEB APP                                       */
 /* -------------------------------------------------------------------------- */
+// This deploy the infrastructure required for a web application in Azure.
 
 // ToDo:
 //  - Adjust this according to requirements
@@ -539,8 +447,8 @@ var IPConfigName_webapp = 'webapp-ipconfig'
 // Dependencies: Azure Subscription, Azure Resource Group, Azure Region, Address Space, Subnets, Network Security Groups (NSGs)
 // Additional: VnetPeering to connect this management vnet to the app vnet for later
 
-// This creates a virtual network for the management side
-// I've created a separate vnet for the management side to isolate it from the other cloud infrastracture
+// The vnetWebApp resource creates a Virtual Network (VNet) for the web application.
+// I've created a separate vnet for the web app side to isolate it from the other cloud infrastracture
 // This segregation helps improve security and network performance by controlling traffic flow between resources.
 // Within VNet, I created a subnet to further segment the resources inside the vnet like virtual machine for the server
 
@@ -553,11 +461,6 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         vnet_addressPrefixes_webapp
       ]
     }
-    // I wrote the subnet inside vnet because of best practice
-
-    // managementSubnet: The management subnet is defined first as it serves as the foundational 
-    // component for the other resources. It specifies the address prefix for the subnet where the 
-    // management server will be deployed.
     subnets: [
       {
         name: subnetName_webapp
@@ -567,15 +470,6 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
           networkSecurityGroup: {
             id: resourceId('Microsoft.Network/networkSecurityGroups', nsgName_webapp)
           }
-          // serviceEndpoints: [
-          //   // Add service endpoints if required
-          // ]
-          // // ToDo: Check the requirements if delegation is needed
-          // delegation: {
-          //   name: 'delegation'
-          //   properties: {
-          //     serviceName: 'Microsoft.Authorization/roleAssignments'
-          //   }
         }
       }
     ]
@@ -595,6 +489,11 @@ output WebAppSubnetID string = vnetWebApp.properties.subnets[0].id
 /* -------------------------------------------------------------------------- */
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
+// Creates a network security group for the web application.
+// The nsgWebApp resource creates a Network Security Group (NSG) for the web application. 
+// An NSG is used to enforce network-level security policies for the resources within a subnet. 
+// It contains security rules that define network traffic rules, 
+// such as allowing inbound traffic on ports 443 (HTTPS), 80 (HTTP), and 22 (SSH).
 
 resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   name: nsgName_webapp
@@ -603,65 +502,6 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   properties: {
     // security Rule are An array of security rules that define the network traffic rules for the NSG.
     securityRules: [
-      // {
-      //   name: securityRulesName_webapp
-      //   properties: {
-      //     // priority: Lower values indicate higher priority. In this case, the rule has a priority of 100.
-      //     priority: 100
-      //     access: 'Allow'
-      //     // direction: Indicates the direction of the traffic. 'Inbound' means the rule applies to incoming traffic.
-      //     direction: 'Inbound'
-      //     protocol: 'Tcp'
-      //     sourcePortRange: '*'
-      //     // destinationPortRange: Specifies the destination port range for the traffic. In this example, it is set to '22', which is the default port for SSH
-      //     // should it be '3389'
-      //     destinationPortRange: '22' // Customize for SSH or RDP port
-      //     // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
-      //     sourceAddressPrefixes: [
-      //       // Add trusted source IP addresses/ranges
-      //       // '10.20.20.0/24'
-      //       // '10.10.10.0/24'
-      //       '85.149.106.77'
-      //     ]
-      //     // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
-      //     destinationAddressPrefixes: [
-      //       // Customize for management subnet address range
-      //       vnet_addressPrefixes_webapp
-      //     ]
-      //   }
-      // }
-      // Add additional security rules as needed
-      // {
-      //   name: 'specific-inbound-allow'
-      //   properties: {
-      //     priority: 200
-      //     direction: 'Inbound'
-      //     access: 'Allow'
-      //     protocol: '*'
-      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     description: 'Allow specific IP address'
-      //   }
-      // }
-
-      // // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
-
-      // {
-      //   name: 'specific-outbound-allow'
-      //   properties: {
-      //     priority: 200
-      //     direction: 'Outbound'
-      //     access: 'Allow'
-      //     protocol: '*'
-      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     description: 'Allow specific IP address'
-      //   }
-      // }
       {
         name: 'HTTPS-rule'
         properties: {
@@ -712,8 +552,9 @@ output nsgWebAppName string = nsgWebApp.name
 /* -------------------------------------------------------------------------- */
 /*                     Public IP                                              */
 /* -------------------------------------------------------------------------- */
-// managementPublicIP: The management public IP resource is created next. It provides a 
-// public IP address for the management server, allowing it to be accessible from the internet. 
+// The WebAppPublicIP resource provides a public IP address for the web server, allowing it 
+// to be accessible from the internet. It allocates a static IP address and can optionally 
+// configure DNS settings.
 // Public IP resource does not have any dependencies on other resources.
 
 resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
@@ -731,17 +572,14 @@ output WebAppPublicIPName string = WebAppPublicIP.name
 output WebAppPublicIPID string = WebAppPublicIP.id
 
 output webAppPublicIpAddress string = WebAppPublicIP.properties.ipAddress
-output webAppDnsDomainNameLabel string = WebAppPublicIP.properties.dnsSettings.domainNameLabel
+// output webAppDnsDomainNameLabel string = WebAppPublicIP.properties.dnsSettings.domainNameLabel
 
 /* -------------------------------------------------------------------------- */
 /*                     Network Interface Card                                 */
 /* -------------------------------------------------------------------------- */
-// managementNetworkInterface: The management network interface is defined next. It depends on the 
-// managementNSG because it needs the NSG's configuration to associate the security rules with the 
-// network interface. By placing the network interface definition here, we ensure that the NSG is created
-//  and its properties are accessible.
-
-// The network interface is responsible for connecting the resource to the VNet and a specific subnet within the VNet.
+// The WebAppNetworkInterface resource creates a network interface for the web application. 
+// It connects the web application resource to the VNet and assigns it a private 
+// IP address from the subnet. It depends on the previously created NSG for network security configurations.
 
 resource WebAppNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' = {
   name: nicName_webapp
@@ -773,10 +611,9 @@ output nic_webappID string = WebAppNetworkInterface.id
 /* -------------------------------------------------------------------------- */
 /*                     PEERING                                                */
 /* -------------------------------------------------------------------------- */
-// peering: To connect the VNet for management server and the VNet for application, we can establish VNet peering.
-// VNet peering enables virtual machines and other resources in one VNet to communicate with resources in the peered VNet, 
-// as if they were part of the same network.
-
+// The vnetwebappvnetmngnt resource establishes VNet peering between the web application 
+// VNet and the management VNet. VNet peering enables communication between resources in 
+// different VNets, allowing them to access each other's resources.
 // ToDo: VnetPeering to connect this webapp vnet to the management vnet
 
 resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2022-11-01' = {
@@ -798,23 +635,19 @@ output vnetWebAppVnetMngnPEERINGId string = vnetwebappvnetmngnt.id
 /* -------------------------------------------------------------------------- */
 /*                     Virtual Machine / Server                               */
 /* -------------------------------------------------------------------------- */
-// managementVirtualMachine: Finally, the management virtual machine resource is defined. It depends on 
-// the managementNetworkInterface because it requires a network interface to be associated with the virtual 
+// Defines the virtual machine/server for the web application.
+
+// WebAppVirtualMachine: Finally, the WebApp virtual machine resource is defined. It depends on 
+// the WebAppNetworkInterface because it requires a network interface to be associated with the virtual 
 // machine. By placing the virtual machine definition last, we ensure that all the necessary dependencies, 
 // such as the network interface, NSG, and subnet, are created and available.
-
-// ToDo: Management server is a WINDOWS SERVER
-// ToDo: Web server is a a LINUX SERVER
-// ToDo: Make a key vault first for the 'All VM disks must be encrypted.'
-// ToDo: Connect Availability Set resource
-// resource VMManagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
-//   name: 
-//   location: 
-// }
 
 /* -------------------------------------------------------------------------- */
 /*                              Key Vault                                     */
 /* -------------------------------------------------------------------------- */
+// Creates a key vault to store encryption keys for VM disks.
+// The keyVault resource creates a Key Vault, which is a secure storage container for 
+// cryptographic keys, secrets, and certificates. 
 
 var keyVaultName = 'mykeyvault${uniqueString(resourceGroup().id)}'
 
@@ -864,6 +697,10 @@ output keyVaultURI string = keyVault.properties.vaultUri
 /* -------------------------------------------------------------------------- */
 /*                              Key Vault Key                                 */
 /* -------------------------------------------------------------------------- */
+// The keyKeyVault resource creates a Key Vault Key within the Key Vault. This represents a 
+// cryptographic key stored and managed within Azure Key Vault. It specifies the attributes 
+// and properties of the key, such as enabling it, setting the key size to 2048 bits, and 
+// specifying the key type as RSA.
 
 // Reference: https://learn.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/keys?pivots=deployment-language-bicep#keyattributes
 
@@ -887,50 +724,8 @@ output keyKeyVaultID string = keyKeyVault.id
 output keyKeyVaultName string = keyKeyVault.name
 
 /* -------------------------------------------------------------------------- */
-/*                              DOCUMENTATION                                 */
+/*                              TODO                                          */
 /* -------------------------------------------------------------------------- */
-
-// Parameters:
-
-// - adminUsername: The username for the admin account.
-// - adminPassword: The password for the admin account.
-// - vmNamePrefix: The prefix to use for VM names.
-// - location: The location for all resources.
-// - vmSize: The size of the virtual machines.
-
-// Variables:
-
-// - availabilitySetName: The name of the availability set.
-// - storageAccountType: The type of the storage account.
-// - storageAccountName: The name of the storage account.
-// - virtualNetworkName: The name of the virtual network.
-// - subnetName: The name of the backend subnet.
-// - loadBalancerName: The name of the internal load balancer.
-// - networkInterfaceName: The name of the network interface.
-// - subnetRef: The reference to the subnet.
-// - numberOfInstances: The number of VM instances.
-
-// Resources:
-
-// - storageAccount: Deploys a storage account for VM disks and backups.
-// - availabilitySet: Deploys an availability set for high availability and fault tolerance.
-// - virtualNetwork: Deploys a virtual network for network isolation.
-// - subnetManagement: Deploys a subnet for the management server.
-// - subnetApplication: Deploys a subnet for the application server.
-// - nsgManagementSubnet: Deploys a network security group for the management subnet.
-// - nsgApplicationSubnet: Deploys a network security group for the application subnet.
-// - networkInterface: Deploys network interfaces for the VM instances.
-// - loadBalancer: Deploys an internal load balancer for traffic distribution.
-// - vm: Deploys the virtual machines.
-
-// Additional resources:
-
-// - publicIPAddress: Deploys a public IP address for the management server.
-// - managementNetworkInterface: Deploys a network interface for the management server.
-// - managementNsgRuleSSH: Configures an NSG rule to allow SSH access to the management server.
-// - managementNsgRuleRDP: Configures an NSG rule to allow RDP access to the management server.
-// - bootstrapStorageAccount: Deploys a storage account to store bootstrap and post-deployment scripts.
-// - backupSolution: Deploys the backup solution for the VMs.
 
 // # Deployment Outputs and Artifacts
 
