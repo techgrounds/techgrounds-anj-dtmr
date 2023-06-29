@@ -25,7 +25,7 @@ Optional but not needed in this project:
 - [ ] Azure Service Principal (optional): In certain scenarios, you might need to create an Azure Service Principal to authenticate and authorize access to your Azure resources. This is commonly used when integrating Bicep deployments into automated pipelines or when deploying resources to separate Azure tenants or subscriptions.
 - [ ] Bicep CLI (optional): Install the Bicep CLI, which is the command-line tool used to compile and deploy Bicep files. The CLI is available for different operating systems (Windows, macOS, Linux) and can be downloaded from the official Bicep GitHub repository or installed through package managers like Homebrew (macOS) or Chocolatey (Windows).
 
-## Instructions for setting up the environment for this project
+## Setting up the environment for this project
 
 To set up your development environment for working with Bicep, follow these instructions:
 
