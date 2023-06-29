@@ -20,3 +20,6 @@ According to the design of the architecture:
 - "Post-deployment scripts in an Azure storage account" means use an Azure storage account for post-deployment scripts, providing necessary storage capabilities to host the script files.
 
 ## My v1.0 Project Architecture
+
+
+![image info](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/06_diagram/cloud_architecture.drawio.png)
