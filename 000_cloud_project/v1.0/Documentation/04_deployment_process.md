@@ -12,7 +12,7 @@ Let's start deploying the Bicep project using a bash script (`deploy.sh`), you c
 
 1. Clone the [Bicep project repository](https://github.com/techgrounds/techgrounds-anj-dtmr). Read the [Getting Started](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/02_getting_started.md) for prerequisites, how to set up the environment and cloning instructions.
    
-2. Open a terminal or command-line interface and navigate to your Bicep project directory. The v1.0 bicep files are saved as 000_cloud_project/v1.0/bicep_files. From there you can proceed to the next step.
+2. Open a terminal or command-line interface and navigate to your Bicep project directory. The v1.0 bicep files are saved as techgrounds-anj-dtmr/000_cloud_project/v1.0/bicep_files. From there you can proceed to the next step.
 
 ```bash
 cd techgrounds-anj-dtmr/000_cloud_project/v1.0/bicep_files
