@@ -11,12 +11,16 @@ For this project, I created a custom deployment script using the Azure CLI to au
 Let's start deploying the Bicep project using a bash script (`deploy.sh`), you can follow these steps:
 
 1. Clone the [Bicep project repository](https://github.com/techgrounds/techgrounds-anj-dtmr). Read the [Getting Started](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/02_getting_started.md) for prerequisites, how to set up the environment and cloning instructions.
+
+Note: The main.bicep and deploy.sh is saved at 000_cloud_project/v1.0/bicep_files
    
-2. Open a terminal or command-line interface and navigate to your Bicep project directory. The v1.0 bicep files are saved as techgrounds-anj-dtmr/000_cloud_project/v1.0/bicep_files. From there you can proceed to the next step.
+2. Open a terminal or command-line interface and navigate to the Bicep project directory. 
 
 ```bash
-cd techgrounds-anj-dtmr/000_cloud_project/v1.0/bicep_files
+cd 000_cloud_project/v1.0/bicep_files
 ```
+
+From here you can proceed to the next step.
 
 3. Run the following command to make the `deploy.sh` script executable:
 
