@@ -236,32 +236,37 @@ output WebAppPublicIPID string = WebAppPublicIP.id
 /* -------------------------------------------------------------------------- */
 /*                     Network Interface Card                                 */
 /* -------------------------------------------------------------------------- */
-// NetworkInterface: The network interface is defined next. It depends on the 
-// NSG because it needs the NSG's configuration to associate the security rules with the 
-// network interface. By placing the network interface definition here, we ensure that the NSG is created
-//  and its properties are accessible.
+// The WebAppNetworkInterface resource creates a network interface for the web application. 
+// It connects the web application resource to the VNet and assigns it a private 
+// IP address from the subnet. It depends on the previously created NSG for network security configurations.
 
-// The network interface is responsible for connecting the resource to the VNet and a specific subnet within the VNet.
+var nsgWebAppID = nsgWebApp.id
 
 resource WebAppNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' = {
   name: nicName_webapp
   location: location
-  dependsOn: [
-    nsgWebApp
-  ]
+  // dependsOn: [
+  //   nsgWebApp
+  // ]
   properties: {
     ipConfigurations: [
       {
         name: IPConfigName_webapp
         properties: {
           subnet: {
+            // The ID is written like this because I wrote down the subnet inside the vnet
             id: '${vnetWebApp.id}/subnets/${subnetName_webapp}'
           }
           privateIPAllocationMethod: 'Dynamic'
-          publicIPAddress: WebAppPublicIP
+          publicIPAddress: {
+            id: WebAppPublicIP.id
+          }
         }
       }
     ]
+    networkSecurityGroup: {
+      id: nsgWebAppID
+    }
   }
 }
 
