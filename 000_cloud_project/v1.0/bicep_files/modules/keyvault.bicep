@@ -344,3 +344,86 @@ output keyKeyVaultName string = keyKeyVault.name
 
 // output diskEncryptionSetName string = diskEncryptionSet.name
 // output diskEncryptionSetID string = diskEncryptionSet.id
+
+// SUBMITTED V1.0
+
+// /* -------------------------------------------------------------------------- */
+// /*                              Key Vault                                     */
+// /* -------------------------------------------------------------------------- */
+// // Creates a key vault to store encryption keys for VM disks.
+// // The keyVault resource creates a Key Vault, which is a secure storage container for 
+// // cryptographic keys, secrets, and certificates. 
+
+// var keyVaultName = 'mykeyvault${uniqueString(resourceGroup().id)}'
+
+// resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
+//   name: keyVaultName
+//   // Find out if this key vault should be a child of other resources
+//   // parent:
+//   location: location
+//   properties: {
+//     // stock-keeping unit refers to the pricing tier or level of service for the Key Vault instance.
+//     sku: {
+//       family: 'A'
+//       // 'standard' SKU is typically more cost-effective compared to higher-tier SKUs. If budget is a consideration and the desired features of the 'standard' SKU meet the project's requirements, it can be a suitable choice.
+//       name: 'standard'
+//     }
+//     tenantId: subscription().tenantId
+//     enabledForDeployment: true
+//     enableSoftDelete: true
+//     softDeleteRetentionInDays: 7
+//     // enablePurgeProtection: false
+//     enabledForTemplateDeployment: true
+//     createMode: 'default'
+//     // enableRbacAuthorization: true
+//     // publicNetworkAccess: 'disabled'
+//     accessPolicies: [
+//       {
+//         objectId: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
+//         tenantId: subscription().tenantId
+//         permissions: {
+//           keys: [
+//             'all'
+//           ]
+//         }
+//       }
+//     ]
+//   }
+// }
+
+// /* -------------------------------------------------------------------------- */
+// /*                              OUTPUT KEY VAULT                              */
+// /* -------------------------------------------------------------------------- */
+
+// output keyVaultName string = keyVaultName
+// output keyVaultID string = keyVault.id
+// output keyVaultURI string = keyVault.properties.vaultUri
+
+// /* -------------------------------------------------------------------------- */
+// /*                              Key Vault Key                                 */
+// /* -------------------------------------------------------------------------- */
+// // The keyKeyVault resource creates a Key Vault Key within the Key Vault. This represents a 
+// // cryptographic key stored and managed within Azure Key Vault. It specifies the attributes 
+// // and properties of the key, such as enabling it, setting the key size to 2048 bits, and 
+// // specifying the key type as RSA.
+
+// // Reference: https://learn.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/keys?pivots=deployment-language-bicep#keyattributes
+
+// resource keyKeyVault 'Microsoft.KeyVault/vaults/keys@2022-07-01' = {
+//   name: 'keyVaultKey'
+//   parent: keyVault
+//   properties: {
+//     attributes: {
+//       enabled: true
+//     }
+//     keySize: 2048 // For example: 2048, 3072, or 4096 for RSA.
+//     kty: 'RSA'
+//   }
+// }
+
+// /* -------------------------------------------------------------------------- */
+// /*                              OUTPUT KEY                                    */
+// /* -------------------------------------------------------------------------- */
+
+// output keyKeyVaultID string = keyKeyVault.id
+// output keyKeyVaultName string = keyKeyVault.name
