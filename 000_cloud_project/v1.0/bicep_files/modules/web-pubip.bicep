@@ -27,15 +27,20 @@ var DNSdomainNameLabel_webapp = 'webapp-server'
 /* -------------------------------------------------------------------------- */
 /*                     Public IP                                              */
 /* -------------------------------------------------------------------------- */
-// managementPublicIP: The management public IP resource is created next. It provides a 
-// public IP address for the management server, allowing it to be accessible from the internet. 
+// The WebAppPublicIP resource provides a public IP address for the web server, allowing it 
+// to be accessible from the internet. It allocates a static IP address and can optionally 
+// configure DNS settings.
 // Public IP resource does not have any dependencies on other resources.
 
 resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
   name: publicIpName_webapp
   location: location
+  sku: {
+    name: 'Basic'
+  }
   properties: {
     publicIPAllocationMethod: 'Static'
+    publicIPAddressVersion: 'IPv4'
     dnsSettings: {
       domainNameLabel: DNSdomainNameLabel_webapp
     }
