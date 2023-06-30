@@ -16,6 +16,20 @@ Een standup is bedoeld om in 15 minuten afgerond te hebben. Zorg ervoor dat jij 
 Team Azure:
 
 - Jenny:
+- Roan:
+- Akram:
+- Jon:
+- Sjoerd:
+- Rogier:
+- Angeline:
+
+## Questions
+
+1. Wat heb ik gedaan? Wat heb ik bereikt sinds de vorige daily standup? What did you do the last day?
+2. Wat ga ik doen? Wat ga ik vandaag bereiken? What are you going to do today?
+3. Loop ik ergens tegenaan? Heb ik hierbij hulp nodig? kan het team me daarbij helpen? Wat is je energie-niveau vandaag? What are the most pressing issues you are facing? And do you need help?
+
+- Jenny:
 - Roan: vmss connection is heel lastig met db, verdipen met encryptie
 - Akram: werkende key vault krijg, servers staan
 - Jon: peering web server, proberen zoveel mogelijk af te krijgen voor v1.0
