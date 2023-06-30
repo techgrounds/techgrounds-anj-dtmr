@@ -61,3 +61,5 @@ Best practices recommend implementing proper network segmentation and isolation 
 By following this approach, you can enhance the security posture of your infrastructure and reduce the potential risks associated with having both the management server and web server in the same storage account.
 
 I'll leave this decision here until the next version's requirements and move on to building the web server today and tomorrow.
+
+I've successfully deployed a web server with a storage account and private container.
