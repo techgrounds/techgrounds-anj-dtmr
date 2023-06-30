@@ -324,7 +324,7 @@ var storageAccountManagementConnectionStringBlobEndpoint = storageAccountManagem
 
 @secure()
 @description('The administrator username.')
-param adminUsername string
+param adminUsernameMngmt string
 
 @secure()
 @description('The administrator password.')
@@ -347,7 +347,7 @@ resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
     }
     osProfile: {
       computerName: virtualMachineName_mngt
-      adminUsername: adminUsername
+      adminUsername: adminUsernameMngmt
       adminPassword: adminPassword
     }
     storageProfile: {
@@ -432,7 +432,7 @@ var nicName_webapp = 'webapp-nic'
 // addressPrefixes
 var vnet_addressPrefixes_webapp = '10.10.10.0/24'
 // // DNS
-// var DNSdomainNameLabel_webapp = 'webapp-server'
+var DNSdomainNameLabel_webapp = 'webapp-server'
 // IP config
 var IPConfigName_webapp = 'webapp-ipconfig'
 
@@ -466,6 +466,8 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
         name: subnetName_webapp
         properties: {
           addressPrefix: vnet_addressPrefixes_webapp
+          privateEndpointNetworkPolicies: 'Enabled'
+          privateLinkServiceNetworkPolicies: 'Enabled'
           // By associating an NSG with a subnet, we can enforce network-level security policies for the resources within that subnet.
           networkSecurityGroup: {
             id: resourceId('Microsoft.Network/networkSecurityGroups', nsgName_webapp)
@@ -528,17 +530,19 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
           direction: 'Inbound'
         }
       }
-      // Web/App Server: 10.10.10.0/24
+      // // Management Server: 10.20.20.0/24
+      // // Web/App Server: 10.10.10.0/24
       {
         name: 'SSH-rule'
         properties: {
           protocol: 'TCP'
-          sourceAddressPrefix: '10.10.10.10/32'
+          // Enable the NSG rules to allow SSH connections only from the admin/management server.
+          sourceAddressPrefix: '10.20.20.10/32'
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
           destinationPortRange: '22'
           access: 'Allow'
-          priority: 1200
+          priority: 100
           direction: 'Inbound'
         }
       }
@@ -560,11 +564,15 @@ output nsgWebAppName string = nsgWebApp.name
 resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
   name: publicIpName_webapp
   location: location
+  sku: {
+    name: 'Basic'
+  }
   properties: {
     publicIPAllocationMethod: 'Static'
-    // dnsSettings: {
-    //   domainNameLabel: DNSdomainNameLabel_webapp
-    // }
+    publicIPAddressVersion: 'IPv4'
+    dnsSettings: {
+      domainNameLabel: DNSdomainNameLabel_webapp
+    }
   }
 }
 
@@ -581,12 +589,14 @@ output webAppPublicIpAddress string = WebAppPublicIP.properties.ipAddress
 // It connects the web application resource to the VNet and assigns it a private 
 // IP address from the subnet. It depends on the previously created NSG for network security configurations.
 
+var nsgWebAppID = nsgWebApp.id
+
 resource WebAppNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' = {
   name: nicName_webapp
   location: location
-  dependsOn: [
-    nsgWebApp
-  ]
+  // dependsOn: [
+  //   nsgWebApp
+  // ]
   properties: {
     ipConfigurations: [
       {
@@ -603,10 +613,14 @@ resource WebAppNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01'
         }
       }
     ]
+    networkSecurityGroup: {
+      id: nsgWebAppID
+    }
   }
 }
 
-output nic_webappID string = WebAppNetworkInterface.id
+output WebAppNetworkInterfaceName string = WebAppNetworkInterface.name
+output WebAppNetworkInterfaceID string = WebAppNetworkInterface.id
 
 /* -------------------------------------------------------------------------- */
 /*                     PEERING                                                */
@@ -631,7 +645,6 @@ resource vnetwebappvnetmngnt 'Microsoft.Network/virtualNetworks/virtualNetworkPe
 }
 
 output vnetWebAppVnetMngnPEERINGId string = vnetwebappvnetmngnt.id
-
 // /* -------------------------------------------------------------------------- */
 // /*                     WEB APP - STORAGE                                      */
 // /* -------------------------------------------------------------------------- */
@@ -700,16 +713,6 @@ output storageAccountWebAppConnectionStringBlobEndpoint string = storageAccountW
 output containerWebAppName string = containerWebApp.name
 output containerWebAppID string = containerWebApp.id
 output containerWebAppUrl string = containerWebApp.properties.publicAccess
-
-/* -------------------------------------------------------------------------- */
-/*                     WEB APP - Virtual Machine / Server                     */
-/* -------------------------------------------------------------------------- */
-// Defines the virtual machine/server for the web application.
-
-// WebAppVirtualMachine: Finally, the WebApp virtual machine resource is defined. It depends on 
-// the WebAppNetworkInterface because it requires a network interface to be associated with the virtual 
-// machine. By placing the virtual machine definition last, we ensure that all the necessary dependencies, 
-// such as the network interface, NSG, and subnet, are created and available.
 
 /* -------------------------------------------------------------------------- */
 /*                              Key Vault                                     */
@@ -791,6 +794,126 @@ resource keyKeyVault 'Microsoft.KeyVault/vaults/keys@2022-07-01' = {
 
 output keyKeyVaultID string = keyKeyVault.id
 output keyKeyVaultName string = keyKeyVault.name
+
+/* -------------------------------------------------------------------------- */
+/*                     WEB APP - Virtual Machine / Server                     */
+/* -------------------------------------------------------------------------- */
+// Defines the virtual machine/server for the web application.
+
+// WebAppVirtualMachine: Finally, the WebApp virtual machine resource is defined. It depends on 
+// the WebAppNetworkInterface because it requires a network interface to be associated with the virtual 
+// machine. By placing the virtual machine definition last, we ensure that all the necessary dependencies, 
+// such as the network interface, NSG, and subnet, are created and available.
+
+// Resource: 
+// - https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-bicep?tabs=CLI
+// - https://medium.com/codex/how-to-create-a-linux-virtual-machine-with-azure-bicep-template-e22f50f2baea
+
+// // adminUsername: The administrator username for the management virtual machine/server.
+// // adminPassword: The administrator password for the management virtual machine/server.
+
+var virtualMachineName_webapp = 'vmwebapp'
+var virtualMachineSize_webapp = 'Standard_B1ms'
+// var virtualMachineSize_webapp = 'Standard_B2s'
+
+@description('Username for the Virtual Machine.')
+// @secure()
+param adminUsername string
+
+@description('Type of authentication to use on the Virtual Machine. SSH key is recommended.')
+@allowed([
+  'sshPublicKey'
+  'password'
+])
+param authenticationType string = 'password'
+@description('SSH Key or password for the Virtual Machine. SSH key is recommended.')
+@secure()
+param adminPasswordOrKey string
+
+var linuxConfiguration = {
+  disablePasswordAuthentication: true
+  ssh: {
+    publicKeys: [
+      {
+        path: '/home/${adminUsername}/.ssh/authorized_keys'
+        keyData: adminPasswordOrKey
+      }
+    ]
+  }
+}
+
+// @description('Security Type of the Virtual Machine.')
+// @allowed([
+//   'Standard'
+//   'TrustedLaunch'
+// ])
+// param securityType string = 'TrustedLaunch'
+// param securityType string = 'Standard'
+// var securityProfileJson = {
+//   uefiSettings: {
+//     secureBootEnabled: true
+//     vTpmEnabled: true
+//   }
+//   securityType: securityType
+// }
+
+var storageAccountWebAppConnectionStringBlobEndpoint = storageAccountWebApp.properties.primaryEndpoints.blob
+
+resource VMWebApp 'Microsoft.Compute/virtualMachines@2022-11-01' = {
+  name: virtualMachineName_webapp
+  location: location
+  // dependsOn: [
+  //   WebAppNetworkInterface
+  // ]
+  properties: {
+    diagnosticsProfile: {
+      bootDiagnostics: {
+        enabled: true
+        storageUri: storageAccountWebAppConnectionStringBlobEndpoint
+      }
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: WebAppNetworkInterface.id
+        }
+      ]
+    }
+    hardwareProfile: {
+      vmSize: virtualMachineSize_webapp
+    }
+    storageProfile: {
+      imageReference: {
+        publisher: 'Canonical'
+        offer: 'UbuntuServer'
+        sku: '18.04-LTS'
+        version: 'latest'
+      }
+      osDisk: {
+        createOption: 'FromImage'
+        managedDisk: {
+          storageAccountType: 'Standard_LRS'
+        }
+      }
+    }
+    osProfile: {
+      computerName: virtualMachineName_webapp
+      adminUsername: adminUsername
+      adminPassword: adminPasswordOrKey
+      linuxConfiguration: ((authenticationType == 'password') ? null : linuxConfiguration)
+    }
+    // securityProfile: ((securityType == 'TrustedLaunch') ? securityProfileJson : null)
+
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                     WEB APP - OUTPUT                                       */
+/* -------------------------------------------------------------------------- */
+
+output VMWebAppadminUsername string = adminUsername
+output hostname string = publicIpName_webapp
+output sshCommand string = 'ssh ${adminUsername}@${WebAppPublicIP.properties.dnsSettings.fqdn}'
 
 // /* -------------------------------------------------------------------------- */
 // /*                     POSTDEPLOYMENTSCRIPT - STORAGE                         */
