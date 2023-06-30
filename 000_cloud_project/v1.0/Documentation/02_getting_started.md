@@ -74,8 +74,8 @@ Here's the official documentation how to [Install Bicep tools](https://learn.mic
 2. Choose a cloning method:
    
 - If you want to download the repository's v1.0 release. Click on the 'tag' button on the repository page or click the '[v1.0](https://github.com/techgrounds/techgrounds-anj-dtmr/releases/tag/v1.0)' under the 'Releases' below the About, and then select which file you want to download.
-- If you want to clone the repository using a [Git](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-- If you want to clone the repository using a [GitHub Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop)
+- If you want to clone the repository using a [Git](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+- If you want to clone the repository using a [GitHub Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
 - If you want to download the repository as a ZIP file without using Git, click on the "Code" button on the repository page, and then select "Download ZIP". This option allows you to download the repository as a compressed ZIP file without the version control capabilities of Git.
 
 3. Access the downloaded repository:
