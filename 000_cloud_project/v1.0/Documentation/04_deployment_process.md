@@ -15,7 +15,7 @@ Let's start deploying the Bicep project using a bash script (`deploy.sh`), you c
 2. Open a terminal or command-line interface and navigate to your Bicep project directory. The v1.0 bicep files are saved as 000_cloud_project/v1.0/bicep_files. From there you can proceed to the next step.
 
 ```bash
-cd 000_cloud_project/v1.0/bicep_files
+cd techgrounds-anj-dtmr/000_cloud_project/v1.0/bicep_files
 ```
 
 3. Run the following command to make the `deploy.sh` script executable:
