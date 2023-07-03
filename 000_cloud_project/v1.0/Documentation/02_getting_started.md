@@ -87,4 +87,4 @@ Now you have successfully cloned or downloaded the Bicep project repository. You
 
 The project root folder is 000_cloud_project/v1.0.
 
-Go back to the main [README.md]() for the next steps on documentation or go to [Deployment Process]() to start deploying Azure resources.
+Go back to the main [README.md](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.0) for the next steps on documentation or go to [Deployment Process](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/04_deployment_process.md) to start deploying Azure resources.
