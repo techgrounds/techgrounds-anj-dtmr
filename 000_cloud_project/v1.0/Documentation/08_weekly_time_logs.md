@@ -554,7 +554,9 @@ Wat zijn jou wins vandaag?-----
 
 ---
 
-June 27, 2023 Monday
+# Week 4
+
+June 26, 2023 Monday
 
 ### Dagverslag (1 zin)
 
@@ -676,7 +678,7 @@ Wat zijn jou wins vandaag?-----
 
 ---
 
-June , 2023 day
+June 29, 2023 Thursday
 
 ### Dagverslag (1 zin)
 
@@ -684,6 +686,7 @@ Wat zijn jou wins vandaag?-----
 
 - Successfully have a working deployed web server
 - Documentation is also finished
+- Apache server is working on port 80 using public ip and dns
 
 ### Obstakels & Oplossingen
 
