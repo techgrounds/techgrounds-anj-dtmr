@@ -4,7 +4,8 @@ Here you may find **all the projects** I did during the training
 
 ## Projects
 
-[Cloud Portfolio Project](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project)
+[Cloud Project v1.0](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.0)
+[Cloud Project v1.1](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project/v1.1)
 
 **Week 1:**
 
