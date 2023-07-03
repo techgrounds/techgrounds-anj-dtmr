@@ -26,7 +26,7 @@ This file:
 
 ## File and Directory Purpose
 
-- README.md: The readme file of the Root Directory [000_cloud_project](https://github.com/techgrounds/techgrounds-anj-dtmr/tree/main/000_cloud_project) provides an overview of the project, its purpose, and instructions on how to use or contribute to the project. It includes information on prerequisites, setup instructions, and deployment steps.
+- README.md: The readme file of the Root Directory [000_cloud_project/v1.0](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/README.md) provides an overview of the project, its purpose, and instructions on how to use or contribute to the project. It includes information on prerequisites, setup instructions, and deployment steps.
 
 - [main.bicep](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/bicep_files/main.bicep): The main.bicep file is the entry point of the Bicep project. In v1.0, it will contain all the resources that I successfully can deploy. In v1.1 I will develop it into a file where defines the main infrastructure resources and their relationships. It may include imports to other Bicep files or modules.
 
