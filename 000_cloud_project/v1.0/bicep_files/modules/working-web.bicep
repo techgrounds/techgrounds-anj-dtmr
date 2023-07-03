@@ -4,8 +4,8 @@
 
 // az login
 // az account set --subscription 'Cloud Student 1'
-// az group create --name TestRGcloud_project --location westeurope
-// az deployment group create --resource-group TestRGcloud_project --template-file main-vm.bicep
+// az group create --name TestRGcloud_project --location uksouth
+// az deployment group create --resource-group TestRGcloud_project --template-file working-web.bicep
 
 /* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
@@ -504,48 +504,61 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   properties: {
     // security Rule are An array of security rules that define the network traffic rules for the NSG.
     securityRules: [
+      // {
+      //   name: 'HTTPS-rule'
+      //   properties: {
+      //     protocol: 'TCP'
+      //     sourceAddressPrefix: '*'
+      //     destinationAddressPrefix: '*'
+      //     sourcePortRange: '*'
+      //     destinationPortRange: '443'
+      //     access: 'Allow'
+      //     priority: 1200
+      //     direction: 'Inbound'
+      // }
+      // }
+      // {
+      //   name: 'HTTP-rule'
+      //   properties: {
+      //     protocol: 'TCP'
+      //     sourceAddressPrefix: '*'
+      //     destinationAddressPrefix: '*'
+      //     sourcePortRange: '*'
+      //     destinationPortRange: '80'
+      //     access: 'Allow'
+      //     priority: 1100
+      //     direction: 'Inbound'
+      //   }
+      // }
       {
-        name: 'HTTPS-rule'
+        name: 'openPorts80In'
         properties: {
-          protocol: 'TCP'
-          sourceAddressPrefix: '*'
-          destinationAddressPrefix: '*'
-          sourcePortRange: '*'
-          destinationPortRange: '443'
-          access: 'Allow'
-          priority: 1000
+          priority: 200
           direction: 'Inbound'
-        }
-      }
-      {
-        name: 'HTTP-rule'
-        properties: {
-          protocol: 'TCP'
+          access: 'Allow'
+          protocol: 'tcp'
           sourceAddressPrefix: '*'
           destinationAddressPrefix: '*'
           sourcePortRange: '*'
           destinationPortRange: '80'
-          access: 'Allow'
-          priority: 1080
-          direction: 'Inbound'
         }
       }
-      // // Management Server: 10.20.20.0/24
-      // // Web/App Server: 10.10.10.0/24
-      {
-        name: 'SSH-rule'
-        properties: {
-          protocol: 'TCP'
-          // Enable the NSG rules to allow SSH connections only from the admin/management server.
-          sourceAddressPrefix: '10.20.20.10/32'
-          sourcePortRange: '*'
-          destinationAddressPrefix: '*'
-          destinationPortRange: '22'
-          access: 'Allow'
-          priority: 100
-          direction: 'Inbound'
-        }
-      }
+      // // // Management Server: 10.20.20.0/24
+      // // // Web/App Server: 10.10.10.0/24
+      // {
+      //   name: 'SSH-rule'
+      //   properties: {
+      //     protocol: 'TCP'
+      //     // Enable the NSG rules to allow SSH connections only from the admin/management server.
+      //     sourceAddressPrefix: '10.20.20.10/32'
+      //     sourcePortRange: '*'
+      //     destinationAddressPrefix: '*'
+      //     destinationPortRange: '22'
+      //     access: 'Allow'
+      //     priority: 1000
+      //     direction: 'Inbound'
+      //   }
+      // }
     ]
   }
 }
@@ -568,7 +581,7 @@ resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
     name: 'Basic'
   }
   properties: {
-    publicIPAllocationMethod: 'Static'
+    publicIPAllocationMethod: 'Dynamic'
     publicIPAddressVersion: 'IPv4'
     dnsSettings: {
       domainNameLabel: DNSdomainNameLabel_webapp
@@ -714,86 +727,86 @@ output containerWebAppName string = containerWebApp.name
 output containerWebAppID string = containerWebApp.id
 output containerWebAppUrl string = containerWebApp.properties.publicAccess
 
-/* -------------------------------------------------------------------------- */
-/*                              Key Vault                                     */
-/* -------------------------------------------------------------------------- */
-// Creates a key vault to store encryption keys for VM disks.
-// The keyVault resource creates a Key Vault, which is a secure storage container for 
-// cryptographic keys, secrets, and certificates. 
+// /* -------------------------------------------------------------------------- */
+// /*                              Key Vault                                     */
+// /* -------------------------------------------------------------------------- */
+// // Creates a key vault to store encryption keys for VM disks.
+// // The keyVault resource creates a Key Vault, which is a secure storage container for 
+// // cryptographic keys, secrets, and certificates. 
 
-var keyVaultName = 'mykeyvault${uniqueString(resourceGroup().id)}'
+// var keyVaultName = 'mykeyvault${uniqueString(resourceGroup().id)}'
 
-resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
-  name: keyVaultName
-  // Find out if this key vault should be a child of other resources
-  // parent:
-  location: location
-  properties: {
-    // stock-keeping unit refers to the pricing tier or level of service for the Key Vault instance.
-    sku: {
-      family: 'A'
-      // 'standard' SKU is typically more cost-effective compared to higher-tier SKUs. If budget is a consideration and the desired features of the 'standard' SKU meet the project's requirements, it can be a suitable choice.
-      name: 'standard'
-    }
-    tenantId: subscription().tenantId
-    enabledForDeployment: true
-    enableSoftDelete: true
-    softDeleteRetentionInDays: 7
-    // enablePurgeProtection: false
-    enabledForTemplateDeployment: true
-    createMode: 'default'
-    // enableRbacAuthorization: true
-    // publicNetworkAccess: 'disabled'
-    accessPolicies: [
-      {
-        objectId: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
-        tenantId: subscription().tenantId
-        permissions: {
-          keys: [
-            'all'
-          ]
-        }
-      }
-    ]
-  }
-}
+// resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' = {
+//   name: keyVaultName
+//   // Find out if this key vault should be a child of other resources
+//   // parent:
+//   location: location
+//   properties: {
+//     // stock-keeping unit refers to the pricing tier or level of service for the Key Vault instance.
+//     sku: {
+//       family: 'A'
+//       // 'standard' SKU is typically more cost-effective compared to higher-tier SKUs. If budget is a consideration and the desired features of the 'standard' SKU meet the project's requirements, it can be a suitable choice.
+//       name: 'standard'
+//     }
+//     tenantId: subscription().tenantId
+//     enabledForDeployment: true
+//     enableSoftDelete: true
+//     softDeleteRetentionInDays: 7
+//     // enablePurgeProtection: false
+//     enabledForTemplateDeployment: true
+//     createMode: 'default'
+//     // enableRbacAuthorization: true
+//     // publicNetworkAccess: 'disabled'
+//     accessPolicies: [
+//       {
+//         objectId: 'ade71768-d55d-4d4f-a5b1-5d058c571459'
+//         tenantId: subscription().tenantId
+//         permissions: {
+//           keys: [
+//             'all'
+//           ]
+//         }
+//       }
+//     ]
+//   }
+// }
 
-/* -------------------------------------------------------------------------- */
-/*                              OUTPUT KEY VAULT                              */
-/* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /*                              OUTPUT KEY VAULT                              */
+// /* -------------------------------------------------------------------------- */
 
-output keyVaultName string = keyVaultName
-output keyVaultID string = keyVault.id
-output keyVaultURI string = keyVault.properties.vaultUri
+// output keyVaultName string = keyVaultName
+// output keyVaultID string = keyVault.id
+// output keyVaultURI string = keyVault.properties.vaultUri
 
-/* -------------------------------------------------------------------------- */
-/*                              Key Vault Key                                 */
-/* -------------------------------------------------------------------------- */
-// The keyKeyVault resource creates a Key Vault Key within the Key Vault. This represents a 
-// cryptographic key stored and managed within Azure Key Vault. It specifies the attributes 
-// and properties of the key, such as enabling it, setting the key size to 2048 bits, and 
-// specifying the key type as RSA.
+// /* -------------------------------------------------------------------------- */
+// /*                              Key Vault Key                                 */
+// /* -------------------------------------------------------------------------- */
+// // The keyKeyVault resource creates a Key Vault Key within the Key Vault. This represents a 
+// // cryptographic key stored and managed within Azure Key Vault. It specifies the attributes 
+// // and properties of the key, such as enabling it, setting the key size to 2048 bits, and 
+// // specifying the key type as RSA.
 
-// Reference: https://learn.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/keys?pivots=deployment-language-bicep#keyattributes
+// // Reference: https://learn.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/keys?pivots=deployment-language-bicep#keyattributes
 
-resource keyKeyVault 'Microsoft.KeyVault/vaults/keys@2022-07-01' = {
-  name: 'keyVaultKey'
-  parent: keyVault
-  properties: {
-    attributes: {
-      enabled: true
-    }
-    keySize: 2048 // For example: 2048, 3072, or 4096 for RSA.
-    kty: 'RSA'
-  }
-}
+// resource keyKeyVault 'Microsoft.KeyVault/vaults/keys@2022-07-01' = {
+//   name: 'keyVaultKey'
+//   parent: keyVault
+//   properties: {
+//     attributes: {
+//       enabled: true
+//     }
+//     keySize: 2048 // For example: 2048, 3072, or 4096 for RSA.
+//     kty: 'RSA'
+//   }
+// }
 
-/* -------------------------------------------------------------------------- */
-/*                              OUTPUT KEY                                    */
-/* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /*                              OUTPUT KEY                                    */
+// /* -------------------------------------------------------------------------- */
 
-output keyKeyVaultID string = keyKeyVault.id
-output keyKeyVaultName string = keyKeyVault.name
+// output keyKeyVaultID string = keyKeyVault.id
+// output keyKeyVaultName string = keyKeyVault.name
 
 /* -------------------------------------------------------------------------- */
 /*                     WEB APP - Virtual Machine / Server                     */
@@ -858,6 +871,7 @@ var linuxConfiguration = {
 // }
 
 var storageAccountWebAppConnectionStringBlobEndpoint = storageAccountWebApp.properties.primaryEndpoints.blob
+var apache_script = loadFileAsBase64('../../bash/install_apache.sh')
 
 resource VMWebApp 'Microsoft.Compute/virtualMachines@2022-11-01' = {
   name: virtualMachineName_webapp
@@ -866,6 +880,32 @@ resource VMWebApp 'Microsoft.Compute/virtualMachines@2022-11-01' = {
   //   WebAppNetworkInterface
   // ]
   properties: {
+    userData: apache_script
+    hardwareProfile: {
+      vmSize: virtualMachineSize_webapp
+    }
+    osProfile: {
+      computerName: virtualMachineName_webapp
+      adminUsername: adminUsername
+      adminPassword: adminPasswordOrKey
+      linuxConfiguration: ((authenticationType == 'password') ? null : linuxConfiguration)
+    }
+    storageProfile: {
+      imageReference: {
+        publisher: 'Canonical'
+        offer: 'UbuntuServer'
+        sku: '18.04-LTS'
+        version: 'latest'
+      }
+      osDisk: {
+        name: '${virtualMachineName_webapp}_OSDisk'
+        caching: 'ReadWrite'
+        createOption: 'FromImage'
+        managedDisk: {
+          storageAccountType: 'Standard_LRS'
+        }
+      }
+    }
     diagnosticsProfile: {
       bootDiagnostics: {
         enabled: true
@@ -879,29 +919,6 @@ resource VMWebApp 'Microsoft.Compute/virtualMachines@2022-11-01' = {
         }
       ]
     }
-    hardwareProfile: {
-      vmSize: virtualMachineSize_webapp
-    }
-    storageProfile: {
-      imageReference: {
-        publisher: 'Canonical'
-        offer: 'UbuntuServer'
-        sku: '18.04-LTS'
-        version: 'latest'
-      }
-      osDisk: {
-        createOption: 'FromImage'
-        managedDisk: {
-          storageAccountType: 'Standard_LRS'
-        }
-      }
-    }
-    osProfile: {
-      computerName: virtualMachineName_webapp
-      adminUsername: adminUsername
-      adminPassword: adminPasswordOrKey
-      linuxConfiguration: ((authenticationType == 'password') ? null : linuxConfiguration)
-    }
     // securityProfile: ((securityType == 'TrustedLaunch') ? securityProfileJson : null)
 
   }
@@ -914,6 +931,31 @@ resource VMWebApp 'Microsoft.Compute/virtualMachines@2022-11-01' = {
 output VMWebAppadminUsername string = adminUsername
 output hostname string = publicIpName_webapp
 output sshCommand string = 'ssh ${adminUsername}@${WebAppPublicIP.properties.dnsSettings.fqdn}'
+
+/* -------------------------------------------------------------------------- */
+/*                     WEB APP - APACHE                                       */
+/* -------------------------------------------------------------------------- */
+
+// resource vmName_install_apache 'Microsoft.Compute/virtualMachines/extensions@2023-03-01' = {
+//   parent: VMWebApp
+//   name: 'install_apache'
+//   location: location
+//   properties: {
+//     publisher: 'Microsoft.Azure.Extensions'
+//     type: 'CustomScript'
+//     typeHandlerVersion: '2.1'
+//     autoUpgradeMinorVersion: true
+//     settings: {
+//       skipDos2Unix: false
+//       fileUris: [
+//         '000_cloud_project/v1.0/bash/install_apache.sh'
+//       ]
+//     }
+//     protectedSettings: {
+//       commandToExecute: 'bash install_apache.sh'
+//     }
+//   }
+// }
 
 /* -------------------------------------------------------------------------- */
 /*                              TODO                                          */
