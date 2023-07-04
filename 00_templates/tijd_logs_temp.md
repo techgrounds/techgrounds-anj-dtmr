@@ -1,4 +1,4 @@
-Juli , 2023 day
+July , 2023 day
 
 ### Dagverslag (1 zin)
 
