@@ -1,7 +1,12 @@
 # How to proceed from v1.0 requirements to v1.1?
 
-- [ ] Backup v1.0: Before I make any changes, I've created a backup of the existing v1.0 Bicep project. This will ensure that I have a safe copy in case anything goes wrong during the upgrade process.
-- [ ] Understand the Changes: I started by reviewing the release notes or changelog for Bicep version 1.1. This give me insights into the new features, bug fixes, and any breaking changes introduced in the new version. I make sure to understand the implications of these changes for my IaC project.
+## Backup v1.0
+
+- [ ] Before I make any changes, I've created a backup of the existing v1.0 Bicep project. This will ensure that I have a safe copy in case anything goes wrong during the upgrade process.
+
+## Understand the Changes
+
+- [ ] I started by reviewing the release notes or changelog for Bicep version 1.1. This give me insights into the new features, bug fixes, and any breaking changes introduced in the new version. I make sure to understand the implications of these changes for my IaC project.
 
 ## Write the user stories yourself:
 
@@ -37,8 +42,13 @@ Note: Since we don't want to purchase a domain name for everyone, it is difficul
 
 15. As a development team, we will deliver a final presentation to summarize the implemented changes, demonstrate the MVP, and discuss the future direction of the project.
 
-- [ ] Review Breaking Changes: If there are any breaking changes introduced in version 1.1, carefully review them and identify how they impact your existing code. Considerations might include changes to syntax, deprecated features, or modifications to resource types.
-- [ ] Break Down Key Terminologies: As a beginner, it helps me understand the bigger picture by starting to understand every word I encounter.
+## Review Breaking Changes
+
+- [ ] If there are any breaking changes introduced in version 1.1, carefully review them and identify how they impact your existing code. Considerations might include changes to syntax, deprecated features, or modifications to resource types.
+
+## Break Down Key Terminologies
+
+- [ ] As a beginner, it helps me understand the bigger picture by starting to understand every word I encounter.
 
 1. Web Server: A web server is a software or hardware system that serves web content, such as webpages, to clients (users) who request it over the internet.
 
@@ -118,10 +128,16 @@ Connect the web and admin server to the Key Vault to retrieve necessary secrets.
 
 ### July 10 - 14
 
+- [ ] Extend the things I can't finish the last week
+
 ### July 17, 18, 19
+
+- [ ] Documentation and Prepare final presentation
 
 ### July 20
 
-Final Presentation
+- [ ] Final Presentation
 
 ### July 21
+
+- [ ] Graduation
