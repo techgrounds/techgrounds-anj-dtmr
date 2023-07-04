@@ -96,9 +96,11 @@ Resources: https://learn.microsoft.com/en-us/events/learn-events/learnlive-iac-a
 
 - [ ] NSG (management)
 
-- [ ] Web server VMSS with application gateway as load balancer v1.1 (- Deploy the VM's to an Availability Set?????)
+- [ ] Deploy a SQL Database that is connected to both the web server and admin/management server.
 
 5.
+
+- [ ] Web server VMSS with application gateway as load balancer v1.1 (- Deploy the VM's to an Availability Set?????)
 
 - NSG (web) and apache
 
@@ -114,8 +116,6 @@ Resources: https://learn.microsoft.com/en-us/events/learn-events/learnlive-iac-a
 - [ ] Application Gateway includes various security features, such as Web Application Firewall (WAF)
 
 7.
-
-- [ ] Deploy a SQL Database that is connected to both the web server and admin/management server.
 
 - [ ] Key Vault, Disk Encryption:
 
