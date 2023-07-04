@@ -13,14 +13,20 @@
 
 // location
 @description('Location for all resources.')
-param location string = resourceGroup().location
+param location string
 
 /* -------------------------------------------------------------------------- */
 /*                     PARAMS & VARS                                          */
 /* -------------------------------------------------------------------------- */
 
 // nsg
-var nsgName = 'management-nsg'
+@description('Name of the management network security group.')
+param nsgName string
+
+// allowedIPAddresses: Array of IP addresses allowed to access the management server.
+@description('Array of IP addresses allowed to access the management server.')
+param allowedIPAddresses array = [ '85.149.106.77' ]
+
 /* -------------------------------------------------------------------------- */
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
@@ -28,8 +34,6 @@ var nsgName = 'management-nsg'
 // because the security rules in the NSG refer to the address prefixes of the management subnet. 
 // By placing the NSG definition next, we ensure that the subnet is available and its properties
 // are accessible when defining the security rules.
-
-param allowedIPAddresses array = [ '85.149.106.77' ]
 
 resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   name: nsgName
@@ -141,8 +145,11 @@ resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
 /* -------------------------------------------------------------------------- */
 /*                     Output                                                 */
 /* -------------------------------------------------------------------------- */
-// ToDo:
-// - add output from other resources
 
+// nsgManagementID: ID of the created management network security group.
+@description('ID of the created management network security group.')
 output nsgManagementID string = nsgManagement.id
+
+// nsgManagementName: Name of the created management network security group.
+@description('Name of the created management network security group.')
 output nsgManagementName string = nsgManagement.name
