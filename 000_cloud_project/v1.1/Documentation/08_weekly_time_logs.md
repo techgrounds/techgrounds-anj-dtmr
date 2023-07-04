@@ -12,12 +12,10 @@ Wat zijn jou wins vandaag?-----
 
 - gelezen de pdf, gaat meer over de web server en health check
 - de v1.0 en v1.1 requirements vergelijken maar ook niets veel gaan veranderen
-- Can I let you see the things that I did for the v1.0 and my planning to take for v1.1
 - ik heb user stories geschreven
 - Planning voor mezelf geschreven
-- over proxy en self-signed certificate gelezen/gekeken
-- morgen wil ik over vmss
-- advies vragen: zal ik eerst een main.bicep maken met module of verder met web server vmss + application gateway/key vault & disk encryption verder of module
+- over key terminologies (proxy en self-signed certificate) gelezen/gekeken
+- advies vragen: zal ik eerst een main.bicep maken met module of verder met web server vmss + application gateway/key vault & disk encryption verder of module. Can I let you see the things that I did for the v1.0 and my planning to take for v1.1
 
 ### Obstakels & Oplossingen
 
@@ -84,6 +82,61 @@ By leveraging the capabilities of the Azure Application Gateway, you can meet th
 
 ### Plans for tomorrow
 
-1. Tomorrow I would like to ask question to the learning coach and my team mates on how to proceed smartly.
+1. Tomorrow I would like to ask question to the learning coach and my team mates on how to proceed smartly. morgen wil ik over vmss beginnen of module??????
+
+---
+
+July 4, 2023 Tuesday
+
+### Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+Important things I've learned from the last year trasitioning to tech are:
+
+1. Make the code works
+2. Follow the best practice (DRY, split your code into smaller, more manageable files)
+
+From v1.0 I did made my code work, learned the syntax, deployment process, understood the infrastracture better than the beginning (like SSH is for internal connections to be secured).
+
+Today I will use Bicep module to follow the best practices. I might be late than my other team, but how would I know better. I'm here to act and learn as I go.
+
+Update: I successfully deployed all management resources using module!!!
+Another update: I successfully deployed a sql db
+
+### Obstakels & Oplossingen
+
+1. At first I thought I need to create all param in main.bicep from all the output I've created from the resources, like the blob endpoint. But all I need is find the right path from the (dot)outputs.
+
+2. Under the storage bicep file, there is a container. I thought I should create another module for container. The easy and correct way is to call it under the params
+3. Asking better questions
+
+- [ ] How shall I confirm if my sql db is connected to the management server and web server?
+- [ ] What are the dependencis of a database?
+
+### Learnings
+
+- [ ] How to use module, outputs, params
+
+- [ ] Today I've learned that a database need a database server, virtual network and firewall rules and key vault.
+
+The dependencies of an Azure SQL Database resource in Bicep:
+
+Azure SQL Server: Typically, an Azure SQL Database is created under an Azure SQL Server. The SQL Server provides the logical container for multiple databases. Therefore, you may need to create the Azure SQL Server resource first and ensure it is provisioned before creating the Azure SQL Database.
+
+Virtual Network and Firewall Rules: If you want to restrict access to your Azure SQL Database to specific networks or IP addresses, you may need to configure the virtual network and firewall rules. In this case, the virtual network and associated firewall rules should be created before creating the Azure SQL Database.
+
+Azure Key Vault: If you plan to store sensitive information, such as connection strings or credentials, securely, you can leverage Azure Key Vault. You may need to create an Azure Key Vault and configure it to store and manage the secrets required for the Azure SQL Database. In this case, the Azure Key Vault should be provisioned and configured before creating the Azure SQL Database.
+
+### Plans for tomorrow
+
+- [ ] apache
+- [ ] Continue with key vault
+- [ ] Data encryption
+- [ ] Write down documentataion on management.bicep and web/app.bicep
+- [ ] Miro planning
+- [ ] VMSS for webserver
+- [ ] Recovery service vault
+- [ ] Database
 
 ---
