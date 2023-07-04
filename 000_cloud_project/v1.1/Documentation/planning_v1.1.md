@@ -92,6 +92,8 @@ v1.1
 
 - [ ] Gebruik maken van module (main.bicep)
 
+Resources: https://learn.microsoft.com/en-us/events/learn-events/learnlive-iac-and-bicep/
+
 - [ ] NSG (management)
 
 - [ ] Web server VMSS with application gateway as load balancer v1.1 (- Deploy the VM's to an Availability Set?????)
