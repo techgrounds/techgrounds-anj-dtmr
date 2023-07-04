@@ -13,16 +13,19 @@
 
 // location
 @description('Location for all resources.')
-param location string = resourceGroup().location
+param location string
 
 /* -------------------------------------------------------------------------- */
 /*                     PARAMS & VARS                                          */
 /* -------------------------------------------------------------------------- */
 
-// public ip
-var publicIpName = 'management-public-ip'
-// DNS
-var DNSdomainNameLabel = 'management-server'
+// publicIpName: Name of the management public IP resource.
+@description('Name of the management public IP resource.')
+param publicIpName string
+
+// DNSdomainNameLabel: Domain name label for the management server.
+@description('Domain name label for the management server.')
+param DNSdomainNameLabel string = 'management-server'
 
 /* -------------------------------------------------------------------------- */
 /*                     Public IP                                              */
@@ -45,9 +48,18 @@ resource managementPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
 /* -------------------------------------------------------------------------- */
 /*                     Output                                                 */
 /* -------------------------------------------------------------------------- */
-
+// managementPublicIPName: Name of the created management public IP resource.
+@description('Name of the created management public IP resource.')
 output managementPublicIPName string = managementPublicIP.name
+
+// managementPublicIPID: ID of the created management public IP resource.
+@description('ID of the created management public IP resource.')
 output managementPublicIPID string = managementPublicIP.id
 
+// managementPublicIPAddress: IP address of the created management public IP resource.
+@description('IP address of the created management public IP resource.')
 output managementPublicIPAddress string = managementPublicIP.properties.ipAddress
+
+// managementDnsDomainNameLabel: Domain name label of the created management public IP resource.
+@description('Domain name label of the created management public IP resource.')
 output managementDnsDomainNameLabel string = managementPublicIP.properties.dnsSettings.domainNameLabel
