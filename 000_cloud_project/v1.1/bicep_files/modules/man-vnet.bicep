@@ -7,42 +7,36 @@
 // az group create --name TestRGcloud_project --location westeurope
 // az deployment group create --resource-group TestRGcloud_project --template-file man-vnet.bicep
 
+// Management Server: 10.20.20.0/24
+// Web/App Server: 10.10.10.0/24
+
 /* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
 /* -------------------------------------------------------------------------- */
 
 // location
 @description('Location for all resources.')
-param location string = resourceGroup().location
-
-/* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/*                              Management                                    */
-/* -------------------------------------------------------------------------- */
-
-// ToDo:
-//  - Adjust this according to requirements
-
-// Management Server: 10.20.20.0/24
-// Web/App Server: 10.10.10.0/24
+param location string
 
 /* -------------------------------------------------------------------------- */
 /*                     PARAMS & VARS                                          */
 /* -------------------------------------------------------------------------- */
 
 // vnet
-var virtualNetworkName = 'management-vnet'
+@description('Name of the virtual network.')
+param virtualNetworkName string
+
 // subnet
-var subnetName = 'management-subnet'
+@description('Name of the subnet within the virtual network.')
+param subnetName string
+
 // nsg
-var nsgName = 'management-nsg'
+@description('Name of the network security group.')
+param nsgName string
+
 // addressPrefixes
-var vnet_addressPrefixes = '10.20.20.0/24'
+@description('Address prefix for the virtual network.')
+param vnet_addressPrefixes string
 
 /* -------------------------------------------------------------------------- */
 /*                     Virtual Network with subnet                            */
@@ -59,6 +53,9 @@ var vnet_addressPrefixes = '10.20.20.0/24'
 // I've created a separate vnet for the management side to isolate it from the other cloud infrastracture
 // This segregation helps improve security and network performance by controlling traffic flow between resources.
 // Within VNet, I created a subnet to further segment the resources inside the vnet like virtual machine for the server
+
+// The Bicep template creates a virtual network with a subnet for the management server. 
+// The subnet is associated with a network security group to enforce network-level security policies.
 
 resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   name: virtualNetworkName
@@ -102,6 +99,14 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
 /*                     Output                                                 */
 /* -------------------------------------------------------------------------- */
 
+@description('Name of the created virtual network.')
 output vnetManagementName string = vnetManagement.name
-// output vnetManagementID string = vnetManagement.id
-output vnetManagementID string = vnetManagement.properties.subnets[0].id
+
+@description('ID of the created virtual network.')
+output vnetManagementID string = vnetManagement.id
+
+@description('Name of the created subnet inside virtual network.')
+output vnetManagementSubnetName string = vnetManagement.properties.subnets[0].name
+
+@description('ID of the subnet within the created virtual network.')
+output vnetManagementSubnetID string = vnetManagement.properties.subnets[0].id
