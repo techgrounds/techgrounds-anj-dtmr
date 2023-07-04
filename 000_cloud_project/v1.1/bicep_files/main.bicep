@@ -4,6 +4,7 @@
 
 // az login
 // az account set --subscription 'Cloud Student 1'
+// cd 000_cloud_project/v1.1/bicep_files
 // az group create --name TestRGcloud_project --location uksouth
 // az deployment group create --resource-group TestRGcloud_project --template-file main.bicep
 
@@ -119,6 +120,17 @@ param adminUsernameMngmnt string
 @description('The administrator password.')
 param adminPasswordMngmnt string = 'Password@321'
 
+param mysqlDBName string = 'mysqlDB'
+
+@description('The administrator username of the SQL logical server.')
+param sqladminLogin string
+
+@description('The administrator password of the SQL logical server.')
+@secure()
+param sqladminLoginPassword string
+
+param sqlVirtualNetworkRulesName string = 'sqlVirtualNetwork'
+
 /* -------------------------------------------------------------------------- */
 /*                              Management                                    */
 /* -------------------------------------------------------------------------- */
@@ -232,5 +244,22 @@ module VMmanagement 'modules/man-vm.bicep' = {
     location: location
     managementNetworkInterfaceID: managementNetworkInterfaceModule.outputs.managementNetworkInterfaceID
     storageAccountManagementConnectionStringBlobEndpoint: storageAccountManagementModule.outputs.storageAccountManagementConnectionStringBlobEndpoint
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                     DATABASE                                               */
+/* -------------------------------------------------------------------------- */
+
+module dbModule 'modules/db.bicep' = {
+  name: mysqlDBName
+  params: {
+    mysqlDBName: mysqlDBName
+    location: location
+    sqladminLogin: sqladminLogin
+    sqladminLoginPassword: sqladminLoginPassword
+    // ToDo: Check how to connect this on web server and management server
+    virtualNetworkName: vnetManagementModule.name
+    sqlVirtualNetworkRulesName: sqlVirtualNetworkRulesName
   }
 }
