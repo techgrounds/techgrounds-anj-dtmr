@@ -11,19 +11,30 @@
 /*                     LOCATION FOR EVERY RESOURCE                            */
 /* -------------------------------------------------------------------------- */
 
-// location
+// location: Location for all resources.
 @description('Location for all resources.')
-param location string = resourceGroup().location
+param location string
+
+/* -------------------------------------------------------------------------- */
+/*                     PARAMS & VARS                                          */
+/* -------------------------------------------------------------------------- */
+
+// ToDo: How to dynamically create a name without hard coding
+// storageAccountManagementPrefix: Prefix for the storage account name.
+
+// storageAccountManagementName: Name of the storage account.
+@description('Name of the storage account.')
+param storageAccountManagementName string
+
+// containerManagementName: Name of the storage container.
+@description('Name of the storage container.')
+param containerManagementName string
 
 // /* -------------------------------------------------------------------------- */
 // /*                     MANAGEMENT SERVER - STORAGE                            */
 // /* -------------------------------------------------------------------------- */
 // The Bicep template includes a section for creating a storage account and a storage container.
 // The storage account is used to store and manage data for the management server.
-
-// ToDo: How to dynamically create a name without hard coding
-param storageAccountManagementPrefix string = 'stgmngmt'
-param storageAccountManagementName string = '${storageAccountManagementPrefix}${uniqueString(resourceGroup().id)}'
 
 resource storageAccountManagement 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   name: storageAccountManagementName
@@ -57,13 +68,10 @@ resource storageAccountManagement 'Microsoft.Storage/storageAccounts@2022-09-01'
 // /* -------------------------------------------------------------------------- */
 //  The storage container is configured to restrict public access.
 
-// ToDo: How to dynamically create a name without hard coding
 // ToDo: For now the container is publicly not accessible, check the requirements for this
-param containerManagementNamePrefix string = 'contmngmt'
-param containerManagementName string = '${containerManagementNamePrefix}${uniqueString(resourceGroup().id)}'
 
 resource containerManagement 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
-  name: '${storageAccountManagementName}/default/${containerManagementName}'
+  name: containerManagementName
   properties: {
     publicAccess: 'None'
   }
@@ -76,10 +84,26 @@ resource containerManagement 'Microsoft.Storage/storageAccounts/blobServices/con
 // /*                     OUTPUT - STORAGE & CONTAINER                           */
 // /* -------------------------------------------------------------------------- */
 
+// storageAccountManagementName: Name of the storage account.
+@description('Name of the storage account.')
 output storageAccountManagementName string = storageAccountManagement.name
+
+// storageAccountManagementID: ID of the storage account.
+@description('ID of the storage account.')
 output storageAccountManagementID string = storageAccountManagement.id
+
+// storageAccountManagementConnectionStringBlobEndpoint: Blob endpoint of the storage account's primary endpoint.
+@description('Blob endpoint of the storage account\'s primary endpoint.')
 output storageAccountManagementConnectionStringBlobEndpoint string = storageAccountManagement.properties.primaryEndpoints.blob
 
+// containerManagementName: Name of the storage container.
+@description('Name of the storage container.')
 output containerManagementName string = containerManagement.name
+
+// containerManagementID: ID of the storage container.
+@description('ID of the storage container.')
 output containerManagementID string = containerManagement.id
+
+// containerManagementUrl: Public access URL of the storage container.
+@description('Public access URL of the storage container.')
 output containerManagementUrl string = containerManagement.properties.publicAccess
