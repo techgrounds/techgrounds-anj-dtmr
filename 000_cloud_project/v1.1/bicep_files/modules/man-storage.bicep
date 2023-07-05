@@ -26,9 +26,9 @@ param location string
 @description('Name of the storage account.')
 param storageAccountManagementName string
 
-// containerManagementName: Name of the storage container.
-@description('Name of the storage container.')
-param containerManagementName string
+// // containerManagementName: Name of the storage container.
+// @description('Name of the storage container.')
+// param containerManagementName string
 
 // /* -------------------------------------------------------------------------- */
 // /*                     MANAGEMENT SERVER - STORAGE                            */
@@ -70,15 +70,15 @@ resource storageAccountManagement 'Microsoft.Storage/storageAccounts@2022-09-01'
 
 // ToDo: For now the container is publicly not accessible, check the requirements for this
 
-resource containerManagement 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
-  name: containerManagementName
-  properties: {
-    publicAccess: 'None'
-  }
-  dependsOn: [
-    storageAccountManagement
-  ]
-}
+// resource containerManagement 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
+//   name: containerManagementName
+//   properties: {
+//     publicAccess: 'None'
+//   }
+//   dependsOn: [
+//     storageAccountManagement
+//   ]
+// }
 
 // /* -------------------------------------------------------------------------- */
 // /*                     OUTPUT - STORAGE & CONTAINER                           */
@@ -96,14 +96,14 @@ output storageAccountManagementID string = storageAccountManagement.id
 @description('Blob endpoint of the storage account\'s primary endpoint.')
 output storageAccountManagementConnectionStringBlobEndpoint string = storageAccountManagement.properties.primaryEndpoints.blob
 
-// containerManagementName: Name of the storage container.
-@description('Name of the storage container.')
-output containerManagementName string = containerManagement.name
+// // containerManagementName: Name of the storage container.
+// @description('Name of the storage container.')
+// output containerManagementName string = containerManagement.name
 
-// containerManagementID: ID of the storage container.
-@description('ID of the storage container.')
-output containerManagementID string = containerManagement.id
+// // containerManagementID: ID of the storage container.
+// @description('ID of the storage container.')
+// output containerManagementID string = containerManagement.id
 
-// containerManagementUrl: Public access URL of the storage container.
-@description('Public access URL of the storage container.')
-output containerManagementUrl string = containerManagement.properties.publicAccess
+// // containerManagementUrl: Public access URL of the storage container.
+// @description('Public access URL of the storage container.')
+// output containerManagementUrl string = containerManagement.properties.publicAccess
