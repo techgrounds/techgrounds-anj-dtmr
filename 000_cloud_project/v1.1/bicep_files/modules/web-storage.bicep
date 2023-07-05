@@ -20,8 +20,8 @@ param location string = resourceGroup().location
 /* -------------------------------------------------------------------------- */
 
 // ToDo: How to dynamically create a name without hard coding
-param storageAccountWebAppPrefix string = 'stgwebapp'
-param storageAccountWebAppName string = '${storageAccountWebAppPrefix}${uniqueString(resourceGroup().id)}'
+
+param storageAccountWebAppName string
 
 // /* -------------------------------------------------------------------------- */
 // /*                     WEB APP - STORAGE                                      */
@@ -64,8 +64,7 @@ resource storageAccountWebApp 'Microsoft.Storage/storageAccounts@2022-09-01' = {
 
 // ToDo: How to dynamically create a name without hard coding
 // ToDo: For now the container is publicly not accessible, check the requirements for this
-param containerWebAppNamePrefix string = 'contwebapp'
-param containerWebAppName string = '${containerWebAppNamePrefix}${uniqueString(resourceGroup().id)}'
+param containerWebAppName string
 
 resource containerWebApp 'Microsoft.Storage/storageAccounts/blobServices/containers@2022-09-01' = {
   name: '${storageAccountWebAppName}/default/${containerWebAppName}'
