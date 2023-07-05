@@ -15,6 +15,9 @@
 @description('Name of the virtual network.')
 param vnetManagementName string
 
+@description('Name of the virtual network.')
+param virtualNetworkName_webapp string
+
 /* -------------------------------------------------------------------------- */
 /*                     PEERING                                                */
 /* -------------------------------------------------------------------------- */
