@@ -20,7 +20,7 @@ param location string = resourceGroup().location
 /* -------------------------------------------------------------------------- */
 
 // nsg
-var nsgName_webapp = 'webapp-nsg'
+param nsgName_webapp string
 
 /* -------------------------------------------------------------------------- */
 /*                     Network Security Group                                 */
