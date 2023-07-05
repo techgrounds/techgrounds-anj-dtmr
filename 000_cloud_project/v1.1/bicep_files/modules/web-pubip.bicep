@@ -20,9 +20,9 @@ param location string = resourceGroup().location
 /* -------------------------------------------------------------------------- */
 
 // public ip
-var publicIpName_webapp = 'webapp-public-ip'
+param publicIpName_webapp string
 // DNS
-var DNSdomainNameLabel_webapp = 'webapp-server'
+param DNSdomainNameLabel_webapp string = 'webapp-server'
 
 /* -------------------------------------------------------------------------- */
 /*                     Public IP                                              */
