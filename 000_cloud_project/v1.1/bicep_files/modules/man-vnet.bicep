@@ -34,9 +34,12 @@ param subnetName string
 @description('Name of the network security group.')
 param nsgName string
 
+resource nsgManagement 'Microsoft.Network/networkSecurityGroups@2022-11-01' existing = {
+  name: nsgName
+}
 // addressPrefixes
-@description('Address prefix for the virtual network.')
-param vnet_addressPrefixes string
+// @description('Address prefix for the virtual network.')
+// param vnet_addressPrefixes string
 
 /* -------------------------------------------------------------------------- */
 /*                     Virtual Network with subnet                            */
@@ -62,8 +65,11 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   location: location
   properties: {
     addressSpace: {
+      // addressPrefixes: [
+      //   vnet_addressPrefixes
+      // ]
       addressPrefixes: [
-        vnet_addressPrefixes
+        '10.20.20.0/24'
       ]
     }
     // I wrote the subnet inside vnet because of best practice
@@ -75,10 +81,11 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
       {
         name: subnetName
         properties: {
-          addressPrefix: vnet_addressPrefixes
+          // addressPrefix: vnet_addressPrefixes
+          addressPrefix: '10.20.20.0/24'
           // By associating an NSG with a subnet, we can enforce network-level security policies for the resources within that subnet.
           networkSecurityGroup: {
-            id: resourceId('Microsoft.Network/networkSecurityGroups', nsgName)
+            id: resourceId('Microsoft.Network/networkSecurityGroups', nsgManagement.name)
           }
           // serviceEndpoints: [
           //   // Add service endpoints if required
