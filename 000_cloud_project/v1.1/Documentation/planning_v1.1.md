@@ -87,18 +87,27 @@ v1.1
 
 ### July 3 - 7
 
-3. Planning
+3.
+
+- [x] Planning
+
 4.
 
-- [ ] Gebruik maken van module (main.bicep)
+- [x] Use module (main.bicep) for management network
 
 Resources: https://learn.microsoft.com/en-us/events/learn-events/learnlive-iac-and-bicep/
 
-- [ ] NSG (management)
+- [x] NSG (management)
 
-- [ ] Deploy a SQL Database that is connected to both the web server and admin/management server.
+- [x] Deploy a SQL Database
 
 5.
+
+- [x] Use module (main.bicep) for web network
+
+- [x] Deploy a SQL Database that is connected to both the web server and admin/management server.
+
+6.
 
 - [ ] Web server VMSS with application gateway as load balancer v1.1 (- Deploy the VM's to an Availability Set?????)
 
@@ -107,8 +116,6 @@ Resources: https://learn.microsoft.com/en-us/events/learn-events/learnlive-iac-a
 - [ ] Application Gateway does not provide auto scaling for backend servers so use VMSS or Azure Kubernetes Service (AKS)
 
 - [ ] Application Gateway with reverse proxy
-
-6.
 
 - [ ] The Application Gateway supports terminating SSL/TLS connections, enabling you to configure HTTPS endpoints for client connections
 - [ ] Upload a self-signed certificate to the Application Gateway
