@@ -9,3 +9,12 @@ July 4, 2023
 The v1.0 was working, but not according to the best practices. Today, I spent half day building a main.bicep where my modules are for the management side. It was a day full of learning about how my bicep templates can be connected to the modules using output and param. Because of limited time and low level of energy, I focused on deploying the database server, the sql database, as it seems less complicated than the new requirements for the web server.
 
 I've chosen a SQL Database because it is dynamic and general-purpose.
+
+July 5, 2023
+It's a self-study day but I chose to be at Zoom with the AWS team. It's AWSome how the same the concepts are.
+
+I focused on the database, found that I can use private endpoints to connect the vnets of the management server and web server. Half-way thru I need to work on converting the web network into modules at my main.bicep.
+
+It was successfully deployed but I could not ping the server name from the management server.
+
+I focused on DB yesterday and today, so that I can work on my modules next to it.
