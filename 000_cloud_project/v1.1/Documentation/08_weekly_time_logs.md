@@ -140,3 +140,42 @@ Azure Key Vault: If you plan to store sensitive information, such as connection 
 - [ ] Database
 
 ---
+
+July 5, 2023 Wednesday
+
+### Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+- [ ] Made modules for the web network
+- [ ] Successfuly deployed a db server and database
+- [ ] Connect web server and management server using private endpoint
+
+### Obstakels & Oplossingen
+
+1. The Storage Container was failing when I was trying to deploy the main.bicep. I uncomment it for now, because the management server does need a storage account but not the container.
+
+2. Using the module, output, param the correct way. Read the error and troubleshoot.
+
+3. Asking better questions
+
+- [ ] How can I check if the db is really connected with the server? Open the web server using ssh or rdp then ping the ip address/server name in the command prompt.
+- [ ] How to start with v1.1? VMSS or application gateway?
+
+### Learnings
+
+- [ ] Virtual Network Rule for db can only be connected with one vnet, while endpoints can be multiple vnets
+- [ ] How to open the management server using Microsoft Remote Desktop and use powershell.
+
+### Plans for tomorrow
+
+- [ ] apache
+- [ ] Continue with key vault
+- [ ] Data encryption
+- [ ] Write down documentataion on management.bicep and web/app.bicep
+- [ ] Miro planning
+- [ ] VMSS for webserver
+- [ ] Recovery service vault
+- [ ] Database
+
+---
