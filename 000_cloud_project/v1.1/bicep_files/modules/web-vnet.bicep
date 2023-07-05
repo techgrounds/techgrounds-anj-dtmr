@@ -13,21 +13,30 @@
 
 // location
 @description('Location for all resources.')
-param location string = resourceGroup().location
+param location string
 
 /* -------------------------------------------------------------------------- */
 /*                     PARAMS & VARS                                          */
 /* -------------------------------------------------------------------------- */
 
 // vnet
-var virtualNetworkName_webapp = 'webapp-vnet'
+@description('Name of the web application virtual network.')
+param virtualNetworkName_webapp string
+
 // subnet
-var subnetName_webapp = 'webapp-subnet'
+@description('Name of the web application subnet.')
+param subnetName_webapp string
+
 // nsg
-var nsgName_webapp = 'webapp-nsg'
+@description('Name of the web application network security group.')
+param nsgName_webapp string
+
+resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' existing = {
+  name: nsgName_webapp
+}
 
 // addressPrefixes
-var vnet_addressPrefixes_webapp = '10.10.10.0/24'
+// param vnet_addressPrefixes_webapp string = '10.10.10.0/24'
 
 /* -------------------------------------------------------------------------- */
 /*                     Virtual Network with subnet                            */
@@ -51,19 +60,19 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   properties: {
     addressSpace: {
       addressPrefixes: [
-        vnet_addressPrefixes_webapp
+        '10.10.10.0/24'
       ]
     }
     subnets: [
       {
         name: subnetName_webapp
         properties: {
-          addressPrefix: vnet_addressPrefixes_webapp
+          addressPrefix: '10.10.10.0/24'
           privateEndpointNetworkPolicies: 'Enabled'
           privateLinkServiceNetworkPolicies: 'Enabled'
           // By associating an NSG with a subnet, we can enforce network-level security policies for the resources within that subnet.
           networkSecurityGroup: {
-            id: resourceId('Microsoft.Network/networkSecurityGroups', nsgName_webapp)
+            id: resourceId('Microsoft.Network/networkSecurityGroups', nsgWebApp.name)
           }
         }
       }
@@ -74,9 +83,19 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
 /* -------------------------------------------------------------------------- */
 /*                     Output                                                 */
 /* -------------------------------------------------------------------------- */
-// ToDo:
-// - add output from other resources
 
+// Name of the web application virtual network.
+@description('Name of the web application virtual network.')
 output vnetWebAppName string = vnetWebApp.name
+
+// ID of the web application virtual network.
+@description('ID of the web application virtual network.')
 output vnetWebAppID string = vnetWebApp.id
+
+// Name of the web application subnet.
+@description('Name of the web application virtual network.')
+output WebAppSubnetName string = vnetWebApp.properties.subnets[0].name
+
+// ID of the web application subnet.
+@description('ID of the web application subnet.')
 output WebAppSubnetID string = vnetWebApp.properties.subnets[0].id
