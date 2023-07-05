@@ -1,3 +1,5 @@
+//  Resources: https://azure.microsoft.com/en-us/blog/sql-azure-connectivity-troubleshooting-guide/
+
 /* -------------------------------------------------------------------------- */
 /*                     Use this command to deploy                             */
 /* -------------------------------------------------------------------------- */
@@ -24,6 +26,10 @@ param location string
 @description('The name of the SQL server.')
 param sqlServerName string = uniqueString('sqlserver', resourceGroup().id)
 
+// The name of the MySQL database.
+@description('The name of the MySQL database.')
+param mysqlDBName string
+
 // The administrator username of the SQL logical server.
 @description('The administrator username of the SQL logical server.')
 param sqladminLogin string
@@ -33,17 +39,13 @@ param sqladminLogin string
 @secure()
 param sqladminLoginPassword string
 
-// The name of the SQL virtual network rule.
-@description('The name of the SQL virtual network rule.')
-param sqlVirtualNetworkRulesName string
+// The name of the SQL firewall rule for the management server.
+@description('The name of the SQL firewall rule for the management server.')
+param MansqlFirewallRulesName string
 
-// The name of the SQL firewall rule.
-@description('The name of the SQL firewall rule.')
-param sqlFirewallRulesName string = 'sqlFirewallRules'
-
-// The name of the MySQL database.
-@description('The name of the MySQL database.')
-param mysqlDBName string
+// The name of the SQL firewall rule for the web/app server.
+@description('The name of the SQL firewall rule for the web/app server.')
+param WebsqlFirewallRulesName string
 
 /* -------------------------------------------------------------------------- */
 /*                                                                            */
@@ -64,11 +66,39 @@ resource sqlServer 'Microsoft.Sql/servers@2021-11-01' = {
   properties: {
     administratorLogin: sqladminLogin
     administratorLoginPassword: sqladminLoginPassword
+    // version:
   }
 }
 
 /* -------------------------------------------------------------------------- */
-/*                     Virtual Network Rules                                  */
+/*                     MYSQL DATABASE                                         */
+/* -------------------------------------------------------------------------- */
+// 
+resource mysqlDB 'Microsoft.Sql/servers/databases@2021-11-01' = {
+  parent: sqlServer
+  name: mysqlDBName
+  location: location
+  // properties: {
+  //   collation: 'SQL_Latin1_General_CP1_CI_AS'
+  //   maxSizeBytes: 1073741824
+  // }
+}
+
+// /* -------------------------------------------------------------------------- */
+// /*                     Virtual Network Rules                                  */
+// /* -------------------------------------------------------------------------- */
+
+// resource sqlVirtualNetworkRules 'Microsoft.Sql/servers/virtualNetworkRules@2021-11-01' = {
+//   parent: sqlServer
+//   name: sqlVirtualNetworkRulesName
+//   properties: {
+//     ignoreMissingVnetServiceEndpoint: true
+//     virtualNetworkSubnetId: vnetManagement.properties.subnets[0].id
+//   }
+// }
+
+/* -------------------------------------------------------------------------- */
+/*                     Private Endpoint for the SQL database in each VNet     */
 /* -------------------------------------------------------------------------- */
 
 param virtualNetworkName string
@@ -77,12 +107,57 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' existing 
   name: virtualNetworkName
 }
 
-resource sqlVirtualNetworkRules 'Microsoft.Sql/servers/virtualNetworkRules@2021-11-01' = {
-  parent: sqlServer
-  name: sqlVirtualNetworkRulesName
+resource privateEndpointManagement 'Microsoft.Network/privateEndpoints@2022-11-01' = {
+  name: 'privateEndpointManagement'
+  location: location
   properties: {
-    ignoreMissingVnetServiceEndpoint: true
-    virtualNetworkSubnetId: vnetManagement.properties.subnets[0].id
+    subnet: {
+      id: vnetManagement.properties.subnets[0].id
+    }
+    privateLinkServiceConnections: [
+      {
+        name: 'managementprivateLinkServiceConnection'
+        properties: {
+          privateLinkServiceId: sqlServer.id
+          groupIds: [
+            'sqlServer'
+          ]
+          // requestMessage: {
+          //   content: 'Please approve the private endpoint connection.'
+          // }
+        }
+      }
+    ]
+  }
+}
+
+param virtualNetworkName_webapp string
+
+resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' existing = {
+  name: virtualNetworkName_webapp
+}
+
+resource privateEndpointWebApp 'Microsoft.Network/privateEndpoints@2022-11-01' = {
+  name: 'privateEndpointWebApp'
+  location: location
+  properties: {
+    subnet: {
+      id: vnetWebApp.properties.subnets[0].id
+    }
+    privateLinkServiceConnections: [
+      {
+        name: 'webAppprivateLinkServiceConnection'
+        properties: {
+          privateLinkServiceId: sqlServer.id
+          groupIds: [
+            'sqlServer'
+          ]
+          // requestMessage: {
+          //   content: 'Please approve the private endpoint connection.'
+          // }
+        }
+      }
+    ]
   }
 }
 
@@ -95,45 +170,107 @@ resource sqlVirtualNetworkRules 'Microsoft.Sql/servers/virtualNetworkRules@2021-
 
 var rule = [
   {
-    Name: 'rule1'
+    Name: 'webServerFirewallRule'
     StartIpAddress: '10.10.10.0'
     EndIpAddress: '10.10.10.255'
   }
   {
-    Name: 'rule2'
+    Name: 'managementServerSqlFirewallRules'
     StartIpAddress: '10.20.20.0'
     EndIpAddress: '10.20.20.255'
   }
 ]
 
-resource sqlFirewallRules 'Microsoft.Sql/servers/firewallRules@2021-11-01' = {
-  name: sqlFirewallRulesName
+resource managementServerSqlFirewallRules 'Microsoft.Sql/servers/firewallRules@2021-11-01' = {
+  name: MansqlFirewallRulesName
   parent: sqlServer
   properties: {
     endIpAddress: rule[1].EndIpAddress
     startIpAddress: rule[1].StartIpAddress
   }
+  dependsOn: [
+    mysqlDB
+    privateEndpointManagement
+  ]
 }
 
-/* -------------------------------------------------------------------------- */
-/*                     MYSQL DATABASE                                         */
-/* -------------------------------------------------------------------------- */
-// 
-resource mysqlDB 'Microsoft.Sql/servers/databases@2021-11-01' = {
+resource webServerFirewallRules 'Microsoft.Sql/servers/firewallRules@2021-11-01' = {
+  name: WebsqlFirewallRulesName
   parent: sqlServer
-  name: mysqlDBName
-  location: location
-  dependsOn: []
+  properties: {
+    endIpAddress: rule[0].EndIpAddress
+    startIpAddress: rule[0].StartIpAddress
+  }
+  dependsOn: [
+    mysqlDB
+    privateEndpointWebApp
+  ]
 }
 
 /* -------------------------------------------------------------------------- */
 /*                     OUTPUT                                                 */
 /* -------------------------------------------------------------------------- */
 
+// The name of the SQL server.
+@description('The name of the SQL server.')
+output sqlServerName string = sqlServer.name
+
+// The ID of the SQL server.
+@description('The ID of the SQL server.')
+output sqlServerID string = sqlServer.id
+
 // The name of the MySQL database.
 @description('The name of the MySQL database.')
 output mysqlDBName string = mysqlDB.name
 
-// The name of the SQL virtual network rule.
-@description('The name of the SQL virtual network rule.')
-output sqlVirtualNetworkRulesName string = sqlVirtualNetworkRules.name
+// The ID of the MySQL database.
+@description('The ID of the MySQL database.')
+output mysqlDBID string = mysqlDB.id
+
+// Private Endpoint for the SQL database in each VNet
+@description('Name of the Private Endpoint for the SQL database in each VNet.')
+output privateEndpointManagementName string = privateEndpointManagement.name
+
+// ID of the Private Endpoint for the SQL database in each VNet
+@description('ID of the Private Endpoint for the SQL database in each VNet.')
+output privateEndpointManagementID string = privateEndpointManagement.id
+
+// Name of the Private Link Service Connection for the management Private Endpoint
+@description('Name of the Private Link Service Connection for the management Private Endpoint.')
+output manPrivateLinkServiceConnectionsName string = privateEndpointManagement.properties.privateLinkServiceConnections[0].name
+
+// ID of the Private Link Service Connection for the management Private Endpoint
+@description('ID of the Private Link Service Connection for the management Private Endpoint.')
+output manPrivateLinkServiceConnectionsID string = privateEndpointManagement.properties.privateLinkServiceConnections[0].id
+
+// Name of the management server SQL firewall rules
+@description('Name of the management server SQL firewall rules.')
+output managementServerSqlFirewallRulesName string = managementServerSqlFirewallRules.name
+
+// ID of the management server SQL firewall rules
+@description('ID of the management server SQL firewall rules.')
+output managementServerSqlFirewallRulesID string = managementServerSqlFirewallRules.id
+
+// Private Endpoint for the SQL database in each VNet
+@description('Name of the Private Endpoint for the SQL database in each VNet.')
+output privateEndpointWebAppName string = privateEndpointWebApp.name
+
+// ID of the Private Endpoint for the SQL database in each VNet
+@description('ID of the Private Endpoint for the SQL database in each VNet.')
+output privateEndpointWebAppID string = privateEndpointWebApp.id
+
+// Name of the Private Link Service Connection for the web/app Private Endpoint
+@description('Name of the Private Link Service Connection for the web/app Private Endpoint.')
+output webPrivateLinkServiceConnectionsName string = privateEndpointWebApp.properties.privateLinkServiceConnections[0].name
+
+// ID of the Private Link Service Connection for the web/app Private Endpoint
+@description('ID of the Private Link Service Connection for the web/app Private Endpoint.')
+output webPrivateLinkServiceConnectionsID string = privateEndpointWebApp.properties.privateLinkServiceConnections[0].id
+
+// Name of the web server SQL firewall rules
+@description('Name of the web server SQL firewall rules.')
+output webServerFirewallRulesName string = webServerFirewallRules.name
+
+// ID of the web server SQL firewall rules
+@description('ID of the web server SQL firewall rules.')
+output webServerFirewallRulesID string = webServerFirewallRules.id
