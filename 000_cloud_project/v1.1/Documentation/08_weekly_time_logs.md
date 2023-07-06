@@ -188,11 +188,11 @@ July 6, 2023 Thursday
 
 Wat zijn jou wins vandaag?-----
 
-- [ ] No so much productive today, I deployed the quickstart for application gateway, to play around with it using the portal.
+- [ ] Not so much productive today, I deployed the quickstart for application gateway, to play around with it using the portal.
 
 ### Obstakels & Oplossingen
 
-1. Today, I didn not found any good resources to understand application gateway. I will continue with that tomorrow.
+1. Today, I did not found any good resources to understand application gateway. I will continue with that tomorrow.
 
 2.
 3. Asking better questions
