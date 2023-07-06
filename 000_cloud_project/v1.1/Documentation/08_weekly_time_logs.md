@@ -151,11 +151,13 @@ Wat zijn jou wins vandaag?-----
 - [ ] Successfuly deployed a db server and database
 - [ ] Connect web server and management server using private endpoint
 
+---- na de q&a ga ortho rond 2 tot 3
+
 ### Obstakels & Oplossingen
 
 1. The Storage Container was failing when I was trying to deploy the main.bicep. I uncomment it for now, because the management server does need a storage account but not the container.
 
-2. Using the module, output, param the correct way. Read the error and troubleshoot.
+2. Using the module, output, param the correct way. Read the error and troubleshoot. Make one change, then test.
 
 3. Asking better questions
 
@@ -164,8 +166,43 @@ Wat zijn jou wins vandaag?-----
 
 ### Learnings
 
-- [ ] Virtual Network Rule for db can only be connected with one vnet, while endpoints can be multiple vnets
-- [ ] How to open the management server using Microsoft Remote Desktop and use powershell.
+- [ ] Virtual Network Rule for db can only be connected with one vnet, while endpoints can be connected with multiple vnets
+- [ ] How to open the management server using Microsoft Remote Desktop, use powershell and use ping command from there.
+
+### Plans for tomorrow
+
+- [ ] apache
+- [ ] Continue with key vault
+- [ ] Data encryption
+- [ ] Write down documentataion on management.bicep and web/app.bicep
+- [ ] Miro planning
+- [ ] VMSS for webserver
+- [ ] Recovery service vault
+- [ ] Database
+
+---
+
+July 6, 2023 Thursday
+
+### Dagverslag (1 zin)
+
+Wat zijn jou wins vandaag?-----
+
+- [ ] No so much productive today, I deployed the quickstart for application gateway, to play around with it using the portal.
+
+### Obstakels & Oplossingen
+
+1. Today, I didn not found any good resources to understand application gateway. I will continue with that tomorrow.
+
+2.
+3. Asking better questions
+
+- [ ] are Virtual Network rule and private endpoint rule the same? if no what are their difference?
+- [ ]
+
+### Learnings
+
+- [ ] ping is another protocol
 
 ### Plans for tomorrow
 
