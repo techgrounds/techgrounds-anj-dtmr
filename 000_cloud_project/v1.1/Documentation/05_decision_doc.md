@@ -18,3 +18,7 @@ I focused on the database, found that I can use private endpoints to connect the
 It was successfully deployed but I could not ping the server name from the management server.
 
 I focused on DB yesterday and today, so that I can work on my modules next to it.
+
+July 6, 2023
+Chose to start on understanding what Application Gateway is.
+No definite progress today.
