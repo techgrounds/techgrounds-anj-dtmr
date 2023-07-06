@@ -84,6 +84,7 @@ resource mysqlDB 'Microsoft.Sql/servers/databases@2021-11-01' = {
   // }
 }
 
+// ToDo: Build Virtual Network Rules 
 // /* -------------------------------------------------------------------------- */
 // /*                     Virtual Network Rules                                  */
 // /* -------------------------------------------------------------------------- */
