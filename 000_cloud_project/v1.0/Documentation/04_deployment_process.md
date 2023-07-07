@@ -20,8 +20,6 @@ Note: The main.bicep and deploy.sh is saved at 000_cloud_project/v1.0/bicep_file
 cd 000_cloud_project/v1.0/bicep_files
 ```
 
-From here you can proceed to the next step.
-
 3. Run the following command to make the `deploy.sh` script executable:
 
 ```bash
