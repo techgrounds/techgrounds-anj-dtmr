@@ -4,8 +4,9 @@
 
 // az login
 // az account set --subscription 'Cloud Student 1'
-// az group create --name TestRGcloud_project --location westeurope
-// az deployment group create --resource-group TestRGcloud_project --template-file main-storage.bicep
+// cd 000_cloud_project/v1.0/bicep_files
+// az group create --name Testv10RGcloud_project --location westeurope
+// az deployment group create --resource-group Testv10RGcloud_project --template-file main.bicep
 
 /* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
@@ -324,11 +325,11 @@ var storageAccountManagementConnectionStringBlobEndpoint = storageAccountManagem
 
 @secure()
 @description('The administrator username.')
-param adminUsernameMngmt string
+param adminUsernameMngmt string = 'adminAnj'
 
 @secure()
 @description('The administrator password.')
-param adminPassword string
+param adminPassword string = 'Password@321'
 
 var virtualMachineName_mngt = 'vmmanagement'
 var virtualMachineSize_mngt = 'Standard_B1ms'
@@ -358,6 +359,7 @@ resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' = {
         version: 'latest'
       }
       osDisk: {
+        name: 'OSDisk_management'
         createOption: 'FromImage'
         managedDisk: {
           storageAccountType: 'StandardSSD_LRS'
@@ -504,19 +506,19 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
   properties: {
     // security Rule are An array of security rules that define the network traffic rules for the NSG.
     securityRules: [
-      {
-        name: 'HTTPS-rule'
-        properties: {
-          protocol: 'TCP'
-          sourceAddressPrefix: '*'
-          destinationAddressPrefix: '*'
-          sourcePortRange: '*'
-          destinationPortRange: '443'
-          access: 'Allow'
-          priority: 1000
-          direction: 'Inbound'
-        }
-      }
+      // {
+      //   name: 'HTTPS-rule'
+      //   properties: {
+      //     protocol: 'TCP'
+      //     sourceAddressPrefix: '*'
+      //     destinationAddressPrefix: '*'
+      //     sourcePortRange: '*'
+      //     destinationPortRange: '443'
+      //     access: 'Allow'
+      //     priority: 1000
+      //     direction: 'Inbound'
+      //   }
+      // }
       {
         name: 'HTTP-rule'
         properties: {
@@ -526,26 +528,26 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
           sourcePortRange: '*'
           destinationPortRange: '80'
           access: 'Allow'
-          priority: 1080
+          priority: 200
           direction: 'Inbound'
         }
       }
       // // Management Server: 10.20.20.0/24
       // // Web/App Server: 10.10.10.0/24
-      {
-        name: 'SSH-rule'
-        properties: {
-          protocol: 'TCP'
-          // Enable the NSG rules to allow SSH connections only from the admin/management server.
-          sourceAddressPrefix: '10.20.20.10/32'
-          sourcePortRange: '*'
-          destinationAddressPrefix: '*'
-          destinationPortRange: '22'
-          access: 'Allow'
-          priority: 100
-          direction: 'Inbound'
-        }
-      }
+      // {
+      //   name: 'SSH-rule'
+      //   properties: {
+      //     protocol: 'TCP'
+      //     // Enable the NSG rules to allow SSH connections only from the admin/management server.
+      //     sourceAddressPrefix: '10.20.20.10/32'
+      //     sourcePortRange: '*'
+      //     destinationAddressPrefix: '*'
+      //     destinationPortRange: '22'
+      //     access: 'Allow'
+      //     priority: 100
+      //     direction: 'Inbound'
+      //   }
+      // }
     ]
   }
 }
@@ -818,7 +820,7 @@ var virtualMachineSize_webapp = 'Standard_B1ms'
 
 @description('Username for the Virtual Machine.')
 // @secure()
-param adminUsername string
+param adminUsername string = 'adminAnj'
 
 @description('Type of authentication to use on the Virtual Machine. SSH key is recommended.')
 @allowed([
@@ -828,7 +830,7 @@ param adminUsername string
 param authenticationType string = 'password'
 @description('SSH Key or password for the Virtual Machine. SSH key is recommended.')
 @secure()
-param adminPasswordOrKey string
+param adminPasswordOrKey string = 'Password@321'
 
 var linuxConfiguration = {
   disablePasswordAuthentication: true
@@ -858,6 +860,7 @@ var linuxConfiguration = {
 // }
 
 var storageAccountWebAppConnectionStringBlobEndpoint = storageAccountWebApp.properties.primaryEndpoints.blob
+var apache_script = loadFileAsBase64('../bash/install_apache.sh')
 
 resource VMWebApp 'Microsoft.Compute/virtualMachines@2022-11-01' = {
   name: virtualMachineName_webapp
@@ -866,6 +869,33 @@ resource VMWebApp 'Microsoft.Compute/virtualMachines@2022-11-01' = {
   //   WebAppNetworkInterface
   // ]
   properties: {
+    userData: apache_script
+    hardwareProfile: {
+      vmSize: virtualMachineSize_webapp
+    }
+    osProfile: {
+      computerName: virtualMachineName_webapp
+      adminUsername: adminUsername
+      adminPassword: adminPasswordOrKey
+      linuxConfiguration: ((authenticationType == 'password') ? null : linuxConfiguration)
+    }
+    storageProfile: {
+      imageReference: {
+        publisher: 'Canonical'
+        offer: 'UbuntuServer'
+        sku: '18.04-LTS'
+        version: 'latest'
+      }
+      osDisk: {
+        name: '${virtualMachineName_webapp}_OSDisk'
+        // name: 'OSDisk-webApp'
+        caching: 'ReadWrite'
+        createOption: 'FromImage'
+        managedDisk: {
+          storageAccountType: 'Standard_LRS'
+        }
+      }
+    }
     diagnosticsProfile: {
       bootDiagnostics: {
         enabled: true
@@ -878,29 +908,6 @@ resource VMWebApp 'Microsoft.Compute/virtualMachines@2022-11-01' = {
           id: WebAppNetworkInterface.id
         }
       ]
-    }
-    hardwareProfile: {
-      vmSize: virtualMachineSize_webapp
-    }
-    storageProfile: {
-      imageReference: {
-        publisher: 'Canonical'
-        offer: 'UbuntuServer'
-        sku: '18.04-LTS'
-        version: 'latest'
-      }
-      osDisk: {
-        createOption: 'FromImage'
-        managedDisk: {
-          storageAccountType: 'Standard_LRS'
-        }
-      }
-    }
-    osProfile: {
-      computerName: virtualMachineName_webapp
-      adminUsername: adminUsername
-      adminPassword: adminPasswordOrKey
-      linuxConfiguration: ((authenticationType == 'password') ? null : linuxConfiguration)
     }
     // securityProfile: ((securityType == 'TrustedLaunch') ? securityProfileJson : null)
 
