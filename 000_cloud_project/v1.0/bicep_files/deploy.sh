@@ -13,7 +13,7 @@ az group create --name Testv10RGcloud_project --location westeurope
 az deployment group create --resource-group Testv10RGcloud_project --template-file main.bicep
 
 
-
+########## ToDo: Learn how to write a dynamic script
 
 # #!/bin/bash
 
