@@ -1,6 +1,6 @@
 # Weekly Time Logs
 
-Check [v1.0 time logs]() for the first weeks.
+Check [v1.0 time logs](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/08_weekly_time_logs.md) for the first weeks.
 
 # WEEK 4
 
