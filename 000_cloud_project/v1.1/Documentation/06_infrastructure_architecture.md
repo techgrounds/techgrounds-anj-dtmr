@@ -110,9 +110,12 @@ Next Steps:
 
 Backlogs for both versions:
 
+- [ ] SSH connections to the Web server should only be established from the admin server.
 - [ ] Configure apache-install.sh on web server
+- [ ] Deploy the VMSS to an Availability Set
 - [ ] have a working application that allows to deploy a secure network. (management server has my own IP Address, web server still need to implement)
 - [ ] Deploy a Recovery Service Vault. The Web server should be backed up daily. Backups must be retained for 7 days. Create a Recovery Services Vault and configure it to back up the VMSSs in the webserver subnet.
+- [ ] All VM disks must be encrypted.
 - [ ] Utilize Key Vault to securely store any secrets or credentials required for accessing and executing the bootstrap/post-deployment scripts.
 - [ ] Use Key Vault to manage and store the cryptographic keys required for encrypting and decrypting the data within the infrastructure.
 - [ ] Connect the web and admin server to the Key Vault to retrieve necessary secrets.
