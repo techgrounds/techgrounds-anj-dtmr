@@ -75,7 +75,7 @@ For the v1.0 **requirements** I was NOT able to:
 
 ## My v1.1 Project Architecture
 
-![image info](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/06_diagram/cloud_architecture.drawio.png)
+![image info](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/06_diagram/cloud_architecture.drawio.png)
 
 Update:
 
