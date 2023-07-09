@@ -103,7 +103,7 @@ Connect the web and admin server to the Key Vault to retrieve necessary secrets.
 
 ### July 10 - 14
 
-- [ ] Extend the things I can't finish the last week
+- [ ] Extend the things I can't finish from last week
 
 ### July 17, 18, 19
 
