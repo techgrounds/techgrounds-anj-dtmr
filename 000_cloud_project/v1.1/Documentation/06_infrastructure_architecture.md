@@ -96,7 +96,7 @@ What I know:
 - [x] HTTPS Listener is a protocol
 - [x] ping is another protocol
 
-Favorite Errors message so far:
+Favorite Error messages so far:
 
 - [x] "message": "At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/arm-deployment-operations for usage details."
 - [x] Database: "code":"MissingRegistrationForLocation","message":"The subscription is not registered for the resource type 'privateDnsZones' in the location 'westeurope'. Please re-register for this provider in order to have access to this location.". See deploy.sh for solution that is not working YET.
