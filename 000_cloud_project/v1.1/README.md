@@ -12,11 +12,11 @@
 
 5. [Decision Documentation](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/05_decision_doc.md)
 
-6. [Design Documentation or Infrastructure Architecture](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/06_infrastructure_architecture.md)
+6. [Design Documentation or Infrastructure Architecture](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/06_infrastructure_architecture.md)
 
 7. [Weekly Time Logs](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/08_weekly_time_logs.md)
 
-8. [Conclusion and Additional Resources](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/09_conclusion_additional_resources.md)
+8. [Conclusion and Additional Resources](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/09_conclusion_additional_resources.md)
 
 9. [Final presentation]()
 
