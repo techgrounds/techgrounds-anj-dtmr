@@ -4,7 +4,7 @@ This file:
 
 - Provide a brief introduction to the project and its purpose.
 - Outline the scope and objectives of the project.
-- Outline the deliverables and v1.0 requirements
+- Outline the deliverables, v1.0 requirements and user stories.
 - Explain the benefits of using Bicep for infrastructure provisioning.
 
 ## Introduction and Overview
