@@ -21,57 +21,54 @@ According to the design of the architecture:
 
 ## My v1.0 Project Architecture
 
-
 ![image info](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.0/Documentation/06_diagram/cloud_architecture.drawio.png)
 
 For the v1.0 **user stories** I was able to:
+
 - [x] have a clear understanding what the requirements of the application are.
 - [x] have a clear record of the assumptions.
 - [x] have a clear overview of the Cloud Infrastructure the application needs.
 - [x] have a working application with which to deploy a working management server (RDP).
 - [x] have a working application with which to deploy a working web server (SSH).
-- [x] have a working application that allows to deploy a secure network.
 - [x] have a storage solution in which bootstrap/post-deployment script can be stored. Deployed a storage account with a private container.
 - [x] provide documentation or user guides to explain how to use the application.
 - [x] submit a well-documentated project how to deploy an MVP for testing and deploy the infrastructure.
 
 For the v1.0 **user stories** I was NOT able to:
+
+- [ ] have a working application that allows to deploy a secure network. (management server has my own IP Address, web server still need to implement)
 - [ ] encrypt all data in the infrastructure.
 - [ ] have a backup every day that is maintained for 7 days.
 
 For the v1.0 **requirements** I was able to:
-- [x] Build this IaC project using bicep template.
+
+- [x] Build this IaC project using bicep templates.
 - [x] The Web server must be installed in an automated manner (I used a deploy.sh bash command).
-- [x] The admin/management server must be reachable by a public IP.
+- [x] The web & management server must be reachable by a public IP.
 - [x] The admin/management server should be accessible only from trusted locations (office/admin's home).
+- [x] Deploy web server, management server and post deployment script with separate azure storage accounts for data isolation.
 - [x] The following IP ranges are used: 10.10.10.0/24 & 10.20.20.0/24.
 - [x] All subnets must be protected by a firewall at the subnet level.
-- [x] SSH connections to the Web server should only be established from the admin server.
 - [x] Peer the two vnets.
-- [x] Connect all the resources, using NIC, to the vnet of both servers.
-- [x] Understand the need of a public IP for the web server must.
+- [x] Connect all the resources, using NIC, to the vnet of both servers. (NIC for azure network/resources. Public Ip for the outside network)
+- [x] Understand the need of a public IP for the web server (app users) and management server (admins).
 - [x] Deploy a Key Vault.
 - [x] Use Github Release to tag the v1.0.
 - [x] Deploy a resource group using azure cli.
 - [x] I should submit a GitHub repository with .bicep files on the main branch.
-- [x] Portal cost under 50 euros.
+- [x] Portal cost under 10 euros.
 - [x] Use GitHub branches for version control.
 - [x] Customize apache script for the web server.
 
-
 For the v1.0 **requirements** I was NOT able to:
+
+- [ ] SSH connections to the Web server should only be established from the admin server.
 - [ ] Deploy a SQL Database that is connected to both the web server and admin/management server.
-- [ ] Deploy a Recovery Service Vault
+- [ ] Deploy a Recovery Service Vault. The Web server should be backed up daily. Backups must be retained for 7 days. Create a Recovery Services Vault and configure it to back up the VMs in the webserver subnet.
 - [ ] Deploy the VM's to an Availability Set
 - [ ] All VM disks must be encrypted.
-- [ ] The Web server should be backed up daily. Backups must be retained for 7 days. Create a Recovery Services Vault and configure it to back up the VMs in the webserver subnet.
 - [ ] (Not a must but best practice) Use module writing the bicep template.
 - [ ] Utilize Key Vault to securely store any secrets or credentials required for accessing and executing the bootstrap/post-deployment scripts.
 - [ ] Use Key Vault to manage and store the cryptographic keys required for encrypting and decrypting the data within the infrastructure.
 - [ ] Connect the web and admin server to the Key Vault to retrieve necessary secrets.
-
-
-
-
-
-
+- [ ] (If time allow) Excel file of estimations for all the resources prices.

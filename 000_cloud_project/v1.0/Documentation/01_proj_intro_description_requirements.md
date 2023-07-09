@@ -43,6 +43,73 @@ The following deliverables are expected in your GitHub repository at the end of 
 - SSH or RDP connections to the Web server should only be established from the admin server.
 - Don't be afraid to suggest or implement improvements in the architecture, but make hard choices so you can meet the deadline.
 
+## User Stories
+
+1. As a team, we want to be clear what the requirements of the application are.
+
+   - Epic: Exploration
+   - Description: You've already gotten a lot of information. There are some requirements already listed in this document, but this list may be incomplete or unclear. It's important to have all the ambiguities sorted out before you do any major work.
+   - Deliverable: A point-by-point description of all requirements
+
+2. As a team, we want a clear record of the assumptions we have made.
+
+   - Epic: Exploration
+   - Description: You've already gotten a lot of information. There may be questions that none of the stakeholders were able to answer. Your team should be able to produce an overview of the assumptions you make as a result.
+   - Deliverable: A point-by-point overview of all assumptions
+
+3. As a team, we want to have a clear overview of the Cloud Infrastructure the application needs.
+
+   - Epic: Exploration
+   - Description: You've already gotten a lot of information. And already a design. Only missing from the design are things like IAM/AD. Identify these additional services that you will need and list all of them.
+   - Deliverable: An overview of all the services that will be used.
+
+4. As a customer, I want to have a working application that allows me to deploy a secure network.
+
+   - Epic: v1.0
+   - Description: The application must build a network that meets all requirements. An example of a stated requirement is that only traffic from trusted sources may access the management server.
+   - Deliverable: IaC code for the network and all components
+
+5. As a client, I want to have a working application with which to deploy a working web server.
+
+   - Epic: v1.0
+   - Description: The application must start a Web server and make it available to general audiences.
+   - Deliverable: IaC code for the web server and all supplies
+
+6. As a customer, I want to have a working application with which to deploy a working management server.
+
+   - Epic: v1.0
+   - Description: The application should start a management server and make it available to a limited audience.
+   - Deliverable: IaC code for a management server with all supplies
+
+7. As a client, I want to have a storage solution in which bootstrap/post-deployment scripts can be stored.
+
+   - Epic: v1.0
+   - Description: There must be a location where bootstrap scripts become available. These scripts should not be publicly accessible.
+   - Deliverable: IaC code for a script storage solution
+
+8. As a customer, I want all my data in the infrastructure to be encrypted.
+
+   - Epic: v1.0
+   - Description: Great importance is attached to the security of data at rest and in motion. All data must be encrypted.
+   - Deliverable: IaC code for encryption facilities
+
+9. As a customer, I want to have a backup every day that is maintained for 7 days.
+
+   - Epic: v1.0
+   - Description: The client would like a backup to be available, should it be necessary to return the servers to a previous state. (Make sure the Backup actually works)
+   - Deliverable: IaC code for backup facilities
+
+10. As a customer, I want to know how to use the application.
+
+    - Epic: v1.0
+    - Description: Make sure the customer can understand how to use the application. Make sure it is clear what the client must configure before the deployment can start and what arguments the program requires.
+    - Deliverable: Documentation for using the application
+
+11. As a customer, I want to be able to deploy an MVP for testing.
+    - Epic: v1.0
+    - Description: The client itself wants to test your architecture internally before they start using the code in production. Ensure that configuration is available that allows the customer to deploy an MVP.
+    - Deliverable: Configuration for an MVP deployment
+
 ## What is Bicep and its usage benefits
 
 Bicep is:

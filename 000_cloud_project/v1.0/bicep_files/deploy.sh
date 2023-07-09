@@ -7,10 +7,10 @@ az login
 az account set --subscription 'Cloud Student 1'
 
 # Create the resource group
-az group create --name Testv10RGcloud_project --location westeurope
+az group create --name v10test --location westeurope
 
 # Deploy the template
-az deployment group create --resource-group Testv10RGcloud_project --template-file main.bicep
+az deployment group create --resource-group v10test --template-file main.bicep
 
 
 ########## ToDo: Learn how to write a dynamic script
