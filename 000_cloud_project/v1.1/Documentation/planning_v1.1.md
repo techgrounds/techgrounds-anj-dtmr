@@ -12,10 +12,6 @@
 
 - [ ] See under [Project Introduction]()
 
-## Review Breaking Changes
-
-- [ ] If there are any breaking changes introduced in version 1.1, carefully review them and identify how they impact your existing code. Considerations might include changes to syntax, deprecated features, or modifications to resource types.
-
 ## Break Down Key Terminologies
 
 - [ ] As a beginner, it helps me understand the bigger picture by starting to understand every word I encounter.
