@@ -122,3 +122,4 @@ Backlogs for both versions:
 Questions:
 
 - [ ] Do I still need a separate nsg or I can just configure the inbound and outbound traffic under app gateway.
+- [ ] What is your favorite error message so far? ;)
