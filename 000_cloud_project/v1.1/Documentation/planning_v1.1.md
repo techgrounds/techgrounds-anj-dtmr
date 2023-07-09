@@ -8,7 +8,7 @@
 
 - [ ] I started by reviewing the release notes or changelog for Bicep version 1.1. This gave me better understanding into the new features, bug fixes, and any breaking changes introduced in the new version. I make sure to understand the implications of these changes for my IaC project.
 
-## Write the user stories yourself:
+## Write the user stories
 
 - [ ] See under [Project Introduction]()
 
