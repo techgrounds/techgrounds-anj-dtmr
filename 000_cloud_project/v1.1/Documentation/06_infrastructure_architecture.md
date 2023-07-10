@@ -120,7 +120,7 @@ Backlogs for both versions:
 - [ ] Utilize Key Vault to securely store any secrets or credentials required for accessing and executing the bootstrap/post-deployment scripts.
 - [ ] Use Key Vault to manage and store the cryptographic keys required for encrypting and decrypting the data within the infrastructure.
 - [ ] Connect the web and admin server to the Key Vault to retrieve necessary secrets.
-- [ ] Update Topology
+- [ ] Update the architecture design
 - [ ] Git Release v1.1
 
 Questions:
