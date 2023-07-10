@@ -82,7 +82,7 @@ Update:
 - [x] Deploy management network & server using bicep module (with vnet peering)
 - [x] With module the RDP for management server is still working
 - [x] Learned how to dynamically assign name for key vault, db server, storage
-- [x] Chain module. key vault->network->vm/vmss etc
+- [x] Chain module. loc->rg->key vault->network->vm/vmss etc
 - [x] Deploy web network using bicep module (with vnet peering)
 - [x] Deploy a SQL Database that is connected to both the web server and admin/management server using private endpoint->nic->vnets.
 - [x] Used for loops for nic, nsg, public ip to follow the capacity of VMSS
