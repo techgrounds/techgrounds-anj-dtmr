@@ -29,13 +29,13 @@ For the v1.0 **user stories** I was able to:
 - [x] have a clear record of the assumptions.
 - [x] have a clear overview of the Cloud Infrastructure the application needs.
 - [x] have a working application with which to deploy a working management server (RDP).
-- [x] have a working application with which to deploy a working web server (SSH).
 - [x] have a storage solution in which bootstrap/post-deployment script can be stored. Deployed a storage account with a private container.
 - [x] provide documentation or user guides to explain how to use the application.
 - [x] submit a well-documentated project how to deploy an MVP for testing and deploy the infrastructure.
 
 For the v1.0 **user stories** I was NOT able to:
 
+- [ ] have a working application with which to deploy a working web server (SSH).
 - [ ] have a working application that allows to deploy a secure network. (management server has my own IP Address, web server still need to implement)
 - [ ] encrypt all data in the infrastructure.
 - [ ] have a backup every day that is maintained for 7 days.

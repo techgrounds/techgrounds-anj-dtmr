@@ -82,7 +82,7 @@ Update:
 - [x] Deploy management network & server using bicep module (with vnet peering)
 - [x] With module the RDP for management server is still working
 - [x] Learned how to dynamically assign name for key vault, db server, storage
-- [x] Chain module. key vault->network->vm/vmss etc
+- [x] Chain module. loc->rg->key vault->network->vm/vmss etc
 - [x] Deploy web network using bicep module (with vnet peering)
 - [x] Deploy a SQL Database that is connected to both the web server and admin/management server using private endpoint->nic->vnets.
 - [x] Used for loops for nic, nsg, public ip to follow the capacity of VMSS
@@ -115,11 +115,12 @@ Backlogs for both versions:
 - [ ] Deploy the VMSS to an Availability Set
 - [ ] have a working application that allows to deploy a secure network. (management server has my own IP Address, web server still need to implement)
 - [ ] Deploy a Recovery Service Vault. The Web server should be backed up daily. Backups must be retained for 7 days. Create a Recovery Services Vault and configure it to back up the VMSSs in the webserver subnet.
+- [ ] Continue with the DB, learn how to test if the servers are really connected if not troubleshoot
 - [ ] All VM disks must be encrypted.
 - [ ] Utilize Key Vault to securely store any secrets or credentials required for accessing and executing the bootstrap/post-deployment scripts.
 - [ ] Use Key Vault to manage and store the cryptographic keys required for encrypting and decrypting the data within the infrastructure.
 - [ ] Connect the web and admin server to the Key Vault to retrieve necessary secrets.
-- [ ] Update Topology
+- [ ] Update the architecture design
 - [ ] Git Release v1.1
 
 Questions:
