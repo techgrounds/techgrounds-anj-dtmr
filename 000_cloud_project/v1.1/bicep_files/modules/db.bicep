@@ -104,6 +104,8 @@ resource sqlVirtualNetworkRules 'Microsoft.Sql/servers/virtualNetworkRules@2021-
   }
 }
 
+// ToDo: Another sqlVirtualNetworkRules for web server
+
 /* -------------------------------------------------------------------------- */
 /*       Vnet where Azure SQL Database can reside                             */
 /* -------------------------------------------------------------------------- */
