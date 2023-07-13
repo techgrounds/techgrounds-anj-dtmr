@@ -9,7 +9,7 @@
 // cd 000_cloud_project/v1.1/bicep_files/modules          
 // az group create --name TestRGcloud_project --location westeurope
 // az deployment group create --resource-group TestRGcloud_project --template-file db.bicep
-// Test-NetConnection -ComputerName ww2lwq5vspx2i.database.windows.net -Port 1433
+// Test-NetConnection -ComputerName itzgvtsfn62lm.database.windows.net -Port 1433
 
 /* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
@@ -72,6 +72,7 @@ resource sqlServer 'Microsoft.Sql/servers@2021-11-01' = {
     administratorLogin: sqladminLogin
     administratorLoginPassword: sqladminLoginPassword
     // version:
+    // publicNetworkAccess: 'Disabled'
   }
 }
 
@@ -94,27 +95,13 @@ resource mysqlDB 'Microsoft.Sql/servers/databases@2021-11-01' = {
 // /*                     Virtual Network Rules                                  */
 // /* -------------------------------------------------------------------------- */
 
-// resource sqlVirtualNetworkRules 'Microsoft.Sql/servers/virtualNetworkRules@2021-11-01' = {
-//   parent: sqlServer
-//   name: sqlVirtualNetworkRulesName
-//   properties: {
-//     ignoreMissingVnetServiceEndpoint: true
-//     virtualNetworkSubnetId: vnetManagement.properties.subnets[0].id
-//   }
-// }
-
-// /* -------------------------------------------------------------------------- */
-// /*                     Private DNS Zone                                       */
-// /* -------------------------------------------------------------------------- */
-
-resource privateDnsZoneManagement 'Microsoft.Network/privateDnsZones@2020-06-01' = {
-  name: privateDnsZoneNameManagement
-  location: location
-}
-
-resource privateDnsZoneWebApp 'Microsoft.Network/privateDnsZones@2020-06-01' = {
-  name: privateDnsZoneNameWebApp
-  location: location
+resource sqlVirtualNetworkRules 'Microsoft.Sql/servers/virtualNetworkRules@2021-11-01' = {
+  parent: sqlServer
+  name: 'sqlVirtualNetworkRulesManagement'
+  properties: {
+    ignoreMissingVnetServiceEndpoint: true
+    virtualNetworkSubnetId: vnetManagement.properties.subnets[0].id
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -129,7 +116,7 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' existing 
 
 param virtualNetworkName_webapp string
 
-resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' existing = {
+resource dbVnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' existing = {
   name: virtualNetworkName_webapp
 }
 
@@ -160,7 +147,11 @@ resource privateEndpointManagement 'Microsoft.Network/privateEndpoints@2022-11-0
         }
       }
     ]
+
   }
+  dependsOn: [
+    vnetManagement
+  ]
 }
 
 resource privateEndpointWebApp 'Microsoft.Network/privateEndpoints@2022-11-01' = {
@@ -168,7 +159,7 @@ resource privateEndpointWebApp 'Microsoft.Network/privateEndpoints@2022-11-01' =
   location: location
   properties: {
     subnet: {
-      id: vnetWebApp.properties.subnets[0].id
+      id: dbVnetWebApp.properties.subnets[0].id
     }
     privateLinkServiceConnections: [
       {
@@ -185,15 +176,34 @@ resource privateEndpointWebApp 'Microsoft.Network/privateEndpoints@2022-11-01' =
       }
     ]
   }
+  dependsOn: [
+    dbVnetWebApp
+  ]
 }
+
+// // /* -------------------------------------------------------------------------- */
+// // /*                     Private DNS Zone                                       */
+// // /* -------------------------------------------------------------------------- */
+// // Private DNS Zone:
+
+// resource privateDnsZoneManagement 'Microsoft.Network/privateDnsZones@2020-06-01' = {
+//   name: privateDnsZoneNameManagement
+//   location: location
+// }
+
+// resource privateDnsZoneWebApp 'Microsoft.Network/privateDnsZones@2020-06-01' = {
+//   name: privateDnsZoneNameWebApp
+//   location: location
+// }
 
 /* -------------------------------------------------------------------------- */
 /*                     Virtual Network Link                                   */
 /* -------------------------------------------------------------------------- */
 
 resource virtualNetworkLinkManagement 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = {
-  name: 'man-links-web'
-  parent: privateDnsZoneManagement
+  name: 'man/links-web'
+  // parent: privateDnsZoneManagement
+  location: location
   properties: {
     registrationEnabled: true
     virtualNetwork: {
@@ -203,12 +213,13 @@ resource virtualNetworkLinkManagement 'Microsoft.Network/privateDnsZones/virtual
 }
 
 resource virtualNetworkLinkWebApp 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = {
-  name: 'web-links-man'
-  parent: privateDnsZoneWebApp
+  name: 'web/links-man'
+  // parent: privateDnsZoneWebApp
+  location: location
   properties: {
     registrationEnabled: true
     virtualNetwork: {
-      id: vnetWebApp.id
+      id: dbVnetWebApp.id
     }
   }
 }
