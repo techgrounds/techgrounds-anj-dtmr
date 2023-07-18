@@ -13,10 +13,7 @@
 /*                    RESOURCE GROUP & LOCATION                               */
 /* -------------------------------------------------------------------------- */
 
-@description('Name of the resource group.')
 param resourceGroupName string = 'cloud_proj'
-
-@description('Location for the resources.')
 param location string = 'uksouth'
 
 module resourceGroupModule 'modules/resourcegrp.bicep' = {
@@ -32,7 +29,6 @@ module resourceGroupModule 'modules/resourcegrp.bicep' = {
 /*                              Key Vault                                     */
 /* -------------------------------------------------------------------------- */
 
-@description('Prefix for the key vault name.')
 param vaultNamePrefix string = 'myvault'
 
 var uniqueSuffix = uniqueString(substring(resourceGroup().id, 0, 10), deployment().name)
@@ -51,9 +47,20 @@ module keyVaultModule 'modules/keyvault.bicep' = {
 }
 
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                              Management                                    */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
 
+// nsg
 @description('Name of the network security group.')
 param nsgManagementName string = 'management-nsg'
 
@@ -69,9 +76,11 @@ module nsgManagementModule 'modules/man-nsg.bicep' = {
 /*                     Virtual Network with subnet                            */
 /* -------------------------------------------------------------------------- */
 
+// vnet
 @description('Name of the virtual network.')
 param vnetManagementName string = 'management-vnet'
 
+// subnet
 @description('Name of the subnet within the virtual network.')
 param subnetManagementName string = 'management-subnet'
 
@@ -89,6 +98,7 @@ module vnetManagementModule 'modules/man-vnet.bicep' = {
 /*                     Public IP                                              */
 /* -------------------------------------------------------------------------- */
 
+// publicIpName: Name of the management public IP resource.
 @description('Name of the management public IP resource.')
 param managementPublicIPName string = 'management-public-ip'
 
@@ -104,6 +114,7 @@ module managementPublicIPModule 'modules/man-pubip.bicep' = {
 /*                     Network Interface Card                                 */
 /* -------------------------------------------------------------------------- */
 
+// managementNetworkInterfaceName: Name of the created management network interface.
 @description('Name of the created management network interface.')
 param managementNetworkInterfaceName string = 'management-nic'
 
@@ -118,13 +129,28 @@ module managementNetworkInterfaceModule 'modules/man-nic.bicep' = {
   }
 }
 
-/* -------------------------------------------------------------------------- */
-/*                     MANAGEMENT SERVER - STORAGE                            */
-/* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /*                     PEERING                                                */
+// /* -------------------------------------------------------------------------- */
+
+param vnetmngntvnetwebappPEERINGName string = 'vnetmngntvnetwebappPEERINGName'
+
+module vnetmngntvnetwebappPeeringModule 'modules/man-peering.bicep' = {
+  name: vnetmngntvnetwebappPEERINGName
+  params: {
+    vnetManagementName: vnetManagementModule.name
+    virtualNetworkName_webapp: virtualNetworkName_webapp
+  }
+}
+
+// /* -------------------------------------------------------------------------- */
+// /*                     MANAGEMENT SERVER - STORAGE                            */
+// /* -------------------------------------------------------------------------- */
 
 @description('Prefix for the storage account name.')
 param storageAccountManagementPrefix string = 'stgmngmt'
 
+// storageAccountManagementName: Name of the storage account.
 @description('Name of the storage account.')
 param storageAccountManagementName string = '${storageAccountManagementPrefix}${uniqueString(resourceGroup().id)}'
 
@@ -140,12 +166,16 @@ module storageAccountManagementModule 'modules/man-storage.bicep' = {
 /*                     Virtual Machine / Server                               */
 /* -------------------------------------------------------------------------- */
 
+// VMmanagementName: Name of the management virtual machine.
 @description('Name of the management virtual machine.')
 param VMmanagementName string = 'vmmanagement'
 
+// adminUsername: The administrator username.
+// @secure()
 @description('The administrator username.')
 param adminUsernameMngmnt string = 'adminAnj'
 
+// adminPassword: The administrator password.
 @secure()
 @description('The administrator password.')
 param adminPasswordMngmnt string = 'Password@321'
@@ -161,11 +191,20 @@ module VirtualMachineManagementModule 'modules/man-vm.bicep' = {
   }
 }
 
-/* -------------------------------------------------------------------------- */
-/*                     WEB APP                                                */
-/* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /* -------------------------------------------------------------------------- */
+// /*                              WEB APP                                       */
+// /* -------------------------------------------------------------------------- */
 
-@description('Name of the application gateway.')
+// /* -------------------------------------------------------------------------- */
+// /*                     APP GATEWAY                                             */
+// /* -------------------------------------------------------------------------- */
+
 param applicationGateWayName string = 'applicationGateWayName'
 
 module applicationGateWayVMSSModule 'modules/web-ag-vmss.bicep' = {
@@ -180,10 +219,10 @@ module applicationGateWayVMSSModule 'modules/web-ag-vmss.bicep' = {
 /*                     PEERING                                                */
 /* -------------------------------------------------------------------------- */
 
+// vnet
 @description('Name of the web application virtual network.')
 param virtualNetworkName_webapp string = 'webapp-vnet'
 
-@description('Name of the peering between web app and management virtual networks.')
 param vnetwebappvnetmngntPeeringName string = 'vnetwebappvnetmngntPeeringName'
 
 module vnetwebappvnetmngntPeeringModule 'modules/web-peering.bicep' = {
@@ -195,22 +234,31 @@ module vnetwebappvnetmngntPeeringModule 'modules/web-peering.bicep' = {
 }
 
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 /*                     DATABASE                                               */
 /* -------------------------------------------------------------------------- */
 
 @description('The administrator username of the SQL logical server.')
 param sqladminLogin string = 'adminAnj'
 
-@secure()
 @description('The administrator password of the SQL logical server.')
+@secure()
 param sqladminLoginPassword string = 'Password@321'
 
+// The name of the MySQL database.
 @description('The name of the MySQL database.')
 param mysqlDBName string = 'mysqlDB'
 
+// Name of the management server SQL firewall rules
 @description('Name of the management server SQL firewall rules.')
 param managementServerSqlFirewallRulesName string = 'mansqlFirewallRules'
 
+// Name of the web server SQL firewall rules
 @description('Name of the web server SQL firewall rules.')
 param webServerFirewallRulesName string = 'websqlFirewallRules'
 
@@ -229,13 +277,16 @@ module dbModule 'modules/db.bicep' = {
 }
 
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 /*                     STORAGE - POST SCRIPT WITH PRIVATE CONTAINER           */
 /* -------------------------------------------------------------------------- */
 
-@description('Prefix for the storage account name.')
 param storageAccountPrefix string = 'storage'
-
-@description('Name of the storage account.')
 param storageAccountName string = '${storageAccountPrefix}${uniqueString('storage', resourceGroup().id)}'
 
 module storagePostscriptModule 'modules/storage-postscript.bicep' = {

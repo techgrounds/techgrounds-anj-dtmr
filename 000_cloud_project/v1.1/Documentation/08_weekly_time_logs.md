@@ -259,7 +259,9 @@ July 7, 2023 Friday
 
 Wat zijn jou wins vandaag?-----
 
-- Errors
+- Prepared for the presentation
+- Understood why I need backend pool subnet for.
+- Errors. Errors. Errors.
 
 ### Obstakels & Oplossingen
 
@@ -318,6 +320,37 @@ If you want to connect to an Azure SQL Database using a private IP address inste
 8. Connect using the private IP address: Update the connection string or configuration of your application or client to use the private IP address of the Azure SQL Database instead of the public endpoint or server name.
 
 By following these steps, you can establish a private connection between the management server and the Azure SQL Database using their respective private IP addresses within the Virtual Network. This ensures that the communication remains within the Azure network and does not go through the public internet.
+
+### Plans for tomorrow
+
+1. Presentation
+2. VMSS & Application Gateway
+
+---
+
+## WEEK 15
+
+### Dagverslag
+
+Wat zijn jou wins vandaag?-----
+
+- Documentation for v1.1 is updated
+- I did sprint review presentation
+- Deploy a basic App Gateway
+
+### Obstakels & Oplossingen
+
+1.
+
+2.
+3. Asking better questions
+
+- [ ]
+- [ ]
+
+### Learnings
+
+- [ ]
 
 ### Plans for tomorrow
 

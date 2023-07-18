@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# # Set variables for your deployment
+resourceGroupName="cloud_proj"
+deploymentName="my-bicep-deployment"
+location="uksouth"
+templateFile="main.bicep"
+
 # Login to Azure
 az login
 
@@ -10,16 +16,16 @@ az account set --subscription 'Cloud Student 1'
 # Register the 'Microsoft.Network' namespace, which includes the 'privateDnsZones' resource provider.
 # az provider register --namespace Microsoft.Network --subscription <subscription-id> --location westeurope
 # az provider register --namespace Microsoft.Network --location westeurope
-az provider register --namespace Microsoft.Network --wait
+# az provider register --namespace Microsoft.Network --wait
 # Check the registration status of the resource provider
 # az provider show --namespace Microsoft.Network --subscription <subscription-id> --query "registrationState" --location westeurope
-az provider show --namespace Microsoft.Network
+# az provider show --namespace Microsoft.Network
 
 # Create the resource group
-az group create --name v11test --location westeurope
+az group create --name cloud_proj --location uksouth
 
 # Deploy the template
-az deployment group create --resource-group v11test --template-file main.bicep
+az deployment group create --resource-group cloud_proj --template-file main.bicep
 
 
 

@@ -76,16 +76,17 @@ resource managementNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11
   properties: {
     ipConfigurations: [
       {
-        name: 'management-ipconfig'
+        name: IPConfigName
         properties: {
           subnet: {
             // The ID is written like this because I wrote down the subnet inside the vnet
             // '${vnetManagement.id}/subnets/${subnetName}'
             id: resourceId('Microsoft.Network/virtualNetworks/subnets', vnetManagementName, vnetManagementSubnetName)
           }
-          privateIPAddress: '10.20.20.10'
+          // privateIPAddress: '10.20.20.10'
           privateIPAddressVersion: 'IPv4'
-          privateIPAllocationMethod: 'Static'
+          // privateIPAllocationMethod: 'Static'
+          privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
             id: managementPublicIPID
           }

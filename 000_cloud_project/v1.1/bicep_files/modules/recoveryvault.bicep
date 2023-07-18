@@ -16,70 +16,75 @@
 param location string = resourceGroup().location
 
 /* -------------------------------------------------------------------------- */
-/*                     PARAMS & VARS                                          */
-/* -------------------------------------------------------------------------- */
-
-// @description('The name of the Web Server.')
-// param webServerName string
-
-@description('The name of the Recovery Services Vault')
-param recoveryVaultName string = 'recoveryVaultName'
-
-// var VaultPolicyName = '${recoveryVaultName}-policy'
-// var VaultVmssContainerName = '${recoveryVaultName}-websv-container'
-
-/* -------------------------------------------------------------------------- */
 /*                     RECOVERY VAULT                                         */
 /* -------------------------------------------------------------------------- */
+@description('The environment name. "dev" and "prod" are valid inputs.')
+@allowed([
+  'dev'
+  'prod'
+])
+param envName string
 
-resource recoveryServiceVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
+@description('The name of the Management Server.')
+param mgmtServerName string
+
+@description('The name of the Recovery Services Vault')
+param recoveryVaultName string = '${take(envName, 3)}-${take(location, 6)}-recoveryvault${take(uniqueString(resourceGroup().id), 6)}'
+
+var backupFabric = 'Azure'
+var protectionContainer = 'iaasvmcontainer;iaasvmcontainerv2;${resourceGroup().name};${mgmtServerName}'
+var protectedItem = 'vm;iaasvmcontainerv2;${resourceGroup().name};${mgmtServerName}'
+
+// VMmanagementName: Name of the management virtual machine.
+@description('Name of the management virtual machine.')
+param virtualMachineName_mngt string
+
+resource VMmanagement 'Microsoft.Compute/virtualMachines@2023-03-01' existing = {
+  name: virtualMachineName_mngt
+}
+
+resource recoveryVault 'Microsoft.RecoveryServices/vaults@2023-01-01' = {
   name: recoveryVaultName
   location: location
-  // tags: {
-  //   tagName1: 'tagValue1'
-  //   tagName2: 'tagValue2'
-  // }
-  // sku: {
-  //   capacity: 'string'
-  //   family: 'string'
-  //   name: 'string'
-  //   size: 'string'
-  //   tier: 'string'
-  // }
-  // etag: 'string'
-  // identity: {
-  //   type: 'string'
-  //   userAssignedIdentities: {}
-  // }
+  identity: {
+    type: 'SystemAssigned'
+  }
+  tags: {
+    Location: location
+    Environment: envName
+  }
+  sku: {
+    name: 'RS0'
+    tier: 'Standard'
+  }
   properties: {
-    // encryption: {
-    //   infrastructureEncryption: 'string'
-    //   kekIdentity: {
-    //     userAssignedIdentity: 'string'
-    //     useSystemAssignedIdentity: bool
-    //   }
-    //   keyVaultProperties: {
-    //     keyUri: 'string'
-    //   }
-    // }
     monitoringSettings: {
       azureMonitorAlertSettings: {
-        alertsForAllJobFailures: 'string'
+        alertsForAllJobFailures: 'Enabled'
       }
       classicAlertSettings: {
-        alertsForCriticalOperations: 'string'
+        alertsForCriticalOperations: 'Enabled'
       }
     }
-    moveDetails: {}
     publicNetworkAccess: 'Disabled'
-    redundancySettings: {}
-    securitySettings: {
-      immutabilitySettings: {
-        state: 'string'
-      }
-    }
-    upgradeDetails: {}
   }
+  dependsOn: [
+    VMmanagement
+  ]
+}
+
+// Enables backup of the management server with a default policy.
+resource mgmtBackup 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2023-02-01' = {
+  name: '${recoveryVaultName}/${backupFabric}/${protectionContainer}/${protectedItem}'
+  location: location
+  properties: {
+    protectedItemType: 'Microsoft.Compute/virtualMachines'
+    policyId: '${recoveryVault.id}/backupPolicies/DefaultPolicy'
+    sourceResourceId: VMmanagement.id
+  }
+  dependsOn: [
+    VMmanagement
+  ]
 }
 
 /* -------------------------------------------------------------------------- */

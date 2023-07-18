@@ -26,112 +26,13 @@ param nsgName_webapp string
 /*                     Network Security Group                                 */
 /* -------------------------------------------------------------------------- */
 
-resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = [for i in range(0, 2): {
-  name: '${nsgName_webapp}${i + 1}'
+resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = {
+  name: nsgName_webapp
   location: location
   // Contains the set of properties for the NSG, including the security rules.
   properties: {
     // security Rule are An array of security rules that define the network traffic rules for the NSG.
     securityRules: [
-      // {
-      //   name: securityRulesName_webapp
-      //   properties: {
-      //     // priority: Lower values indicate higher priority. In this case, the rule has a priority of 100.
-      //     priority: 100
-      //     access: 'Allow'
-      //     // direction: Indicates the direction of the traffic. 'Inbound' means the rule applies to incoming traffic.
-      //     direction: 'Inbound'
-      //     protocol: 'Tcp'
-      //     sourcePortRange: '*'
-      //     // destinationPortRange: Specifies the destination port range for the traffic. In this example, it is set to '22', which is the default port for SSH
-      //     // should it be '3389'
-      //     destinationPortRange: '22' // Customize for SSH or RDP port
-      //     // sourceAddressPrefixes: Defines the source IP addresses or ranges allowed for the traffic. You can add trusted source IP addresses or ranges that are allowed to access the management server.
-      //     sourceAddressPrefixes: [
-      //       // Add trusted source IP addresses/ranges
-      //       // '10.20.20.0/24'
-      //       // '10.10.10.0/24'
-      //       '85.149.106.77'
-      //     ]
-      //     // destinationAddressPrefixes: Specifies the destination IP addresses or ranges for the traffic. In this case, it is set to '10.20.20.0/24', which represents the IP address range of the management subnet.
-      //     destinationAddressPrefixes: [
-      //       // Customize for management subnet address range
-      //       vnet_addressPrefixes_webapp
-      //     ]
-      //   }
-      // }
-      // Add additional security rules as needed
-      // {
-      //   name: 'specific-inbound-allow'
-      //   properties: {
-      //     priority: 200
-      //     direction: 'Inbound'
-      //     access: 'Allow'
-      //     protocol: '*'
-      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     description: 'Allow specific IP address'
-      //   }
-      // }
-
-      // // destinationAddressPrefix: 'VirtualNetwork' // Assuming you want to restrict access to the virtual network
-
-      // {
-      //   name: 'specific-outbound-allow'
-      //   properties: {
-      //     priority: 200
-      //     direction: 'Outbound'
-      //     access: 'Allow'
-      //     protocol: '*'
-      //     sourceAddressPrefix: '${allowedIPAddresses[0]}/32'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '*'
-      //     description: 'Allow specific IP address'
-      //   }
-      // }
-      // {
-      //   name: 'HTTPS-rule'
-      //   properties: {
-      //     protocol: 'TCP'
-      //     sourceAddressPrefix: '*'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '443'
-      //     access: 'Allow'
-      //     priority: 1000
-      //     direction: 'Inbound'
-      //   }
-      // }
-      // {
-      //   name: 'HTTP-rule'
-      //   properties: {
-      //     protocol: 'TCP'
-      //     sourceAddressPrefix: '*'
-      //     destinationAddressPrefix: '*'
-      //     sourcePortRange: '*'
-      //     destinationPortRange: '80'
-      //     access: 'Allow'
-      //     priority: 1080
-      //     direction: 'Inbound'
-      //   }
-      // }
-      // // Web/App Server: 10.10.10.0/24
-      // {
-      //   name: 'SSH-rule'
-      //   properties: {
-      //     protocol: 'TCP'
-      //     sourceAddressPrefix: '10.10.10.10/32'
-      //     sourcePortRange: '*'
-      //     destinationAddressPrefix: '*'
-      //     destinationPortRange: '22'
-      //     access: 'Allow'
-      //     priority: 1200
-      //     direction: 'Inbound'
-      //   }
-      // }
       {
         name: 'RDP'
         properties: {
@@ -160,7 +61,7 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = [for i
       }
     ]
   }
-}]
+}
 
 /* -------------------------------------------------------------------------- */
 /*                     Output                                                 */
@@ -168,8 +69,8 @@ resource nsgWebApp 'Microsoft.Network/networkSecurityGroups@2022-11-01' = [for i
 // ToDo:
 // - add output from other resources
 
-output nsgWebAppID string = nsgWebApp[0].id
-output nsgWebAppName string = nsgWebApp[0].name
+output nsgWebAppID string = nsgWebApp.id
+output nsgWebAppName string = nsgWebApp.name
 
 // /* -------------------------------------------------------------------------- */
 // /*                     Network Security Group                                 */

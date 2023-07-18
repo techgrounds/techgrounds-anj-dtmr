@@ -1,28 +1,10 @@
 /* -------------------------------------------------------------------------- */
-/*                     Use this command to deploy                             */
-/* -------------------------------------------------------------------------- */
-
-// az login
-// az account set --subscription 'Cloud Student 1'
-// az group create --name TestRGcloud_project --location uksouth
-// az deployment group create --resource-group TestRGcloud_project --template-file web-pubip.bicep
-
-/* -------------------------------------------------------------------------- */
 /*                     LOCATION FOR EVERY RESOURCE                            */
 /* -------------------------------------------------------------------------- */
 
 // location
 @description('Location for all resources.')
-param location string
-
-/* -------------------------------------------------------------------------- */
-/*                     PARAMS & VARS                                          */
-/* -------------------------------------------------------------------------- */
-
-// public ip
-param publicIpName_webapp string
-// DNS
-// param DNSdomainNameLabel_webapp string = 'webapp-server'
+param location string = resourceGroup().location
 
 /* -------------------------------------------------------------------------- */
 /*                     Public IP                                              */
@@ -32,9 +14,11 @@ param publicIpName_webapp string
 // configure DNS settings.
 // Public IP resource does not have any dependencies on other resources.
 
-// Why is this 3?
-resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = [for i in range(0, 3): {
-  name: '${publicIpName_webapp}${i + 1}'
+// public ip
+param publicIpName_ag string = 'AGpublicIp'
+
+resource agPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
+  name: publicIpName_ag
   location: location
   sku: {
     name: 'Standard'
@@ -48,14 +32,14 @@ resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' = [for 
     idleTimeoutInMinutes: 4
     // publicIPAllocationMethod: 'None'
   }
-}]
+}
 
 /* -------------------------------------------------------------------------- */
 /*                     Output                                                 */
 /* -------------------------------------------------------------------------- */
 
-output WebAppPublicIPName string = WebAppPublicIP[0].name
-output WebAppPublicIPID string = WebAppPublicIP[0].id
+output agPublicIPIPName string = agPublicIP.name
+output agPublicIPID string = agPublicIP.id
 
-output webAppPublicIpAddress string = WebAppPublicIP[0].properties.ipAddress
+output agPublicIPAddress string = agPublicIP.properties.ipAddress
 // output webAppDnsDomainNameLabel string = WebAppPublicIP[0].properties.dnsSettings.domainNameLabel

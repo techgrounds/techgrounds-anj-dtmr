@@ -13,7 +13,7 @@
 
 // location
 @description('Location for all resources.')
-param location string
+param location string = resourceGroup().location
 
 /* -------------------------------------------------------------------------- */
 /*                     PARAMS & VARS                                          */
@@ -69,7 +69,7 @@ param appGateway_subnetName string
 // This segregation helps improve security and network performance by controlling traffic flow between resources.
 // Within VNet, I created a subnet to further segment the resources inside the vnet like virtual machine for the server
 
-resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
+resource vnetagvmssWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
   name: virtualNetworkName_webapp
   location: location
   properties: {
@@ -79,6 +79,18 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
       ]
     }
     subnets: [
+      // {
+      //   name: 'subnetName_webapp'
+      //   properties: {
+      //     addressPrefix: vnet_addressPrefixes_webapp
+      //     privateEndpointNetworkPolicies: 'Enabled'
+      //     privateLinkServiceNetworkPolicies: 'Enabled'
+      //     // By associating an NSG with a subnet, we can enforce network-level security policies for the resources within that subnet.
+      //     networkSecurityGroup: {
+      //       id: resourceId('Microsoft.Network/networkSecurityGroups', nsgWebApp.id)
+      //     }
+      //   }
+      // }
       {
         name: appGateway_subnetName
         properties: {
@@ -107,20 +119,20 @@ resource vnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' = {
 
 // Name of the web application virtual network.
 @description('Name of the web application virtual network.')
-output vnetWebAppName string = vnetWebApp.name
+output vnetWebAppName string = vnetagvmssWebApp.name
 
 // ID of the web application virtual network.
 @description('ID of the web application virtual network.')
-output vnetWebAppID string = vnetWebApp.id
+output vnetWebAppID string = vnetagvmssWebApp.id
 
 // Name of the web application subnet.
 @description('Name of the web application gateway virtual network.')
-output WebAppGatewaySubnetName string = vnetWebApp.properties.subnets[0].name
+output WebAppGatewaySubnetName string = vnetagvmssWebApp.properties.subnets[0].name
 
 // ID of the web application subnet.
 @description('ID of the web application gateway subnet.')
-output WebAppGatewaySubnetID string = vnetWebApp.properties.subnets[0].id
+output WebAppGatewaySubnetID string = vnetagvmssWebApp.properties.subnets[0].id
 
-output WebAppBackEndSubnetName string = vnetWebApp.properties.subnets[1].name
+output WebAppBackEndSubnetName string = vnetagvmssWebApp.properties.subnets[1].name
 
-output WebAppBackEndSubnetID string = vnetWebApp.properties.subnets[1].id
+output WebAppBackEndSubnetID string = vnetagvmssWebApp.properties.subnets[1].id

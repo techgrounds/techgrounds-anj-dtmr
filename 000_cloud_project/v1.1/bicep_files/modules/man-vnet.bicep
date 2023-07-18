@@ -96,7 +96,7 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' = {
           //   properties: {
           //     serviceName: 'Microsoft.Authorization/roleAssignments'
           //   }
-
+          // privateEndpointNetworkPolicies: 'Enabled'
         }
       }
     ]

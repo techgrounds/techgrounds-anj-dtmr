@@ -50,6 +50,16 @@ resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' existin
   name: publicIpName_webapp
 }
 
+// App Gateway
+@description('Name of the web application subnet.')
+param appGateway_subnetName string
+
+param applicationGateWayName string
+resource applicationGateWay 'Microsoft.Network/applicationGateways@2021-05-01' = {
+  name: applicationGateWayName
+}
+
+var ipconfigName = 'ipconfig-nic'
 /* -------------------------------------------------------------------------- */
 /*                     Network Interface Card                                 */
 /* -------------------------------------------------------------------------- */
@@ -60,64 +70,38 @@ resource WebAppPublicIP 'Microsoft.Network/publicIPAddresses@2022-11-01' existin
 resource WebAppNetworkInterface 'Microsoft.Network/networkInterfaces@2022-11-01' = [for i in range(0, 2): {
   name: '${nicName_webapp}${i + 1}'
   location: location
-  // dependsOn: [
-  //   nsgWebApp
-  // ]
-  // properties: {
-  //   ipConfigurations: [
-  //     {
-  //       name: IPConfigName_webapp
-  //       properties: {
-  //         subnet: {
-  //           // The ID is written like this because I wrote down the subnet inside the vnet
-  //           id: '${vnetWebApp.id}/subnets/${subnetName_webapp}'
-  //         }
-  //         privateIPAllocationMethod: 'Dynamic'
-  //         publicIPAddress: {
-  //           id: WebAppPublicIP.id
-  //         }
-  //       }
-  //     }
-  //   ]
-  //   networkSecurityGroup: {
-  //     id: nsgWebApp.id
-  //   }
-  // }
   properties: {
     ipConfigurations: [
       {
-        name: '${IPConfigName_webapp}${i + 1}'
+        name: '${ipconfigName}${i + 1}'
         properties: {
           privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
-            id: resourceId('Microsoft.Network/publicIPAddresses', '${WebAppPublicIP.name}${i + 1}')
+            id: resourceId('Microsoft.Network/publicIPAddresses', '${publicIpName_webapp}${i + 1}')
           }
-          // backend subnet
           subnet: {
-            id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName_webapp, vnetWebApp.properties.subnets[1].name)
+            id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName_webapp, 'backend-subnet')
           }
           primary: true
           privateIPAddressVersion: 'IPv4'
-          // applicationGatewayBackendAddressPools: [
-          //   {
-          //     id: resourceId('Microsoft.Network/applicationGateways/backendAddressPools', applicationGateWayName, 'myBackendPool')
-          //   }
-          // ]
+          applicationGatewayBackendAddressPools: [
+            {
+              id: resourceId('Microsoft.Network/applicationGateways/backendAddressPools', applicationGateWayName, 'myBackendPool')
+            }
+          ]
         }
       }
     ]
     enableAcceleratedNetworking: false
     enableIPForwarding: false
     networkSecurityGroup: {
-      id: resourceId('Microsoft.Network/networkSecurityGroups', '${nsgWebApp.name}${i + 1}')
+      id: resourceId('Microsoft.Network/networkSecurityGroups', '${nsgName_webapp}2')
     }
   }
   dependsOn: [
-    WebAppPublicIP
-    // applicationGateWay
-    nsgWebApp
-    vnetWebApp
+    applicationGateWay
   ]
+
 }]
 
 /* -------------------------------------------------------------------------- */

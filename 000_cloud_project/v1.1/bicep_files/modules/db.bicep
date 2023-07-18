@@ -1,5 +1,31 @@
 //  Resources: https://azure.microsoft.com/en-us/blog/sql-azure-connectivity-troubleshooting-guide/
 
+// # Load the SQL Server SMO assembly
+// Add-Type -AssemblyName "Microsoft.SqlServer.Smo, Version=16.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+
+// # Load the SQL Server SMO assembly
+// [System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.Smo') | Out-Null
+
+// # Replace 'database_server_name' with the actual DNS name or IP address of the SQL Server
+// $serverName = 'itzgvtsfn62lm.database.windows.net'
+// # Replace 'database_name' with the name of the specific database you want to connect to
+// $databaseName = 'mysqlDB'
+
+// try {
+//     # Try to connect to the SQL Server instance and the specified database
+//     $server = New-Object Microsoft.SqlServer.Management.Smo.Server($serverName)
+//     $database = $server.Databases[$databaseName]
+
+//     # Check if the database is connected and online
+//     if ($database.IsAccessible) {
+//         Write-Host "Database is connected and accessible."
+//     } else {
+//         Write-Host "Database is not accessible or not connected."
+//     }
+// } catch {
+//     Write-Host "Failed to connect to the database: $_"
+// }
+
 /* -------------------------------------------------------------------------- */
 /*                     Use this command to deploy                             */
 /* -------------------------------------------------------------------------- */
@@ -23,9 +49,15 @@ param location string
 /*                     PARAMS & VARS                                          */
 /* -------------------------------------------------------------------------- */
 
+param sqlserverNamePrefix string = 'sqlserver'
+
+var uniqueSuffix = uniqueString(substring(resourceGroup().id, 0, 10), deployment().name)
+
 // The name of the SQL server.
 @description('The name of the SQL server.')
-param sqlServerName string = uniqueString('sqlserver', resourceGroup().id)
+var sqlServerName = '${sqlserverNamePrefix}${uniqueSuffix}'
+
+// param sqlServerName string = uniqueString('sqlserver', resourceGroup().id)
 
 // The name of the MySQL database.
 @description('The name of the MySQL database.')
@@ -48,9 +80,9 @@ param MansqlFirewallRulesName string
 @description('The name of the SQL firewall rule for the web/app server.')
 param WebsqlFirewallRulesName string
 
-param privateDnsZoneNameManagement string = 'man-privatelink${environment().suffixes.sqlServerHostname}'
+// param privateDnsZoneNameManagement string = 'man-privatelink${environment().suffixes.sqlServerHostname}'
 
-param privateDnsZoneNameWebApp string = 'webApp-privatelink${environment().suffixes.sqlServerHostname}'
+// param privateDnsZoneNameWebApp string = 'webApp-privatelink${environment().suffixes.sqlServerHostname}'
 
 /* -------------------------------------------------------------------------- */
 /*                                                                            */
@@ -65,14 +97,22 @@ param privateDnsZoneNameWebApp string = 'webApp-privatelink${environment().suffi
 /*                     SQL Server                                             */
 /* -------------------------------------------------------------------------- */
 
+// @description('MySQL version')
+// @allowed([
+//   '5.6'
+//   '5.7'
+//   '8.0'
+// ])
+// param mysqlVersion string = '8.0'
+
 resource sqlServer 'Microsoft.Sql/servers@2021-11-01' = {
   name: sqlServerName
   location: location
   properties: {
     administratorLogin: sqladminLogin
     administratorLoginPassword: sqladminLoginPassword
-    // version:
-    // publicNetworkAccess: 'Disabled'
+    publicNetworkAccess: 'Enabled'
+    // restrictOutboundNetworkAccess: 'Enabled'
   }
 }
 
@@ -84,10 +124,6 @@ resource mysqlDB 'Microsoft.Sql/servers/databases@2021-11-01' = {
   parent: sqlServer
   name: mysqlDBName
   location: location
-  // properties: {
-  //   collation: 'SQL_Latin1_General_CP1_CI_AS'
-  //   maxSizeBytes: 1073741824
-  // }
 }
 
 // ToDo: Build Virtual Network Rules 
@@ -104,10 +140,17 @@ resource sqlVirtualNetworkRules 'Microsoft.Sql/servers/virtualNetworkRules@2021-
   }
 }
 
-// ToDo: Another sqlVirtualNetworkRules for web server
+resource sqlVirtualNetworkRules_webapp 'Microsoft.Sql/servers/virtualNetworkRules@2021-11-01' = {
+  parent: sqlServer
+  name: 'sqlVirtualNetworkRulesWebapp'
+  properties: {
+    ignoreMissingVnetServiceEndpoint: true
+    virtualNetworkSubnetId: virtualNetwork.properties.subnets[0].id
+  }
+}
 
 /* -------------------------------------------------------------------------- */
-/*       Vnet where Azure SQL Database can reside                             */
+/*       Vnets where Azure SQL Database can reside                             */
 /* -------------------------------------------------------------------------- */
 
 param virtualNetworkName string
@@ -118,7 +161,7 @@ resource vnetManagement 'Microsoft.Network/virtualNetworks@2022-11-01' existing 
 
 param virtualNetworkName_webapp string
 
-resource dbVnetWebApp 'Microsoft.Network/virtualNetworks@2022-11-01' existing = {
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2021-05-01' existing = {
   name: virtualNetworkName_webapp
 }
 
@@ -161,7 +204,7 @@ resource privateEndpointWebApp 'Microsoft.Network/privateEndpoints@2022-11-01' =
   location: location
   properties: {
     subnet: {
-      id: dbVnetWebApp.properties.subnets[0].id
+      id: virtualNetwork.properties.subnets[1].id
     }
     privateLinkServiceConnections: [
       {
@@ -179,35 +222,35 @@ resource privateEndpointWebApp 'Microsoft.Network/privateEndpoints@2022-11-01' =
     ]
   }
   dependsOn: [
-    dbVnetWebApp
+    virtualNetwork
   ]
 }
 
 // // /* -------------------------------------------------------------------------- */
 // // /*                     Private DNS Zone                                       */
 // // /* -------------------------------------------------------------------------- */
-// // Private DNS Zone:
 
-// resource privateDnsZoneManagement 'Microsoft.Network/privateDnsZones@2020-06-01' = {
-//   name: privateDnsZoneNameManagement
-//   location: location
-// }
+param privateDnsZoneName string = 'privateLink.mysql.database.azure.com'
 
-// resource privateDnsZoneWebApp 'Microsoft.Network/privateDnsZones@2020-06-01' = {
-//   name: privateDnsZoneNameWebApp
-//   location: location
-// }
+resource privateDnsZone 'Microsoft.Network/privateDnsZones@2020-06-01' = {
+  name: privateDnsZoneName
+  // tags: {
 
-/* -------------------------------------------------------------------------- */
-/*                     Virtual Network Link                                   */
-/* -------------------------------------------------------------------------- */
+  //  }
+  location: 'global'
+  properties: {}
+}
+
+// /* -------------------------------------------------------------------------- */
+// /*                     Virtual Network Link                                   */
+// /* -------------------------------------------------------------------------- */
 
 resource virtualNetworkLinkManagement 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = {
-  name: 'man/links-web'
-  // parent: privateDnsZoneManagement
-  location: location
+  name: '${privateDnsZone.name}man-links-web'
+  parent: privateDnsZone
+  location: 'global'
   properties: {
-    registrationEnabled: true
+    registrationEnabled: false
     virtualNetwork: {
       id: vnetManagement.id
     }
@@ -215,13 +258,13 @@ resource virtualNetworkLinkManagement 'Microsoft.Network/privateDnsZones/virtual
 }
 
 resource virtualNetworkLinkWebApp 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = {
-  name: 'web/links-man'
-  // parent: privateDnsZoneWebApp
+  name: '${privateDnsZone.name}web-links-man'
+  parent: privateDnsZone
   location: location
   properties: {
     registrationEnabled: true
     virtualNetwork: {
-      id: dbVnetWebApp.id
+      id: virtualNetwork.id
     }
   }
 }
@@ -232,19 +275,23 @@ resource virtualNetworkLinkWebApp 'Microsoft.Network/privateDnsZones/virtualNetw
 
 // var pvtEndpointDnsGroupName = '${privateEndpointManagement.name}/dnsgroupname'
 
-// resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2022-11-01' = {
-//   name: pvtEndpointDnsGroupName
-//   properties: {
-//     privateDnsZoneConfigs: [
-//       {
-//         name: 'privateDnsZoneConfigsManagement'
-//         properties: {
-//           privateDnsZoneId: privateDnsZoneManagement.id
-//         }
-//       }
-//     ]
-//   }
-// }
+resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2022-11-01' = {
+  name: 'pvtEndpoint/DnsGroup'
+  properties: {
+    privateDnsZoneConfigs: [
+      {
+        name: 'privateDnsZoneConfigsManagement'
+        properties: {
+          privateDnsZoneId: privateDnsZone.id
+        }
+      }
+    ]
+  }
+  dependsOn: [
+    privateEndpointManagement
+    privateEndpointWebApp
+  ]
+}
 
 /* -------------------------------------------------------------------------- */
 /*                     Firewall Rules                                         */

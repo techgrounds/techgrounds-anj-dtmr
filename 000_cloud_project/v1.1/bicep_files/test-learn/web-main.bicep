@@ -4,7 +4,7 @@
 
 // az login
 // az account set --subscription 'Cloud Student 1'
-// cd /000_cloud_project/v1.1/bicep_files/test-learn
+// cd 000_cloud_project/v1.1/bicep_files/test-learn
 // az group create --name testlearn --location westeurope
 // az deployment group create --resource-group testlearn --template-file web-main.bicep
 
