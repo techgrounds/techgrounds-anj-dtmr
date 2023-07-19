@@ -78,4 +78,5 @@ Grand Total: $112,000 per year
 
 ## Q&A and feedbacks
 
+Salamat! Thank you! Bedankt!
 
