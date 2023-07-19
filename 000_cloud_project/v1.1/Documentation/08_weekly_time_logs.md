@@ -332,28 +332,10 @@ By following these steps, you can establish a private connection between the man
 
 ### Dagverslag
 
-Wat zijn jou wins vandaag?-----
+Wat zijn jou wins voor deze week?-----
 
 - Documentation for v1.1 is updated
 - I did sprint review presentation
 - Deploy a basic App Gateway
+- Deploy VMSS
 
-### Obstakels & Oplossingen
-
-1.
-
-2.
-3. Asking better questions
-
-- [ ]
-- [ ]
-
-### Learnings
-
-- [ ]
-
-### Plans for tomorrow
-
-1.
-
----
