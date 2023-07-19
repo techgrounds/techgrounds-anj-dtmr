@@ -22,7 +22,23 @@
 - 1 Virtual Network with 1 app gateway subnet and 1 backend subnet both connected to VMSS
 - Both way peering
 - Azure SQL Database
-  
+
+Advantages of Azure SQL Database:
+
+Compatibility with Microsoft SQL Server: Azure SQL Database is based on Microsoft SQL Server, which means it offers compatibility with existing SQL Server applications and tools. This makes it an excellent choice for organizations with a Microsoft-centric technology stack.
+
+Seamless Managed Service: Azure SQL Database is a fully managed service, which means Microsoft handles the infrastructure management, backups, patching, and updates. This offloads the operational burden from the users, allowing them to focus more on application development and business logic.
+
+Scalability: Azure SQL Database offers flexible scaling options, allowing you to easily adjust the performance tier based on your application's demands. You can scale up or down the database resources without significant downtime.
+
+High Availability and Fault Tolerance: Azure SQL Database automatically provides high availability through automatic backups, geo-replication, and redundancy across multiple Azure data centers. This ensures data integrity and minimal downtime.
+
+Advanced Security Features: Azure SQL Database offers robust security features such as Transparent Data Encryption (TDE), firewall rules, and Azure Active Directory integration to protect sensitive data.
+
+Intelligent Performance Optimization: Azure SQL Database utilizes intelligent features like Query Performance Insight and Automatic Tuning to optimize database performance and improve query execution.
+
+
+
 ## Before Cloud Implementation & Cost Analysis
 
 On on-premises infrastructure where the company manages its own hardware, networking, and software updates, we need to consider various cost components:
