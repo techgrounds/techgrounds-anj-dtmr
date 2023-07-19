@@ -53,4 +53,4 @@ Documentation and preparing for the final presentation.
 
 ## Design-related decisions
 
-All the decisions I've made about the design of the project. You can find [here]().
+All the decisions I've made about the design of the project. You can find [here](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/10_final_presentation.md).
