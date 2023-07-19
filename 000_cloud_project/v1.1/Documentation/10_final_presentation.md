@@ -8,12 +8,12 @@
 6. Q&A and feedbacks
 
 
-## Design Architecture (What have I able to finish?)
+## Design Architecture
 
 ![Final CLoud Design](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/06_diagram/final-cloud.drawio.png)
 
 
-## Demo (Which resources are deployed and working?)
+## Demo
 
 - Play the demo.
 
