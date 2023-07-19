@@ -158,6 +158,20 @@ module VirtualMachineManagementModule 'modules/man-vm.bicep' = {
   }
 }
 
+// /* -------------------------------------------------------------------------- */
+// /*                     PEERING                                                */
+// /* -------------------------------------------------------------------------- */
+
+param vnetmngntvnetwebappPEERINGName string = 'vnetmngntvnetwebappPEERINGName'
+
+module vnetmngntvnetwebappPeeringModule 'modules/man-peering.bicep' = {
+  name: vnetmngntvnetwebappPEERINGName
+  params: {
+    vnetManagementName: vnetManagementModule.name
+    virtualNetworkName_webapp: virtualNetworkName_webapp
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 /*                     WEB APP WITH APP GATEWAY AND THE NETWORKS NEEDED       */
 /* -------------------------------------------------------------------------- */
