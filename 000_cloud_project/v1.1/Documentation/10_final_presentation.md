@@ -80,7 +80,7 @@ Power and Cooling Costs: $24,000
 Maintenance and Support Costs: $5,000
 Space and Facility Costs: $36,000
 
-Grand Total: $112,000 per year
+**Grand Total: $112,000 per year**
 
 
 ## After Cloud Implementation & Cost Analysis
