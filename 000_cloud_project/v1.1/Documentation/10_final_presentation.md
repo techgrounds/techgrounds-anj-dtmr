@@ -16,18 +16,13 @@
 
 - Play the demo.
 
-## Decisions, Challenges, Learnings
+## Decisions
 
 - Application Gateway
 - 1 Virtual Network with 1 app gateway subnet and 1 backend subnet both connected to VMSS
 - Both way peering
 - Azure SQL Database
-
-
-- Spent too much focus on DB
-
-
-
+  
 ## Before Cloud Implementation & Cost Analysis
 
 On on-premises infrastructure where the company manages its own hardware, networking, and software updates, we need to consider various cost components:
