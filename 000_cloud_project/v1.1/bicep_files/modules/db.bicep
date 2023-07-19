@@ -1,31 +1,5 @@
 //  Resources: https://azure.microsoft.com/en-us/blog/sql-azure-connectivity-troubleshooting-guide/
 
-// # Load the SQL Server SMO assembly
-// Add-Type -AssemblyName "Microsoft.SqlServer.Smo, Version=16.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-
-// # Load the SQL Server SMO assembly
-// [System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.Smo') | Out-Null
-
-// # Replace 'database_server_name' with the actual DNS name or IP address of the SQL Server
-// $serverName = 'itzgvtsfn62lm.database.windows.net'
-// # Replace 'database_name' with the name of the specific database you want to connect to
-// $databaseName = 'mysqlDB'
-
-// try {
-//     # Try to connect to the SQL Server instance and the specified database
-//     $server = New-Object Microsoft.SqlServer.Management.Smo.Server($serverName)
-//     $database = $server.Databases[$databaseName]
-
-//     # Check if the database is connected and online
-//     if ($database.IsAccessible) {
-//         Write-Host "Database is connected and accessible."
-//     } else {
-//         Write-Host "Database is not accessible or not connected."
-//     }
-// } catch {
-//     Write-Host "Failed to connect to the database: $_"
-// }
-
 /* -------------------------------------------------------------------------- */
 /*                     Use this command to deploy                             */
 /* -------------------------------------------------------------------------- */
@@ -97,14 +71,6 @@ param WebsqlFirewallRulesName string
 /*                     SQL Server                                             */
 /* -------------------------------------------------------------------------- */
 
-// @description('MySQL version')
-// @allowed([
-//   '5.6'
-//   '5.7'
-//   '8.0'
-// ])
-// param mysqlVersion string = '8.0'
-
 resource sqlServer 'Microsoft.Sql/servers@2021-11-01' = {
   name: sqlServerName
   location: location
@@ -126,10 +92,9 @@ resource mysqlDB 'Microsoft.Sql/servers/databases@2021-11-01' = {
   location: location
 }
 
-// ToDo: Build Virtual Network Rules 
-// /* -------------------------------------------------------------------------- */
-// /*                     Virtual Network Rules                                  */
-// /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                     Virtual Network Rules                                  */
+/* -------------------------------------------------------------------------- */
 
 resource sqlVirtualNetworkRules 'Microsoft.Sql/servers/virtualNetworkRules@2021-11-01' = {
   parent: sqlServer
@@ -226,72 +191,69 @@ resource privateEndpointWebApp 'Microsoft.Network/privateEndpoints@2022-11-01' =
   ]
 }
 
+// // // /* -------------------------------------------------------------------------- */
+// // // /*                     Private DNS Zone                                       */
+// // // /* -------------------------------------------------------------------------- */
+
+// param privateDnsZoneName string = 'privateLink.mysql.database.azure.com'
+
+// resource privateDnsZone 'Microsoft.Network/privateDnsZones@2020-06-01' = {
+//   name: privateDnsZoneName
+//   location: 'global'
+//   properties: {}
+// }
+
 // // /* -------------------------------------------------------------------------- */
-// // /*                     Private DNS Zone                                       */
+// // /*                     Virtual Network Link                                   */
 // // /* -------------------------------------------------------------------------- */
 
-param privateDnsZoneName string = 'privateLink.mysql.database.azure.com'
+// resource virtualNetworkLinkManagement 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = {
+//   name: '${privateDnsZone.name}man-links-web'
+//   parent: privateDnsZone
+//   location: 'global'
+//   properties: {
+//     registrationEnabled: false
+//     virtualNetwork: {
+//       id: vnetManagement.id
+//     }
+//   }
+// }
 
-resource privateDnsZone 'Microsoft.Network/privateDnsZones@2020-06-01' = {
-  name: privateDnsZoneName
-  // tags: {
+// resource virtualNetworkLinkWebApp 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = {
+//   name: '${privateDnsZone.name}web-links-man'
+//   parent: privateDnsZone
+//   location: location
+//   properties: {
+//     registrationEnabled: true
+//     virtualNetwork: {
+//       id: virtualNetwork.id
+//     }
+//   }
+// }
 
-  //  }
-  location: 'global'
-  properties: {}
-}
+// // /* -------------------------------------------------------------------------- */
+// // /*                     private Dns Zone Groups                                  */
+// // /* -------------------------------------------------------------------------- */
 
-// /* -------------------------------------------------------------------------- */
-// /*                     Virtual Network Link                                   */
-// /* -------------------------------------------------------------------------- */
+// // var pvtEndpointDnsGroupName = '${privateEndpointManagement.name}/dnsgroupname'
 
-resource virtualNetworkLinkManagement 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = {
-  name: '${privateDnsZone.name}man-links-web'
-  parent: privateDnsZone
-  location: 'global'
-  properties: {
-    registrationEnabled: false
-    virtualNetwork: {
-      id: vnetManagement.id
-    }
-  }
-}
-
-resource virtualNetworkLinkWebApp 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = {
-  name: '${privateDnsZone.name}web-links-man'
-  parent: privateDnsZone
-  location: location
-  properties: {
-    registrationEnabled: true
-    virtualNetwork: {
-      id: virtualNetwork.id
-    }
-  }
-}
-
-// /* -------------------------------------------------------------------------- */
-// /*                     private Dns Zone Groups                                  */
-// /* -------------------------------------------------------------------------- */
-
-// var pvtEndpointDnsGroupName = '${privateEndpointManagement.name}/dnsgroupname'
-
-resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2022-11-01' = {
-  name: 'pvtEndpoint/DnsGroup'
-  properties: {
-    privateDnsZoneConfigs: [
-      {
-        name: 'privateDnsZoneConfigsManagement'
-        properties: {
-          privateDnsZoneId: privateDnsZone.id
-        }
-      }
-    ]
-  }
-  dependsOn: [
-    privateEndpointManagement
-    privateEndpointWebApp
-  ]
-}
+// resource pvtEndpointDnsGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2022-11-01' = {
+//   name: 'pvtEndpoint/DnsGroup'
+//   properties: {
+//     privateDnsZoneConfigs: [
+//       {
+//         name: 'privateDnsZoneConfigsManagement'
+//         properties: {
+//           privateDnsZoneId: privateDnsZone.id
+//         }
+//       }
+//     ]
+//   }
+//   dependsOn: [
+//     privateEndpointManagement
+//     privateEndpointWebApp
+//   ]
+// }
 
 /* -------------------------------------------------------------------------- */
 /*                     Firewall Rules                                         */

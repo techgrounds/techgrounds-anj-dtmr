@@ -31,15 +31,26 @@ July 7, 2023
 Focused on preparing for the presentation
 
 July 10, 2023
-Presentation
+Presentation. Slowed down today as I worked the whole weekend for the presentation.
 
 July 11, 2023
-App Gateway
+Deloy the basis of App Gateway
 
 July 12, 2023
 DB and key vault
 
 July 13, 2023
-Take off the sepate nic module, then put it in one bicep file with vmss
+Take off the separate nic module, then put it in one bicep file with vmss
 
-July 14, 2023
+July 17, 2023
+Worked with the database with others and chose to connect the VMSS and App Gateway
+
+July 18, 2023
+Cleaning the code and testing.
+
+July 19, 2023
+Documentation and preparing for the final presentation.
+
+## Design-related decisions
+
+All the decisions I've made about the design of the project. You can find [here]().

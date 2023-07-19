@@ -1,65 +1,45 @@
 #!/bin/bash
 
 # # Set variables for your deployment
-resourceGroupName="cloud_proj"
-deploymentName="my-bicep-deployment"
-location="uksouth"
-templateFile="main.bicep"
+RESOURCE_GROUP_NAME=""
+DEPLOYMENT_NAME=""
+LOCATION=""
+TEMPLATEFILE="main.bicep"
 
 # Login to Azure
 az login
 
 # Set the subscription
-az account set --subscription 'Cloud Student 1'
-
-############### ---------- Database Private DNS Registration in the location
-# Register the 'Microsoft.Network' namespace, which includes the 'privateDnsZones' resource provider.
-# az provider register --namespace Microsoft.Network --subscription <subscription-id> --location westeurope
-# az provider register --namespace Microsoft.Network --location westeurope
-# az provider register --namespace Microsoft.Network --wait
-# Check the registration status of the resource provider
-# az provider show --namespace Microsoft.Network --subscription <subscription-id> --query "registrationState" --location westeurope
-# az provider show --namespace Microsoft.Network
+# Replace <subscription-id>
+az account set --subscription <subscription-id>
 
 # Create the resource group
-az group create --name cloud_proj --location uksouth
+# Replace RESOURCE_GROUP_NAME and LOCATION
+az group create --name RESOURCE_GROUP_NAME --location LOCATION
 
 # Deploy the template
-az deployment group create --resource-group cloud_proj --template-file main.bicep
+# Replace RESOURCE_GROUP_NAME and TEMPLATEFILE
+az deployment group create --resource-group RESOURCE_GROUP_NAME --template-file TEMPLATEFILE
 
 
 
-
+# ---------------------- EXAMPLE ------------------------
 # #!/bin/bash
 
 # # Set variables for your deployment
-# resourceGroupName="my-resource-group"
+# resourceGroupName="cloud_proj"
 # deploymentName="my-bicep-deployment"
-# location="westus"
+# location="uksouth"
 # templateFile="main.bicep"
 
 # # Login to Azure using the Azure CLI
 # az login
 
 # # Set the active Azure subscription (if needed)
-# # az account set --subscription "<subscription-id>"
+# # az account set --subscription "cloud-dev-1"
 
-# # Create a resource group (if needed)
-# # az group create --name "$resourceGroupName" --location "$location"
+# # Create the resource group
+# az group create --name cloud_proj --location uksouth
 
-# # Validate the deployment
-# az deployment group validate \
-#   --resource-group $resourceGroupName \
-#   --name $deploymentName \
-#   --template-file $templateFile \
-#   --parameters $parameterFile
-
-# # Build the Bicep file and generate the ARM template
-# bicep build "$templateFile"
-
-# # Deploy the ARM template using Azure CLI
-# az deployment group create \
-#   --name "$deploymentName" \
-#   --resource-group "$resourceGroupName" \
-#   --template-file "${templateFile%.*}.json" \
-#   --parameters "@${templateFile%.*}.parameters.json"
+# # Deploy the template
+# az deployment group create --resource-group cloud_proj --template-file main.bicep

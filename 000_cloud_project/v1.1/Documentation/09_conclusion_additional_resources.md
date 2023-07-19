@@ -10,3 +10,5 @@ This file will:
 
 - https://github.com/Azure/azure-quickstart-templates
 - https://www.ssllabs.com/ssltest
+- https://bicepdemo.z22.web.core.windows.net/
+- https://learn.microsoft.com/en-us/events/learn-events/learnlive-iac-and-bicep/

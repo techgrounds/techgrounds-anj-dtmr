@@ -14,10 +14,10 @@
 /* -------------------------------------------------------------------------- */
 
 @description('Name of the resource group.')
-param resourceGroupName string = 'cloud_proj'
+param resourceGroupName string = resourceGroup().name
 
 @description('Location for the resources.')
-param location string = 'uksouth'
+param location string = resourceGroup().location
 
 module resourceGroupModule 'modules/resourcegrp.bicep' = {
   scope: subscription()
@@ -33,7 +33,7 @@ module resourceGroupModule 'modules/resourcegrp.bicep' = {
 /* -------------------------------------------------------------------------- */
 
 @description('Prefix for the key vault name.')
-param vaultNamePrefix string = 'myvault'
+param vaultNamePrefix string = 'keyvault'
 
 var uniqueSuffix = uniqueString(substring(resourceGroup().id, 0, 10), deployment().name)
 
@@ -42,11 +42,8 @@ var keyVaultName = '${vaultNamePrefix}${uniqueSuffix}'
 module keyVaultModule 'modules/keyvault.bicep' = {
   name: keyVaultName
   params: {
-    adminPassword: adminPasswordMngmnt
-    adminUserName: adminPasswordMngmnt
+    keyVaultName: keyVaultName
     location: location
-    principalId: ''
-    envName: 'dev'
   }
 }
 
@@ -162,11 +159,11 @@ module VirtualMachineManagementModule 'modules/man-vm.bicep' = {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                     WEB APP                                                */
+/*                     WEB APP WITH APP GATEWAY AND THE NETWORKS NEEDED       */
 /* -------------------------------------------------------------------------- */
 
 @description('Name of the application gateway.')
-param applicationGateWayName string = 'applicationGateWayName'
+param applicationGateWayName string = 'applicationGateWay'
 
 module applicationGateWayVMSSModule 'modules/web-ag-vmss.bicep' = {
   name: applicationGateWayName
