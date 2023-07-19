@@ -1,6 +1,6 @@
 # Infrastructure as Code (IaC) using Azure Bicep project
 
-0. [How to proceed from v1.0 requirements to v1.1?](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/planning_v1.1.md)
+0. [How to proceed from v1.0 requirements to v1.1?](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/00_planning_v1.1.md)
 
 1. [Project Introduction and Overview](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/01_proj_intro_description_requirements.md)
 
