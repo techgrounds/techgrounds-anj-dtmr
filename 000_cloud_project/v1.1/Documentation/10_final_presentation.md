@@ -2,7 +2,7 @@
 
 1. Design Architecture (What have I able to finish?)
 2. Demo (Which resources are deployed and working?)
-3. Decisions, Challenges, Learnings
+3. Decisions
 4. Before Cloud Implementation & Cost Analysis
 5. After Cloud Implementation & Cost Analysis
 6. Q&A and feedbacks
