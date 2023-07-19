@@ -49,7 +49,7 @@ v1.1
 - [ ] Application Gateway can perform health checks
 - [ ] Application Gateway includes various security features, such as Web Application Firewall (WAF)
 
-## Planning
+## Draft Planning
 
 ### July 3 - 7
 
