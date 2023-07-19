@@ -2,9 +2,8 @@
 
 This file:
 
-- Describe the architecture of the infrastructure provisioned by the Bicep project.
+- Describe the architecture of the infrastructure for The Given Project Architecture and v1.1 sprint review provisioned by the Bicep project.
 - Provide diagrams or visual representations to help readers understand the overall structure.
-- Explain the purpose and functionality of each resource or module used.
 
 ## The Given Project Architecture
 
@@ -127,3 +126,6 @@ Questions:
 
 - [ ] Do I still need a separate nsg or I can just configure the inbound and outbound traffic under app gateway.
 - [ ] What is your favorite error message so far? ;)
+
+
+Check the final architecture [here](https://github.com/techgrounds/techgrounds-anj-dtmr/edit/main/000_cloud_project/v1.1/Documentation/10_final_presentation.md).
