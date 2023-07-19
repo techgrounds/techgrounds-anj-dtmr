@@ -74,11 +74,11 @@ On on-premises infrastructure where the company manages its own hardware, networ
 
 
 **Estimated Total On-Premises Infrastructure Cost (Per Year):**
-Hardware Costs: $25,000
-Software Licensing Costs: $22,000
-Power and Cooling Costs: $24,000
-Maintenance and Support Costs: $5,000
-Space and Facility Costs: $36,000
+- Hardware Costs: $25,000
+- Software Licensing Costs: $22,000
+- Power and Cooling Costs: $24,000
+- Maintenance and Support Costs: $5,000
+- Space and Facility Costs: $36,000
 
 **Grand Total: $112,000 per year**
 
