@@ -23,20 +23,21 @@
 - Both way peering
 - Azure SQL Database
 
+While Azure MySQL Database is way more Cost Effective, Open-Source Flexibility, Support for Non-Microsoft Platforms, has vast Community Support and Tools......
+
 Advantages of Azure SQL Database:
 
-Compatibility with Microsoft SQL Server: Azure SQL Database is based on Microsoft SQL Server, which means it offers compatibility with existing SQL Server applications and tools. This makes it an excellent choice for organizations with a Microsoft-centric technology stack.
+1. Compatibility with Microsoft SQL Server: Azure SQL Database is based on Microsoft SQL Server, which means it offers compatibility with existing SQL Server applications and tools. This makes it an excellent choice for organizations with a Microsoft-centric technology stack. (Relate to bicep)
 
-Seamless Managed Service: Azure SQL Database is a fully managed service, which means Microsoft handles the infrastructure management, backups, patching, and updates. This offloads the operational burden from the users, allowing them to focus more on application development and business logic.
+2. Seamless Managed Service: Azure SQL Database is a fully managed service, which means Microsoft handles the infrastructure management, backups, patching, and updates. This offloads the operational burden from the users, allowing them to focus more on application development and business logic.
 
-Scalability: Azure SQL Database offers flexible scaling options, allowing you to easily adjust the performance tier based on your application's demands. You can scale up or down the database resources without significant downtime.
+3. Scalability: Azure SQL Database offers flexible scaling options, allowing you to easily adjust the performance tier based on your application's demands. You can scale up or down the database resources without significant downtime.
 
-High Availability and Fault Tolerance: Azure SQL Database automatically provides high availability through automatic backups, geo-replication, and redundancy across multiple Azure data centers. This ensures data integrity and minimal downtime.
+4. High Availability and Fault Tolerance: Azure SQL Database automatically provides high availability through automatic backups, geo-replication, and redundancy across multiple Azure data centers. This ensures data integrity and minimal downtime.
 
-Advanced Security Features: Azure SQL Database offers robust security features such as Transparent Data Encryption (TDE), firewall rules, and Azure Active Directory integration to protect sensitive data.
+5. Advanced Security Features: Azure SQL Database offers robust security features such as Transparent Data Encryption (TDE), firewall rules, and Azure Active Directory integration to protect sensitive data.
 
-Intelligent Performance Optimization: Azure SQL Database utilizes intelligent features like Query Performance Insight and Automatic Tuning to optimize database performance and improve query execution.
-
+6. Intelligent Performance Optimization: Azure SQL Database utilizes intelligent features like Query Performance Insight and Automatic Tuning to optimize database performance and improve query execution.
 
 
 ## Before Cloud Implementation & Cost Analysis
