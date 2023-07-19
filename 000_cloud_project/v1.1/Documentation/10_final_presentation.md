@@ -12,16 +12,21 @@
 
 ![Final CLoud Design](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/06_diagram/final-cloud.drawio.png)
 
+
 ## Demo (Which resources are deployed and working?)
 
 - Play the demo.
 
+
 ## Decisions
 
-- Application Gateway
-- 1 Virtual Network with 1 app gateway subnet and 1 backend subnet both connected to VMSS
-- Both way peering
-- Azure SQL Database
+- [x] Azure SQL DB connected to both management server and web server using private endpoint
+- [x] working management server
+- [x] 1 Virtual Network with 1 app gateway subnet and 1 backend subnet both connected to VMSS
+- [x] Azure Application Gateway with Web Application Firewall (WAF) capabilities to act as a proxy 
+- [x] VMSS Load balancer
+- [x] Both way peering
+- [x] Azure SQL DB connected to both management server and web server using private endpoint
 
 While Azure MySQL Database is way more Cost Effective, Open-Source Flexibility, Support for Non-Microsoft Platforms, has vast Community Support and Tools......
 
@@ -76,6 +81,7 @@ Maintenance and Support Costs: $5,000
 Space and Facility Costs: $36,000
 
 Grand Total: $112,000 per year
+
 
 ## After Cloud Implementation & Cost Analysis
 
