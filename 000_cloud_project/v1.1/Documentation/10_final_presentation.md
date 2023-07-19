@@ -91,7 +91,7 @@ On on-premises infrastructure where the company manages its own hardware, networ
 
 - [3-year (Azure SQL Database)](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/06_diagram/Cloud%20Cost%20Analysis%20-%203-yr.pdf)
 
-**Estimated Monthly bill: $14,293.97**
+**Estimated Monthly bill: $315.26**
 
 
 ## Q&A and feedbacks
