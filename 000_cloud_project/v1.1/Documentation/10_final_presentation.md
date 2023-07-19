@@ -1,6 +1,6 @@
 # Final Presentation
 
-1. Design Architecture (What have I able to finish?)
+1. Design Architecture (What I achieved)
 2. Demo (Which resources are deployed and working?)
 3. Decisions
 4. Before Cloud Implementation & Cost Analysis
