@@ -18,6 +18,6 @@
 
 8. [Conclusion and Additional Resources](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/09_conclusion_additional_resources.md)
 
-9. [Final presentation]()
+9. [Final presentation](https://github.com/techgrounds/techgrounds-anj-dtmr/blob/main/000_cloud_project/v1.1/Documentation/10_final_presentation.md)
 
 10. [Miro board for Project Management](https://miro.com/app/board/uXjVMTGcfGo=/?share_link_id=227067548492)
