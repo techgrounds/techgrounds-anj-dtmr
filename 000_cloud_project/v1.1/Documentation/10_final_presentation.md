@@ -21,10 +21,10 @@
 ## Decisions
 
 - [x] working management server
+- [x] Both way peering
 - [x] 1 Virtual Network with 1 app gateway subnet and 1 backend subnet both connected to VMSS
 - [x] Azure Application Gateway with Web Application Firewall (WAF) capabilities to act as a proxy 
 - [x] VMSS Load balancer
-- [x] Both way peering
 - [x] Azure SQL DB connected to both management server and web server using private endpoint
 
 While Azure MySQL Database is way more Cost Effective, Open-Source Flexibility, Support for Non-Microsoft Platforms, has vast Community Support and Tools......
