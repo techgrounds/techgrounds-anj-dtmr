@@ -20,7 +20,6 @@
 
 ## Decisions
 
-- [x] Azure SQL DB connected to both management server and web server using private endpoint
 - [x] working management server
 - [x] 1 Virtual Network with 1 app gateway subnet and 1 backend subnet both connected to VMSS
 - [x] Azure Application Gateway with Web Application Firewall (WAF) capabilities to act as a proxy 
